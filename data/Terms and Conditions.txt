@@ -1,0 +1,23 @@
+Terms and Conditions
+
+https://ghdx.healthdata.org/ihme_data
+
+Data made available for download on the GHDx can be used, shared, modified, or built upon by non-commercial users via the Open Data Commons Attribution License. For more information (and inquiries about commercial use), visit IHME Terms and Conditions.
+
+
+https://www.healthdata.org/about/terms-and-conditions
+
+TERMS AND CONDITIONS OF USE
+
+IHME follows the University of Washington’s website terms and conditions:
+
+http://www.washington.edu/online/terms/
+
+Commercial organizations wishing to acquire a license to access and download IHME data should contact services@healthdata.org.
+
+For non-commercial users of IHME websites, including all pages and datasets found on the healthdata.org, vizhub.healthdata.org, and ghdx.healthdata.org domains, the following constitute prior written permission, as required under Section 7 of the University of Washington’s Website Terms and Conditions of Use.
+
+Text, graphs, and screenshots of the visualizations on IHME Websites can be copied and redistributed with proper attribution by non-commercial users via a Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License (https://creativecommons.org/licenses/by-nc-nd/4.0/).
+Data made available for download on IHME Websites can be used, shared, modified or built upon by non-commercial users in accordance with the IHME FREE-OF-CHARGE NON-COMMERCIAL USER AGREEMENT.
+
+https://www.healthdata.org/about/ihme-free-charge-non-commercial-user-agreement
