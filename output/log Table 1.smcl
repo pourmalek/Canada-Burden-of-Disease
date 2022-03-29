@@ -3,7 +3,7 @@
       name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output/log Table 1.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res}29 Mar 2022, 06:34:14
+ {txt}opened on:  {res}29 Mar 2022, 11:55:33
 {txt}
 {com}. 
 . ***************************************************************************
@@ -13,6 +13,15 @@
 . * Person: Farshad Pourmalek pourmalek_farshad at yahoo dotcom
 . * Time (initial): 2022 March 28
 . ***************************************************************************
+. 
+. 
+. 
+. 
+. ***********************************************************************
+. * Prepare Table 1 Part 1
+. 
+. * SMPH base values 1990 and 2019
+. 
 . 
 . cd .. // Canada-Burden-of-Disease-main
 {res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main
@@ -26,6 +35,33 @@
 {res}{text}(16 vars, 72 obs)
 
 {com}. 
+. /* "IHME-GBD_2019_DATA-1.csv" Metadata:
+> 
+> Permalink:
+> https://ghdx.healthdata.org/gbd-results-tool?params=gbd-api-2019-permalink/47b4b82e1c612fb0cbc5e0f286cb2a1d
+> 
+> 
+> Data settings:
+> 
+> Base: Single
+> Location: Canada
+> Year: 1990, 2000, 2010, 2019
+> 
+> Context: Cause
+> Age: All-ages, Age-standardized
+> Metric: Rate
+> 
+> Measure: DALY, YLL, YLD
+> Sex: Male, Female, Both
+> Cause: Total All Causes
+> 
+> 
+> Download settings: 
+> Both IDs and Names 
+> (ID = variable_id, Name = variable_name)
+> 
+> */
+. 
 . cd .. // Canada-Burden-of-Disease-main
 {res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main
 {txt}
@@ -118,6 +154,14 @@
 {com}. rename lower Lower_UL
 {res}{txt}
 {com}. 
+. order Upper_UL, after(Lower_UL)
+{txt}
+{com}. 
+. label var Upper_UL "Upper UL"
+{txt}
+{com}. label var Lower_UL "Lower UL"
+{txt}
+{com}. 
 . replace Value = round(Value,0.1)
 {txt}(72 real changes made)
 
@@ -127,7 +171,7 @@
 {com}. replace Lower_UL = round(Lower_UL,0.1)
 {txt}(72 real changes made)
 
-{com}. format %12.1fc Value Upper_UL Lower_UL
+{com}. format Value Upper_UL Lower_UL %5.1fc
 {txt}
 {com}. 
 . rename age_name Age
@@ -143,20 +187,763 @@
 . sort measure_id_new sex_id_new age_id_new Year
 {txt}
 {com}. 
-. drop sex_id     measure_id_new  sex_id_new age_id_new
+. drop sex_id     measure_id_new sex_id_new age_id_new
 {txt}
 {com}. 
 . order Sex, after(Age)
 {txt}
 {com}. 
-. save "IHME-GBD_2019_DATA-1.dta", replace
-{txt}file IHME-GBD_2019_DATA-1.dta saved
+. export excel using "Table 1.xlsx", replace sheet("Part1") firstrow(varlabels) 
+{res}{txt}file Table 1.xlsx saved
 
 {com}. 
-. export delimited using "Table 1 Part 1.csv", replace
-{res}{txt}file Table 1 Part 1.csv saved
+. 
+. /* "Table 1.xlsx", sheet("Part1") contents
+> 
+> Base values of 1990 and 2019
+> 
+> Value   Lower UL        Upper UL
+> 
+> DALYs YLLs YLDs
+> 
+> Both sexes      Males   Females
+> 
+> All ages        Age-standardized
+> 
+> */
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. ***********************************************************************
+. * Prepare Table 1 Part 2
+. 
+. * SMPH change % from 1990 to 2019
+. 
+. 
+. cd .. // Canada-Burden-of-Disease-main
+{res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main
+{txt}
+{com}. 
+. cd data
+{res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/data
+{txt}
+{com}. 
+. import delimited using "IHME-GBD_2019_DATA-2.csv", clear 
+{res}{text}(17 vars, 54 obs)
 
 {com}. 
+. 
+. 
+. /* "IHME-GBD_2019_DATA-2.csv" Metadata:
+> 
+> Permalink:
+> https://ghdx.healthdata.org/gbd-results-tool?params=gbd-api-2019-permalink/abba564428b723f55bc1f4893394ac39
+> 
+> Data settings:
+> 
+> Base: Change
+> Location: Canada
+> Year range: 1990-2010, 1990-2019, 2010-2019
+> 
+> Context: Cause
+> Age: All-ages, Age-standardized
+> Metric: Rate
+> 
+> Measure: DALY, YLL, YLD
+> Sex: Male, Female, Both
+> Cause: Total All Causes
+> 
+> 
+> Download settings: 
+> Both IDs and Names 
+> (ID = variable_id, Name = variable_name)
+> 
+> */
+. 
+. 
+. 
+. cd .. // Canada-Burden-of-Disease-main
+{res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main
+{txt}
+{com}. 
+. cd output 
+{res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output
+{txt}
+{com}. 
+. save "IHME-GBD_2019_DATA-2.dta", replace
+{txt}file IHME-GBD_2019_DATA-2.dta saved
+
+{com}. 
+. drop measure_id location_id location_name age_id cause_id cause_name metric_id metric_name
+{txt}
+{com}. 
+. 
+. rename measure_name Measure
+{res}{txt}
+{com}. replace Measure = "DALYs" if Measure == "DALYs (Disability-Adjusted Life Years)"
+{txt}(18 real changes made)
+
+{com}. replace Measure = "YLDs" if Measure == "YLDs (Years Lived with Disability)"
+{txt}(18 real changes made)
+
+{com}. replace Measure = "YLLs" if Measure == "YLLs (Years of Life Lost)"
+{txt}(18 real changes made)
+
+{com}. qui compress
+{txt}
+{com}. 
+. gen measure_id_new = .
+{txt}(54 missing values generated)
+
+{com}. replace measure_id_new = 1 if Measure == "DALYs"
+{txt}(18 real changes made)
+
+{com}. replace measure_id_new = 2 if Measure == "YLLs"
+{txt}(18 real changes made)
+
+{com}. replace measure_id_new = 3 if Measure == "YLDs"
+{txt}(18 real changes made)
+
+{com}. 
+. 
+. gen age_id_new = .
+{txt}(54 missing values generated)
+
+{com}. replace age_id_new = 1 if age_name == "All Ages"
+{txt}(27 real changes made)
+
+{com}. replace age_id_new = 2 if age_name == "Age-standardized"
+{txt}(27 real changes made)
+
+{com}. 
+. 
+. gen Sex = ""
+{txt}(54 missing values generated)
+
+{com}. replace Sex = "Both sexes" if sex_name == "Both"
+{txt}variable {bf}Sex{sf} was {bf}{res}str1{sf}{txt} now {bf}{res}str10{sf}
+{txt}(18 real changes made)
+
+{com}. replace Sex = "Males" if sex_name == "Male"
+{txt}(18 real changes made)
+
+{com}. replace Sex = "Females" if sex_name == "Female"
+{txt}(18 real changes made)
+
+{com}. drop sex_name
+{txt}
+{com}. 
+. 
+. gen sex_id_new = .
+{txt}(54 missing values generated)
+
+{com}. replace sex_id_new = 1 if Sex == "Both sexes"
+{txt}(18 real changes made)
+
+{com}. replace sex_id_new = 2 if Sex == "Males"
+{txt}(18 real changes made)
+
+{com}. replace sex_id_new = 3 if Sex == "Females"
+{txt}(18 real changes made)
+
+{com}. 
+. rename  val Value
+{res}{txt}
+{com}. rename upper Upper_UL
+{res}{txt}
+{com}. rename lower Lower_UL
+{res}{txt}
+{com}. label var Upper_UL "Upper UL"
+{txt}
+{com}. label var Lower_UL "Lower UL"
+{txt}
+{com}. 
+. order Upper_UL, after(Lower_UL)
+{txt}
+{com}. 
+. replace Value = round(Value,0.01)
+{txt}(54 real changes made)
+
+{com}. replace Upper_UL = round(Upper_UL,0.1)
+{txt}(54 real changes made)
+
+{com}. replace Lower_UL = round(Lower_UL,0.1)
+{txt}(54 real changes made)
+
+{com}. format Value Upper_UL Lower_UL %5.2f
+{txt}
+{com}. 
+. rename age_name Age
+{res}{txt}
+{com}.         
+. rename year_start Year_start    
+{res}{txt}
+{com}. rename year_end Year_end
+{res}{txt}
+{com}.   
+. keep if Year_start == 1990 & Year_end == 2019
+{txt}(36 observations deleted)
+
+{com}.         
+. sort measure_id_new sex_id_new age_id_new 
+{txt}
+{com}. 
+. drop sex_id     measure_id_new sex_id_new age_id_new
+{txt}
+{com}. 
+. order Sex, after(Age)
+{txt}
+{com}. 
+. export excel using "Table 1.xlsx", sheet("Part2") firstrow(varlabels) 
+{res}{txt}file Table 1.xlsx saved
+
+{com}. 
+. 
+. /* "Table 1.xlsx", sheet("Part2") contents
+> 
+> Relative change (%) from 1990 to 2019
+> 
+> Value   (without Lower UL       Upper UL)
+> 
+> DALYs YLLs YLDs
+> 
+> Both sexes      Males   Females
+> 
+> All ages        Age-standardized
+> 
+> */
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. ***********************************************************************
+. * Prepare Table 1 Part 3
+. 
+. * Life expectancy (at birth) base values 1990 and 2019
+. 
+. 
+. cd .. // Canada-Burden-of-Disease-main
+{res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main
+{txt}
+{com}. 
+. cd data
+{res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/data
+{txt}
+{com}. 
+. import delimited using "IHME-GBD_2019_DATA-3.csv", clear 
+{res}{text}(14 vars, 12 obs)
+
+{com}. 
+. 
+. 
+. /* "IHME-GBD_2019_DATA-3.csv" Metadata:
+> 
+> Permalink:
+> https://ghdx.healthdata.org/gbd-results-tool?params=gbd-api-2019-permalink/788221935a962b8350f191fa1f265340
+> 
+> Data settings:
+> 
+> Base: Single
+> Location: Canada
+> Year: 1990, 2000, 2010, 2019
+> 
+> Context: All Cause Mortality
+> Age: <1 year
+> Metric: Years
+> 
+> Measure: Life Expectancy
+> Sex: Male, Female, Both
+> Cause: (Not applicable)
+> 
+> 
+> Download settings: 
+> Both IDs and Names 
+> (ID = variable_id, Name = variable_name)
+> 
+> */
+. 
+. cd .. // Canada-Burden-of-Disease-main
+{res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main
+{txt}
+{com}. 
+. cd output 
+{res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output
+{txt}
+{com}. 
+. save "IHME-GBD_2019_DATA-3.dta", replace
+{txt}file IHME-GBD_2019_DATA-3.dta saved
+
+{com}. 
+. 
+. 
+. drop measure_id location_id     location_name   sex_id  age_id  metric_id       metric_name
+{txt}
+{com}. 
+. rename measure_name Measure
+{res}{txt}
+{com}. 
+. rename age_name Age
+{res}{txt}
+{com}. replace Age = "At birth"
+{txt}variable {bf}Age{sf} was {bf}{res}str7{sf}{txt} now {bf}{res}str8{sf}
+{txt}(12 real changes made)
+
+{com}. 
+. rename val Value
+{res}{txt}
+{com}. rename upper Upper_UL
+{res}{txt}
+{com}. rename lower Lower_UL
+{res}{txt}
+{com}. label var Upper_UL "Upper UL"
+{txt}
+{com}. label var Lower_UL "Lower UL"
+{txt}
+{com}. 
+. order Upper_UL, after(Lower_UL)
+{txt}
+{com}. 
+. replace Value = round(Value,0.01)
+{txt}(12 real changes made)
+
+{com}. replace Upper_UL = round(Upper_UL,0.1)
+{txt}(12 real changes made)
+
+{com}. replace Lower_UL = round(Lower_UL,0.1)
+{txt}(12 real changes made)
+
+{com}. format Value Upper_UL Lower_UL %5.2f
+{txt}
+{com}. 
+. gen sex_id_new = .
+{txt}(12 missing values generated)
+
+{com}. replace sex_id_new = 1 if sex_name == "Both"
+{txt}(4 real changes made)
+
+{com}. replace sex_id_new = 2 if sex_name == "Male"
+{txt}(4 real changes made)
+
+{com}. replace sex_id_new = 3 if sex_name == "Female"
+{txt}(4 real changes made)
+
+{com}. 
+. rename sex_name Sex
+{res}{txt}
+{com}. replace Sex = "Both sexes" if Sex == "Both"
+{txt}variable {bf}Sex{sf} was {bf}{res}str6{sf}{txt} now {bf}{res}str10{sf}
+{txt}(4 real changes made)
+
+{com}. replace Sex = "Males" if Sex == "Male"
+{txt}(4 real changes made)
+
+{com}. replace Sex = "Females" if Sex == "Female"
+{txt}(4 real changes made)
+
+{com}. 
+. sort sex_id_new  
+{txt}
+{com}. 
+. drop sex_id_new sex_id_new 
+{txt}
+{com}. 
+. order Sex, after(Age)
+{txt}
+{com}. 
+. rename year Year
+{res}{txt}
+{com}. keep if Year == 1990 | Year == 2019
+{txt}(6 observations deleted)
+
+{com}. 
+. 
+. export excel using "Table 1.xlsx", sheet("Part3") firstrow(varlabels) 
+{res}{txt}file Table 1.xlsx saved
+
+{com}. 
+. 
+. /* "Table 1.xlsx", sheet("Part3") contents
+> 
+> Life expectancy at birth 1990 2010
+> 
+> Both sexes      Males   Females
+> 
+> 
+> */
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. ***********************************************************************
+. * Prepare Table 1 Part 4
+. 
+. * Life expectancy (at birth) % from 1990 to 2019
+. 
+. use "IHME-GBD_2019_DATA-3.dta", clear
+{txt}
+{com}. 
+. 
+. drop measure_id location_id     location_name sex_id age_id metric_id metric_name
+{txt}
+{com}. 
+. rename measure_name Measure
+{res}{txt}
+{com}. 
+. rename age_name Age
+{res}{txt}
+{com}. replace Age = "At birth"
+{txt}variable {bf}Age{sf} was {bf}{res}str7{sf}{txt} now {bf}{res}str8{sf}
+{txt}(12 real changes made)
+
+{com}. 
+. rename val Value
+{res}{txt}
+{com}. rename upper Upper_UL
+{res}{txt}
+{com}. rename lower Lower_UL
+{res}{txt}
+{com}. 
+. order Upper_UL, after(Lower_UL)
+{txt}
+{com}. 
+. replace Value = round(Value,0.01)
+{txt}(12 real changes made)
+
+{com}. replace Upper_UL = round(Upper_UL,0.1)
+{txt}(12 real changes made)
+
+{com}. replace Lower_UL = round(Lower_UL,0.1)
+{txt}(12 real changes made)
+
+{com}. format Value Upper_UL Lower_UL %5.2f
+{txt}
+{com}. 
+. gen sex_id_new = .
+{txt}(12 missing values generated)
+
+{com}. replace sex_id_new = 1 if sex_name == "Both"
+{txt}(4 real changes made)
+
+{com}. replace sex_id_new = 2 if sex_name == "Male"
+{txt}(4 real changes made)
+
+{com}. replace sex_id_new = 3 if sex_name == "Female"
+{txt}(4 real changes made)
+
+{com}. 
+. rename sex_name Sex
+{res}{txt}
+{com}. replace Sex = "Both sexes" if Sex == "Both"
+{txt}variable {bf}Sex{sf} was {bf}{res}str6{sf}{txt} now {bf}{res}str10{sf}
+{txt}(4 real changes made)
+
+{com}. replace Sex = "Males" if Sex == "Male"
+{txt}(4 real changes made)
+
+{com}. replace Sex = "Females" if Sex == "Female"
+{txt}(4 real changes made)
+
+{com}. 
+. sort sex_id_new  
+{txt}
+{com}. 
+. drop sex_id_new sex_id_new 
+{txt}
+{com}. 
+. order Sex, after(Age)
+{txt}
+{com}. 
+. rename year Year
+{res}{txt}
+{com}. 
+. reshape wide Value Upper_UL Lower_UL, i(Sex) j(Year)
+{txt}(note: j = 1990 2000 2010 2019)
+
+Data{col 36}long{col 43}->{col 48}wide
+{hline 77}
+Number of obs.                 {res}      12   {txt}->{res}       3
+{txt}Number of variables            {res}       7   {txt}->{res}      15
+{txt}j variable (4 values)              {res}Year   {txt}->   (dropped)
+xij variables:
+                                  {res}Value   {txt}->   {res}Value1990 Value2000 ... Value2019
+                               Upper_UL   {txt}->   {res}Upper_UL1990 Upper_UL2000 ... Upper_UL2019
+                               Lower_UL   {txt}->   {res}Lower_UL1990 Lower_UL2000 ... Lower_UL2019
+{txt}{hline 77}
+
+{com}. 
+. order Measure Age
+{txt}
+{com}. 
+. gen sex_id_new = .
+{txt}(3 missing values generated)
+
+{com}. replace sex_id_new = 1 if Sex == "Both"
+{txt}(0 real changes made)
+
+{com}. replace sex_id_new = 2 if Sex == "Male"
+{txt}(0 real changes made)
+
+{com}. replace sex_id_new = 3 if Sex == "Female"
+{txt}(0 real changes made)
+
+{com}. sort sex_id_new 
+{txt}
+{com}. drop sex_id_new
+{txt}
+{com}. 
+. 
+. * gen % Change = 100 * (New - Old) / Old
+. 
+. gen ChangeValue1990_2019 = 100 * (Value2019 - Value1990) / Value1990
+{txt}
+{com}. gen ChangeUpper_UL1990_2019 = 100 * (Upper_UL2019 - Upper_UL1990) / Upper_UL1990
+{txt}
+{com}. gen ChangeLower_UL1990_2019 = 100 * (Lower_UL2019 - Lower_UL1990) / Lower_UL1990
+{txt}
+{com}. 
+. 
+. keep Measure Age Sex ChangeValue1990_2019 ChangeUpper_UL1990_2019 ChangeLower_UL1990_2019
+{txt}
+{com}. 
+. 
+. replace Measure = "Life expectancy % Change 1990 to 2019"
+{txt}variable {bf}Measure{sf} was {bf}{res}str15{sf}{txt} now {bf}{res}str37{sf}
+{txt}(3 real changes made)
+
+{com}. 
+. rename ChangeValue1990_2019 Value
+{res}{txt}
+{com}. rename ChangeUpper_UL1990_2019 Upper_UL
+{res}{txt}
+{com}. rename ChangeLower_UL1990_2019 Lower_UL
+{res}{txt}
+{com}. 
+. label var Upper_UL "Upper UL"
+{txt}
+{com}. label var Lower_UL "Lower UL"
+{txt}
+{com}. 
+. replace Value = round(Value,0.01)
+{txt}(3 real changes made)
+
+{com}. replace Upper_UL = round(Upper_UL,0.1)
+{txt}(3 real changes made)
+
+{com}. replace Lower_UL = round(Lower_UL,0.1)
+{txt}(3 real changes made)
+
+{com}. format Value Upper_UL Lower_UL %5.2f
+{txt}
+{com}. 
+. 
+. 
+. export excel using "Table 1.xlsx", sheet("Part4") firstrow(varlabels) 
+{res}{txt}file Table 1.xlsx saved
+
+{com}. 
+. 
+. /* "Table 1.xlsx", sheet("Part4") contents
+> 
+> Life expectancy at birth % change from 1990 to 2019
+> 
+> Both sexes      Males   Females
+> 
+> 
+> */
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. ***********************************************************************
+. * Prepare Table 1 Part 5
+. 
+. * Post-neonatal infant mortality rate 1990 2019
+. 
+. 
+. cd .. // Canada-Burden-of-Disease-main
+{res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main
+{txt}
+{com}. 
+. cd data
+{res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/data
+{txt}
+{com}. 
+. import delimited using "IHME-GBD_2019_DATA-4.csv", clear 
+{res}{text}(16 vars, 12 obs)
+
+{com}. 
+. 
+. 
+. drop measure_id location_id     location_name sex_id age_id metric_id metric_name cause_id
+{txt}
+{com}. 
+. 
+. rename measure_name Measure
+{res}{txt}
+{com}. 
+. replace Measure = "Mortality rate" 
+{txt}variable {bf}Measure{sf} was {bf}{res}str6{sf}{txt} now {bf}{res}str14{sf}
+{txt}(12 real changes made)
+
+{com}. 
+. 
+. rename age_name Age
+{res}{txt}
+{com}. replace Age = "Post Neonatal"
+{txt}(0 real changes made)
+
+{com}. 
+. rename val Value
+{res}{txt}
+{com}. rename upper Upper_UL
+{res}{txt}
+{com}. rename lower Lower_UL
+{res}{txt}
+{com}. label var Upper_UL "Upper UL"
+{txt}
+{com}. label var Lower_UL "Lower UL"
+{txt}
+{com}. 
+. order Upper_UL, after(Lower_UL)
+{txt}
+{com}. 
+. replace Value = round(Value,0.01)
+{txt}(12 real changes made)
+
+{com}. replace Upper_UL = round(Upper_UL,0.1)
+{txt}(12 real changes made)
+
+{com}. replace Lower_UL = round(Lower_UL,0.1)
+{txt}(12 real changes made)
+
+{com}. format Value Upper_UL Lower_UL %5.2f
+{txt}
+{com}. 
+. gen sex_id_new = .
+{txt}(12 missing values generated)
+
+{com}. replace sex_id_new = 1 if sex_name == "Both"
+{txt}(4 real changes made)
+
+{com}. replace sex_id_new = 2 if sex_name == "Male"
+{txt}(4 real changes made)
+
+{com}. replace sex_id_new = 3 if sex_name == "Female"
+{txt}(4 real changes made)
+
+{com}. 
+. rename sex_name Sex
+{res}{txt}
+{com}. replace Sex = "Both sexes" if Sex == "Both"
+{txt}variable {bf}Sex{sf} was {bf}{res}str6{sf}{txt} now {bf}{res}str10{sf}
+{txt}(4 real changes made)
+
+{com}. replace Sex = "Males" if Sex == "Male"
+{txt}(4 real changes made)
+
+{com}. replace Sex = "Females" if Sex == "Female"
+{txt}(4 real changes made)
+
+{com}. 
+. sort sex_id_new  
+{txt}
+{com}. 
+. drop sex_id_new sex_id_new 
+{txt}
+{com}. 
+. order Sex, after(Age)
+{txt}
+{com}. 
+. rename year Year
+{res}{txt}
+{com}. 
+. gen sex_id_new = .
+{txt}(12 missing values generated)
+
+{com}. replace sex_id_new = 1 if Sex == "Both"
+{txt}(0 real changes made)
+
+{com}. replace sex_id_new = 2 if Sex == "Male"
+{txt}(0 real changes made)
+
+{com}. replace sex_id_new = 3 if Sex == "Female"
+{txt}(0 real changes made)
+
+{com}. sort sex_id_new 
+{txt}
+{com}. drop sex_id_new
+{txt}
+{com}. 
+. replace Value = round(Value,0.01)
+{txt}(0 real changes made)
+
+{com}. replace Upper_UL = round(Upper_UL,0.1)
+{txt}(0 real changes made)
+
+{com}. replace Lower_UL = round(Lower_UL,0.1)
+{txt}(0 real changes made)
+
+{com}. format Value Upper_UL Lower_UL %5.2f
+{txt}
+{com}. 
+. cd .. // Canada-Burden-of-Disease-main
+{res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main
+{txt}
+{com}. 
+. cd output 
+{res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output
+{txt}
+{com}. 
+. export excel using "Table 1.xlsx", sheet("Part5") firstrow(varlabels) 
+{res}{txt}file Table 1.xlsx saved
+
+{com}. 
+. 
+. /* "Table 1.xlsx", sheet("Part5") contents
+> 
+> Postneonatal Mortality Rate 1990 and 2019
+> 
+> Both sexes      Males   Females
+> 
+> */
+. 
+. 
+. 
+. 
+. 
+. 
 . 
 . 
 . 
@@ -170,7 +957,7 @@
       {txt}name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output/log Table 1.smcl
   {txt}log type:  {res}smcl
- {txt}closed on:  {res}29 Mar 2022, 06:34:15
+ {txt}closed on:  {res}29 Mar 2022, 11:55:34
 {txt}{.-}
 {smcl}
 {txt}{sf}{ul off}

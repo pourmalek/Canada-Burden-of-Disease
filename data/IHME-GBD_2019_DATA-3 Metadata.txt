@@ -1,0 +1,29 @@
+IHME-GBD_2019_DATA-3 Metadata
+
+Permalink:
+https://ghdx.healthdata.org/gbd-results-tool?params=gbd-api-2019-permalink/788221935a962b8350f191fa1f265340
+
+Data settings:
+
+Base: Single
+Location: Canada
+Year: 1990, 2000, 2010, 2019
+
+Context: All Cause Mortality
+Age: <1 year
+Metric: Years
+
+Measure: Life Expectancy
+Sex: Male, Female, Both
+Cause: (Not applicable)
+
+
+Download settings: 
+Both IDs and Names 
+(ID = variable_id, Name = variable_name)
+
+
+
+
+
+
