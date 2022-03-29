@@ -25,7 +25,7 @@ The outputs will be stored in your local machine in /Downloads/Canada-Burden-of-
 
 See "Table 1 Part 1.csv" in the /output/
 
-A previously produced copy of "Table 1 Part 1.csv" can be seen in https://github.com/pourmalek/Canada-Burden-of-Disease/tree/main/output and here is a [direct link](https://github.com/pourmalek/Canada-Burden-of-Disease/blob/main/output/Table%201%20Part%201.csv) to it. 
+A previously produced copy of "Table 1.xlsx" can be seen in https://github.com/pourmalek/Canada-Burden-of-Disease/tree/main/output and here is a [direct link](https://github.com/pourmalek/Canada-Burden-of-Disease/blob/main/output/Table%201.xlsx) to it. 
 
 
 
