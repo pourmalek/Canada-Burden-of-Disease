@@ -2,7 +2,7 @@
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) 
 
-Canada Burden of Disease 1990-2019, Jacek A. Kopec, Farshad Pourmalek, et al. 
+Canada Burden of Disease 1990-2019. Jacek A. Kopec, Farshad Pourmalek, et al. 
 
 
 **********************
