@@ -3,7 +3,7 @@
       name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output/log Table 1.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res}29 Mar 2022, 06:25:55
+ {txt}opened on:  {res}29 Mar 2022, 06:34:14
 {txt}
 {com}. 
 . ***************************************************************************
@@ -135,8 +135,8 @@
 {com}.         
 . rename year Year 
 {res}{txt}
-{com}.         
-. keep if Year == 1990 | Year == 2010
+{com}. 
+. keep if Year == 1990 | Year == 2019
 {txt}(36 observations deleted)
 
 {com}.         
@@ -170,7 +170,7 @@
       {txt}name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output/log Table 1.smcl
   {txt}log type:  {res}smcl
- {txt}closed on:  {res}29 Mar 2022, 06:25:56
+ {txt}closed on:  {res}29 Mar 2022, 06:34:15
 {txt}{.-}
 {smcl}
 {txt}{sf}{ul off}

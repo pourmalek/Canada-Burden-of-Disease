@@ -73,6 +73,8 @@ format %12.1fc Value Upper_UL Lower_UL
 rename age_name Age
 	
 rename year Year 
+
+keep if Year == 1990 | Year == 2019
 	
 sort measure_id_new sex_id_new age_id_new Year
 
