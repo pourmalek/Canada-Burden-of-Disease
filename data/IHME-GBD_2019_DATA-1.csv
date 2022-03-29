@@ -1,0 +1,37 @@
+measure_id,measure_name,location_id,location_name,sex_id,sex_name,age_id,age_name,cause_id,cause_name,metric_id,metric_name,year,val,upper,lower
+4,YLLs (Years of Life Lost),101,Canada,1,Male,22,All Ages,294,All causes,3,Rate,1990,18597.376674161318,18704.192378946256,18493.444109397795
+4,YLLs (Years of Life Lost),101,Canada,2,Female,22,All Ages,294,All causes,3,Rate,1990,12144.91920585584,12222.844393856558,12071.104547177982
+4,YLLs (Years of Life Lost),101,Canada,3,Both,22,All Ages,294,All causes,3,Rate,1990,15328.534630964225,15405.08171445485,15258.967726870746
+4,YLLs (Years of Life Lost),101,Canada,1,Male,27,Age-standardized,294,All causes,3,Rate,1990,18194.157933367773,18298.476390780594,18091.67519162337
+4,YLLs (Years of Life Lost),101,Canada,2,Female,27,Age-standardized,294,All causes,3,Rate,1990,10256.375164547257,10320.46447485728,10195.519868016887
+4,YLLs (Years of Life Lost),101,Canada,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,13932.014943276547,14001.388354629571,13867.399824278415
+4,YLLs (Years of Life Lost),101,Canada,1,Male,22,All Ages,294,All causes,3,Rate,2019,15825.359810269716,16099.262886326693,15570.511203135984
+4,YLLs (Years of Life Lost),101,Canada,2,Female,22,All Ages,294,All causes,3,Rate,2019,11785.67288828411,11965.182404286512,11616.542745326902
+4,YLLs (Years of Life Lost),101,Canada,3,Both,22,All Ages,294,All causes,3,Rate,2019,13773.418213005298,13999.374486220779,13562.109931073557
+4,YLLs (Years of Life Lost),101,Canada,1,Male,27,Age-standardized,294,All causes,3,Rate,2019,10956.530411422875,11216.098638366904,10719.250984294262
+4,YLLs (Years of Life Lost),101,Canada,2,Female,27,Age-standardized,294,All causes,3,Rate,2019,7120.720494099362,7277.352712310536,6976.110076682363
+4,YLLs (Years of Life Lost),101,Canada,3,Both,27,Age-standardized,294,All causes,3,Rate,2019,8963.60461920983,9171.523268153454,8772.79850804554
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,22,All Ages,294,All causes,3,Rate,1990,28559.658051942173,31454.880714564075,26025.638695600985
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,22,All Ages,294,All causes,3,Rate,1990,24766.42433616251,28610.397277395343,21444.435845003485
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,22,All Ages,294,All causes,3,Rate,1990,26637.989926159156,29975.19519029984,23670.173803522328
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,27,Age-standardized,294,All causes,3,Rate,1990,27614.684790067324,30358.408823355687,25218.012690933512
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,27,Age-standardized,294,All causes,3,Rate,1990,21468.94067450396,24880.163020633445,18492.737812659765
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,24247.512813320744,27249.928509426547,21542.60710515904
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,22,All Ages,294,All causes,3,Rate,2019,28048.25661767698,31578.338951499885,24952.052554292877
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,22,All Ages,294,All causes,3,Rate,2019,26645.894961765094,30872.00370454815,22855.77137543148
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,22,All Ages,294,All causes,3,Rate,2019,27335.93304613648,31173.340943394353,23882.52971581713
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,27,Age-standardized,294,All causes,3,Rate,2019,20739.51364905893,23559.745121986485,18213.720485107944
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,27,Age-standardized,294,All causes,3,Rate,2019,18765.265962674282,22287.152527488917,15692.009801087912
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,294,All causes,3,Rate,2019,19683.722102499112,22813.80843645628,16877.058579218563
+3,YLDs (Years Lived with Disability),101,Canada,1,Male,22,All Ages,294,All causes,3,Rate,1990,9962.281377780864,12867.235203325508,7430.0488498695
+3,YLDs (Years Lived with Disability),101,Canada,2,Female,22,All Ages,294,All causes,3,Rate,1990,12621.505130306665,16503.946594010227,9294.466375260836
+3,YLDs (Years Lived with Disability),101,Canada,3,Both,22,All Ages,294,All causes,3,Rate,1990,11309.455295194917,14702.296409293374,8360.1122494965
+3,YLDs (Years Lived with Disability),101,Canada,1,Male,27,Age-standardized,294,All causes,3,Rate,1990,9420.527874116573,12168.420877580433,7025.268733795961
+3,YLDs (Years Lived with Disability),101,Canada,2,Female,27,Age-standardized,294,All causes,3,Rate,1990,11212.566720913874,14644.1667421709,8225.754324156016
+3,YLDs (Years Lived with Disability),101,Canada,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,10315.49898411809,13379.239153473321,7631.411358864534
+3,YLDs (Years Lived with Disability),101,Canada,1,Male,22,All Ages,294,All causes,3,Rate,2019,12222.896807407262,15637.60786238772,9140.682001113597
+3,YLDs (Years Lived with Disability),101,Canada,2,Female,22,All Ages,294,All causes,3,Rate,2019,14860.222073480978,19091.470560377853,11084.701107011115
+3,YLDs (Years Lived with Disability),101,Canada,3,Both,22,All Ages,294,All causes,3,Rate,2019,13562.514833131167,17380.1607149343,10140.476981149437
+3,YLDs (Years Lived with Disability),101,Canada,1,Male,27,Age-standardized,294,All causes,3,Rate,2019,9782.984294198366,12543.290102623814,7259.754673828505
+3,YLDs (Years Lived with Disability),101,Canada,2,Female,27,Age-standardized,294,All causes,3,Rate,2019,11644.546726185941,15179.470992981056,8632.613053283774
+3,YLDs (Years Lived with Disability),101,Canada,3,Both,27,Age-standardized,294,All causes,3,Rate,2019,10720.118641062083,13795.86575069238,7955.21987801041

@@ -1,0 +1,173 @@
+{smcl}
+{txt}{sf}{ul off}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output/log Table 1.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res}28 Mar 2022, 19:48:44
+{txt}
+{com}. 
+. ***************************************************************************
+. * This is "do Table 1.do"
+. 
+. * Project: Canada Burden of Disease                                                                        
+. * Person: Farshad Pourmalek pourmalek_farshad at yahoo dotcom
+. * Time (initial): 2022 March 28
+. ***************************************************************************
+. 
+. cd .. // Canada-Burden-of-Disease-main
+{res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main
+{txt}
+{com}. 
+. cd data
+{res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/data
+{txt}
+{com}. 
+. import delimited using "IHME-GBD_2019_DATA-1.csv", clear 
+{res}{text}(16 vars, 36 obs)
+
+{com}. 
+. cd .. // Canada-Burden-of-Disease-main
+{res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main
+{txt}
+{com}. 
+. cd output 
+{res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output
+{txt}
+{com}. 
+. save "IHME-GBD_2019_DATA-1.dta", replace
+{txt}file IHME-GBD_2019_DATA-1.dta saved
+
+{com}. 
+. drop measure_id location_id location_name age_id cause_id cause_name metric_id metric_name
+{txt}
+{com}. 
+. 
+. rename measure_name Measure
+{res}{txt}
+{com}. replace Measure = "DALYs" if Measure == "DALYs (Disability-Adjusted Life Years)"
+{txt}(12 real changes made)
+
+{com}. replace Measure = "YLDs" if Measure == "YLDs (Years Lived with Disability)"
+{txt}(12 real changes made)
+
+{com}. replace Measure = "YLLs" if Measure == "YLLs (Years of Life Lost)"
+{txt}(12 real changes made)
+
+{com}. qui compress
+{txt}
+{com}. 
+. gen measure_id_new = .
+{txt}(36 missing values generated)
+
+{com}. replace measure_id_new = 1 if Measure == "DALYs"
+{txt}(12 real changes made)
+
+{com}. replace measure_id_new = 2 if Measure == "YLLs"
+{txt}(12 real changes made)
+
+{com}. replace measure_id_new = 3 if Measure == "YLDs"
+{txt}(12 real changes made)
+
+{com}. 
+. 
+. gen age_id_new = .
+{txt}(36 missing values generated)
+
+{com}. replace age_id_new = 1 if age_name == "All Ages"
+{txt}(18 real changes made)
+
+{com}. replace age_id_new = 2 if age_name == "Age-standardized"
+{txt}(18 real changes made)
+
+{com}. 
+. 
+. gen Sex = ""
+{txt}(36 missing values generated)
+
+{com}. replace Sex = "Both sexes" if sex_name == "Both"
+{txt}variable {bf}Sex{sf} was {bf}{res}str1{sf}{txt} now {bf}{res}str10{sf}
+{txt}(12 real changes made)
+
+{com}. replace Sex = "Males" if sex_name == "Male"
+{txt}(12 real changes made)
+
+{com}. replace Sex = "Females" if sex_name == "Female"
+{txt}(12 real changes made)
+
+{com}. drop sex_name
+{txt}
+{com}. 
+. 
+. gen sex_id_new = .
+{txt}(36 missing values generated)
+
+{com}. replace sex_id_new = 1 if Sex == "Both sexes"
+{txt}(12 real changes made)
+
+{com}. replace sex_id_new = 2 if Sex == "Males"
+{txt}(12 real changes made)
+
+{com}. replace sex_id_new = 3 if Sex == "Females"
+{txt}(12 real changes made)
+
+{com}. 
+. rename  val Value
+{res}{txt}
+{com}. rename upper Upper_UL
+{res}{txt}
+{com}. rename lower Lower_UL
+{res}{txt}
+{com}. 
+. replace Value = round(Value,0.1)
+{txt}(36 real changes made)
+
+{com}. replace Upper_UL = round(Upper_UL,0.1)
+{txt}(36 real changes made)
+
+{com}. replace Lower_UL = round(Lower_UL,0.1)
+{txt}(36 real changes made)
+
+{com}. format %12.1fc Value Upper_UL Lower_UL
+{txt}
+{com}. 
+. rename age_name Age
+{res}{txt}
+{com}.         
+. rename year Year 
+{res}{txt}
+{com}.         
+. sort measure_id_new sex_id_new age_id_new Year
+{txt}
+{com}. 
+. drop sex_id     measure_id_new  sex_id_new age_id_new
+{txt}
+{com}. 
+. order Sex, after(Age)
+{txt}
+{com}. 
+. save "IHME-GBD_2019_DATA-1.dta", replace
+{txt}file IHME-GBD_2019_DATA-1.dta saved
+
+{com}. 
+. export delimited using "Table 1 Part 1.csv", replace
+{res}{txt}(note: file Table 1 Part 1.csv not found)
+{txt}file Table 1 Part 1.csv saved
+
+{com}. 
+. 
+. 
+. 
+. 
+. **********************
+. 
+. view "log Table 1.smcl"
+{txt}
+{com}. 
+. log close
+      {txt}name:  {res}<unnamed>
+       {txt}log:  {res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output/log Table 1.smcl
+  {txt}log type:  {res}smcl
+ {txt}closed on:  {res}28 Mar 2022, 19:48:44
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}
