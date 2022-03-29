@@ -29,4 +29,4 @@ See "Table 1 Part 1.csv" in the /output/
 A previously produced copy of "Table 1 Part 1.csv" can be seen in https://github.com/pourmalek/Canada-Burden-of-Disease/tree/main/output and here is a [direct link](https://github.com/pourmalek/Canada-Burden-of-Disease/blob/main/output/Table%201%20Part%201.csv) to it. 
 
 
->>>>>>> 0fdb479e39648a0a7cd09472de92ab32e82b82ec
+
