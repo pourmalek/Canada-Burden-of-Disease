@@ -4,7 +4,7 @@ Canada Burden of Disease 2019
 
 **********************
 
-This repository includes the Stata codes that use the GBD data and prepares the tables and graphs used in the manuscript titled "Worrisome health trends in Canada 1990-2019: An analysis for the Global Burden of Disease Study". 
+This repository includes the Stata codes that use the GBD data and prepare the tables and graphs used in the manuscript titled "Worrisome health trends in Canada 1990-2019: An analysis for the Global Burden of Disease Study". 
 
 **********************
 
