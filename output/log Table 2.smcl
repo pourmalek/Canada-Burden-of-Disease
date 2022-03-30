@@ -3,7 +3,7 @@
       name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output/log Table 2.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res}29 Mar 2022, 18:19:19
+ {txt}opened on:  {res}29 Mar 2022, 19:05:52
 {txt}
 {com}. 
 . ***************************************************************************
@@ -22,6 +22,8 @@
 . 
 . * All-age DALY rates per 100,000 in Canada in 1990 and 2019. level 1 causes
 . 
+. 
+. * use input data from /data/ folder
 . 
 . cd .. // Canada-Burden-of-Disease-main
 {res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main
@@ -60,6 +62,9 @@
 > (ID = variable_id, Name = variable_name)
 > 
 > */
+. 
+. 
+. * save output data in /output/ folder
 . 
 . cd .. // Canada-Burden-of-Disease-main
 {res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main
@@ -245,6 +250,11 @@
 . sort Sex_Year cause_id_new
 {txt}
 {com}. 
+. label var Sex_Year "Sex-Year group"
+{txt}
+{com}. label var rank "rank of mean DALYs within Sex-Year group"
+{txt}
+{com}. 
 . 
 . export excel using "Table 2.xlsx", replace sheet("Part1") firstrow(varlabels) 
 {res}{txt}file Table 2.xlsx saved
@@ -279,6 +289,8 @@
 . 
 . * All-age DALY rates per 100,000 in Canada in 1990 and 2019. selected level 2 causes
 . 
+. 
+. * use input data from /data/ folder
 . 
 . cd .. // Canada-Burden-of-Disease-main
 {res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main
@@ -317,6 +329,9 @@
 > (ID = variable_id, Name = variable_name)
 > 
 > */
+. 
+. 
+. * save output data in /output/ folder
 . 
 . cd .. // Canada-Burden-of-Disease-main
 {res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main
@@ -533,8 +548,13 @@
 . sort Sex_Year cause_id_new
 {txt}
 {com}. 
+. label var Sex_Year "Sex-Year group"
+{txt}
+{com}. label var rank "rank of mean DALYs within Sex-Year group"
+{txt}
+{com}. 
 . 
-. export excel using "Table 2.xlsx", replace sheet("Part2") firstrow(varlabels) 
+. export excel using "Table 2.xlsx", sheet("Part2") firstrow(varlabels) 
 {res}{txt}file Table 2.xlsx saved
 
 {com}. 
@@ -573,7 +593,7 @@
       {txt}name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output/log Table 2.smcl
   {txt}log type:  {res}smcl
- {txt}closed on:  {res}29 Mar 2022, 18:19:20
+ {txt}closed on:  {res}29 Mar 2022, 19:05:53
 {txt}{.-}
 {smcl}
 {txt}{sf}{ul off}

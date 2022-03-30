@@ -26,6 +26,8 @@ log using "log Table 2.smcl", replace
 * All-age DALY rates per 100,000 in Canada in 1990 and 2019. level 1 causes
 
 
+* use input data from /data/ folder
+
 cd .. // Canada-Burden-of-Disease-main
 
 cd data
@@ -57,6 +59,9 @@ Both IDs and Names
 (ID = variable_id, Name = variable_name)
 
 */
+
+
+* save output data in /output/ folder
 
 cd .. // Canada-Burden-of-Disease-main
 
@@ -155,6 +160,9 @@ bysort Sex_Year: egen rank = rank(-Value)
 
 sort Sex_Year cause_id_new
 
+label var Sex_Year "Sex-Year group"
+label var rank "rank of mean DALYs within Sex-Year group"
+
 
 export excel using "Table 2.xlsx", replace sheet("Part1") firstrow(varlabels) 
 
@@ -188,6 +196,8 @@ level 1 causes (i.e., 3 causes)
 * All-age DALY rates per 100,000 in Canada in 1990 and 2019. selected level 2 causes
 
 
+* use input data from /data/ folder
+
 cd .. // Canada-Burden-of-Disease-main
 
 cd data
@@ -219,6 +229,9 @@ Both IDs and Names
 (ID = variable_id, Name = variable_name)
 
 */
+
+
+* save output data in /output/ folder
 
 cd .. // Canada-Burden-of-Disease-main
 
@@ -322,8 +335,11 @@ bysort Sex_Year: egen rank = rank(-Value)
 
 sort Sex_Year cause_id_new
 
+label var Sex_Year "Sex-Year group"
+label var rank "rank of mean DALYs within Sex-Year group"
 
-export excel using "Table 2.xlsx", replace sheet("Part2") firstrow(varlabels) 
+
+export excel using "Table 2.xlsx", sheet("Part2") firstrow(varlabels) 
 
 
 /* "Table 2.xlsx", sheet("Part2") contents

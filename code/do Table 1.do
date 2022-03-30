@@ -26,6 +26,8 @@ log using "log Table 1.smcl", replace
 * SMPH base values 1990 and 2019
 
 
+* use input data from /data/ folder
+
 cd .. // Canada-Burden-of-Disease-main
 
 cd data
@@ -59,11 +61,14 @@ Both IDs and Names
 
 */
 
+
+* save output data in /output/ folder
+
 cd .. // Canada-Burden-of-Disease-main
 
 cd output 
 
-save "IHME-GBD_2019_DATA-1.dta", replace
+
 
 drop measure_id location_id location_name age_id cause_id cause_name metric_id metric_name
 
@@ -115,14 +120,17 @@ rename age_name Age
 	
 rename year Year 
 
-keep if Year == 1990 | Year == 2019
-	
 sort measure_id_new sex_id_new age_id_new Year
 
 drop sex_id	measure_id_new sex_id_new age_id_new
 
 order Sex, after(Age)
 
+
+save "IHME-GBD_2019_DATA-1.dta", replace
+
+keep if Year == 1990 | Year == 2019 // for Table 1
+	
 export excel using "Table 1.xlsx", replace sheet("Part1") firstrow(varlabels) 
 
 
@@ -154,6 +162,8 @@ All ages	Age-standardized
 
 * SMPH change % from 1990 to 2019
 
+
+* use input data from /data/ folder
 
 cd .. // Canada-Burden-of-Disease-main
 
@@ -190,12 +200,13 @@ Both IDs and Names
 */
 
 
+* save output data in /output/ folder
 
 cd .. // Canada-Burden-of-Disease-main
 
 cd output 
 
-save "IHME-GBD_2019_DATA-2.dta", replace
+
 
 drop measure_id location_id location_name age_id cause_id cause_name metric_id metric_name
 
@@ -247,13 +258,19 @@ rename age_name Age
 rename year_start Year_start	
 rename year_end Year_end
   
-keep if Year_start == 1990 & Year_end == 2019
-	
+  
 sort measure_id_new sex_id_new age_id_new 
 
 drop sex_id	measure_id_new sex_id_new age_id_new
 
 order Sex, after(Age)
+  
+  
+save "IHME-GBD_2019_DATA-2.dta", replace // more details than Table 1
+
+  
+keep if Year_start == 1990 & Year_end == 2019 // for Table 1
+	
 
 export excel using "Table 1.xlsx", sheet("Part2") firstrow(varlabels) 
 
@@ -286,6 +303,8 @@ All ages	Age-standardized
 
 * Life expectancy (at birth) base values 1990 and 2019
 
+
+* use input data from /data/ folder
 
 cd .. // Canada-Burden-of-Disease-main
 
@@ -321,12 +340,14 @@ Both IDs and Names
 
 */
 
+
+
+* save output data in /output/ folder
+
+
 cd .. // Canada-Burden-of-Disease-main
 
 cd output 
-
-save "IHME-GBD_2019_DATA-3.dta", replace
-
 
 
 drop measure_id	location_id	location_name	sex_id	age_id	metric_id	metric_name
@@ -366,7 +387,10 @@ drop sex_id_new sex_id_new
 order Sex, after(Age)
 
 rename year Year
-keep if Year == 1990 | Year == 2019
+
+save "IHME-GBD_2019_DATA-3.dta", replace // more details than Table 1
+
+keep if Year == 1990 | Year == 2019 // for Table 1
 
 
 export excel using "Table 1.xlsx", sheet("Part3") firstrow(varlabels) 
@@ -397,44 +421,12 @@ Both sexes	Males	Females
 
 * Life expectancy (at birth) % from 1990 to 2019
 
+
+* use input data from /output/ folder // Note: % change from year to year did not work for Life expectancy
+
+
 use "IHME-GBD_2019_DATA-3.dta", clear
 
-
-drop measure_id	location_id	location_name sex_id age_id metric_id metric_name
-
-rename measure_name Measure
-
-rename age_name Age
-replace Age = "At birth"
-
-rename val Value
-rename upper Upper_UL
-rename lower Lower_UL
-
-order Upper_UL, after(Lower_UL)
-
-replace Value = round(Value,0.01)
-replace Upper_UL = round(Upper_UL,0.1)
-replace Lower_UL = round(Lower_UL,0.1)
-format Value Upper_UL Lower_UL %5.2f
-
-gen sex_id_new = .
-replace sex_id_new = 1 if sex_name == "Both"
-replace sex_id_new = 2 if sex_name == "Male"
-replace sex_id_new = 3 if sex_name == "Female"
-
-rename sex_name Sex
-replace Sex = "Both sexes" if Sex == "Both"
-replace Sex = "Males" if Sex == "Male"
-replace Sex = "Females" if Sex == "Female"
-
-sort sex_id_new  
-
-drop sex_id_new sex_id_new 
-
-order Sex, after(Age)
-
-rename year Year
 
 reshape wide Value Upper_UL Lower_UL, i(Sex) j(Year)
 
@@ -446,6 +438,7 @@ replace sex_id_new = 2 if Sex == "Male"
 replace sex_id_new = 3 if Sex == "Female"
 sort sex_id_new 
 drop sex_id_new
+
 
 
 * gen % Change = 100 * (New - Old) / Old
@@ -473,8 +466,11 @@ replace Lower_UL = round(Lower_UL,0.1)
 format Value Upper_UL Lower_UL %5.2f
 
 
+* save output data in /output/ folder
 
-export excel using "Table 1.xlsx", sheet("Part4") firstrow(varlabels) 
+save "Table 1 Part4.dta", replace // more details than Table 1
+
+export excel using "Table 1.xlsx", sheet("Part4") firstrow(varlabels) // for Table 1
 
 
 /* "Table 1.xlsx", sheet("Part4") contents
@@ -482,7 +478,6 @@ export excel using "Table 1.xlsx", sheet("Part4") firstrow(varlabels)
 Life expectancy at birth % change from 1990 to 2019
 
 Both sexes	Males	Females
-
 
 */
 
@@ -506,12 +501,13 @@ Both sexes	Males	Females
 * Post-neonatal infant mortality rate 1990 2019
 
 
+* use input data from /data/ folder
+
 cd .. // Canada-Burden-of-Disease-main
 
 cd data
 
 import delimited using "IHME-GBD_2019_DATA-4.csv", clear 
-
 
 
 drop measure_id	location_id	location_name sex_id age_id metric_id metric_name cause_id
@@ -568,9 +564,15 @@ replace Upper_UL = round(Upper_UL,0.1)
 replace Lower_UL = round(Lower_UL,0.1)
 format Value Upper_UL Lower_UL %5.2f
 
+
+* save output data in /output/ folder
+
 cd .. // Canada-Burden-of-Disease-main
 
 cd output 
+
+
+save "IHME-GBD_2019_DATA-4.dta", replace 
 
 export excel using "Table 1.xlsx", sheet("Part5") firstrow(varlabels) 
 
