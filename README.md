@@ -27,10 +27,32 @@ The outputs will be stored in your local machine in /Downloads/Canada-Burden-of-
 
 See "Table 1 Part 1.csv" in the /output/
 
-Previously produced Excel (xslsx) copies of manuscript tables can be downloaded and seen from https://github.com/pourmalek/Canada-Burden-of-Disease/tree/main/output and below are direct links to them:
+*
+
+Previously produced Excel (xlsx) copies of manuscript tables can be downloaded and seen from https://github.com/pourmalek/Canada-Burden-of-Disease/tree/main/output and below are direct links to them:
 
 [Table 1 - Crude (all-age) and age-standardized summary measures of population health indicators in Canada for males and females in 1990 and 2019](https://github.com/pourmalek/Canada-Burden-of-Disease/blob/main/output/Table%201.xlsx)
 
-[Table 2- All-age DALY rates per 100,000 in Canada in 1990 and 2019 for groups of conditions](https://github.com/pourmalek/Canada-Burden-of-Disease/blob/main/output/Table%202.xlsx)
+[Table 2 - All-age DALY rates per 100,000 in Canada in 1990 and 2019 for groups of conditions](https://github.com/pourmalek/Canada-Burden-of-Disease/blob/main/output/Table%202.xlsx)
+
+[Table 3 - Top 10 level-3 causes of DALYs, YLDs and YLLs in 1990 and 2019 by sex, all ages and age-standardized]()
+
+[Table 4 - Canada’s rank in the world for 5 health indicators (age-standardized rates) from 1990 to 2019, by sex and age]()
+
+[Table 5 - Changes in age-standardized DALY rates in Canada and comparator locations and Canada’s rank in 1990-2019]()
+
+*
+
+Previously produced PDF copies of manuscript graphs can be downloaded and seen from https://github.com/pourmalek/Canada-Burden-of-Disease/tree/main/output and below are direct links to them:
+
+[Figure 1a - Trends in DALY rates in Canada, 1990-2019]()
+
+[Figure 1b - Trends in YLL rates in Canada, 1990-2019]()
+
+[Figure 1c - Trends in YLD rates in Canada, 1990-2019]()
+
+
+
+
 
 
