@@ -51,8 +51,11 @@ Previously produced PDF copies of manuscript graphs can be downloaded and seen f
 
 [Figure 1c - Trends in YLD rates in Canada, 1990-2019]()
 
+[Figure 2 - Leading causes of all age DALYs in Canada by sex]()
 
+[Figure 3 - All-age DALY rate in 2019 vs. relative change in DALY rates from 1990 to 2019 for top 25 conditions in Canada]()
 
+[Figure 4 - Percent improvement in age-standardized DALY rates for high-income countries, 1990-2019]()
 
-
+[Figure 5 - Changes in ranking of high-income countries according to age-standardized DALY rates, 1990 to 2005 and 2005 to 2019 (excluding San Marino and Monaco) ]()
 
