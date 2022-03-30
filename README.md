@@ -35,9 +35,9 @@ Previously produced Excel (xlsx) copies of manuscript tables can be downloaded a
 
 [Table 2 - All-age DALY rates per 100,000 in Canada in 1990 and 2019 for groups of conditions](https://github.com/pourmalek/Canada-Burden-of-Disease/blob/main/output/Table%202.xlsx)
 
-[Table 3 - Top 10 level-3 causes of DALYs, YLDs and YLLs in 1990 and 2019 by sex, all ages and age-standardized]()
+[Table 3 - Top 10 level-3 causes of DALYs, YLDs and YLLs in 1990 and 2019 by sex, all ages and age-standardized](https://github.com/pourmalek/Canada-Burden-of-Disease/blob/main/output/Table%203.xlsx)
 
-[Table 4 - Canada’s rank in the world for 5 health indicators (age-standardized rates) from 1990 to 2019, by sex and age]()
+[Table 4 - Canada’s rank in the world for 5 health indicators (age-standardized rates) from 1990 to 2019, by sex and age](https://github.com/pourmalek/Canada-Burden-of-Disease/blob/main/output/Table%204.xlsx)
 
 [Table 5 - Changes in age-standardized DALY rates in Canada and comparator locations and Canada’s rank in 1990-2019]()
 
