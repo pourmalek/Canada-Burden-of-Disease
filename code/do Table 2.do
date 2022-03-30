@@ -18,10 +18,26 @@ log using "log Table 2.smcl", replace
 ***************************************************************************
 
 
+** Prepares Table 2
+* Table 2: All-age DALY rates per 100,000 in Canada in 1990 and 2019 for groups of conditions   
+
+
+* Metadata for input data described below,
+* under each -import delimited using "IHME-GBD_2019_DATA-??.csv"-
+
+
+** Table 2 Part 1: level 1 causes
+* Input data: "IHME-GBD_2019_DATA-21.csv"
+* Output data: "Table 2.xlsx", sheet("Part1")
+
+** Table 2 Part 2: level 2 causes
+* Input data: "IHME-GBD_2019_DATA-22.csv"
+* Output data: "Table 2.xlsx", sheet("Part2")
+
 
 
 ***********************************************************************
-* Prepare Table 1 Part1
+* Prepare Table 2 Part1
 
 * All-age DALY rates per 100,000 in Canada in 1990 and 2019. level 1 causes
 
@@ -191,9 +207,9 @@ level 1 causes (i.e., 3 causes)
 
 
 ***********************************************************************
-* Prepare Table 1 Part2
+* Prepare Table 2 Part2
 
-* All-age DALY rates per 100,000 in Canada in 1990 and 2019. selected level 2 causes
+* All-age DALY rates per 100,000 in Canada in 1990 and 2019.  level 2 causes
 
 
 * use input data from /data/ folder
@@ -221,7 +237,7 @@ Metric: Rate
 
 Measure: DALY, YLL, YLD
 Sex: Male, Female, Both
-Cause: selected level 2 causes (17 causes)
+Cause: level 2 causes (17 causes)
 
 
 Download settings: 
@@ -354,7 +370,7 @@ Both sexes	Males	Females
 
 All ages	
 
-selected level 2 causes (17 causes)
+ level 2 causes (17 causes)
 
 */
 
@@ -372,5 +388,9 @@ selected level 2 causes (17 causes)
 view "log Table 2.smcl"
 
 log close
+
+cd ..
+
+cd code
 
 exit, clear

@@ -19,11 +19,42 @@ log using "log Table 1.smcl", replace
 
 
 
+** Prepares Table 1
+* Table 1: Crude (all-age) and age-standardized summary measures of population health indicators 
+* in Canada for males and females in 1990 and 2019
+
+
+* Metadata for input data described below,
+* under each -import delimited using "IHME-GBD_2019_DATA-??.csv"-
+
+
+** Table 1 Part 1: DALYs YLLs YLDs, base values 1990 and 2019
+* Input data: "IHME-GBD_2019_DATA-1.csv"
+* Output data: Table 1.xlsx", sheet("Part1")
+
+** Table 1 Part 2: DALYs YLLs YLDs, change % from 1990 to 2019
+* Input data: "IHME-GBD_2019_DATA-2.csv"
+* Output data: Table 1.xlsx", sheet("Part2")
+
+** Table 1 Part 3: DALYs YLLs YLDs, change % from 1990 to 2019
+* Input data: "IHME-GBD_2019_DATA-3.csv"
+* Output data: Table 1.xlsx", sheet("Part3")
+
+** Table 1 Part 4: Life expectancy (at birth) % from 1990 to 2019
+* Input data: "IHME-GBD_2019_DATA-3.dta"
+* Output data: Table 1.xlsx", sheet("Part4")
+
+** Table 1 Part 5: Post-neonatal infant mortality rate 1990 2019
+* Input data: "IHME-GBD_2019_DATA-4.csv"
+* Output data: Table 1.xlsx", sheet("Part5")
+
+
+
 
 ***********************************************************************
 * Prepare Table 1 Part 1
 
-* SMPH base values 1990 and 2019
+* DALYs YLLs YLDs base values 1990 and 2019
 
 
 * use input data from /data/ folder
@@ -160,7 +191,7 @@ All ages	Age-standardized
 ***********************************************************************
 * Prepare Table 1 Part 2
 
-* SMPH change % from 1990 to 2019
+* DALYs YLLs YLDs change % from 1990 to 2019
 
 
 * use input data from /data/ folder
@@ -599,5 +630,9 @@ Both sexes	Males	Females
 view "log Table 1.smcl"
 
 log close
+
+cd ..
+
+cd code
 
 exit, clear
