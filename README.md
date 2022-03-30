@@ -31,6 +31,6 @@ Previously produced Excel (xslsx) copies of manuscript tables can be downloaded 
 
 [Table 1 - Crude (all-age) and age-standardized summary measures of population health indicators in Canada for males and females in 1990 and 2019](https://github.com/pourmalek/Canada-Burden-of-Disease/blob/main/output/Table%201.xlsx)
 
-[Table 2]
+[Table 2- All-age DALY rates per 100,000 in Canada in 1990 and 2019 for groups of conditions](https://github.com/pourmalek/Canada-Burden-of-Disease/blob/main/output/Table%202.xlsx)
 
 
