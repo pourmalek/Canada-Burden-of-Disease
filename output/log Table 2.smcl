@@ -1,0 +1,579 @@
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output/log Table 2.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res}29 Mar 2022, 18:19:19
+{txt}
+{com}. 
+. ***************************************************************************
+. * This is "do Table 2.do"
+. 
+. * Project: Canada Burden of Disease                                                                        
+. * Person: Farshad Pourmalek pourmalek_farshad at yahoo dotcom
+. * Time (initial): 2022 March 28
+. ***************************************************************************
+. 
+. 
+. 
+. 
+. ***********************************************************************
+. * Prepare Table 1 Part1
+. 
+. * All-age DALY rates per 100,000 in Canada in 1990 and 2019. level 1 causes
+. 
+. 
+. cd .. // Canada-Burden-of-Disease-main
+{res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main
+{txt}
+{com}. 
+. cd data
+{res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/data
+{txt}
+{com}. 
+. import delimited using "IHME-GBD_2019_DATA-21.csv", clear 
+{res}{text}(16 vars, 504 obs)
+
+{com}. 
+. /* "IHME-GBD_2019_DATA-21.csv" Metadata:
+> 
+> Permalink:
+> https://ghdx.healthdata.org/gbd-results-tool?params=gbd-api-2019-permalink/0cda6e1af2fdb16b3a2942edaf32a1d6
+> 
+> Data settings:
+> 
+> Base: Single
+> Location: Canada
+> Year: 1990, 2000, 2010, 2019
+> 
+> Context: Cause
+> Age: All Ages, Age-standardized
+> Metric: Rate
+> 
+> Measure: DALY, YLL, YLD
+> Sex: Male, Female, Both
+> Cause: level 1 causes (i.e., 3 causes)
+> 
+> 
+> Download settings: 
+> Both IDs and Names 
+> (ID = variable_id, Name = variable_name)
+> 
+> */
+. 
+. cd .. // Canada-Burden-of-Disease-main
+{res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main
+{txt}
+{com}. 
+. cd output 
+{res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output
+{txt}
+{com}. 
+. save "IHME-GBD_2019_DATA-21.dta", replace
+{txt}file IHME-GBD_2019_DATA-21.dta saved
+
+{com}. 
+. 
+. /*
+> cause_id        cause_name
+> 295     Communicable, maternal, neonatal, and nutritional diseases
+> 409     Non-communicable diseases
+> 687     Injuries
+> */
+. 
+. keep if cause_id == 295 | cause_id == 409 | cause_id == 687
+{txt}(288 observations deleted)
+
+{com}. 
+. gen cause_id_new = . 
+{txt}(216 missing values generated)
+
+{com}. replace cause_id_new = 1 if cause_name == "Communicable, maternal, neonatal, and nutritional diseases"
+{txt}(72 real changes made)
+
+{com}. replace cause_id_new = 2 if cause_name == "Non-communicable diseases"
+{txt}(72 real changes made)
+
+{com}. replace cause_id_new = 3 if cause_name == "Injuries"
+{txt}(72 real changes made)
+
+{com}. 
+. 
+. drop measure_id location_id location_name age_id cause_id metric_id metric_name
+{txt}
+{com}. 
+. 
+. 
+. rename cause_name Cause
+{res}{txt}
+{com}. 
+. rename measure_name Measure
+{res}{txt}
+{com}. replace Measure = "DALYs" if Measure == "DALYs (Disability-Adjusted Life Years)"
+{txt}(72 real changes made)
+
+{com}. replace Measure = "YLDs" if Measure == "YLDs (Years Lived with Disability)"
+{txt}(72 real changes made)
+
+{com}. replace Measure = "YLLs" if Measure == "YLLs (Years of Life Lost)"
+{txt}(72 real changes made)
+
+{com}. qui compress
+{txt}
+{com}. 
+. gen measure_id_new = .
+{txt}(216 missing values generated)
+
+{com}. replace measure_id_new = 1 if Measure == "DALYs"
+{txt}(72 real changes made)
+
+{com}. replace measure_id_new = 2 if Measure == "YLLs"
+{txt}(72 real changes made)
+
+{com}. replace measure_id_new = 3 if Measure == "YLDs"
+{txt}(72 real changes made)
+
+{com}. 
+. 
+. gen age_id_new = .
+{txt}(216 missing values generated)
+
+{com}. replace age_id_new = 1 if age_name == "All Ages"
+{txt}(108 real changes made)
+
+{com}. replace age_id_new = 2 if age_name == "Age-standardized"
+{txt}(108 real changes made)
+
+{com}. 
+. 
+. gen Sex = ""
+{txt}(216 missing values generated)
+
+{com}. replace Sex = "Both sexes" if sex_name == "Both"
+{txt}variable {bf}Sex{sf} was {bf}{res}str1{sf}{txt} now {bf}{res}str10{sf}
+{txt}(72 real changes made)
+
+{com}. replace Sex = "Males" if sex_name == "Male"
+{txt}(72 real changes made)
+
+{com}. replace Sex = "Females" if sex_name == "Female"
+{txt}(72 real changes made)
+
+{com}. drop sex_name
+{txt}
+{com}. 
+. 
+. gen sex_id_new = .
+{txt}(216 missing values generated)
+
+{com}. replace sex_id_new = 1 if Sex == "Both sexes"
+{txt}(72 real changes made)
+
+{com}. replace sex_id_new = 2 if Sex == "Males"
+{txt}(72 real changes made)
+
+{com}. replace sex_id_new = 3 if Sex == "Females"
+{txt}(72 real changes made)
+
+{com}. 
+. rename  val Value
+{res}{txt}
+{com}. rename upper Upper_UL
+{res}{txt}
+{com}. rename lower Lower_UL
+{res}{txt}
+{com}. 
+. order Upper_UL, after(Lower_UL)
+{txt}
+{com}. 
+. label var Upper_UL "Upper UL"
+{txt}
+{com}. label var Lower_UL "Lower UL"
+{txt}
+{com}. 
+. replace Value = round(Value,0.1)
+{txt}(215 real changes made)
+
+{com}. replace Upper_UL = round(Upper_UL,0.1)
+{txt}(216 real changes made)
+
+{com}. replace Lower_UL = round(Lower_UL,0.1)
+{txt}(215 real changes made)
+
+{com}. format Value Upper_UL Lower_UL %5.1fc
+{txt}
+{com}. 
+. rename age_name Age
+{res}{txt}
+{com}.         
+. rename year Year 
+{res}{txt}
+{com}. 
+. keep if Year == 1990 | Year == 2019
+{txt}(108 observations deleted)
+
+{com}.         
+. sort measure_id_new sex_id_new age_id_new Year cause_id_new
+{txt}
+{com}. 
+. drop sex_id     measure_id_new sex_id_new age_id_new
+{txt}
+{com}. 
+. order Sex, after(Age)
+{txt}
+{com}. 
+. keep if Measure == "DALYs"
+{txt}(72 observations deleted)
+
+{com}. 
+. keep if Age == "All Ages"
+{txt}(18 observations deleted)
+
+{com}. 
+. keep if Year == 1990 | Year == 2019
+{txt}(0 observations deleted)
+
+{com}. 
+. * gen rank of Value (for DALYs) within Sex-Year combinations
+. 
+. egen Sex_Year = group(Sex Year), lname(name)
+{txt}
+{com}. 
+. bysort Sex_Year: egen rank = rank(-Value)
+{txt}
+{com}. 
+. sort Sex_Year cause_id_new
+{txt}
+{com}. 
+. 
+. export excel using "Table 2.xlsx", replace sheet("Part1") firstrow(varlabels) 
+{res}{txt}file Table 2.xlsx saved
+
+{com}. 
+. 
+. /* "Table 2.xlsx", sheet("Part1") contents
+> 
+> Base values of 1990 and 2019
+> 
+> Value   Lower UL        Upper UL
+> 
+> DALYs 
+> 
+> Both sexes      Males   Females
+> 
+> All ages        
+> 
+> level 1 causes (i.e., 3 causes)
+> 
+> */
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. ***********************************************************************
+. * Prepare Table 1 Part2
+. 
+. * All-age DALY rates per 100,000 in Canada in 1990 and 2019. selected level 2 causes
+. 
+. 
+. cd .. // Canada-Burden-of-Disease-main
+{res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main
+{txt}
+{com}. 
+. cd data
+{res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/data
+{txt}
+{com}. 
+. import delimited using "IHME-GBD_2019_DATA-22.csv", clear 
+{res}{text}(16 vars, 1,200 obs)
+
+{com}. 
+. /* "IHME-GBD_2019_DATA-22.csv" Metadata:
+> 
+> Permalink:
+> https://ghdx.healthdata.org/gbd-results-tool?params=gbd-api-2019-permalink/a02d127dfc4f606293148ea261862d35
+> 
+> Data settings:
+> 
+> Base: Single
+> Location: Canada
+> Year: 1990, 2000, 2010, 2019
+> 
+> Context: Cause
+> Age: All Ages, Age-standardized
+> Metric: Rate
+> 
+> Measure: DALY, YLL, YLD
+> Sex: Male, Female, Both
+> Cause: selected level 2 causes (17 causes)
+> 
+> 
+> Download settings: 
+> Both IDs and Names 
+> (ID = variable_id, Name = variable_name)
+> 
+> */
+. 
+. cd .. // Canada-Burden-of-Disease-main
+{res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main
+{txt}
+{com}. 
+. cd output 
+{res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output
+{txt}
+{com}. 
+. save "IHME-GBD_2019_DATA-22.dta", replace
+{txt}file IHME-GBD_2019_DATA-22.dta saved
+
+{com}. 
+. 
+. gen cause_id_new = . 
+{txt}(1,200 missing values generated)
+
+{com}. replace cause_id_new = 1 if cause_name == "Maternal and neonatal disorders"
+{txt}(72 real changes made)
+
+{com}. replace cause_id_new = 2 if cause_name == "Respiratory infections and tuberculosis"
+{txt}(72 real changes made)
+
+{com}. replace cause_id_new = 3 if cause_name == "Neoplasms"
+{txt}(72 real changes made)
+
+{com}. replace cause_id_new = 4 if cause_name == "Cardiovascular diseases"
+{txt}(72 real changes made)
+
+{com}. replace cause_id_new = 5 if cause_name == "Chronic respiratory diseases"
+{txt}(72 real changes made)
+
+{com}. replace cause_id_new = 6 if cause_name == "Digestive diseases"
+{txt}(72 real changes made)
+
+{com}. replace cause_id_new = 7 if cause_name == "Neurological disorders"
+{txt}(72 real changes made)
+
+{com}. replace cause_id_new = 8 if cause_name == "Mental disorders"
+{txt}(72 real changes made)
+
+{com}. replace cause_id_new = 9 if cause_name == "Substance use disorders"
+{txt}(72 real changes made)
+
+{com}. replace cause_id_new = 10 if cause_name == "Diabetes and kidney diseases"
+{txt}(72 real changes made)
+
+{com}. replace cause_id_new = 11 if cause_name == "Skin and subcutaneous diseases"
+{txt}(72 real changes made)
+
+{com}. replace cause_id_new = 12 if cause_name == "Sense organ diseases"
+{txt}(48 real changes made)
+
+{com}. replace cause_id_new = 13 if cause_name == "Musculoskeletal disorders"
+{txt}(72 real changes made)
+
+{com}. replace cause_id_new = 14 if cause_name == "Other non-communicable diseases"
+{txt}(72 real changes made)
+
+{com}. replace cause_id_new = 15 if cause_name == "Transport injuries"
+{txt}(72 real changes made)
+
+{com}. replace cause_id_new = 16 if cause_name == "Unintentional injuries"
+{txt}(72 real changes made)
+
+{com}. replace cause_id_new = 17 if cause_name == "Self-harm and interpersonal violence"
+{txt}(72 real changes made)
+
+{com}. 
+. 
+. drop measure_id location_id location_name age_id cause_id metric_id metric_name
+{txt}
+{com}. 
+. 
+. 
+. rename cause_name Cause
+{res}{txt}
+{com}. 
+. rename measure_name Measure
+{res}{txt}
+{com}. replace Measure = "DALYs" if Measure == "DALYs (Disability-Adjusted Life Years)"
+{txt}(408 real changes made)
+
+{com}. replace Measure = "YLDs" if Measure == "YLDs (Years Lived with Disability)"
+{txt}(408 real changes made)
+
+{com}. replace Measure = "YLLs" if Measure == "YLLs (Years of Life Lost)"
+{txt}(384 real changes made)
+
+{com}. qui compress
+{txt}
+{com}. 
+. gen measure_id_new = .
+{txt}(1,200 missing values generated)
+
+{com}. replace measure_id_new = 1 if Measure == "DALYs"
+{txt}(408 real changes made)
+
+{com}. replace measure_id_new = 2 if Measure == "YLLs"
+{txt}(384 real changes made)
+
+{com}. replace measure_id_new = 3 if Measure == "YLDs"
+{txt}(408 real changes made)
+
+{com}. 
+. 
+. gen age_id_new = .
+{txt}(1,200 missing values generated)
+
+{com}. replace age_id_new = 1 if age_name == "All Ages"
+{txt}(600 real changes made)
+
+{com}. replace age_id_new = 2 if age_name == "Age-standardized"
+{txt}(600 real changes made)
+
+{com}. 
+. 
+. gen Sex = ""
+{txt}(1,200 missing values generated)
+
+{com}. replace Sex = "Both sexes" if sex_name == "Both"
+{txt}variable {bf}Sex{sf} was {bf}{res}str1{sf}{txt} now {bf}{res}str10{sf}
+{txt}(400 real changes made)
+
+{com}. replace Sex = "Males" if sex_name == "Male"
+{txt}(400 real changes made)
+
+{com}. replace Sex = "Females" if sex_name == "Female"
+{txt}(400 real changes made)
+
+{com}. drop sex_name
+{txt}
+{com}. 
+. 
+. gen sex_id_new = .
+{txt}(1,200 missing values generated)
+
+{com}. replace sex_id_new = 1 if Sex == "Both sexes"
+{txt}(400 real changes made)
+
+{com}. replace sex_id_new = 2 if Sex == "Males"
+{txt}(400 real changes made)
+
+{com}. replace sex_id_new = 3 if Sex == "Females"
+{txt}(400 real changes made)
+
+{com}. 
+. rename  val Value
+{res}{txt}
+{com}. rename upper Upper_UL
+{res}{txt}
+{com}. rename lower Lower_UL
+{res}{txt}
+{com}. 
+. order Upper_UL, after(Lower_UL)
+{txt}
+{com}. 
+. label var Upper_UL "Upper UL"
+{txt}
+{com}. label var Lower_UL "Lower UL"
+{txt}
+{com}. 
+. replace Value = round(Value,0.1)
+{txt}(1,200 real changes made)
+
+{com}. replace Upper_UL = round(Upper_UL,0.1)
+{txt}(1,197 real changes made)
+
+{com}. replace Lower_UL = round(Lower_UL,0.1)
+{txt}(1,200 real changes made)
+
+{com}. format Value Upper_UL Lower_UL %5.1fc
+{txt}
+{com}. 
+. rename age_name Age
+{res}{txt}
+{com}.         
+. rename year Year 
+{res}{txt}
+{com}. 
+. keep if Year == 1990 | Year == 2019
+{txt}(600 observations deleted)
+
+{com}.         
+. sort measure_id_new sex_id_new age_id_new Year cause_id_new
+{txt}
+{com}. 
+. drop sex_id     measure_id_new sex_id_new age_id_new
+{txt}
+{com}. 
+. order Sex, after(Age)
+{txt}
+{com}. 
+. keep if Measure == "DALYs"
+{txt}(396 observations deleted)
+
+{com}. 
+. keep if Age == "All Ages"
+{txt}(102 observations deleted)
+
+{com}. 
+. keep if Year == 1990 | Year == 2019
+{txt}(0 observations deleted)
+
+{com}. 
+. * gen rank of Value (for DALYs) within Sex-Year combinations
+. 
+. egen Sex_Year = group(Sex Year), lname(name)
+{txt}
+{com}. 
+. bysort Sex_Year: egen rank = rank(-Value)
+{txt}
+{com}. 
+. sort Sex_Year cause_id_new
+{txt}
+{com}. 
+. 
+. export excel using "Table 2.xlsx", replace sheet("Part2") firstrow(varlabels) 
+{res}{txt}file Table 2.xlsx saved
+
+{com}. 
+. 
+. /* "Table 2.xlsx", sheet("Part2") contents
+> 
+> Base values of 1990 and 2019
+> 
+> Value   Lower UL        Upper UL
+> 
+> DALYs 
+> 
+> Both sexes      Males   Females
+> 
+> All ages        
+> 
+> selected level 2 causes (17 causes)
+> 
+> */
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. **********************
+. 
+. view "log Table 2.smcl"
+{txt}
+{com}. 
+. log close
+      {txt}name:  {res}<unnamed>
+       {txt}log:  {res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output/log Table 2.smcl
+  {txt}log type:  {res}smcl
+ {txt}closed on:  {res}29 Mar 2022, 18:19:20
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}

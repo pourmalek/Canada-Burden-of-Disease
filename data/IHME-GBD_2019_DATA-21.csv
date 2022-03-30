@@ -1,0 +1,505 @@
+measure_id,measure_name,location_id,location_name,sex_id,sex_name,age_id,age_name,cause_id,cause_name,metric_id,metric_name,year,val,upper,lower
+4,YLLs (Years of Life Lost),101,Canada,1,Male,22,All Ages,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,1990,1256.457058764252,1328.3251090408446,1205.9908785322332
+4,YLLs (Years of Life Lost),101,Canada,2,Female,22,All Ages,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,1990,766.9288324378679,819.4059788981124,724.2285590618194
+4,YLLs (Years of Life Lost),101,Canada,3,Both,22,All Ages,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,1990,1008.4600040905046,1063.7254045624782,966.5875745378197
+4,YLLs (Years of Life Lost),101,Canada,1,Male,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,1990,1417.0911792280438,1511.8196581102152,1351.2681732678832
+4,YLLs (Years of Life Lost),101,Canada,2,Female,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,1990,850.6154850912545,922.437642507671,799.5064703591122
+4,YLLs (Years of Life Lost),101,Canada,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,1990,1118.5633921111316,1191.5463888494999,1065.2666900255053
+4,YLLs (Years of Life Lost),101,Canada,1,Male,22,All Ages,409,Non-communicable diseases,3,Rate,1990,13974.94325176749,14083.058195470943,13839.356148469007
+4,YLLs (Years of Life Lost),101,Canada,2,Female,22,All Ages,409,Non-communicable diseases,3,Rate,1990,10209.281993499728,10299.552707642517,10126.06314819503
+4,YLLs (Years of Life Lost),101,Canada,3,Both,22,All Ages,409,Non-communicable diseases,3,Rate,1990,12067.243448719162,12150.492242644063,11977.867953655417
+4,YLLs (Years of Life Lost),101,Canada,1,Male,27,Age-standardized,409,Non-communicable diseases,3,Rate,1990,13535.669247319265,13651.032657099235,13387.48151887659
+4,YLLs (Years of Life Lost),101,Canada,2,Female,27,Age-standardized,409,Non-communicable diseases,3,Rate,1990,8260.223433028666,8337.697573105217,8167.8313181764
+4,YLLs (Years of Life Lost),101,Canada,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,1990,10623.511911056583,10702.183262166334,10523.01281279332
+4,YLLs (Years of Life Lost),101,Canada,1,Male,22,All Ages,687,Injuries,3,Rate,1990,3365.976363629567,3427.148948722996,3321.9947134502195
+4,YLLs (Years of Life Lost),101,Canada,2,Female,22,All Ages,687,Injuries,3,Rate,1990,1168.70837991825,1196.5817556606346,1136.9390136304182
+4,YLLs (Years of Life Lost),101,Canada,3,Both,22,All Ages,687,Injuries,3,Rate,1990,2252.8311781545713,2287.2042612539403,2224.461838698103
+4,YLLs (Years of Life Lost),101,Canada,1,Male,27,Age-standardized,687,Injuries,3,Rate,1990,3241.397506820456,3303.691006950523,3196.884031644022
+4,YLLs (Years of Life Lost),101,Canada,2,Female,27,Age-standardized,687,Injuries,3,Rate,1990,1145.5362464273446,1174.1474343112884,1115.2362435845898
+4,YLLs (Years of Life Lost),101,Canada,3,Both,27,Age-standardized,687,Injuries,3,Rate,1990,2189.9396401088343,2226.119023038133,2159.3221125883388
+4,YLLs (Years of Life Lost),101,Canada,1,Male,22,All Ages,1026,Total burden related to hepatitis B,3,Rate,1990,29.658390048194374,39.12592494284087,22.15439661643369
+4,YLLs (Years of Life Lost),101,Canada,2,Female,22,All Ages,1026,Total burden related to hepatitis B,3,Rate,1990,10.969165422152214,14.234503327881004,8.376738728071144
+4,YLLs (Years of Life Lost),101,Canada,3,Both,22,All Ages,1026,Total burden related to hepatitis B,3,Rate,1990,20.19035038850719,26.308693559869678,15.28898097608665
+4,YLLs (Years of Life Lost),101,Canada,1,Male,27,Age-standardized,1026,Total burden related to hepatitis B,3,Rate,1990,27.025869806984915,35.739088256546744,20.188293647650074
+4,YLLs (Years of Life Lost),101,Canada,2,Female,27,Age-standardized,1026,Total burden related to hepatitis B,3,Rate,1990,9.2227343566108,11.990439880302139,6.991912307616831
+4,YLLs (Years of Life Lost),101,Canada,3,Both,27,Age-standardized,1026,Total burden related to hepatitis B,3,Rate,1990,17.758640632318144,23.419204058097495,13.340681727560353
+4,YLLs (Years of Life Lost),101,Canada,1,Male,22,All Ages,1027,Total burden related to hepatitis C,3,Rate,1990,191.37171171935952,232.5548805945157,151.03985428053093
+4,YLLs (Years of Life Lost),101,Canada,2,Female,22,All Ages,1027,Total burden related to hepatitis C,3,Rate,1990,83.18756260815383,101.82524598179637,66.61634475150477
+4,YLLs (Years of Life Lost),101,Canada,3,Both,22,All Ages,1027,Total burden related to hepatitis C,3,Rate,1990,136.56516758338077,165.09786129094388,109.74645369940383
+4,YLLs (Years of Life Lost),101,Canada,1,Male,27,Age-standardized,1027,Total burden related to hepatitis C,3,Rate,1990,174.41531055417565,212.6742230768909,137.19411063743377
+4,YLLs (Years of Life Lost),101,Canada,2,Female,27,Age-standardized,1027,Total burden related to hepatitis C,3,Rate,1990,68.66223784417589,83.50876509205213,54.623854682753105
+4,YLLs (Years of Life Lost),101,Canada,3,Both,27,Age-standardized,1027,Total burden related to hepatitis C,3,Rate,1990,119.15053956384541,144.81798843754694,94.45719251319444
+4,YLLs (Years of Life Lost),101,Canada,1,Male,22,All Ages,1028,Total burden related to Non-alcoholic fatty liver disease (NAFLD),3,Rate,1990,25.8875178215005,36.59815081798203,18.266569800118972
+4,YLLs (Years of Life Lost),101,Canada,2,Female,22,All Ages,1028,Total burden related to Non-alcoholic fatty liver disease (NAFLD),3,Rate,1990,27.260300450651766,35.334526422555676,20.601488676253258
+4,YLLs (Years of Life Lost),101,Canada,3,Both,22,All Ages,1028,Total burden related to Non-alcoholic fatty liver disease (NAFLD),3,Rate,1990,26.582975264867194,35.507289023406884,19.53780914845672
+4,YLLs (Years of Life Lost),101,Canada,1,Male,27,Age-standardized,1028,Total burden related to Non-alcoholic fatty liver disease (NAFLD),3,Rate,1990,23.828097910371202,33.35157954758998,16.826496258810046
+4,YLLs (Years of Life Lost),101,Canada,2,Female,27,Age-standardized,1028,Total burden related to Non-alcoholic fatty liver disease (NAFLD),3,Rate,1990,22.013441436824827,28.877361822338543,16.440597685941906
+4,YLLs (Years of Life Lost),101,Canada,3,Both,27,Age-standardized,1028,Total burden related to Non-alcoholic fatty liver disease (NAFLD),3,Rate,1990,22.950579406237903,30.736355142606676,16.827836367050637
+4,YLLs (Years of Life Lost),101,Canada,1,Male,22,All Ages,1029,Total cancers,3,Rate,1990,4980.262228428141,5082.66118136184,4826.501038556922
+4,YLLs (Years of Life Lost),101,Canada,2,Female,22,All Ages,1029,Total cancers,3,Rate,1990,3947.245087839107,4035.7995239278735,3810.8397307845576
+4,YLLs (Years of Life Lost),101,Canada,3,Both,22,All Ages,1029,Total cancers,3,Rate,1990,4456.931408025615,4534.753720849035,4332.307560694075
+4,YLLs (Years of Life Lost),101,Canada,1,Male,27,Age-standardized,1029,Total cancers,3,Rate,1990,4655.178585567763,4756.4663716649175,4499.377352497909
+4,YLLs (Years of Life Lost),101,Canada,2,Female,27,Age-standardized,1029,Total cancers,3,Rate,1990,3255.58443356029,3323.362844231789,3153.173160789422
+4,YLLs (Years of Life Lost),101,Canada,3,Both,27,Age-standardized,1029,Total cancers,3,Rate,1990,3852.9815129373255,3920.152882856016,3745.452258627707
+4,YLLs (Years of Life Lost),101,Canada,1,Male,22,All Ages,687,Injuries,3,Rate,2000,2547.0633201534883,2588.2113597377192,2506.105103486826
+4,YLLs (Years of Life Lost),101,Canada,2,Female,22,All Ages,687,Injuries,3,Rate,2000,930.47678169524,959.7263377488858,898.0254077194053
+4,YLLs (Years of Life Lost),101,Canada,3,Both,22,All Ages,687,Injuries,3,Rate,2000,1724.1073079862058,1751.4965906124828,1695.0835279749977
+4,YLLs (Years of Life Lost),101,Canada,1,Male,27,Age-standardized,687,Injuries,3,Rate,2000,2472.374618948665,2513.3391372353785,2429.748131457888
+4,YLLs (Years of Life Lost),101,Canada,2,Female,27,Age-standardized,687,Injuries,3,Rate,2000,883.7098468915658,908.764161228814,860.665043137017
+4,YLLs (Years of Life Lost),101,Canada,3,Both,27,Age-standardized,687,Injuries,3,Rate,2000,1669.8847052356823,1696.0192481667693,1643.9977088080911
+4,YLLs (Years of Life Lost),101,Canada,1,Male,22,All Ages,1026,Total burden related to hepatitis B,3,Rate,2000,36.34895997827832,47.133404138960884,27.358647330154263
+4,YLLs (Years of Life Lost),101,Canada,2,Female,22,All Ages,1026,Total burden related to hepatitis B,3,Rate,2000,13.08631731238962,17.152316949541756,9.86148321865136
+4,YLLs (Years of Life Lost),101,Canada,3,Both,22,All Ages,1026,Total burden related to hepatitis B,3,Rate,2000,24.506642115697197,31.61769811023166,18.59537889560413
+4,YLLs (Years of Life Lost),101,Canada,1,Male,27,Age-standardized,1026,Total burden related to hepatitis B,3,Rate,2000,29.01414855657181,37.5488000153411,22.040007708450457
+4,YLLs (Years of Life Lost),101,Canada,2,Female,27,Age-standardized,1026,Total burden related to hepatitis B,3,Rate,2000,9.709071341961675,12.774390613828329,7.304406099986148
+4,YLLs (Years of Life Lost),101,Canada,3,Both,27,Age-standardized,1026,Total burden related to hepatitis B,3,Rate,2000,18.991255071965387,24.59099393622042,14.476674628108128
+4,YLLs (Years of Life Lost),101,Canada,1,Male,22,All Ages,1027,Total burden related to hepatitis C,3,Rate,2000,188.33701137438234,231.17781997535405,148.55385378107493
+4,YLLs (Years of Life Lost),101,Canada,2,Female,22,All Ages,1027,Total burden related to hepatitis C,3,Rate,2000,89.31023308976674,108.2572353639587,72.29534900934732
+4,YLLs (Years of Life Lost),101,Canada,3,Both,22,All Ages,1027,Total burden related to hepatitis C,3,Rate,2000,137.92543079014513,166.7501209947225,109.98009208812672
+4,YLLs (Years of Life Lost),101,Canada,1,Male,27,Age-standardized,1027,Total burden related to hepatitis C,3,Rate,2000,149.96947328520324,184.43386848298044,117.78160812072
+4,YLLs (Years of Life Lost),101,Canada,2,Female,27,Age-standardized,1027,Total burden related to hepatitis C,3,Rate,2000,64.73661314230199,78.66067785799986,52.17111666983168
+4,YLLs (Years of Life Lost),101,Canada,3,Both,27,Age-standardized,1027,Total burden related to hepatitis C,3,Rate,2000,105.59311196728953,128.59778996730662,83.92719269044207
+4,YLLs (Years of Life Lost),101,Canada,1,Male,22,All Ages,1028,Total burden related to Non-alcoholic fatty liver disease (NAFLD),3,Rate,2000,28.33227767173157,38.41537380224746,20.44356586932872
+4,YLLs (Years of Life Lost),101,Canada,2,Female,22,All Ages,1028,Total burden related to Non-alcoholic fatty liver disease (NAFLD),3,Rate,2000,31.260178138027037,40.05312342537906,23.880646961101586
+4,YLLs (Years of Life Lost),101,Canada,3,Both,22,All Ages,1028,Total burden related to Non-alcoholic fatty liver disease (NAFLD),3,Rate,2000,29.822784510952943,38.86324059813195,22.47127740218743
+4,YLLs (Years of Life Lost),101,Canada,1,Male,27,Age-standardized,1028,Total burden related to Non-alcoholic fatty liver disease (NAFLD),3,Rate,2000,22.81509380515253,30.63111425004403,16.569132830437617
+4,YLLs (Years of Life Lost),101,Canada,2,Female,27,Age-standardized,1028,Total burden related to Non-alcoholic fatty liver disease (NAFLD),3,Rate,2000,22.190504571578685,28.381151661678498,16.761820139206872
+4,YLLs (Years of Life Lost),101,Canada,3,Both,27,Age-standardized,1028,Total burden related to Non-alcoholic fatty liver disease (NAFLD),3,Rate,2000,22.599595160637794,29.626642021955792,17.005504133006205
+4,YLLs (Years of Life Lost),101,Canada,1,Male,22,All Ages,1029,Total cancers,3,Rate,2000,4849.5236551884,4946.575554760426,4673.461778795213
+4,YLLs (Years of Life Lost),101,Canada,2,Female,22,All Ages,1029,Total cancers,3,Rate,2000,4119.594328789737,4220.454749801166,3958.6889745514177
+4,YLLs (Years of Life Lost),101,Canada,3,Both,22,All Ages,1029,Total cancers,3,Rate,2000,4477.93839617104,4562.147807289824,4338.453842541575
+4,YLLs (Years of Life Lost),101,Canada,1,Male,27,Age-standardized,1029,Total cancers,3,Rate,2000,3998.480875250578,4080.922897107018,3847.037136518814
+4,YLLs (Years of Life Lost),101,Canada,2,Female,27,Age-standardized,1029,Total cancers,3,Rate,2000,3029.151288615373,3095.6667591128203,2930.2732948722855
+4,YLLs (Years of Life Lost),101,Canada,3,Both,27,Age-standardized,1029,Total cancers,3,Rate,2000,3442.1766293892397,3503.4767941633536,3335.9435026332326
+4,YLLs (Years of Life Lost),101,Canada,1,Male,22,All Ages,409,Non-communicable diseases,3,Rate,2000,12879.927275383881,12972.902621566873,12787.580823515573
+4,YLLs (Years of Life Lost),101,Canada,2,Female,22,All Ages,409,Non-communicable diseases,3,Rate,2000,10131.159436737078,10228.70568831231,10046.648388729847
+4,YLLs (Years of Life Lost),101,Canada,3,Both,22,All Ages,409,Non-communicable diseases,3,Rate,2000,11480.611516498575,11556.755911941773,11415.140035499306
+4,YLLs (Years of Life Lost),101,Canada,1,Male,27,Age-standardized,409,Non-communicable diseases,3,Rate,2000,11026.79115417116,11118.497449018756,10936.088871173819
+4,YLLs (Years of Life Lost),101,Canada,2,Female,27,Age-standardized,409,Non-communicable diseases,3,Rate,2000,7192.267440233148,7263.4277942081135,7127.005645408338
+4,YLLs (Years of Life Lost),101,Canada,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2000,8913.707176159713,8975.789603609022,8857.596133074103
+4,YLLs (Years of Life Lost),101,Canada,1,Male,22,All Ages,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2000,842.2915158035992,870.1080475953058,809.0275772205385
+4,YLLs (Years of Life Lost),101,Canada,2,Female,22,All Ages,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2000,658.7257134662789,691.0419600377114,615.4513565896824
+4,YLLs (Years of Life Lost),101,Canada,3,Both,22,All Ages,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2000,748.8436383977408,773.486464142668,716.417537038872
+4,YLLs (Years of Life Lost),101,Canada,1,Male,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2000,1043.5261898065469,1082.6167283104824,994.7390815995515
+4,YLLs (Years of Life Lost),101,Canada,2,Female,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2000,776.0434009022697,816.9676901995745,725.9928451044019
+4,YLLs (Years of Life Lost),101,Canada,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2000,901.5586859821723,934.653650035623,860.4560156100933
+4,YLLs (Years of Life Lost),101,Canada,1,Male,22,All Ages,687,Injuries,3,Rate,2010,2114.74129182007,2156.1833449213473,2072.492401416897
+4,YLLs (Years of Life Lost),101,Canada,2,Female,22,All Ages,687,Injuries,3,Rate,2010,854.3579924257267,885.7990641324196,813.258597461401
+4,YLLs (Years of Life Lost),101,Canada,3,Both,22,All Ages,687,Injuries,3,Rate,2010,1472.8885562188452,1502.9365889108367,1440.690352677557
+4,YLLs (Years of Life Lost),101,Canada,1,Male,27,Age-standardized,687,Injuries,3,Rate,2010,2004.9864845516445,2042.8444154278468,1966.655101423403
+4,YLLs (Years of Life Lost),101,Canada,2,Female,27,Age-standardized,687,Injuries,3,Rate,2010,764.6167997439684,789.0000459812495,741.8050284656052
+4,YLLs (Years of Life Lost),101,Canada,3,Both,27,Age-standardized,687,Injuries,3,Rate,2010,1378.1235878588343,1403.8678670170107,1352.3260776334912
+4,YLLs (Years of Life Lost),101,Canada,1,Male,22,All Ages,1026,Total burden related to hepatitis B,3,Rate,2010,43.402758555767655,57.836227059115984,31.84951201596521
+4,YLLs (Years of Life Lost),101,Canada,2,Female,22,All Ages,1026,Total burden related to hepatitis B,3,Rate,2010,17.360763385405274,22.516155867296348,13.203695487940488
+4,YLLs (Years of Life Lost),101,Canada,3,Both,22,All Ages,1026,Total burden related to hepatitis B,3,Rate,2010,30.140820025922707,39.75634024414348,22.528874429687953
+4,YLLs (Years of Life Lost),101,Canada,1,Male,27,Age-standardized,1026,Total burden related to hepatitis B,3,Rate,2010,30.19983730803505,39.413482812760286,22.501290759029025
+4,YLLs (Years of Life Lost),101,Canada,2,Female,27,Age-standardized,1026,Total burden related to hepatitis B,3,Rate,2010,11.645462367016796,15.042500503668364,8.986404262755496
+4,YLLs (Years of Life Lost),101,Canada,3,Both,27,Age-standardized,1026,Total burden related to hepatitis B,3,Rate,2010,20.620670602034096,26.910402721171756,15.550748677431171
+4,YLLs (Years of Life Lost),101,Canada,1,Male,22,All Ages,1027,Total burden related to hepatitis C,3,Rate,2010,207.94766781601655,255.85500888062893,161.01030860635828
+4,YLLs (Years of Life Lost),101,Canada,2,Female,22,All Ages,1027,Total burden related to hepatitis C,3,Rate,2010,107.92694027440862,131.2449996351678,87.13666865135414
+4,YLLs (Years of Life Lost),101,Canada,3,Both,22,All Ages,1027,Total burden related to hepatitis C,3,Rate,2010,157.01191071716002,191.8902306870025,125.12595880462801
+4,YLLs (Years of Life Lost),101,Canada,1,Male,27,Age-standardized,1027,Total burden related to hepatitis C,3,Rate,2010,142.38442520948524,174.23607686100226,111.07822515472702
+4,YLLs (Years of Life Lost),101,Canada,2,Female,27,Age-standardized,1027,Total burden related to hepatitis C,3,Rate,2010,69.52922343256343,84.44217964085645,56.348176562211876
+4,YLLs (Years of Life Lost),101,Canada,3,Both,27,Age-standardized,1027,Total burden related to hepatitis C,3,Rate,2010,104.79702805876127,127.21850030072183,83.81375814168514
+4,YLLs (Years of Life Lost),101,Canada,1,Male,22,All Ages,1028,Total burden related to Non-alcoholic fatty liver disease (NAFLD),3,Rate,2010,34.80087053618443,46.6766875551076,25.115366662274784
+4,YLLs (Years of Life Lost),101,Canada,2,Female,22,All Ages,1028,Total burden related to Non-alcoholic fatty liver disease (NAFLD),3,Rate,2010,40.03646324148207,49.9769677634845,31.32222801530395
+4,YLLs (Years of Life Lost),101,Canada,3,Both,22,All Ages,1028,Total burden related to Non-alcoholic fatty liver disease (NAFLD),3,Rate,2010,37.4671066740355,48.171341408697245,28.487166983611914
+4,YLLs (Years of Life Lost),101,Canada,1,Male,27,Age-standardized,1028,Total burden related to Non-alcoholic fatty liver disease (NAFLD),3,Rate,2010,23.707226315113104,31.66960041047149,17.298671014959996
+4,YLLs (Years of Life Lost),101,Canada,2,Female,27,Age-standardized,1028,Total burden related to Non-alcoholic fatty liver disease (NAFLD),3,Rate,2010,25.179975174904722,31.72451343644481,19.62764138010098
+4,YLLs (Years of Life Lost),101,Canada,3,Both,27,Age-standardized,1028,Total burden related to Non-alcoholic fatty liver disease (NAFLD),3,Rate,2010,24.561852922436227,31.65959360113629,18.733255271126133
+4,YLLs (Years of Life Lost),101,Canada,1,Male,22,All Ages,1029,Total cancers,3,Rate,2010,4868.753668712454,5010.610818590769,4686.919506352435
+4,YLLs (Years of Life Lost),101,Canada,2,Female,22,All Ages,1029,Total cancers,3,Rate,2010,4220.127905690451,4346.576517015264,4008.6753807757113
+4,YLLs (Years of Life Lost),101,Canada,3,Both,22,All Ages,1029,Total cancers,3,Rate,2010,4538.439691546014,4647.668345605589,4347.155674606356
+4,YLLs (Years of Life Lost),101,Canada,1,Male,27,Age-standardized,1029,Total cancers,3,Rate,2010,3386.672561245579,3484.1647913393567,3260.297986529697
+4,YLLs (Years of Life Lost),101,Canada,2,Female,27,Age-standardized,1029,Total cancers,3,Rate,2010,2704.4106567236454,2776.929664999804,2591.0031476527633
+4,YLLs (Years of Life Lost),101,Canada,3,Both,27,Age-standardized,1029,Total cancers,3,Rate,2010,3004.816155789778,3072.1807550804488,2896.323469220654
+4,YLLs (Years of Life Lost),101,Canada,1,Male,22,All Ages,409,Non-communicable diseases,3,Rate,2010,11993.750888446582,12096.526683520533,11892.919200298178
+4,YLLs (Years of Life Lost),101,Canada,2,Female,22,All Ages,409,Non-communicable diseases,3,Rate,2010,9631.554356450095,9736.195676669953,9546.207593990297
+4,YLLs (Years of Life Lost),101,Canada,3,Both,22,All Ages,409,Non-communicable diseases,3,Rate,2010,10790.797543366369,10879.31240096857,10718.526210386186
+4,YLLs (Years of Life Lost),101,Canada,1,Male,27,Age-standardized,409,Non-communicable diseases,3,Rate,2010,8693.114254580429,8791.767018641258,8609.28086952873
+4,YLLs (Years of Life Lost),101,Canada,2,Female,27,Age-standardized,409,Non-communicable diseases,3,Rate,2010,5987.612153607415,6068.287101938713,5924.524023973483
+4,YLLs (Years of Life Lost),101,Canada,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2010,7242.158775829112,7317.3361889129765,7182.239571467071
+4,YLLs (Years of Life Lost),101,Canada,1,Male,22,All Ages,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2010,761.8025347722308,791.1723469351382,720.8799975164062
+4,YLLs (Years of Life Lost),101,Canada,2,Female,22,All Ages,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2010,671.8816507948741,705.4567589481404,621.4080400646465
+4,YLLs (Years of Life Lost),101,Canada,3,Both,22,All Ages,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2010,716.0101433653622,743.2296956896148,673.037341314745
+4,YLLs (Years of Life Lost),101,Canada,1,Male,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2010,919.3336663017495,961.3273615832645,856.0765219279862
+4,YLLs (Years of Life Lost),101,Canada,2,Female,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2010,764.5144084687334,803.7258636051798,708.3546379629811
+4,YLLs (Years of Life Lost),101,Canada,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2010,838.9053863003086,874.4360367535028,785.018325661202
+4,YLLs (Years of Life Lost),101,Canada,1,Male,22,All Ages,687,Injuries,3,Rate,2019,1932.126136899877,2002.5666824784087,1866.1000228176129
+4,YLLs (Years of Life Lost),101,Canada,2,Female,22,All Ages,687,Injuries,3,Rate,2019,808.5552853002041,849.6220800041866,756.3962219353863
+4,YLLs (Years of Life Lost),101,Canada,3,Both,22,All Ages,687,Injuries,3,Rate,2019,1361.4131553260597,1402.976028203453,1312.5180115053558
+4,YLLs (Years of Life Lost),101,Canada,1,Male,27,Age-standardized,687,Injuries,3,Rate,2019,1840.699349776953,1905.1252249795464,1776.4017050335246
+4,YLLs (Years of Life Lost),101,Canada,2,Female,27,Age-standardized,687,Injuries,3,Rate,2019,712.4996475819092,742.3655976462999,682.1270850955796
+4,YLLs (Years of Life Lost),101,Canada,3,Both,27,Age-standardized,687,Injuries,3,Rate,2019,1273.8687908676538,1311.9051746278308,1234.032638451967
+4,YLLs (Years of Life Lost),101,Canada,1,Male,22,All Ages,1026,Total burden related to hepatitis B,3,Rate,2019,43.76969260053591,59.054782786506394,32.279513014811535
+4,YLLs (Years of Life Lost),101,Canada,2,Female,22,All Ages,1026,Total burden related to hepatitis B,3,Rate,2019,17.038240678836246,22.361034611872054,12.798981220251079
+4,YLLs (Years of Life Lost),101,Canada,3,Both,22,All Ages,1026,Total burden related to hepatitis B,3,Rate,2019,30.191566569311714,39.6969786593121,22.450320242861604
+4,YLLs (Years of Life Lost),101,Canada,1,Male,27,Age-standardized,1026,Total burden related to hepatitis B,3,Rate,2019,28.8422198563483,38.82387704883975,21.492902558554142
+4,YLLs (Years of Life Lost),101,Canada,2,Female,27,Age-standardized,1026,Total burden related to hepatitis B,3,Rate,2019,10.762018252377475,13.951839094416421,8.223897046869462
+4,YLLs (Years of Life Lost),101,Canada,3,Both,27,Age-standardized,1026,Total burden related to hepatitis B,3,Rate,2019,19.53412097134094,25.80370973252291,14.680737058050017
+4,YLLs (Years of Life Lost),101,Canada,1,Male,22,All Ages,1027,Total burden related to hepatitis C,3,Rate,2019,221.46343224183,277.2324463573216,169.65886144260296
+4,YLLs (Years of Life Lost),101,Canada,2,Female,22,All Ages,1027,Total burden related to hepatitis C,3,Rate,2019,119.75689959782615,147.0613596494762,94.10386490750032
+4,YLLs (Years of Life Lost),101,Canada,3,Both,22,All Ages,1027,Total burden related to hepatitis C,3,Rate,2019,169.80203642673507,209.81241992928207,134.37388087284393
+4,YLLs (Years of Life Lost),101,Canada,1,Male,27,Age-standardized,1027,Total burden related to hepatitis C,3,Rate,2019,141.38297663266593,175.2229219267687,110.827604684101
+4,YLLs (Years of Life Lost),101,Canada,2,Female,27,Age-standardized,1027,Total burden related to hepatitis C,3,Rate,2019,71.32257147200735,86.88518121522209,57.39740528413681
+4,YLLs (Years of Life Lost),101,Canada,3,Both,27,Age-standardized,1027,Total burden related to hepatitis C,3,Rate,2019,105.31458437045302,129.0841213365322,83.98781115191741
+4,YLLs (Years of Life Lost),101,Canada,1,Male,22,All Ages,1028,Total burden related to Non-alcoholic fatty liver disease (NAFLD),3,Rate,2019,40.311356348882846,54.38278797486939,29.084862966969933
+4,YLLs (Years of Life Lost),101,Canada,2,Female,22,All Ages,1028,Total burden related to Non-alcoholic fatty liver disease (NAFLD),3,Rate,2019,46.204223649469704,59.93013705194963,35.28366934385514
+4,YLLs (Years of Life Lost),101,Canada,3,Both,22,All Ages,1028,Total burden related to Non-alcoholic fatty liver disease (NAFLD),3,Rate,2019,43.30461294889921,56.906179035733444,32.94079027376963
+4,YLLs (Years of Life Lost),101,Canada,1,Male,27,Age-standardized,1028,Total burden related to Non-alcoholic fatty liver disease (NAFLD),3,Rate,2019,24.60378384409459,33.08752881276,18.06569614187676
+4,YLLs (Years of Life Lost),101,Canada,2,Female,27,Age-standardized,1028,Total burden related to Non-alcoholic fatty liver disease (NAFLD),3,Rate,2019,26.301600139053566,33.76448192417543,20.40045020498296
+4,YLLs (Years of Life Lost),101,Canada,3,Both,27,Age-standardized,1028,Total burden related to Non-alcoholic fatty liver disease (NAFLD),3,Rate,2019,25.542225406036952,33.582332459414104,19.671378391125437
+4,YLLs (Years of Life Lost),101,Canada,1,Male,22,All Ages,1029,Total cancers,3,Rate,2019,5264.702479879243,5487.769194921269,5002.508442392907
+4,YLLs (Years of Life Lost),101,Canada,2,Female,22,All Ages,1029,Total cancers,3,Rate,2019,4457.072608110888,4645.543048458698,4170.139336823984
+4,YLLs (Years of Life Lost),101,Canada,3,Both,22,All Ages,1029,Total cancers,3,Rate,2019,4854.470360143528,5021.566145036461,4580.261533303633
+4,YLLs (Years of Life Lost),101,Canada,1,Male,27,Age-standardized,1029,Total cancers,3,Rate,2019,3149.953126365938,3270.463908130095,2996.488121004735
+4,YLLs (Years of Life Lost),101,Canada,2,Female,27,Age-standardized,1029,Total cancers,3,Rate,2019,2555.8524935980045,2648.3934212435915,2419.502091454541
+4,YLLs (Years of Life Lost),101,Canada,3,Both,27,Age-standardized,1029,Total cancers,3,Rate,2019,2825.225979926819,2916.1100613298495,2689.7628348370067
+4,YLLs (Years of Life Lost),101,Canada,1,Male,22,All Ages,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2019,706.788308121347,764.1763389787792,646.5672112546453
+4,YLLs (Years of Life Lost),101,Canada,2,Female,22,All Ages,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2019,641.2750525889556,696.3671405895864,572.6827598630817
+4,YLLs (Years of Life Lost),101,Canada,3,Both,22,All Ages,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2019,673.511131747231,724.0411421102118,613.4235712049642
+4,YLLs (Years of Life Lost),101,Canada,1,Male,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2019,791.5348966932139,875.7699478632567,713.0737890970172
+4,YLLs (Years of Life Lost),101,Canada,2,Female,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2019,672.40363753003,732.4041579275971,615.7631139313298
+4,YLLs (Years of Life Lost),101,Canada,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2019,729.759839119652,801.526017582172,666.6014253884226
+4,YLLs (Years of Life Lost),101,Canada,1,Male,22,All Ages,409,Non-communicable diseases,3,Rate,2019,13186.445365248495,13414.975062070986,12974.75397008118
+4,YLLs (Years of Life Lost),101,Canada,2,Female,22,All Ages,409,Non-communicable diseases,3,Rate,2019,10335.842550394924,10505.989054102505,10183.668429447396
+4,YLLs (Years of Life Lost),101,Canada,3,Both,22,All Ages,409,Non-communicable diseases,3,Rate,2019,11738.493925931994,11930.389135079373,11562.2126676302
+4,YLLs (Years of Life Lost),101,Canada,1,Male,27,Age-standardized,409,Non-communicable diseases,3,Rate,2019,8324.296164952691,8493.785081904023,8153.410650072225
+4,YLLs (Years of Life Lost),101,Canada,2,Female,27,Age-standardized,409,Non-communicable diseases,3,Rate,2019,5735.817208987423,5842.809596850969,5634.5994905517355
+4,YLLs (Years of Life Lost),101,Canada,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2019,6959.97598922253,7095.433681705809,6828.064376526784
+3,YLDs (Years Lived with Disability),101,Canada,1,Male,22,All Ages,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,1990,491.13792958998147,640.3472285968346,358.28107365058895
+3,YLDs (Years Lived with Disability),101,Canada,2,Female,22,All Ages,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,1990,511.90127674849543,682.5178822089476,373.063182383697
+3,YLDs (Years Lived with Disability),101,Canada,3,Both,22,All Ages,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,1990,501.6567284325364,661.3980959945532,368.52544091907725
+3,YLDs (Years Lived with Disability),101,Canada,1,Male,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,1990,501.5537959947922,656.9464241834849,367.6923501051558
+3,YLDs (Years Lived with Disability),101,Canada,2,Female,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,1990,518.0431976915842,691.1619427052055,376.70273606201084
+3,YLDs (Years Lived with Disability),101,Canada,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,1990,509.9043783640904,674.0255071327373,376.2456564916448
+3,YLDs (Years Lived with Disability),101,Canada,1,Male,22,All Ages,409,Non-communicable diseases,3,Rate,1990,8445.13712790207,10972.659742676027,6289.161718629211
+3,YLDs (Years Lived with Disability),101,Canada,2,Female,22,All Ages,409,Non-communicable diseases,3,Rate,1990,11264.618328579243,14684.155479142983,8215.0057190053
+3,YLDs (Years Lived with Disability),101,Canada,3,Both,22,All Ages,409,Non-communicable diseases,3,Rate,1990,9873.49814136842,12924.264889066468,7245.166626547752
+3,YLDs (Years Lived with Disability),101,Canada,1,Male,27,Age-standardized,409,Non-communicable diseases,3,Rate,1990,7966.782940693537,10342.34443273612,5916.3353003028415
+3,YLDs (Years Lived with Disability),101,Canada,2,Female,27,Age-standardized,409,Non-communicable diseases,3,Rate,1990,9978.420087705326,13056.410684467837,7239.254362667738
+3,YLDs (Years Lived with Disability),101,Canada,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,1990,8970.416036745179,11745.468992449976,6575.46835001733
+3,YLDs (Years Lived with Disability),101,Canada,1,Male,22,All Ages,1026,Total burden related to hepatitis B,3,Rate,1990,1.6143370925560927,2.5187280059302743,0.9829413369980232
+3,YLDs (Years Lived with Disability),101,Canada,2,Female,22,All Ages,1026,Total burden related to hepatitis B,3,Rate,1990,1.1711681326457546,1.8592930651078108,0.6901409124620647
+3,YLDs (Years Lived with Disability),101,Canada,3,Both,22,All Ages,1026,Total burden related to hepatitis B,3,Rate,1990,1.389825836881706,2.11296306428812,0.8574045349209142
+3,YLDs (Years Lived with Disability),101,Canada,1,Male,27,Age-standardized,1026,Total burden related to hepatitis B,3,Rate,1990,1.4775731000240773,2.2758518443717315,0.9041115108304699
+3,YLDs (Years Lived with Disability),101,Canada,2,Female,27,Age-standardized,1026,Total burden related to hepatitis B,3,Rate,1990,1.0446683834308204,1.660877959300051,0.6172741784803346
+3,YLDs (Years Lived with Disability),101,Canada,3,Both,27,Age-standardized,1026,Total burden related to hepatitis B,3,Rate,1990,1.2554725033359897,1.917617991893682,0.7784101714726174
+3,YLDs (Years Lived with Disability),101,Canada,1,Male,22,All Ages,1027,Total burden related to hepatitis C,3,Rate,1990,1.4714176226857167,2.200441149489027,0.8777132408804199
+3,YLDs (Years Lived with Disability),101,Canada,2,Female,22,All Ages,1027,Total burden related to hepatitis C,3,Rate,1990,1.2452797102205204,1.840426994725137,0.769968519940301
+3,YLDs (Years Lived with Disability),101,Canada,3,Both,22,All Ages,1027,Total burden related to hepatitis C,3,Rate,1990,1.3568552068219846,1.9851242467619548,0.8450829545259436
+3,YLDs (Years Lived with Disability),101,Canada,1,Male,27,Age-standardized,1027,Total burden related to hepatitis C,3,Rate,1990,1.359769131365975,2.027622597520088,0.8120142407392255
+3,YLDs (Years Lived with Disability),101,Canada,2,Female,27,Age-standardized,1027,Total burden related to hepatitis C,3,Rate,1990,1.0135204928993742,1.4909013525670123,0.6342385114339509
+3,YLDs (Years Lived with Disability),101,Canada,3,Both,27,Age-standardized,1027,Total burden related to hepatitis C,3,Rate,1990,1.1711100003005563,1.7219033811411901,0.7313413377567506
+3,YLDs (Years Lived with Disability),101,Canada,1,Male,22,All Ages,1028,Total burden related to Non-alcoholic fatty liver disease (NAFLD),3,Rate,1990,0.21920127379326299,0.34169253990158543,0.12843624881389923
+3,YLDs (Years Lived with Disability),101,Canada,2,Female,22,All Ages,1028,Total burden related to Non-alcoholic fatty liver disease (NAFLD),3,Rate,1990,0.42154768835759265,0.6483238554569678,0.2528169807483793
+3,YLDs (Years Lived with Disability),101,Canada,3,Both,22,All Ages,1028,Total burden related to Non-alcoholic fatty liver disease (NAFLD),3,Rate,1990,0.32171081693509046,0.4940596185209406,0.19286545555658455
+3,YLDs (Years Lived with Disability),101,Canada,1,Male,27,Age-standardized,1028,Total burden related to Non-alcoholic fatty liver disease (NAFLD),3,Rate,1990,0.20447064003592996,0.3142625288002636,0.1215539794752977
+3,YLDs (Years Lived with Disability),101,Canada,2,Female,27,Age-standardized,1028,Total burden related to Non-alcoholic fatty liver disease (NAFLD),3,Rate,1990,0.32983442270874075,0.504473012876393,0.19789206365103057
+3,YLDs (Years Lived with Disability),101,Canada,3,Both,27,Age-standardized,1028,Total burden related to Non-alcoholic fatty liver disease (NAFLD),3,Rate,1990,0.27219992945051263,0.4166496727974338,0.1624631624088295
+3,YLDs (Years Lived with Disability),101,Canada,1,Male,22,All Ages,1029,Total cancers,3,Rate,1990,216.020752180235,277.9418808567626,158.33981350841188
+3,YLDs (Years Lived with Disability),101,Canada,2,Female,22,All Ages,1029,Total cancers,3,Rate,1990,220.08176979068213,287.54126183384864,160.76939171848184
+3,YLDs (Years Lived with Disability),101,Canada,3,Both,22,All Ages,1029,Total cancers,3,Rate,1990,218.0780807513103,282.7342539871223,160.27984098925677
+3,YLDs (Years Lived with Disability),101,Canada,1,Male,27,Age-standardized,1029,Total cancers,3,Rate,1990,202.63478508662897,259.94332793203336,148.4018189478185
+3,YLDs (Years Lived with Disability),101,Canada,2,Female,27,Age-standardized,1029,Total cancers,3,Rate,1990,178.80690099252448,233.82782638989613,130.3528781764934
+3,YLDs (Years Lived with Disability),101,Canada,3,Both,27,Age-standardized,1029,Total cancers,3,Rate,1990,186.84736667634013,242.34577387987918,136.922591523285
+3,YLDs (Years Lived with Disability),101,Canada,1,Male,22,All Ages,687,Injuries,3,Rate,1990,1026.0063202888134,1450.489788069169,709.9742697854524
+3,YLDs (Years Lived with Disability),101,Canada,2,Female,22,All Ages,687,Injuries,3,Rate,1990,844.9855249789274,1157.87112107093,591.0158297943799
+3,YLDs (Years Lived with Disability),101,Canada,3,Both,22,All Ages,687,Injuries,3,Rate,1990,934.3004253939606,1304.5847104588054,646.6060991322436
+3,YLDs (Years Lived with Disability),101,Canada,1,Male,27,Age-standardized,687,Injuries,3,Rate,1990,952.1911374282436,1347.2974911059227,659.1454659564561
+3,YLDs (Years Lived with Disability),101,Canada,2,Female,27,Age-standardized,687,Injuries,3,Rate,1990,716.1034355169618,985.2207497103697,499.43831179923586
+3,YLDs (Years Lived with Disability),101,Canada,3,Both,27,Age-standardized,687,Injuries,3,Rate,1990,835.1785690088235,1165.4594892026216,579.5298346494816
+3,YLDs (Years Lived with Disability),101,Canada,1,Male,22,All Ages,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2000,490.56412466964224,638.1341583005924,367.91942308422813
+3,YLDs (Years Lived with Disability),101,Canada,2,Female,22,All Ages,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2000,501.06359746120336,670.8302496236204,368.4792995994814
+3,YLDs (Years Lived with Disability),101,Canada,3,Both,22,All Ages,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2000,495.9090932518021,648.4441488710456,371.13867762550655
+3,YLDs (Years Lived with Disability),101,Canada,1,Male,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2000,506.78603109933016,662.815646698846,379.0214423207726
+3,YLDs (Years Lived with Disability),101,Canada,2,Female,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2000,512.9128647701039,684.7033710272602,380.8195309843857
+3,YLDs (Years Lived with Disability),101,Canada,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2000,510.02648742290233,665.7540265634792,379.4488595946992
+3,YLDs (Years Lived with Disability),101,Canada,1,Male,22,All Ages,409,Non-communicable diseases,3,Rate,2000,8856.557504071832,11394.059319565455,6592.202729295441
+3,YLDs (Years Lived with Disability),101,Canada,2,Female,22,All Ages,409,Non-communicable diseases,3,Rate,2000,11762.622893812217,15309.94231288604,8642.985685818983
+3,YLDs (Years Lived with Disability),101,Canada,3,Both,22,All Ages,409,Non-communicable diseases,3,Rate,2000,10335.948756778273,13506.49322707041,7615.070017523049
+3,YLDs (Years Lived with Disability),101,Canada,1,Male,27,Age-standardized,409,Non-communicable diseases,3,Rate,2000,7921.495502773572,10212.348880607566,5888.878550656591
+3,YLDs (Years Lived with Disability),101,Canada,2,Female,27,Age-standardized,409,Non-communicable diseases,3,Rate,2000,9963.677198128591,13063.553394990962,7258.350303863464
+3,YLDs (Years Lived with Disability),101,Canada,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2000,8948.502919226761,11719.289398114726,6550.084216095597
+3,YLDs (Years Lived with Disability),101,Canada,1,Male,22,All Ages,1026,Total burden related to hepatitis B,3,Rate,2000,1.6704124961944775,2.6154964254305577,1.0037266772735378
+3,YLDs (Years Lived with Disability),101,Canada,2,Female,22,All Ages,1026,Total burden related to hepatitis B,3,Rate,2000,1.220201781789133,1.9816748224052945,0.7349449861059104
+3,YLDs (Years Lived with Disability),101,Canada,3,Both,22,All Ages,1026,Total burden related to hepatitis B,3,Rate,2000,1.4412236434187025,2.212054397974794,0.9156414383593011
+3,YLDs (Years Lived with Disability),101,Canada,1,Male,27,Age-standardized,1026,Total burden related to hepatitis B,3,Rate,2000,1.4517240228638915,2.246153232026171,0.8903933335848713
+3,YLDs (Years Lived with Disability),101,Canada,2,Female,27,Age-standardized,1026,Total burden related to hepatitis B,3,Rate,2000,1.0329399092072589,1.658152066426391,0.6255580263745139
+3,YLDs (Years Lived with Disability),101,Canada,3,Both,27,Age-standardized,1026,Total burden related to hepatitis B,3,Rate,2000,1.235872670450206,1.8863978916681825,0.7937488735637478
+3,YLDs (Years Lived with Disability),101,Canada,1,Male,22,All Ages,1027,Total burden related to hepatitis C,3,Rate,2000,1.6016744865851447,2.4267305359505387,0.9732705025388018
+3,YLDs (Years Lived with Disability),101,Canada,2,Female,22,All Ages,1027,Total burden related to hepatitis C,3,Rate,2000,1.438766373304237,2.126617816522324,0.9064210638632583
+3,YLDs (Years Lived with Disability),101,Canada,3,Both,22,All Ages,1027,Total burden related to hepatitis C,3,Rate,2000,1.5187428228195832,2.2486112582414144,0.958480322190692
+3,YLDs (Years Lived with Disability),101,Canada,1,Male,27,Age-standardized,1027,Total burden related to hepatitis C,3,Rate,2000,1.3207002632657077,1.996220013110707,0.8017076475878381
+3,YLDs (Years Lived with Disability),101,Canada,2,Female,27,Age-standardized,1027,Total burden related to hepatitis C,3,Rate,2000,1.0578670625186088,1.5787308527340909,0.6543559440863964
+3,YLDs (Years Lived with Disability),101,Canada,3,Both,27,Age-standardized,1027,Total burden related to hepatitis C,3,Rate,2000,1.179289011518443,1.7511584205903978,0.7413476799206927
+3,YLDs (Years Lived with Disability),101,Canada,1,Male,22,All Ages,1028,Total burden related to Non-alcoholic fatty liver disease (NAFLD),3,Rate,2000,0.2733432020235278,0.4190725367348583,0.16671220710117637
+3,YLDs (Years Lived with Disability),101,Canada,2,Female,22,All Ages,1028,Total burden related to Non-alcoholic fatty liver disease (NAFLD),3,Rate,2000,0.5037880785338582,0.7535239275472715,0.31025418024919715
+3,YLDs (Years Lived with Disability),101,Canada,3,Both,22,All Ages,1028,Total burden related to Non-alcoholic fatty liver disease (NAFLD),3,Rate,2000,0.3906558185062748,0.5821862680686669,0.24198895735120085
+3,YLDs (Years Lived with Disability),101,Canada,1,Male,27,Age-standardized,1028,Total burden related to Non-alcoholic fatty liver disease (NAFLD),3,Rate,2000,0.22443649597689697,0.34043394365064683,0.13789020938739913
+3,YLDs (Years Lived with Disability),101,Canada,2,Female,27,Age-standardized,1028,Total burden related to Non-alcoholic fatty liver disease (NAFLD),3,Rate,2000,0.3536294215545204,0.5202669847162884,0.2194903308430794
+3,YLDs (Years Lived with Disability),101,Canada,3,Both,27,Age-standardized,1028,Total burden related to Non-alcoholic fatty liver disease (NAFLD),3,Rate,2000,0.29421141709625703,0.43656702434423345,0.18270748530532546
+3,YLDs (Years Lived with Disability),101,Canada,1,Male,22,All Ages,1029,Total cancers,3,Rate,2000,278.29724435652156,362.34713747073795,203.35101387212413
+3,YLDs (Years Lived with Disability),101,Canada,2,Female,22,All Ages,1029,Total cancers,3,Rate,2000,266.51241246754233,346.1347453930451,194.0332684715562
+3,YLDs (Years Lived with Disability),101,Canada,3,Both,22,All Ages,1029,Total cancers,3,Rate,2000,272.29793777769424,352.5081846511591,198.64550475081091
+3,YLDs (Years Lived with Disability),101,Canada,1,Male,27,Age-standardized,1029,Total cancers,3,Rate,2000,230.9410107982295,299.7804912978516,169.06460332470343
+3,YLDs (Years Lived with Disability),101,Canada,2,Female,27,Age-standardized,1029,Total cancers,3,Rate,2000,193.94274511406198,253.56834606917624,140.20646728069468
+3,YLDs (Years Lived with Disability),101,Canada,3,Both,27,Age-standardized,1029,Total cancers,3,Rate,2000,208.5784183705011,271.2968555187311,152.1677040353563
+3,YLDs (Years Lived with Disability),101,Canada,1,Male,22,All Ages,687,Injuries,3,Rate,2000,1035.4135235922838,1461.13013130496,715.8045718514835
+3,YLDs (Years Lived with Disability),101,Canada,2,Female,22,All Ages,687,Injuries,3,Rate,2000,919.7404183390624,1264.5541179488737,641.0738551056326
+3,YLDs (Years Lived with Disability),101,Canada,3,Both,22,All Ages,687,Injuries,3,Rate,2000,976.5277942177311,1350.9058325347428,679.2675275851152
+3,YLDs (Years Lived with Disability),101,Canada,1,Male,27,Age-standardized,687,Injuries,3,Rate,2000,894.8546902636032,1260.8530151254304,619.2597420990662
+3,YLDs (Years Lived with Disability),101,Canada,2,Female,27,Age-standardized,687,Injuries,3,Rate,2000,708.3946916831607,975.1975037562562,495.87905337030134
+3,YLDs (Years Lived with Disability),101,Canada,3,Both,27,Age-standardized,687,Injuries,3,Rate,2000,803.7654693660755,1116.01303999814,559.2137223257222
+3,YLDs (Years Lived with Disability),101,Canada,1,Male,22,All Ages,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2010,516.6064874210163,677.6587657256139,378.4018225768094
+3,YLDs (Years Lived with Disability),101,Canada,2,Female,22,All Ages,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2010,499.56878669079157,663.0177711029504,367.37755183722834
+3,YLDs (Years Lived with Disability),101,Canada,3,Both,22,All Ages,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2010,507.93000398355343,666.3290320132127,374.85082744616477
+3,YLDs (Years Lived with Disability),101,Canada,1,Male,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2010,535.395095486493,702.5793130866537,391.29234250216297
+3,YLDs (Years Lived with Disability),101,Canada,2,Female,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2010,516.2742322453887,688.8904543924039,378.5521940812804
+3,YLDs (Years Lived with Disability),101,Canada,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2010,525.9310664214499,691.4855526851915,387.62297206990485
+3,YLDs (Years Lived with Disability),101,Canada,1,Male,22,All Ages,687,Injuries,3,Rate,2010,1078.5640132956482,1513.1122023958042,747.2414765128173
+3,YLDs (Years Lived with Disability),101,Canada,2,Female,22,All Ages,687,Injuries,3,Rate,2010,1043.972504274913,1438.065021070932,729.1806177876682
+3,YLDs (Years Lived with Disability),101,Canada,3,Both,22,All Ages,687,Injuries,3,Rate,2010,1060.9482176053987,1467.7280354890227,736.2428386663789
+3,YLDs (Years Lived with Disability),101,Canada,1,Male,27,Age-standardized,687,Injuries,3,Rate,2010,856.5980297910925,1205.1662047428256,590.3909722237295
+3,YLDs (Years Lived with Disability),101,Canada,2,Female,27,Age-standardized,687,Injuries,3,Rate,2010,721.2523257079539,990.8066965951937,502.9267459715001
+3,YLDs (Years Lived with Disability),101,Canada,3,Both,27,Age-standardized,687,Injuries,3,Rate,2010,791.8171373128747,1099.961251963276,549.1292561761252
+3,YLDs (Years Lived with Disability),101,Canada,1,Male,22,All Ages,1026,Total burden related to hepatitis B,3,Rate,2019,1.7609433304737478,2.6511073901678186,1.0660613421009801
+3,YLDs (Years Lived with Disability),101,Canada,2,Female,22,All Ages,1026,Total burden related to hepatitis B,3,Rate,2019,1.2255567180787637,1.8539956077582223,0.7339166981245069
+3,YLDs (Years Lived with Disability),101,Canada,3,Both,22,All Ages,1026,Total burden related to hepatitis B,3,Rate,2019,1.488996003414115,2.19661545419883,0.9293973403718165
+3,YLDs (Years Lived with Disability),101,Canada,1,Male,27,Age-standardized,1026,Total burden related to hepatitis B,3,Rate,2019,1.3897459614236296,2.1051039747312883,0.8420338094459122
+3,YLDs (Years Lived with Disability),101,Canada,2,Female,27,Age-standardized,1026,Total burden related to hepatitis B,3,Rate,2019,0.9594719667185867,1.4600538736823303,0.5672068411545449
+3,YLDs (Years Lived with Disability),101,Canada,3,Both,27,Age-standardized,1026,Total burden related to hepatitis B,3,Rate,2019,1.169642844933588,1.7361374072638505,0.7281740894614701
+3,YLDs (Years Lived with Disability),101,Canada,1,Male,22,All Ages,1027,Total burden related to hepatitis C,3,Rate,2019,2.1516938388558993,3.3203473035924214,1.2960232526186046
+3,YLDs (Years Lived with Disability),101,Canada,2,Female,22,All Ages,1027,Total burden related to hepatitis C,3,Rate,2019,1.9955302617875905,2.9940509707539236,1.2329986278999998
+3,YLDs (Years Lived with Disability),101,Canada,3,Both,22,All Ages,1027,Total burden related to hepatitis C,3,Rate,2019,2.0723712215460988,3.108429024393512,1.3486419742171794
+3,YLDs (Years Lived with Disability),101,Canada,1,Male,27,Age-standardized,1027,Total burden related to hepatitis C,3,Rate,2019,1.3644103799439897,2.068960283941179,0.8500633193655257
+3,YLDs (Years Lived with Disability),101,Canada,2,Female,27,Age-standardized,1027,Total burden related to hepatitis C,3,Rate,2019,1.2056409612802526,1.8147429455630668,0.7579751440937308
+3,YLDs (Years Lived with Disability),101,Canada,3,Both,27,Age-standardized,1027,Total burden related to hepatitis C,3,Rate,2019,1.2813253634363633,1.8939813438159356,0.8425578202924473
+3,YLDs (Years Lived with Disability),101,Canada,1,Male,22,All Ages,1028,Total burden related to Non-alcoholic fatty liver disease (NAFLD),3,Rate,2019,0.4781332845637104,0.7195392515595714,0.29207881591242174
+3,YLDs (Years Lived with Disability),101,Canada,2,Female,22,All Ages,1028,Total burden related to Non-alcoholic fatty liver disease (NAFLD),3,Rate,2019,0.8025617033620828,1.1968439620428806,0.506830162245905
+3,YLDs (Years Lived with Disability),101,Canada,3,Both,22,All Ages,1028,Total burden related to Non-alcoholic fatty liver disease (NAFLD),3,Rate,2019,0.6429253045205151,0.9458912782712745,0.40257446083895976
+3,YLDs (Years Lived with Disability),101,Canada,1,Male,27,Age-standardized,1028,Total burden related to Non-alcoholic fatty liver disease (NAFLD),3,Rate,2019,0.28288654600957375,0.42359953200520745,0.17450811185039247
+3,YLDs (Years Lived with Disability),101,Canada,2,Female,27,Age-standardized,1028,Total burden related to Non-alcoholic fatty liver disease (NAFLD),3,Rate,2019,0.44669542925648326,0.6637184601906658,0.28421669757664636
+3,YLDs (Years Lived with Disability),101,Canada,3,Both,27,Age-standardized,1028,Total burden related to Non-alcoholic fatty liver disease (NAFLD),3,Rate,2019,0.368619788126236,0.5438994052158566,0.23289051583014786
+3,YLDs (Years Lived with Disability),101,Canada,1,Male,22,All Ages,1029,Total cancers,3,Rate,2019,465.31530077660335,624.6607785704037,323.23361135393407
+3,YLDs (Years Lived with Disability),101,Canada,2,Female,22,All Ages,1029,Total cancers,3,Rate,2019,364.7810947402086,499.5831538396263,254.55778358000353
+3,YLDs (Years Lived with Disability),101,Canada,3,Both,22,All Ages,1029,Total cancers,3,Rate,2019,414.2493832196477,558.1605519284889,288.6283073194195
+3,YLDs (Years Lived with Disability),101,Canada,1,Male,27,Age-standardized,1029,Total cancers,3,Rate,2019,272.69793379346345,368.1891291095386,188.66466601524678
+3,YLDs (Years Lived with Disability),101,Canada,2,Female,27,Age-standardized,1029,Total cancers,3,Rate,2019,206.93300720301895,287.42272741168244,142.8897068174891
+3,YLDs (Years Lived with Disability),101,Canada,3,Both,27,Age-standardized,1029,Total cancers,3,Rate,2019,236.33368634913293,317.98664375809676,164.2405706573883
+3,YLDs (Years Lived with Disability),101,Canada,1,Male,22,All Ages,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2019,514.7439534367891,678.4745951908214,377.35364917356145
+3,YLDs (Years Lived with Disability),101,Canada,2,Female,22,All Ages,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2019,490.91877962320115,659.1151289020082,361.67316487580564
+3,YLDs (Years Lived with Disability),101,Canada,3,Both,22,All Ages,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2019,502.6420588706314,667.5814480483846,371.2207295274398
+3,YLDs (Years Lived with Disability),101,Canada,1,Male,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2019,535.4615313267577,699.436855279749,395.1761141495049
+3,YLDs (Years Lived with Disability),101,Canada,2,Female,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2019,513.8583549412032,687.6556634594452,377.20889960797365
+3,YLDs (Years Lived with Disability),101,Canada,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2019,524.7434111317165,696.485789908846,386.25532969348933
+3,YLDs (Years Lived with Disability),101,Canada,1,Male,22,All Ages,409,Non-communicable diseases,3,Rate,2019,10555.1333723607,13514.458610596777,7833.477687685256
+3,YLDs (Years Lived with Disability),101,Canada,2,Female,22,All Ages,409,Non-communicable diseases,3,Rate,2019,13208.388425429826,17057.232174547586,9797.156299052032
+3,YLDs (Years Lived with Disability),101,Canada,3,Both,22,All Ages,409,Non-communicable diseases,3,Rate,2019,11902.842864874658,15303.646757102044,8854.269630077592
+3,YLDs (Years Lived with Disability),101,Canada,1,Male,27,Age-standardized,409,Non-communicable diseases,3,Rate,2019,8389.223747500546,10795.697307132294,6205.317985878807
+3,YLDs (Years Lived with Disability),101,Canada,2,Female,27,Age-standardized,409,Non-communicable diseases,3,Rate,2019,10388.488690726692,13532.95454350934,7646.108015821247
+3,YLDs (Years Lived with Disability),101,Canada,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2019,9392.561134747693,12178.332928596781,6952.666679418597
+3,YLDs (Years Lived with Disability),101,Canada,1,Male,22,All Ages,1026,Total burden related to hepatitis B,3,Rate,2010,1.7355261597389624,2.672547292779904,1.0954339444827057
+3,YLDs (Years Lived with Disability),101,Canada,2,Female,22,All Ages,1026,Total burden related to hepatitis B,3,Rate,2010,1.2467556676210363,1.951184762087068,0.7618773619156585
+3,YLDs (Years Lived with Disability),101,Canada,3,Both,22,All Ages,1026,Total burden related to hepatitis B,3,Rate,2010,1.486618801479138,2.2684830313987705,0.9478573558782711
+3,YLDs (Years Lived with Disability),101,Canada,1,Male,27,Age-standardized,1026,Total burden related to hepatitis B,3,Rate,2010,1.4335010094917735,2.207262629524914,0.9093790445548198
+3,YLDs (Years Lived with Disability),101,Canada,2,Female,27,Age-standardized,1026,Total burden related to hepatitis B,3,Rate,2010,1.0112802745516754,1.590501510399588,0.6208684623421415
+3,YLDs (Years Lived with Disability),101,Canada,3,Both,27,Age-standardized,1026,Total burden related to hepatitis B,3,Rate,2010,1.2166798488492498,1.8599899490706189,0.7670678496055161
+3,YLDs (Years Lived with Disability),101,Canada,1,Male,22,All Ages,1027,Total burden related to hepatitis C,3,Rate,2010,1.8660446767380003,2.9428785958695998,1.1151318732929565
+3,YLDs (Years Lived with Disability),101,Canada,2,Female,22,All Ages,1027,Total burden related to hepatitis C,3,Rate,2010,1.726165886250242,2.594794142438555,1.1000566692962894
+3,YLDs (Years Lived with Disability),101,Canada,3,Both,22,All Ages,1027,Total burden related to hepatitis C,3,Rate,2010,1.7948111207472937,2.6709979886315027,1.1502620297971695
+3,YLDs (Years Lived with Disability),101,Canada,1,Male,27,Age-standardized,1027,Total burden related to hepatitis C,3,Rate,2010,1.3221112652249998,2.050939405377551,0.8149028630976745
+3,YLDs (Years Lived with Disability),101,Canada,2,Female,27,Age-standardized,1027,Total burden related to hepatitis C,3,Rate,2010,1.1388259282080726,1.7176048996909343,0.7256858455107127
+3,YLDs (Years Lived with Disability),101,Canada,3,Both,27,Age-standardized,1027,Total burden related to hepatitis C,3,Rate,2010,1.2254036556194312,1.8215317330429925,0.7936422211140844
+3,YLDs (Years Lived with Disability),101,Canada,1,Male,22,All Ages,1028,Total burden related to Non-alcoholic fatty liver disease (NAFLD),3,Rate,2010,0.37596389621385135,0.5531585697119877,0.23163186424172227
+3,YLDs (Years Lived with Disability),101,Canada,2,Female,22,All Ages,1028,Total burden related to Non-alcoholic fatty liver disease (NAFLD),3,Rate,2010,0.6648066361878474,0.9778042415333509,0.42209427602336375
+3,YLDs (Years Lived with Disability),101,Canada,3,Both,22,All Ages,1028,Total burden related to Non-alcoholic fatty liver disease (NAFLD),3,Rate,2010,0.5230576437269693,0.7700949563541216,0.328061080380556
+3,YLDs (Years Lived with Disability),101,Canada,1,Male,27,Age-standardized,1028,Total burden related to Non-alcoholic fatty liver disease (NAFLD),3,Rate,2010,0.25855683495813797,0.38131260591314836,0.15964729225302013
+3,YLDs (Years Lived with Disability),101,Canada,2,Female,27,Age-standardized,1028,Total burden related to Non-alcoholic fatty liver disease (NAFLD),3,Rate,2010,0.41306439788637533,0.6060871636113516,0.2613140638474985
+3,YLDs (Years Lived with Disability),101,Canada,3,Both,27,Age-standardized,1028,Total burden related to Non-alcoholic fatty liver disease (NAFLD),3,Rate,2010,0.3404834177376859,0.5010915955959183,0.21589677291905193
+3,YLDs (Years Lived with Disability),101,Canada,1,Male,22,All Ages,1029,Total cancers,3,Rate,2010,343.3963422534018,445.1053827845398,247.2573620124349
+3,YLDs (Years Lived with Disability),101,Canada,2,Female,22,All Ages,1029,Total cancers,3,Rate,2010,306.92259066351994,400.2566138377081,224.86767151680252
+3,YLDs (Years Lived with Disability),101,Canada,3,Both,22,All Ages,1029,Total cancers,3,Rate,2010,324.8220107410319,416.1210477803964,236.26458423309893
+3,YLDs (Years Lived with Disability),101,Canada,1,Male,27,Age-standardized,1029,Total cancers,3,Rate,2010,240.14292249844408,310.53579103242646,173.77313070839654
+3,YLDs (Years Lived with Disability),101,Canada,2,Female,27,Age-standardized,1029,Total cancers,3,Rate,2010,196.24630290012527,257.840779515589,142.66897391610544
+3,YLDs (Years Lived with Disability),101,Canada,3,Both,27,Age-standardized,1029,Total cancers,3,Rate,2010,215.16419971241817,277.1332128209042,156.45496290868786
+3,YLDs (Years Lived with Disability),101,Canada,1,Male,22,All Ages,687,Injuries,3,Rate,2019,1153.0194816097708,1605.530496251002,796.1983796151992
+3,YLDs (Years Lived with Disability),101,Canada,2,Female,22,All Ages,687,Injuries,3,Rate,2019,1160.9148684279533,1596.8314123145203,813.9778121678427
+3,YLDs (Years Lived with Disability),101,Canada,3,Both,22,All Ages,687,Injuries,3,Rate,2019,1157.029909385881,1593.6310092617318,802.394014728455
+3,YLDs (Years Lived with Disability),101,Canada,1,Male,27,Age-standardized,687,Injuries,3,Rate,2019,858.2990153710621,1203.556121703489,597.0339221297389
+3,YLDs (Years Lived with Disability),101,Canada,2,Female,27,Age-standardized,687,Injuries,3,Rate,2019,742.199680518047,1023.684456946658,516.3719014930239
+3,YLDs (Years Lived with Disability),101,Canada,3,Both,27,Age-standardized,687,Injuries,3,Rate,2019,802.8140951826714,1111.3259792291274,556.4460897663143
+3,YLDs (Years Lived with Disability),101,Canada,1,Male,22,All Ages,409,Non-communicable diseases,3,Rate,2010,9714.707033199576,12444.965264315055,7248.302704241268
+3,YLDs (Years Lived with Disability),101,Canada,2,Female,22,All Ages,409,Non-communicable diseases,3,Rate,2010,12479.352202295728,16312.93444372782,9208.462646933054
+3,YLDs (Years Lived with Disability),101,Canada,3,Both,22,All Ages,409,Non-communicable diseases,3,Rate,2010,11122.608157884244,14373.45401322615,8267.213505195425
+3,YLDs (Years Lived with Disability),101,Canada,1,Male,27,Age-standardized,409,Non-communicable diseases,3,Rate,2010,8140.978417401215,10465.643764027152,6048.649957990357
+3,YLDs (Years Lived with Disability),101,Canada,2,Female,27,Age-standardized,409,Non-communicable diseases,3,Rate,2010,10117.825897289007,13278.406026640934,7379.687513492058
+3,YLDs (Years Lived with Disability),101,Canada,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2010,9136.930422268477,11880.968577157897,6731.4555800260205
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,22,All Ages,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,1990,1747.594988354235,1908.9293901547046,1605.0797032574767
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,22,All Ages,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,1990,1278.8301091863639,1451.3591041608452,1140.068567759909
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,22,All Ages,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,1990,1510.1167325230429,1669.8942935488963,1370.286186377743
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,1990,1918.6449210550252,2091.8986533954844,1765.1024734731852
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,1990,1368.6586268341725,1546.122260082058,1220.4841593485667
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,1990,1628.4677154055516,1792.470669805829,1478.8526231579258
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,22,All Ages,409,Non-communicable diseases,3,Rate,1990,22420.080379669584,24862.745741504634,20250.347166032254
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,22,All Ages,409,Non-communicable diseases,3,Rate,1990,21473.90032207895,24979.01975860705,18457.080484287013
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,22,All Ages,409,Non-communicable diseases,3,Rate,1990,21940.74159008757,24979.47137592966,19303.544373311524
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,27,Age-standardized,409,Non-communicable diseases,3,Rate,1990,21502.451327600204,23822.73054447513,19442.292091297535
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,27,Age-standardized,409,Non-communicable diseases,3,Rate,1990,18238.64244306463,21322.441002208932,15513.92269944882
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,1990,19593.92697899684,22369.708735144377,17177.778891281236
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,22,All Ages,1026,Total burden related to hepatitis B,3,Rate,1990,31.272727140750476,40.72532492688687,23.679913527667285
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,22,All Ages,1026,Total burden related to hepatitis B,3,Rate,1990,12.140333554797971,15.426649149618077,9.577202003581991
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,22,All Ages,1026,Total burden related to hepatitis B,3,Rate,1990,21.580176225388897,27.807959883021194,16.696074204708825
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,27,Age-standardized,1026,Total burden related to hepatitis B,3,Rate,1990,28.50344274743111,37.231529291684566,21.592711474602474
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,27,Age-standardized,1026,Total burden related to hepatitis B,3,Rate,1990,10.267402627217438,13.06010620167096,8.041092587471251
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,1026,Total burden related to hepatitis B,3,Rate,1990,19.014113000063094,24.57352541807345,14.596455087587822
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,22,All Ages,1027,Total burden related to hepatitis C,3,Rate,1990,192.84312934204536,234.01697900031,152.4912981502739
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,22,All Ages,1027,Total burden related to hepatitis C,3,Rate,1990,84.43284231837455,103.04823019056332,68.18535870170247
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,22,All Ages,1027,Total burden related to hepatitis C,3,Rate,1990,137.9220227902025,166.60290243964826,111.44862776202261
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,27,Age-standardized,1027,Total burden related to hepatitis C,3,Rate,1990,175.7750795386864,213.84289985265778,138.53881000894094
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,27,Age-standardized,1027,Total burden related to hepatitis C,3,Rate,1990,69.67575822761485,84.51834239503019,55.82410488642458
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,1027,Total burden related to hepatitis C,3,Rate,1990,120.3216494376662,146.10972035886888,95.7350425480453
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,22,All Ages,1028,Total burden related to Non-alcoholic fatty liver disease (NAFLD),3,Rate,1990,26.10671909529367,36.83597105419666,18.445959865356443
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,22,All Ages,1028,Total burden related to Non-alcoholic fatty liver disease (NAFLD),3,Rate,1990,27.681848139009386,35.83628540901089,20.94444022192863
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,22,All Ages,1028,Total burden related to Non-alcoholic fatty liver disease (NAFLD),3,Rate,1990,26.904686081802343,35.821151790739954,19.831213083579364
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,27,Age-standardized,1028,Total burden related to Non-alcoholic fatty liver disease (NAFLD),3,Rate,1990,24.032568528324333,33.62353576366787,17.00626685251496
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,27,Age-standardized,1028,Total burden related to Non-alcoholic fatty liver disease (NAFLD),3,Rate,1990,22.343275823911444,29.206295950540195,16.847860331229782
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,1028,Total burden related to Non-alcoholic fatty liver disease (NAFLD),3,Rate,1990,23.222779306290825,30.943965293040154,17.106794523727274
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,22,All Ages,1029,Total cancers,3,Rate,1990,5196.282980608381,5323.187049180281,5029.65862302926
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,22,All Ages,1029,Total cancers,3,Rate,1990,4167.326857629786,4290.973990548571,4017.1760864331386
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,22,All Ages,1029,Total cancers,3,Rate,1990,4675.009488776936,4784.059051233319,4533.381448027595
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,27,Age-standardized,1029,Total cancers,3,Rate,1990,4857.813348769833,4980.9453432706205,4686.747967119376
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,27,Age-standardized,1029,Total cancers,3,Rate,1990,3434.391315241667,3529.930881694877,3315.9018790079563
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,1029,Total cancers,3,Rate,1990,4039.82885943415,4131.1620953771835,3919.45459734975
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,22,All Ages,687,Injuries,3,Rate,1990,4391.98268391838,4816.373641112602,4060.4836991175653
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,22,All Ages,687,Injuries,3,Rate,1990,2013.6939048971808,2336.0665078653547,1751.7753857564755
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,22,All Ages,687,Injuries,3,Rate,1990,3187.131603548536,3565.7575646471123,2901.3680810757696
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,27,Age-standardized,687,Injuries,3,Rate,1990,4193.58854141205,4583.666720416502,3884.7357685103175
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,27,Age-standardized,687,Injuries,3,Rate,1990,1861.639604605137,2133.120393069866,1639.610683847321
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,687,Injuries,3,Rate,1990,3025.11811891837,3361.848939881861,2765.6186151059433
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,22,All Ages,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2000,1332.855640473243,1490.80958824962,1206.2313151887654
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,22,All Ages,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2000,1159.789310927481,1331.125489870566,1022.3074961383523
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,22,All Ages,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2000,1244.7527316495436,1412.6918388051752,1114.812256517878
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2000,1550.312166172985,1718.121304062737,1411.6441428400103
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2000,1288.956210277784,1458.565774176572,1145.916360637938
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2000,1411.5851183222146,1581.0299195595815,1274.122265149694
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,22,All Ages,409,Non-communicable diseases,3,Rate,2000,21736.48477945571,24232.790523798172,19443.790024492355
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,22,All Ages,409,Non-communicable diseases,3,Rate,2000,21893.78233054927,25415.591646435565,18773.452391351613
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,22,All Ages,409,Non-communicable diseases,3,Rate,2000,21816.560273276853,24947.370643413222,19092.088740108327
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,27,Age-standardized,409,Non-communicable diseases,3,Rate,2000,18948.285801423186,21183.38196416019,16885.10997177607
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,27,Age-standardized,409,Non-communicable diseases,3,Rate,2000,17155.9435622846,20247.69067636339,14461.98331936038
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2000,17862.20912894812,20586.21764395172,15493.43928281493
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,22,All Ages,687,Injuries,3,Rate,2000,3582.4768437457737,4001.7050400059443,3256.9783646191804
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,22,All Ages,687,Injuries,3,Rate,2000,1850.2172000342998,2192.499099240478,1567.6772914345618
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,22,All Ages,687,Injuries,3,Rate,2000,2700.6351022039344,3074.637570789564,2398.7031011393174
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,27,Age-standardized,687,Injuries,3,Rate,2000,3367.2292125679633,3727.018783830403,3084.026588187852
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,27,Age-standardized,687,Injuries,3,Rate,2000,1592.104462068099,1854.6965473369094,1373.1705390558282
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,687,Injuries,3,Rate,2000,2473.6500877950875,2781.677318045022,2224.0071633162092
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,22,All Ages,1026,Total burden related to hepatitis B,3,Rate,2000,38.01937247447278,48.90493167739951,28.98566789569597
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,22,All Ages,1026,Total burden related to hepatitis B,3,Rate,2000,14.30651909417875,18.25777146442467,11.185084064183249
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,22,All Ages,1026,Total burden related to hepatitis B,3,Rate,2000,25.94786575911588,32.98731034897581,20.06406546238757
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,27,Age-standardized,1026,Total burden related to hepatitis B,3,Rate,2000,30.465872422649493,39.04449554683858,23.46042075863219
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,27,Age-standardized,1026,Total burden related to hepatitis B,3,Rate,2000,10.742011139611447,13.632915468428088,8.420498219530415
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,1026,Total burden related to hepatitis B,3,Rate,2000,20.227127608941334,25.675266801717857,15.757283462420418
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,22,All Ages,1027,Total burden related to hepatitis C,3,Rate,2000,189.93868586096767,232.66489826649902,149.87598259179467
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,22,All Ages,1027,Total burden related to hepatitis C,3,Rate,2000,90.74899946307073,110.21554955313891,73.87911480933381
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,22,All Ages,1027,Total burden related to hepatitis C,3,Rate,2000,139.44417361296502,168.72714243301112,111.11708898233563
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,27,Age-standardized,1027,Total burden related to hepatitis C,3,Rate,2000,151.29017340583306,185.43252560853256,119.17293039682968
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,27,Age-standardized,1027,Total burden related to hepatitis C,3,Rate,2000,65.79448009057091,79.940696318287,53.13455252847918
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,1027,Total burden related to hepatitis C,3,Rate,2000,106.77240085144471,129.9450001817241,85.13264547128801
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,22,All Ages,1028,Total burden related to Non-alcoholic fatty liver disease (NAFLD),3,Rate,2000,28.60562087375506,38.68322204025799,20.755254447892383
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,22,All Ages,1028,Total burden related to Non-alcoholic fatty liver disease (NAFLD),3,Rate,2000,31.763966216560917,40.55440401078355,24.38058116568713
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,22,All Ages,1028,Total burden related to Non-alcoholic fatty liver disease (NAFLD),3,Rate,2000,30.213440329459246,39.35256869898599,22.772023807168335
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,27,Age-standardized,1028,Total burden related to Non-alcoholic fatty liver disease (NAFLD),3,Rate,2000,23.039530276890282,30.914600145567555,16.772279005327583
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,27,Age-standardized,1028,Total burden related to Non-alcoholic fatty liver disease (NAFLD),3,Rate,2000,22.54413395494127,28.76012330884782,17.08588684653026
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,1028,Total burden related to Non-alcoholic fatty liver disease (NAFLD),3,Rate,2000,22.893806545959226,29.984705938128048,17.315035905660757
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,22,All Ages,1029,Total cancers,3,Rate,2000,5127.8208995449295,5267.586001664231,4914.9215164375255
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,22,All Ages,1029,Total cancers,3,Rate,2000,4386.106741257277,4525.585994415539,4204.801941096998
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,22,All Ages,1029,Total cancers,3,Rate,2000,4750.2363339487365,4877.89014378691,4583.901075855419
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,27,Age-standardized,1029,Total cancers,3,Rate,2000,4229.421861107184,4345.689434780002,4047.0167226155927
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,27,Age-standardized,1029,Total cancers,3,Rate,2000,3223.094012783623,3319.967255529601,3104.3314803918984
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,1029,Total cancers,3,Rate,2000,3650.7550252332703,3747.02087509804,3530.5191478979737
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,22,All Ages,1026,Total burden related to hepatitis B,3,Rate,2010,45.13828471550659,59.592056638251705,33.795022561968274
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,22,All Ages,1026,Total burden related to hepatitis B,3,Rate,2010,18.607519053026312,23.869676285319617,14.446196721267109
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,22,All Ages,1026,Total burden related to hepatitis B,3,Rate,2010,31.627438827401875,41.228021283258066,23.95596035793693
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,27,Age-standardized,1026,Total burden related to hepatitis B,3,Rate,2010,31.633338162708803,41.00441240402505,24.13203182179666
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,27,Age-standardized,1026,Total burden related to hepatitis B,3,Rate,2010,12.6567425323502,16.015296426424204,9.942929210028534
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,1026,Total burden related to hepatitis B,3,Rate,2010,21.837350319481892,28.033038271044475,16.90554628868877
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,22,All Ages,1027,Total burden related to hepatitis C,3,Rate,2010,209.8137124927545,258.0645905847381,162.92990787720223
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,22,All Ages,1027,Total burden related to hepatitis C,3,Rate,2010,109.65310616065892,133.56768858805063,88.91000850884915
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,22,All Ages,1027,Total burden related to hepatitis C,3,Rate,2010,158.80672183790722,193.78537473176436,127.28156011412008
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,27,Age-standardized,1027,Total burden related to hepatitis C,3,Rate,2010,143.7065363319221,175.74470934645868,112.62175124672864
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,27,Age-standardized,1027,Total burden related to hepatitis C,3,Rate,2010,70.66804923777829,85.87101804862706,57.61604246984088
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,1027,Total burden related to hepatitis C,3,Rate,2010,106.02243158203687,128.71884778002436,84.67847194771782
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,22,All Ages,1028,Total burden related to Non-alcoholic fatty liver disease (NAFLD),3,Rate,2010,35.17683443239828,47.03121933260742,25.482574230909258
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,22,All Ages,1028,Total burden related to Non-alcoholic fatty liver disease (NAFLD),3,Rate,2010,40.701269877669965,50.72583652271123,31.860548879710276
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,22,All Ages,1028,Total burden related to Non-alcoholic fatty liver disease (NAFLD),3,Rate,2010,37.990164317762385,48.78511731246552,29.028751143763678
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,27,Age-standardized,1028,Total burden related to Non-alcoholic fatty liver disease (NAFLD),3,Rate,2010,23.96578312214711,31.92771925503393,17.494513853072995
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,27,Age-standardized,1028,Total burden related to Non-alcoholic fatty liver disease (NAFLD),3,Rate,2010,25.59303952818015,32.09524251133876,20.006328179127195
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,1028,Total burden related to Non-alcoholic fatty liver disease (NAFLD),3,Rate,2010,24.902336303401725,31.945363251804356,19.097628605592547
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,22,All Ages,1029,Total cancers,3,Rate,2010,5212.150010965856,5393.858727899411,5007.300310594407
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,22,All Ages,1029,Total cancers,3,Rate,2010,4527.050496353969,4683.739838905494,4281.243720412336
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,22,All Ages,1029,Total cancers,3,Rate,2010,4863.261702287049,5015.012896865473,4638.792265815782
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,27,Age-standardized,1029,Total cancers,3,Rate,2010,3626.8154578085855,3751.8842189725933,3480.1148182988495
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,27,Age-standardized,1029,Total cancers,3,Rate,2010,2900.6569384291683,2993.3286197559833,2769.064231131792
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,1029,Total cancers,3,Rate,2010,3219.980332264457,3315.0646525774077,3084.0877565342403
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,22,All Ages,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2010,1278.409022193246,1441.8077598208015,1135.4964192868993
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,22,All Ages,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2010,1171.4504374856651,1339.1477029875916,1031.4180639070617
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,22,All Ages,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2010,1223.9401473489143,1383.7530871218098,1082.5313541256228
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2010,1454.7287039655732,1627.3305048256584,1306.6928634660242
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2010,1280.7885849565043,1465.240808943442,1135.7386517151388
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2010,1364.8363959212052,1532.9372182217314,1217.7134682766746
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,22,All Ages,409,Non-communicable diseases,3,Rate,2010,21708.457921646146,24428.71645383046,19197.684250159713
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,22,All Ages,409,Non-communicable diseases,3,Rate,2010,22110.906558745806,25968.289788116945,18824.57714571921
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,22,All Ages,409,Non-communicable diseases,3,Rate,2010,21913.405701250587,25132.02450709297,19006.63661405012
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,27,Age-standardized,409,Non-communicable diseases,3,Rate,2010,16834.091792755964,19140.740422000144,14684.82229690398
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,27,Age-standardized,409,Non-communicable diseases,3,Rate,2010,16105.436958171216,19264.937910145312,13366.787542182037
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2010,16379.088211309081,19112.190957594084,13936.193112748824
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,22,All Ages,687,Injuries,3,Rate,2010,3193.3053051157185,3620.2030749715327,2841.743284852081
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,22,All Ages,687,Injuries,3,Rate,2010,1898.330496700637,2284.4482678221657,1581.3218983891745
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,22,All Ages,687,Injuries,3,Rate,2010,2533.8367738242446,2937.3295854073085,2208.1041229762136
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,27,Age-standardized,687,Injuries,3,Rate,2010,2861.5844218301518,3204.2236275094388,2582.093418737082
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,27,Age-standardized,687,Injuries,3,Rate,2010,1485.8690475566714,1756.3832516344187,1266.3771934363606
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,687,Injuries,3,Rate,2010,2169.940639655457,2472.330881244014,1921.198087929153
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,22,All Ages,687,Injuries,3,Rate,2019,3085.1456185096513,3547.41558800183,2729.921706051901
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,22,All Ages,687,Injuries,3,Rate,2019,1969.4701537281564,2411.9613804549913,1630.2850405235793
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,22,All Ages,687,Injuries,3,Rate,2019,2518.4430647119443,2959.5429339788666,2170.392757058884
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,27,Age-standardized,687,Injuries,3,Rate,2019,2698.9982724517217,3050.1213175195026,2424.856411310252
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,27,Age-standardized,687,Injuries,3,Rate,2019,1454.6992479423895,1734.5089889868996,1235.604046417684
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,687,Injuries,3,Rate,2019,2076.682799346403,2391.17689491735,1831.7787663513254
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,22,All Ages,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2019,1221.5322615581351,1392.2360988259104,1075.3421661160548
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,22,All Ages,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2019,1132.1938322121596,1300.040723833327,990.1082366455429
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,22,All Ages,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2019,1176.153190617862,1345.681254379221,1029.235398309717
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2019,1326.9963701901252,1521.8129400130097,1168.1083445024683
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2019,1186.261936974528,1368.9118351803506,1037.601486421541
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2019,1254.5031935790805,1435.4404011594636,1102.5826961641915
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,22,All Ages,409,Non-communicable diseases,3,Rate,2019,23741.57873760916,26714.48029050053,21038.60230927892
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,22,All Ages,409,Non-communicable diseases,3,Rate,2019,23544.230975824772,27456.446593822264,20114.88132776074
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,22,All Ages,409,Non-communicable diseases,3,Rate,2019,23641.336790806672,27092.911083012285,20598.12465850638
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,27,Age-standardized,409,Non-communicable diseases,3,Rate,2019,16713.5190064171,19133.597441530786,14523.942322179679
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,27,Age-standardized,409,Non-communicable diseases,3,Rate,2019,16124.30477775732,19305.42168093497,13371.52007274381
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2019,16352.536109573623,19155.337336822806,13875.986739708893
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,22,All Ages,1026,Total burden related to hepatitis B,3,Rate,2019,45.530635931009705,60.95730027281991,33.81902333962482
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,22,All Ages,1026,Total burden related to hepatitis B,3,Rate,2019,18.263797396915002,23.66237629769517,14.136306534262607
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,22,All Ages,1026,Total burden related to hepatitis B,3,Rate,2019,31.68056257272577,41.31720806433418,23.90307812154648
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,27,Age-standardized,1026,Total burden related to hepatitis B,3,Rate,2019,30.2319656676793,40.1823199893875,22.83988710126103
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,27,Age-standardized,1026,Total burden related to hepatitis B,3,Rate,2019,11.721490115473106,14.84117945807537,9.15007589328289
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,1026,Total burden related to hepatitis B,3,Rate,2019,20.70376368995309,26.833770875469313,15.913055781175721
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,22,All Ages,1027,Total burden related to hepatitis C,3,Rate,2019,223.61512608068566,279.6157136855279,171.83440823266923
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,22,All Ages,1027,Total burden related to hepatitis C,3,Rate,2019,121.75242985961371,149.2048886820587,96.20581135234633
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,22,All Ages,1027,Total burden related to hepatitis C,3,Rate,2019,171.87440764828125,211.39343780764517,136.34082243114378
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,27,Age-standardized,1027,Total burden related to hepatitis C,3,Rate,2019,142.7473868652536,176.95651508218452,111.93331323143285
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,27,Age-standardized,1027,Total burden related to hepatitis C,3,Rate,2019,72.52821230307842,88.3552641532429,58.4844783223805
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,1027,Total burden related to hepatitis C,3,Rate,2019,106.59590959550643,130.2141242538671,85.41545441253578
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,22,All Ages,1028,Total burden related to Non-alcoholic fatty liver disease (NAFLD),3,Rate,2019,40.78948963344659,54.83535650040178,29.454886234656627
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,22,All Ages,1028,Total burden related to Non-alcoholic fatty liver disease (NAFLD),3,Rate,2019,47.00678535283177,60.76360415369046,36.03824655462114
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,22,All Ages,1028,Total burden related to Non-alcoholic fatty liver disease (NAFLD),3,Rate,2019,43.947538253419744,57.55181813842465,33.48431852323313
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,27,Age-standardized,1028,Total burden related to Non-alcoholic fatty liver disease (NAFLD),3,Rate,2019,24.88667035955244,33.359489858613536,18.308589821346725
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,27,Age-standardized,1028,Total burden related to Non-alcoholic fatty liver disease (NAFLD),3,Rate,2019,26.748295520066897,34.244662336489135,20.806666677666616
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,1028,Total burden related to Non-alcoholic fatty liver disease (NAFLD),3,Rate,2019,25.910845154352238,34.04713265951198,20.03287043852188
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,22,All Ages,1029,Total cancers,3,Rate,2019,5730.017780655846,6034.565468745149,5415.870454028867
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,22,All Ages,1029,Total cancers,3,Rate,2019,4821.853702851102,5065.203505428182,4501.672644081679
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,22,All Ages,1029,Total cancers,3,Rate,2019,5268.719743363171,5518.595682705274,4974.566357095146
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,27,Age-standardized,1029,Total cancers,3,Rate,2019,3422.651030708027,3600.14900912413,3242.606234861129
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,27,Age-standardized,1029,Total cancers,3,Rate,2019,2762.785478452258,2903.020073992365,2607.2505354144014
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,1029,Total cancers,3,Rate,2019,3061.5596407519165,3200.334743130319,2905.869489267901

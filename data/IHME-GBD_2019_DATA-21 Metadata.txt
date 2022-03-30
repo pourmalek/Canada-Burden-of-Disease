@@ -1,0 +1,29 @@
+IHME-GBD_2019_DATA-21 Metadata
+
+Permalink:
+https://ghdx.healthdata.org/gbd-results-tool?params=gbd-api-2019-permalink/0cda6e1af2fdb16b3a2942edaf32a1d6
+
+Data settings:
+
+Base: Single
+Location: Canada
+Year: 1990, 2000, 2010, 2019
+
+Context: Cause
+Age: All-ages, Age-standardized
+Metric: Rate
+
+Measure: DALY, YLL, YLD
+Sex: Male, Female, Both
+Cause: level 1 causes
+
+
+Download settings: 
+Both IDs and Names 
+(ID = variable_id, Name = variable_name)
+
+
+
+
+
+

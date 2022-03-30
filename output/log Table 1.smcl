@@ -3,7 +3,7 @@
       name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output/log Table 1.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res}29 Mar 2022, 11:55:33
+ {txt}opened on:  {res}29 Mar 2022, 16:05:02
 {txt}
 {com}. 
 . ***************************************************************************
@@ -957,7 +957,7 @@ xij variables:
       {txt}name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output/log Table 1.smcl
   {txt}log type:  {res}smcl
- {txt}closed on:  {res}29 Mar 2022, 11:55:34
+ {txt}closed on:  {res}29 Mar 2022, 16:05:03
 {txt}{.-}
 {smcl}
 {txt}{sf}{ul off}
