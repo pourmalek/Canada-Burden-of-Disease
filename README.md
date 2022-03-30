@@ -27,9 +27,10 @@ The outputs will be stored in your local machine in /Downloads/Canada-Burden-of-
 
 See "Table 1 Part 1.csv" in the /output/
 
-Previously produced copies of manuscript tables can be downloaded and seen from https://github.com/pourmalek/Canada-Burden-of-Disease/tree/main/output and below are direct links to them:
+Previously produced Excel (xslsx) copies of manuscript tables can be downloaded and seen from https://github.com/pourmalek/Canada-Burden-of-Disease/tree/main/output and below are direct links to them:
 
-[Table 1](https://github.com/pourmalek/Canada-Burden-of-Disease/blob/main/output/Table%201.xlsx)
+[Table 1 - Crude (all-age) and age-standardized summary measures of population health indicators in Canada for males and females in 1990 and 2019](https://github.com/pourmalek/Canada-Burden-of-Disease/blob/main/output/Table%201.xlsx)
 
+[Table 2]
 
 
