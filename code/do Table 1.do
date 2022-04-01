@@ -30,24 +30,27 @@ log using "log Table 1.smcl", replace
 
 ** Table 1 Part 1: DALYs YLLs YLDs, base values 1990 and 2019
 * Input data: "IHME-GBD_2019_DATA-1.csv"
-* Output data: Table 1.xlsx", sheet("Part1")
+* Output data: "Table 1 Part1.dta"
 
 ** Table 1 Part 2: DALYs YLLs YLDs, change % from 1990 to 2019
 * Input data: "IHME-GBD_2019_DATA-2.csv"
-* Output data: Table 1.xlsx", sheet("Part2")
+* Output data: "Table 1 Part2.dta"
 
 ** Table 1 Part 3: DALYs YLLs YLDs, change % from 1990 to 2019
 * Input data: "IHME-GBD_2019_DATA-3.csv"
-* Output data: Table 1.xlsx", sheet("Part3")
+* Output data: "Table 1 Part3.dta"
 
 ** Table 1 Part 4: Life expectancy (at birth) % from 1990 to 2019
 * Input data: "IHME-GBD_2019_DATA-3.dta"
-* Output data: Table 1.xlsx", sheet("Part4")
+* Output data: "Table 1 Part4.dta"
 
 ** Table 1 Part 5: Post-neonatal infant mortality rate 1990 2019
 * Input data: "IHME-GBD_2019_DATA-4.csv"
-* Output data: Table 1.xlsx", sheet("Part5")
+* Output data: "Table 1 Part5.dta"
 
+** Table 1 Part 6: Post-neonatal infant mortality rate % change 1990 to 2019
+* Input data: "IHME-GBD_2019_DATA-4.csv"
+* Output data: "Table 1 Part6.dta"
 
 
 
@@ -151,21 +154,28 @@ rename age_name Age
 	
 rename year Year 
 
-sort measure_id_new sex_id_new age_id_new Year
+keep if Year == 1990 | Year == 2019
 
-drop sex_id	measure_id_new sex_id_new age_id_new
+order Measure Age Sex Year Value Lower_UL Upper_UL
 
-order Sex, after(Age)
+sort age_id_new sex_id_new Year
+
+reshape wide Value Lower_UL Upper_UL, i(Measure Age	Sex) j(Year)
+
+drop sex_id measure_id_new age_id_new sex_id_new
+
+label var Value1990	"1990 Value"
+label var Lower_UL1990 "1990 Lower_UL"
+label var Upper_UL1990 "1990 Upper_UL"
+label var Value2019 "2019 Value"
+label var Lower_UL2019 "2019 Lower_UL"
+label var Upper_UL2019 "2019 Upper_UL"
 
 
-save "IHME-GBD_2019_DATA-1.dta", replace
-
-keep if Year == 1990 | Year == 2019 // for Table 1
-	
-export excel using "Table 1.xlsx", replace sheet("Part1") firstrow(varlabels) 
+save "Table 1 Part1.dta", replace
 
 
-/* "Table 1.xlsx", sheet("Part1") contents
+/* "Table 1 Part1.dta" contents
 
 Base values of 1990 and 2019
 
@@ -178,10 +188,7 @@ Both sexes	Males	Females
 All ages	Age-standardized
 
 */
-
-
-
-
+				
 
 
 
@@ -295,18 +302,22 @@ sort measure_id_new sex_id_new age_id_new
 drop sex_id	measure_id_new sex_id_new age_id_new
 
 order Sex, after(Age)
-  
-  
-save "IHME-GBD_2019_DATA-2.dta", replace // more details than Table 1
+
+drop Lower_UL Upper_UL
+
+order Measure Age Sex Value 
+
+rename Value Relative_change_pct
+
+label var Relative_change_pct "Relative change (%)"
+
+keep if Year_start == 1990 & Year_end == 2019 
 
   
-keep if Year_start == 1990 & Year_end == 2019 // for Table 1
-	
-
-export excel using "Table 1.xlsx", sheet("Part2") firstrow(varlabels) 
-
-
-/* "Table 1.xlsx", sheet("Part2") contents
+save "Table 1 Part2.dta", replace
+  
+  
+/* "Table 1 Part2.dta" contents
 
 Relative change (%) from 1990 to 2019
 
@@ -319,6 +330,7 @@ Both sexes	Males	Females
 All ages	Age-standardized
 
 */
+
 
 
 
@@ -419,15 +431,40 @@ order Sex, after(Age)
 
 rename year Year
 
-save "IHME-GBD_2019_DATA-3.dta", replace // more details than Table 1
-
-keep if Year == 1990 | Year == 2019 // for Table 1
+keep if Year == 1990 | Year == 2019
 
 
-export excel using "Table 1.xlsx", sheet("Part3") firstrow(varlabels) 
+order Measure Age Sex Year Value Lower_UL Upper_UL
 
 
-/* "Table 1.xlsx", sheet("Part3") contents
+gen sex_id_new = .
+replace sex_id_new = 1 if Sex == "Both sexes"
+replace sex_id_new = 2 if Sex == "Males"
+replace sex_id_new = 3 if Sex == "Females"
+
+sort sex_id_new Year
+
+
+reshape wide Value Lower_UL Upper_UL, i(Measure Age	Sex) j(Year)
+
+drop sex_id_new
+
+label var Value1990	"1990 Value"
+label var Lower_UL1990 "1990 Lower_UL"
+label var Upper_UL1990 "1990 Upper_UL"
+label var Value2019 "2019 Value"
+label var Lower_UL2019 "2019 Lower_UL"
+label var Upper_UL2019 "2019 Upper_UL"
+
+
+rename (Value1990 Lower_UL1990 Upper_UL1990 Value2019 Lower_UL2019 Upper_UL2019) ///
+(Y_1990_Value Y_1990_Lower_UL Y_1990_Upper_UL Y_2019_Value Y_2019_Lower_UL Y_2019_Upper_UL)
+
+
+save "Table 1 Part3.dta", replace
+
+
+/* "Table 1 Part3.dta" contents
 
 Life expectancy at birth 1990 2010
 
@@ -446,22 +483,29 @@ Both sexes	Males	Females
 
 
 
-
 ***********************************************************************
 * Prepare Table 1 Part 4
 
 * Life expectancy (at birth) % from 1990 to 2019
 
 
-* use input data from /output/ folder // Note: % change from year to year did not work for Life expectancy
+* use input data from /output/ folder // Note: % change from year to year not working for Life expectancy
 
 
-use "IHME-GBD_2019_DATA-3.dta", clear
+use "Table 1 Part3.dta", clear
+
+// use "Table 1 Part3 long.dta", clear
+
+// use "IHME-GBD_2019_DATA-3.dta", clear
 
 
-reshape wide Value Upper_UL Lower_UL, i(Sex) j(Year)
 
-order Measure Age
+// reshape wide Value Upper_UL Lower_UL, i(Sex) j(Year)
+
+// order Measure Age
+
+
+
 
 gen sex_id_new = .
 replace sex_id_new = 1 if Sex == "Both"
@@ -474,9 +518,9 @@ drop sex_id_new
 
 * gen % Change = 100 * (New - Old) / Old
 
-gen ChangeValue1990_2019 = 100 * (Value2019 - Value1990) / Value1990
-gen ChangeUpper_UL1990_2019 = 100 * (Upper_UL2019 - Upper_UL1990) / Upper_UL1990
-gen ChangeLower_UL1990_2019 = 100 * (Lower_UL2019 - Lower_UL1990) / Lower_UL1990
+gen ChangeValue1990_2019 = 100 * (Y_2019_Value - Y_1990_Value) / Y_1990_Value
+gen ChangeLower_UL1990_2019 = 100 * (Y_2019_Lower_UL - Y_1990_Lower_UL) / Y_1990_Lower_UL
+gen ChangeUpper_UL1990_2019 = 100 * (Y_2019_Upper_UL - Y_1990_Upper_UL) / Y_1990_Upper_UL
 
 
 keep Measure Age Sex ChangeValue1990_2019 ChangeUpper_UL1990_2019 ChangeLower_UL1990_2019
@@ -497,21 +541,29 @@ replace Lower_UL = round(Lower_UL,0.1)
 format Value Upper_UL Lower_UL %5.2f
 
 
+
+order Measure Age Sex Value 
+
+rename Value Relative_change_pct
+
+label var Relative_change_pct "Relative change (%)"
+
+drop Lower_UL Upper_UL
+
+
 * save output data in /output/ folder
 
-save "Table 1 Part4.dta", replace // more details than Table 1
-
-export excel using "Table 1.xlsx", sheet("Part4") firstrow(varlabels) // for Table 1
+save "Table 1 Part4.dta", replace 
 
 
-/* "Table 1.xlsx", sheet("Part4") contents
+
+/* "Table 1 Part4.dta" contents
 
 Life expectancy at birth % change from 1990 to 2019
 
 Both sexes	Males	Females
 
 */
-
 
 
 
@@ -596,6 +648,40 @@ replace Lower_UL = round(Lower_UL,0.1)
 format Value Upper_UL Lower_UL %5.2f
 
 
+keep if Year == 1990 | Year == 2019
+
+
+order Measure Age Sex Year Value Lower_UL Upper_UL
+
+
+gen sex_id_new = .
+replace sex_id_new = 1 if Sex == "Both sexes"
+replace sex_id_new = 2 if Sex == "Males"
+replace sex_id_new = 3 if Sex == "Females"
+
+sort sex_id_new Year
+
+
+reshape wide Value Lower_UL Upper_UL, i(Measure Age	Sex) j(Year)
+
+drop sex_id_new
+
+label var Value1990	"1990 Value"
+label var Lower_UL1990 "1990 Lower_UL"
+label var Upper_UL1990 "1990 Upper_UL"
+label var Value2019 "2019 Value"
+label var Lower_UL2019 "2019 Lower_UL"
+label var Upper_UL2019 "2019 Upper_UL"
+
+
+rename (Value1990 Lower_UL1990 Upper_UL1990 Value2019 Lower_UL2019 Upper_UL2019) ///
+(Y_1990_Value Y_1990_Lower_UL Y_1990_Upper_UL Y_2019_Value Y_2019_Lower_UL Y_2019_Upper_UL)
+
+replace Measure = "Post-neonatal infant mortality"
+
+drop cause_name
+
+
 * save output data in /output/ folder
 
 cd .. // Canada-Burden-of-Disease-main
@@ -603,18 +689,268 @@ cd .. // Canada-Burden-of-Disease-main
 cd output 
 
 
-save "IHME-GBD_2019_DATA-4.dta", replace 
 
-export excel using "Table 1.xlsx", sheet("Part5") firstrow(varlabels) 
+save "Table 1 Part5.dta", replace 
 
 
-/* "Table 1.xlsx", sheet("Part5") contents
+/* "Table 1 Part5.dta" contents
 
 Postneonatal Mortality Rate 1990 and 2019
 
 Both sexes	Males	Females
 
 */
+
+
+
+
+
+
+
+***********************************************************************
+* Prepare Table 1 Part 6
+
+* Post-neonatal infant mortality rate, % change 1990 to 2019
+
+
+
+* use input data from /data/ folder
+
+cd .. // Canada-Burden-of-Disease-main
+
+cd data
+
+import delimited using "IHME-GBD_2019_DATA-5.csv", clear 
+
+
+/* "IHME-GBD_2019_DATA-5.csv" Metadata:
+
+Permalink:
+https://ghdx.healthdata.org/gbd-results-tool?params=gbd-api-2019-permalink/5399b053ee07e05980e588f9dabf449e
+
+
+Data settings:
+
+Base: Change
+Location: Canada
+Year range: 1990-2019
+
+Context: Cause
+Age: Post Neonatal
+Metric: Rate
+
+Measure: Deaths
+Sex: Male, Female, Both
+Cause: Total All Causes
+
+
+Download settings: 
+Both IDs and Names 
+(ID = variable_id, Name = variable_name)
+
+*/
+
+
+
+
+drop measure_id	location_id	location_name sex_id age_id metric_id metric_name cause_id
+
+
+rename measure_name Measure
+
+replace Measure = "Mortality rate" 
+
+
+rename age_name Age
+replace Age = "Post Neonatal"
+
+rename val Value
+rename upper Upper_UL
+rename lower Lower_UL
+label var Upper_UL "Upper UL"
+label var Lower_UL "Lower UL"
+
+order Upper_UL, after(Lower_UL)
+
+replace Value = round(Value,0.01)
+replace Upper_UL = round(Upper_UL,0.1)
+replace Lower_UL = round(Lower_UL,0.1)
+format Value Upper_UL Lower_UL %5.2f
+
+gen sex_id_new = .
+replace sex_id_new = 1 if sex_name == "Both"
+replace sex_id_new = 2 if sex_name == "Male"
+replace sex_id_new = 3 if sex_name == "Female"
+
+rename sex_name Sex
+replace Sex = "Both sexes" if Sex == "Both"
+replace Sex = "Males" if Sex == "Male"
+replace Sex = "Females" if Sex == "Female"
+
+sort sex_id_new  
+
+drop sex_id_new sex_id_new 
+
+order Sex, after(Age)
+
+
+
+gen sex_id_new = .
+replace sex_id_new = 1 if Sex == "Both"
+replace sex_id_new = 2 if Sex == "Male"
+replace sex_id_new = 3 if Sex == "Female"
+sort sex_id_new 
+drop sex_id_new
+
+replace Value = round(Value,0.01)
+replace Upper_UL = round(Upper_UL,0.1)
+replace Lower_UL = round(Lower_UL,0.1)
+format Value Upper_UL Lower_UL %5.2f
+
+
+order Measure Age Sex Value Lower_UL Upper_UL
+
+replace Measure = "Post-neonatal infant mortality"
+
+drop Lower_UL Upper_UL cause_name year_start year_end
+
+
+* save output data in /output/ folder
+
+cd .. // Canada-Burden-of-Disease-main
+
+cd output 
+
+
+save "Table 1 Part6.dta", replace 
+
+
+/* "Table 1 Part6.dta" contents
+
+Postneonatal Mortality Rate % change 1990 to 2019
+
+Both sexes	Males	Females
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+************************************************************************
+* merge DALYs, YLLs, YLDs, Base values and relative changes
+
+use "Table 1 Part1.dta", clear 
+
+merge 1:1 Measure Age Sex using "Table 1 Part2.dta"
+
+drop Year_start Year_end _merge
+
+rename (Value1990 Lower_UL1990 Upper_UL1990 Value2019 Lower_UL2019 Upper_UL2019) ///
+(Y_1990_Value Y_1990_Lower_UL Y_1990_Upper_UL Y_2019_Value Y_2019_Lower_UL Y_2019_Upper_UL)
+
+save "Table 1 Part1and2.dta", replace 
+
+
+
+
+
+
+
+
+
+
+************************************************************************
+* merge Life expectancy, Base values and relative changes
+
+use "Table 1 Part3.dta", clear 
+
+merge 1:1 Age Sex using "Table 1 Part4.dta"
+
+drop _merge
+
+qui compress
+
+save "Table 1 Part3and4.dta", replace 
+
+
+
+
+
+
+
+
+
+
+
+
+************************************************************************
+* merge Post-neonatal mortality rate, Base values and relative changes
+
+use "Table 1 Part5.dta", clear 
+
+merge 1:1 Sex using "Table 1 Part6.dta"
+
+drop _merge
+
+rename Value Relative_change_pct
+
+qui compress
+
+save "Table 1 Part5and6.dta", replace 
+
+
+
+
+
+
+************************************************************************
+* append (DALYs, YLLs, YLDs), (Life expectancy), (Post-neonatal mortality rate)
+
+use "Table 1 Part1and2.dta", clear
+
+append using  "Table 1 Part3and4.dta"
+
+append using  "Table 1 Part5and6.dta"
+
+save "Table 1.dta", replace
+
+export excel using "Table 1.xlsx", replace firstrow(varlabels)
+
+
+
+
+
+
+********
+
+* remove files no longer needed
+
+shell rm -r "Table 1 Part1.dta"
+shell rm -r "Table 1 Part1and2.dta"
+shell rm -r "Table 1 Part2.dta"
+shell rm -r "Table 1 Part3.dta"
+shell rm -r "Table 1 Part3and4.dta"
+shell rm -r "Table 1 Part4.dta"
+shell rm -r "Table 1 Part5.dta"
+shell rm -r "Table 1 Part5and6.dta"
+shell rm -r "Table 1 Part3.dta"
+shell rm -r "Table 1 Part6.dta"
+
+
 
 
 

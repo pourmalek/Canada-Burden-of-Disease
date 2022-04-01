@@ -1,9 +1,9 @@
 {smcl}
-{com}{sf}{ul off}{txt}{.-}
+{txt}{sf}{ul off}{.-}
       name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output/log Table 2.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res}30 Mar 2022, 10:41:01
+ {txt}opened on:  {res} 1 Apr 2022, 10:18:19
 {txt}
 {com}. 
 . ***************************************************************************
@@ -25,11 +25,11 @@
 . 
 . ** Table 2 Part 1: level 1 causes
 . * Input data: "IHME-GBD_2019_DATA-21.csv"
-. * Output data: "Table 2.xlsx", sheet("Part1")
+. * Output data: "Table 2 Part1.dta"
 . 
 . ** Table 2 Part 2: level 2 causes
 . * Input data: "IHME-GBD_2019_DATA-22.csv"
-. * Output data: "Table 2.xlsx", sheet("Part2")
+. * Output data: "Table 2 Part2.dta"
 . 
 . 
 . 
@@ -91,7 +91,8 @@
 {txt}
 {com}. 
 . save "IHME-GBD_2019_DATA-21.dta", replace
-{txt}file IHME-GBD_2019_DATA-21.dta saved
+{txt}(note: file IHME-GBD_2019_DATA-21.dta not found)
+file IHME-GBD_2019_DATA-21.dta saved
 
 {com}. 
 . 
@@ -119,11 +120,17 @@
 {txt}(72 real changes made)
 
 {com}. 
+. replace cause_name = "CMNN" if cause_name == "Communicable, maternal, neonatal, and nutritional diseases"
+{txt}(72 real changes made)
+
+{com}. replace cause_name = "NCDs" if cause_name == "Non-communicable diseases"
+{txt}(72 real changes made)
+
+{com}. 
 . 
 . drop measure_id location_id location_name age_id cause_id metric_id metric_name
 {txt}
 {com}. 
-. 
 . 
 . rename cause_name Cause
 {res}{txt}
@@ -272,12 +279,71 @@
 {txt}
 {com}. 
 . 
-. export excel using "Table 2.xlsx", replace sheet("Part1") firstrow(varlabels) 
-{res}{txt}file Table 2.xlsx saved
+. 
+. 
+. keep if Sex == "Both sexes"
+{txt}(12 observations deleted)
 
 {com}. 
+. drop Sex_Year
+{txt}
+{com}. 
+. order Cause Year Value Lower_UL Upper_UL rank
+{txt}
+{com}. 
+. reshape wide Value Lower_UL Upper_UL rank, i(Cause) j(Year)
+{txt}(note: j = 1990 2019)
+
+Data{col 36}long{col 43}->{col 48}wide
+{hline 77}
+Number of obs.                 {res}       6   {txt}->{res}       3
+{txt}Number of variables            {res}      10   {txt}->{res}      13
+{txt}j variable (2 values)              {res}Year   {txt}->   (dropped)
+xij variables:
+                                  {res}Value   {txt}->   {res}Value1990 Value2019
+                               Lower_UL   {txt}->   {res}Lower_UL1990 Lower_UL2019
+                               Upper_UL   {txt}->   {res}Upper_UL1990 Upper_UL2019
+                                   rank   {txt}->   {res}rank1990 rank2019
+{txt}{hline 77}
+
+{com}. 
+. order rank1990 rank2019, last
+{txt}
+{com}. 
+. gen to = " to "
+{txt}
+{com}. 
+. egen Rank_change = concat(rank1990 to rank2019)
+{txt}
+{com}. label var Rank_change "Rank change"
+{txt}
+{com}. 
+. label var Value1990     "1990 Value"
+{txt}
+{com}. label var Lower_UL1990 "1990 Lower_UL"
+{txt}
+{com}. label var Upper_UL1990 "1990 Upper_UL"
+{txt}
+{com}. label var Value2019 "2019 Value"
+{txt}
+{com}. label var Lower_UL2019 "2019 Lower_UL"
+{txt}
+{com}. label var Upper_UL2019 "2019 Upper_UL"
+{txt}
+{com}. 
+. drop Measure Age Sex cause_id_new
+{txt}
+{com}. 
+. drop rank1990 rank2019 to
+{txt}
+{com}. 
 . 
-. /* "Table 2.xlsx", sheet("Part1") contents
+. save "Table 2 Part1.dta", replace
+{txt}(note: file Table 2 Part1.dta not found)
+file Table 2 Part1.dta saved
+
+{com}. 
+. /* "Table 2 Part1.dta" contents
 > 
 > Base values of 1990 and 2019
 > 
@@ -292,8 +358,6 @@
 > level 1 causes (i.e., 3 causes)
 > 
 > */
-. 
-. 
 . 
 . 
 . 
@@ -358,7 +422,8 @@
 {txt}
 {com}. 
 . save "IHME-GBD_2019_DATA-22.dta", replace
-{txt}file IHME-GBD_2019_DATA-22.dta saved
+{txt}(note: file IHME-GBD_2019_DATA-22.dta not found)
+file IHME-GBD_2019_DATA-22.dta saved
 
 {com}. 
 . 
@@ -417,6 +482,60 @@
 {txt}(72 real changes made)
 
 {com}. 
+. 
+. replace cause_name = "Maternal & neonatal" if cause_name == "Maternal and neonatal disorders"
+{txt}(72 real changes made)
+
+{com}. replace cause_name = "Respiratory infections" if cause_name == "Respiratory infections and tuberculosis"
+{txt}(72 real changes made)
+
+{com}. replace cause_name = "Neoplasms" if cause_name == "Neoplasms"
+{txt}(0 real changes made)
+
+{com}. replace cause_name = "Cardiovascular" if cause_name == "Cardiovascular diseases"
+{txt}(72 real changes made)
+
+{com}. replace cause_name = "Chronic respiratory" if cause_name == "Chronic respiratory diseases"
+{txt}(72 real changes made)
+
+{com}. replace cause_name = "Digestive" if cause_name == "Digestive diseases"
+{txt}(72 real changes made)
+
+{com}. replace cause_name = "Neurological" if cause_name == "Neurological disorders"
+{txt}(72 real changes made)
+
+{com}. replace cause_name = "Mental" if cause_name == "Mental disorders"
+{txt}(72 real changes made)
+
+{com}. replace cause_name = "Substance use" if cause_name == "Substance use disorders"
+{txt}(72 real changes made)
+
+{com}. replace cause_name = "Diabetes & kidney" if cause_name == "Diabetes and kidney diseases"
+{txt}(72 real changes made)
+
+{com}. replace cause_name = "Skin" if cause_name == "Skin and subcutaneous diseases"
+{txt}(72 real changes made)
+
+{com}. replace cause_name = "Sense organ" if cause_name == "Sense organ diseases"
+{txt}(48 real changes made)
+
+{com}. replace cause_name = "Musculoskeletal" if cause_name == "Musculoskeletal disorders"
+{txt}(72 real changes made)
+
+{com}. replace cause_name = "Other NCD" if cause_name == "Other non-communicable diseases"
+{txt}(72 real changes made)
+
+{com}. replace cause_name = "Transport injuries" if cause_name == "Transport injuries"
+{txt}(0 real changes made)
+
+{com}. replace cause_name = "Unintentional injuries" if cause_name == "Unintentional injuries"
+{txt}(0 real changes made)
+
+{com}. replace cause_name = "Self-harm and violence" if cause_name == "Self-harm and interpersonal violence"
+{txt}(72 real changes made)
+
+{com}. 
+. 
 . 
 . drop measure_id location_id location_name age_id cause_id metric_id metric_name
 {txt}
@@ -570,12 +689,72 @@
 {txt}
 {com}. 
 . 
-. export excel using "Table 2.xlsx", sheet("Part2") firstrow(varlabels) 
-{res}{txt}file Table 2.xlsx saved
+. 
+. 
+. keep if Sex == "Both sexes"
+{txt}(68 observations deleted)
 
 {com}. 
+. drop Sex_Year
+{txt}
+{com}. 
+. order Cause Year Value Lower_UL Upper_UL rank
+{txt}
+{com}. 
+. reshape wide Value Lower_UL Upper_UL rank, i(Cause) j(Year)
+{txt}(note: j = 1990 2019)
+
+Data{col 36}long{col 43}->{col 48}wide
+{hline 77}
+Number of obs.                 {res}      34   {txt}->{res}      17
+{txt}Number of variables            {res}      10   {txt}->{res}      13
+{txt}j variable (2 values)              {res}Year   {txt}->   (dropped)
+xij variables:
+                                  {res}Value   {txt}->   {res}Value1990 Value2019
+                               Lower_UL   {txt}->   {res}Lower_UL1990 Lower_UL2019
+                               Upper_UL   {txt}->   {res}Upper_UL1990 Upper_UL2019
+                                   rank   {txt}->   {res}rank1990 rank2019
+{txt}{hline 77}
+
+{com}. 
+. order rank1990 rank2019, last
+{txt}
+{com}. 
+. gen to = " to "
+{txt}
+{com}. 
+. egen Rank_change = concat(rank1990 to rank2019)
+{txt}
+{com}. label var Rank_change "Rank change"
+{txt}
+{com}. 
+. label var Value1990     "1990 Value"
+{txt}
+{com}. label var Lower_UL1990 "1990 Lower_UL"
+{txt}
+{com}. label var Upper_UL1990 "1990 Upper_UL"
+{txt}
+{com}. label var Value2019 "2019 Value"
+{txt}
+{com}. label var Lower_UL2019 "2019 Lower_UL"
+{txt}
+{com}. label var Upper_UL2019 "2019 Upper_UL"
+{txt}
+{com}. 
+. drop Measure Age Sex cause_id_new
+{txt}
+{com}. 
+. drop rank1990 rank2019 to
+{txt}
+{com}. 
 . 
-. /* "Table 2.xlsx", sheet("Part2") contents
+. 
+. save "Table 2 Part2.dta", replace
+{txt}(note: file Table 2 Part2.dta not found)
+file Table 2 Part2.dta saved
+
+{com}. 
+. /* Table 2 Part2.dta" contents
 > 
 > Base values of 1990 and 2019
 > 
@@ -595,6 +774,51 @@
 . 
 . 
 . 
+. ************************************************************************
+. * append (level 1), (level 2) causes
+. 
+. use "Table 2 Part1.dta", clear
+{txt}
+{com}. 
+. append using "Table 2 Part2.dta"
+{txt}{p 0 7 2}
+(note: variable
+Cause was 
+str8, now str22 to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+Rank_change was 
+str6, now str8 to accommodate using data's values)
+{p_end}
+
+{com}. 
+. save "Table 2.dta", replace
+{txt}(note: file Table 2.dta not found)
+file Table 2.dta saved
+
+{com}. 
+. export excel using "Table 2.xlsx", replace firstrow(varlabels)
+{res}{txt}file Table 2.xlsx saved
+
+{com}. 
+. 
+. 
+. ********
+. 
+. * remove files no longer needed
+. 
+. shell rm -r "Table 2 Part1.dta"
+{txt}
+
+{com}. shell rm -r "Table 2 Part2.dta"
+{txt}
+
+{com}. 
+. 
+. 
+. 
+. 
 . 
 . 
 . 
@@ -609,7 +833,7 @@
       {txt}name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output/log Table 2.smcl
   {txt}log type:  {res}smcl
- {txt}closed on:  {res}30 Mar 2022, 10:41:01
+ {txt}closed on:  {res} 1 Apr 2022, 10:18:19
 {txt}{.-}
 {smcl}
 {txt}{sf}{ul off}

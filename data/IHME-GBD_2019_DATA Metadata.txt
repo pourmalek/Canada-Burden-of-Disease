@@ -1,0 +1,29 @@
+IHME-GBD_2019_DATA Metadata
+
+IHME-GBD_2019_DATA metadata is mentioned within each Stata do file that uses them. 
+
+The format of metadata:
+
+
+Permalink:
+
+
+Data settings:
+
+Base:
+Location:
+Year:
+
+Context:
+Age:
+Metric:
+
+Measure:
+Sex:
+Cause:
+
+
+Download settings: 
+Both IDs and Names 
+(ID = variable_id, Name = variable_name)
+

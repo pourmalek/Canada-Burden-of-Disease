@@ -1,9 +1,9 @@
 {smcl}
-{com}{sf}{ul off}{txt}{.-}
+{txt}{sf}{ul off}{.-}
       name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output/log Table 4 b.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res}30 Mar 2022, 10:41:03
+ {txt}opened on:  {res} 1 Apr 2022, 10:18:23
 {txt}
 {com}. 
 . ***************************************************************************
@@ -27,11 +27,11 @@
 . 
 . ** Table 4 Part 3: YLLs, Age-standardized
 . * Input data: "IHME-GBD_2019_DATA-43.csv"
-. * Output data: "Table 4.xlsx", sheet("Part3")
+. * Output data: "Table 4 Part3.dta"
 . 
 . ** Table 4 Part 4: YLLs, Age: <5, 5-14, 15-49, 50-69, 70+
 . * Input data: "IHME-GBD_2019_DATA-44.csv"
-. * Output data: "Table 4.xlsx", sheet("Part4")
+. * Output data: ""Table 4 Part4.dta"
 . 
 . 
 . 
@@ -62,7 +62,7 @@
 {txt}
 {com}. 
 . import delimited using "IHME-GBD_2019_DATA-43.csv", clear 
-{res}{text}(16 vars, 12,240 obs)
+{res}{text}(16 vars, 2,448 obs)
 
 {com}. 
 . 
@@ -112,40 +112,40 @@
 . rename measure_name Measure
 {res}{txt}
 {com}. replace Measure = "YLLs" if Measure == "YLLs (Years of Life Lost)"
-{txt}(12,240 real changes made)
+{txt}(2,448 real changes made)
 
 {com}. qui compress
 {txt}
 {com}. 
 . 
 . gen Sex = ""
-{txt}(12,240 missing values generated)
+{txt}(2,448 missing values generated)
 
 {com}. replace Sex = "Both sexes" if sex_name == "Both"
 {txt}variable {bf}Sex{sf} was {bf}{res}str1{sf}{txt} now {bf}{res}str10{sf}
-{txt}(4,080 real changes made)
+{txt}(816 real changes made)
 
 {com}. replace Sex = "Males" if sex_name == "Male"
-{txt}(4,080 real changes made)
+{txt}(816 real changes made)
 
 {com}. replace Sex = "Females" if sex_name == "Female"
-{txt}(4,080 real changes made)
+{txt}(816 real changes made)
 
 {com}. drop sex_name
 {txt}
 {com}. 
 . 
 . gen sex_id_new = .
-{txt}(12,240 missing values generated)
+{txt}(2,448 missing values generated)
 
 {com}. replace sex_id_new = 1 if Sex == "Both sexes"
-{txt}(4,080 real changes made)
+{txt}(816 real changes made)
 
 {com}. replace sex_id_new = 2 if Sex == "Males"
-{txt}(4,080 real changes made)
+{txt}(816 real changes made)
 
 {com}. replace sex_id_new = 3 if Sex == "Females"
-{txt}(4,080 real changes made)
+{txt}(816 real changes made)
 
 {com}. 
 . rename  val Value
@@ -164,13 +164,13 @@
 {txt}
 {com}. 
 . replace Value = round(Value,0.1)
-{txt}(11,688 real changes made)
+{txt}(2,373 real changes made)
 
 {com}. replace Upper_UL = round(Upper_UL,0.1)
-{txt}(11,586 real changes made)
+{txt}(2,380 real changes made)
 
 {com}. replace Lower_UL = round(Lower_UL,0.1)
-{txt}(11,751 real changes made)
+{txt}(2,383 real changes made)
 
 {com}. format Value Upper_UL Lower_UL %5.1fc
 {txt}
@@ -201,7 +201,8 @@
 {txt}
 {com}. 
 . save "IHME-GBD_2019_DATA-43.dta", replace
-{txt}file IHME-GBD_2019_DATA-43.dta saved
+{txt}(note: file IHME-GBD_2019_DATA-43.dta not found)
+file IHME-GBD_2019_DATA-43.dta saved
 
 {com}. 
 . 
@@ -225,15 +226,43 @@
 {txt}
 {com}. 
 . keep if location_name == "Canada"
-{txt}(12,180 observations deleted)
+{txt}(2,436 observations deleted)
 
 {com}. 
-. export excel using "Table 4.xlsx", sheet("Part3") firstrow(varlabels) 
-{res}{txt}file Table 4.xlsx saved
+. *
+. 
+. drop Value Lower_UL Upper_UL Sex_Year
+{txt}
+{com}. 
+. drop location_name Cause
+{txt}
+{com}. 
+. order Measure Sex Age rank 
+{txt}
+{com}. 
+. reshape wide rank, i(Measure Sex Age) j(Year)
+{txt}(note: j = 1990 2000 2010 2019)
+
+Data{col 36}long{col 43}->{col 48}wide
+{hline 77}
+Number of obs.                 {res}      12   {txt}->{res}       3
+{txt}Number of variables            {res}       5   {txt}->{res}       7
+{txt}j variable (4 values)              {res}Year   {txt}->   (dropped)
+xij variables:
+                                   {res}rank   {txt}->   {res}rank1990 rank2000 ... rank2019
+{txt}{hline 77}
+
+{com}. 
+. qui compress
+{txt}
+{com}. 
+. save "Table 4 Part3.dta", replace
+{txt}(note: file Table 4 Part3.dta not found)
+file Table 4 Part3.dta saved
 
 {com}. 
 . 
-. /* "Table 4.xlsx", sheet("Part3") contents
+. /* "Table 4 Part3.dta" contents
 > 
 > Base values of 1990 2000 2010 2019
 > 
@@ -411,7 +440,7 @@
 . sort sex_id_new Year 
 {txt}
 {com}. 
-. drop sex_id sex_id_new cause_id
+. drop sex_id cause_id
 {txt}
 {com}. 
 . order Sex, after(Age)
@@ -464,7 +493,8 @@
 {txt}
 {com}. 
 . save "IHME-GBD_2019_DATA-44.dta", replace
-{txt}file IHME-GBD_2019_DATA-44.dta saved
+{txt}(note: file IHME-GBD_2019_DATA-44.dta not found)
+file IHME-GBD_2019_DATA-44.dta saved
 
 {com}. 
 . 
@@ -491,12 +521,40 @@
 {txt}(12,180 observations deleted)
 
 {com}. 
-. export excel using "Table 4.xlsx", sheet("Part4") firstrow(varlabels) 
-{res}{txt}file Table 4.xlsx saved
+. * 
+. 
+. drop Value Lower_UL Upper_UL Sex_Year
+{txt}
+{com}. 
+. drop location_name Cause
+{txt}
+{com}. 
+. order Measure Sex Age rank 
+{txt}
+{com}. 
+. reshape wide rank, i(Measure Sex Age) j(Year)
+{txt}(note: j = 1990 2000 2010 2019)
+
+Data{col 36}long{col 43}->{col 48}wide
+{hline 77}
+Number of obs.                 {res}      60   {txt}->{res}      15
+{txt}Number of variables            {res}       7   {txt}->{res}       9
+{txt}j variable (4 values)              {res}Year   {txt}->   (dropped)
+xij variables:
+                                   {res}rank   {txt}->   {res}rank1990 rank2000 ... rank2019
+{txt}{hline 77}
+
+{com}. 
+. qui compress
+{txt}
+{com}. 
+. save "Table 4 Part4.dta", replace
+{txt}(note: file Table 4 Part4.dta not found)
+file Table 4 Part4.dta saved
 
 {com}. 
 . 
-. /* "Table 4.xlsx", sheet("Part4") contents
+. /* "Table 4 Part4.dta" contents
 > 
 > Base values of 1990 2000 2010 2019
 > 
@@ -537,7 +595,7 @@
       {txt}name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output/log Table 4 b.smcl
   {txt}log type:  {res}smcl
- {txt}closed on:  {res}30 Mar 2022, 10:41:04
+ {txt}closed on:  {res} 1 Apr 2022, 10:18:24
 {txt}{.-}
 {smcl}
 {txt}{sf}{ul off}

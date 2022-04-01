@@ -1,0 +1,513 @@
+measure_id,measure_name,location_id,location_name,sex_id,sex_name,age_id,age_name,cause_id,cause_name,metric_id,metric_name,year,val,upper,lower
+2,DALYs (Disability-Adjusted Life Years),77,Cyprus,3,Both,27,Age-standardized,687,Injuries,3,Rate,1990,3049.405346766889,3414.785481844244,2718.5973929231836
+2,DALYs (Disability-Adjusted Life Years),67,Japan,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,1990,16689.093163402922,19221.404654831265,14553.211694665299
+2,DALYs (Disability-Adjusted Life Years),88,Malta,3,Both,27,Age-standardized,687,Injuries,3,Rate,1990,2010.9699184297817,2366.030740875929,1726.0312374826901
+2,DALYs (Disability-Adjusted Life Years),396,San Marino,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,21528.372667924705,25092.976402704964,18432.783374021292
+2,DALYs (Disability-Adjusted Life Years),396,San Marino,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,1990,1654.6641841814915,1984.0668089267558,1362.3884861496385
+2,DALYs (Disability-Adjusted Life Years),89,Netherlands,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,24087.68026972065,27074.725105538604,21398.199802203235
+2,DALYs (Disability-Adjusted Life Years),89,Netherlands,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,1990,1560.9033203394763,1720.2908900453683,1425.0964532466448
+2,DALYs (Disability-Adjusted Life Years),67,Japan,3,Both,27,Age-standardized,687,Injuries,3,Rate,1990,2563.1915869323707,2919.288444712581,2290.3884324177575
+2,DALYs (Disability-Adjusted Life Years),78,Denmark,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,27554.41649458654,30799.250792797688,24675.2381724548
+2,DALYs (Disability-Adjusted Life Years),78,Denmark,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,1990,1574.7696125061714,1749.3659316021499,1431.6820497195133
+2,DALYs (Disability-Adjusted Life Years),78,Denmark,3,Both,27,Age-standardized,687,Injuries,3,Rate,1990,3184.7762675326826,3544.8044198229404,2896.014681354782
+2,DALYs (Disability-Adjusted Life Years),89,Netherlands,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,1990,20389.004685212287,23098.193782181446,18012.52563240617
+2,DALYs (Disability-Adjusted Life Years),78,Denmark,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,1990,22794.870614547675,25628.62572023526,20252.596799892093
+2,DALYs (Disability-Adjusted Life Years),79,Finland,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,27337.68298792159,30639.84226411932,24445.569675066086
+2,DALYs (Disability-Adjusted Life Years),79,Finland,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,1990,1648.3140661116338,1829.624943330662,1503.600252929666
+2,DALYs (Disability-Adjusted Life Years),68,Republic of Korea,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,32256.409792213875,35278.37654549849,29591.74421015966
+2,DALYs (Disability-Adjusted Life Years),68,Republic of Korea,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,1990,3292.568748056606,3730.6159331325807,2928.0718540308108
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,24247.512813320744,27249.928509426547,21542.60710515904
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,1990,1628.4677154055516,1792.470669805829,1478.8526231579258
+2,DALYs (Disability-Adjusted Life Years),396,San Marino,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,1990,17561.25778385968,20718.004066089063,14855.483083057821
+2,DALYs (Disability-Adjusted Life Years),79,Finland,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,1990,21395.892177700367,24216.333436156434,18950.22364059219
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,1990,19593.92697899684,22369.708735144377,17177.778891281236
+2,DALYs (Disability-Adjusted Life Years),68,Republic of Korea,3,Both,27,Age-standardized,687,Injuries,3,Rate,1990,4960.8597269576385,5447.4240335525665,4559.441618572777
+2,DALYs (Disability-Adjusted Life Years),68,Republic of Korea,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,1990,24002.981317199614,26356.09614049686,21867.804977809206
+2,DALYs (Disability-Adjusted Life Years),102,United States of America,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,29357.019257744683,32925.20031737191,26194.1426383483
+2,DALYs (Disability-Adjusted Life Years),102,United States of America,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,1990,2524.4748723675757,2699.4836034550867,2363.228030919918
+2,DALYs (Disability-Adjusted Life Years),90,Norway,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,25439.00490457856,28671.38358491266,22527.071269543845
+2,DALYs (Disability-Adjusted Life Years),102,United States of America,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,1990,23081.31355365619,26266.406210643163,20274.748511762074
+2,DALYs (Disability-Adjusted Life Years),396,San Marino,3,Both,27,Age-standardized,687,Injuries,3,Rate,1990,2312.4506998835477,2701.13301981037,1990.7727609716726
+2,DALYs (Disability-Adjusted Life Years),90,Norway,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,1990,1754.9292696414136,1947.2557973027003,1595.1352863821403
+2,DALYs (Disability-Adjusted Life Years),79,Finland,3,Both,27,Age-standardized,687,Injuries,3,Rate,1990,4293.476744109603,4771.526353840009,3909.4605633081896
+2,DALYs (Disability-Adjusted Life Years),89,Netherlands,3,Both,27,Age-standardized,687,Injuries,3,Rate,1990,2137.772264168902,2423.3514749227925,1920.4207388401749
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,687,Injuries,3,Rate,1990,3025.11811891837,3361.848939881861,2765.6186151059433
+2,DALYs (Disability-Adjusted Life Years),367,Monaco,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,23504.937534967947,27429.40104702778,19995.227101805107
+2,DALYs (Disability-Adjusted Life Years),367,Monaco,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,1990,1477.6784953333101,1763.8336906784295,1230.5798479205205
+2,DALYs (Disability-Adjusted Life Years),90,Norway,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,1990,20601.083039071356,23463.337083976414,18119.386185468164
+2,DALYs (Disability-Adjusted Life Years),80,France,3,Both,27,Age-standardized,687,Injuries,3,Rate,1990,3899.184411333838,4299.279632384571,3575.3627543860334
+2,DALYs (Disability-Adjusted Life Years),69,Singapore,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,25490.5647334208,28340.330377045302,23035.216641779483
+2,DALYs (Disability-Adjusted Life Years),69,Singapore,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,1990,2770.5048083503007,3035.328024125662,2558.2641992466874
+2,DALYs (Disability-Adjusted Life Years),69,Singapore,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,1990,20306.50124468058,22639.2317907592,18224.81828495102
+2,DALYs (Disability-Adjusted Life Years),367,Monaco,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,1990,19544.256723147446,22968.291357797712,16546.24526722184
+2,DALYs (Disability-Adjusted Life Years),90,Norway,3,Both,27,Age-standardized,687,Injuries,3,Rate,1990,3082.992595865805,3464.889373003347,2786.784924370051
+2,DALYs (Disability-Adjusted Life Years),69,Singapore,3,Both,27,Age-standardized,687,Injuries,3,Rate,1990,2413.5586803899314,2776.7783460310143,2137.98626911705
+2,DALYs (Disability-Adjusted Life Years),102,United States of America,3,Both,27,Age-standardized,687,Injuries,3,Rate,1990,3751.2308317209095,4125.81978311172,3459.496835288305
+2,DALYs (Disability-Adjusted Life Years),81,Germany,3,Both,27,Age-standardized,687,Injuries,3,Rate,1990,2854.994334533039,3197.1729183064067,2591.302199270255
+2,DALYs (Disability-Adjusted Life Years),80,France,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,25192.057376564215,28351.298631528985,22374.132533351578
+2,DALYs (Disability-Adjusted Life Years),80,France,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,1990,1738.653710086046,1899.2439607803242,1589.3348561535522
+2,DALYs (Disability-Adjusted Life Years),80,France,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,1990,19554.21925514437,22338.91793456024,17077.738252889692
+2,DALYs (Disability-Adjusted Life Years),367,Monaco,3,Both,27,Age-standardized,687,Injuries,3,Rate,1990,2483.002316487204,2887.535058165621,2092.482563394703
+2,DALYs (Disability-Adjusted Life Years),91,Portugal,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,30064.1623470045,33351.83699873725,27060.61098913418
+2,DALYs (Disability-Adjusted Life Years),91,Portugal,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,1990,2744.783547981301,3040.1028009597767,2526.9640088913475
+2,DALYs (Disability-Adjusted Life Years),91,Portugal,3,Both,27,Age-standardized,687,Injuries,3,Rate,1990,4249.680916050191,4587.323219201569,3974.9933212824285
+2,DALYs (Disability-Adjusted Life Years),71,Australia,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,26008.85950765163,29310.77505859484,23079.031816199993
+2,DALYs (Disability-Adjusted Life Years),91,Portugal,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,1990,23069.69788297302,26007.080038818403,20366.176981438286
+2,DALYs (Disability-Adjusted Life Years),92,Spain,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,25244.171755154628,28385.74243265617,22439.144209099544
+2,DALYs (Disability-Adjusted Life Years),92,Spain,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,1990,2104.9416246269893,2309.289445355453,1918.4811180979377
+2,DALYs (Disability-Adjusted Life Years),81,Germany,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,26732.4193855028,29928.70260489628,23911.59221423069
+2,DALYs (Disability-Adjusted Life Years),81,Germany,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,1990,1581.4308493160943,1761.6875011208244,1426.5929171118325
+2,DALYs (Disability-Adjusted Life Years),81,Germany,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,1990,22295.994201653622,25220.91276008097,19797.45848012462
+2,DALYs (Disability-Adjusted Life Years),82,Greece,3,Both,27,Age-standardized,687,Injuries,3,Rate,1990,2702.3640526792915,3051.6481851858157,2414.95079431124
+2,DALYs (Disability-Adjusted Life Years),92,Spain,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,1990,20138.594787329257,22971.78969031595,17656.116981476393
+2,DALYs (Disability-Adjusted Life Years),71,Australia,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,1990,1539.5718779153053,1717.3806611471744,1396.912106900785
+2,DALYs (Disability-Adjusted Life Years),83,Iceland,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,23361.408552058598,26509.68324465758,20490.32914629745
+2,DALYs (Disability-Adjusted Life Years),93,Sweden,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,23374.925077415133,26527.877849977867,20625.774112016017
+2,DALYs (Disability-Adjusted Life Years),93,Sweden,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,1990,1378.2245997231275,1536.9322570922182,1243.8750027239098
+2,DALYs (Disability-Adjusted Life Years),83,Iceland,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,1990,1637.9028390655474,1824.2769442299546,1474.924775671736
+2,DALYs (Disability-Adjusted Life Years),93,Sweden,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,1990,19212.641958713106,21906.014399115484,16786.904528809246
+2,DALYs (Disability-Adjusted Life Years),83,Iceland,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,1990,19005.37599311139,21710.309840341823,16520.115062073233
+2,DALYs (Disability-Adjusted Life Years),92,Spain,3,Both,27,Age-standardized,687,Injuries,3,Rate,1990,3000.635343198356,3334.8164435600584,2738.417504554286
+2,DALYs (Disability-Adjusted Life Years),83,Iceland,3,Both,27,Age-standardized,687,Injuries,3,Rate,1990,2718.129719881689,3064.4559671571515,2442.6449409667393
+2,DALYs (Disability-Adjusted Life Years),84,Ireland,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,27513.256844006428,30710.052320062896,24603.217472711032
+2,DALYs (Disability-Adjusted Life Years),84,Ireland,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,1990,1859.863277043853,2044.6739013689219,1719.213262821091
+2,DALYs (Disability-Adjusted Life Years),84,Ireland,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,1990,23037.33219420423,25877.963732896074,20456.264364857947
+2,DALYs (Disability-Adjusted Life Years),71,Australia,3,Both,27,Age-standardized,687,Injuries,3,Rate,1990,3558.9755033083397,4194.025937874785,3084.9253453289325
+2,DALYs (Disability-Adjusted Life Years),71,Australia,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,1990,20910.31212642802,23752.096208645875,18380.50588486305
+2,DALYs (Disability-Adjusted Life Years),82,Greece,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,24431.971751086,27567.08465589524,21653.726838455506
+2,DALYs (Disability-Adjusted Life Years),82,Greece,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,1990,1718.3032501394975,1979.9483077250234,1532.9360201399145
+2,DALYs (Disability-Adjusted Life Years),94,Switzerland,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,24919.06708679114,28244.5415500604,21979.5053440439
+2,DALYs (Disability-Adjusted Life Years),94,Switzerland,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,1990,1499.9791959115284,1668.6805465432474,1358.224467763117
+2,DALYs (Disability-Adjusted Life Years),82,Greece,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,1990,20011.304448267216,22819.739365842408,17525.842058166178
+2,DALYs (Disability-Adjusted Life Years),94,Switzerland,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,1990,19700.246447931706,22560.02287250546,17134.681851283534
+2,DALYs (Disability-Adjusted Life Years),72,New Zealand,3,Both,27,Age-standardized,687,Injuries,3,Rate,1990,4449.170517285306,5190.941387215496,3897.1467569860974
+2,DALYs (Disability-Adjusted Life Years),72,New Zealand,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,28550.586806180167,32019.638301237996,25432.668323193604
+2,DALYs (Disability-Adjusted Life Years),72,New Zealand,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,1990,1796.7476884756015,1986.1071176791795,1635.513895344331
+2,DALYs (Disability-Adjusted Life Years),72,New Zealand,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,1990,22304.66860041928,25109.024589930363,19751.77207218076
+2,DALYs (Disability-Adjusted Life Years),66,Brunei Darussalam,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,37591.098467902644,41035.21267526148,34413.147123169
+2,DALYs (Disability-Adjusted Life Years),66,Brunei Darussalam,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,1990,3495.450341521178,3907.473204047268,3132.198053751976
+2,DALYs (Disability-Adjusted Life Years),93,Sweden,3,Both,27,Age-standardized,687,Injuries,3,Rate,1990,2784.0585189788444,3149.549858360019,2499.575074851757
+2,DALYs (Disability-Adjusted Life Years),66,Brunei Darussalam,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,1990,29769.736673159845,32481.32842538222,27133.237946625464
+2,DALYs (Disability-Adjusted Life Years),86,Italy,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,25436.779533556986,28833.41767477248,22443.367476747837
+2,DALYs (Disability-Adjusted Life Years),86,Italy,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,1990,1889.0337519661678,2085.8283059362907,1718.7459782618766
+2,DALYs (Disability-Adjusted Life Years),74,Andorra,3,Both,27,Age-standardized,687,Injuries,3,Rate,1990,2566.3931944980995,3142.301479755482,2107.0794784921413
+2,DALYs (Disability-Adjusted Life Years),85,Israel,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,24211.65586365814,27240.957429853657,21510.54374873028
+2,DALYs (Disability-Adjusted Life Years),85,Israel,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,1990,1964.5383198917982,2197.324755562799,1780.0178534789075
+2,DALYs (Disability-Adjusted Life Years),75,Austria,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,26628.747946189964,29789.37740476334,23776.833098496914
+2,DALYs (Disability-Adjusted Life Years),75,Austria,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,1990,1537.9164940435373,1714.9640930727833,1378.179927625215
+2,DALYs (Disability-Adjusted Life Years),85,Israel,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,1990,19764.50780714724,22454.977527027248,17391.826586423955
+2,DALYs (Disability-Adjusted Life Years),67,Japan,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,20928.055495768425,23852.09271472273,18397.876093641837
+2,DALYs (Disability-Adjusted Life Years),67,Japan,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,1990,1675.7707454331457,1891.6379056848873,1512.3873203080964
+2,DALYs (Disability-Adjusted Life Years),75,Austria,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,1990,21662.70987347996,24547.86846851726,19178.386568841775
+2,DALYs (Disability-Adjusted Life Years),86,Italy,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,1990,20877.8687132225,23824.077579040226,18233.92655128278
+2,DALYs (Disability-Adjusted Life Years),74,Andorra,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,22259.044472543046,26643.810244342993,18519.81986351389
+2,DALYs (Disability-Adjusted Life Years),74,Andorra,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,1990,1454.1337453847968,1869.5010325545245,1184.401468782779
+2,DALYs (Disability-Adjusted Life Years),74,Andorra,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,1990,18238.517532660197,22041.408172856292,15037.142788354482
+2,DALYs (Disability-Adjusted Life Years),76,Belgium,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,26249.81621032002,29484.578988046134,23357.11487881039
+2,DALYs (Disability-Adjusted Life Years),76,Belgium,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,1990,1667.199080339598,1847.2510455598876,1502.0852614537503
+2,DALYs (Disability-Adjusted Life Years),84,Ireland,3,Both,27,Age-standardized,687,Injuries,3,Rate,1990,2616.0613727583373,2963.896210257944,2345.0190659154014
+2,DALYs (Disability-Adjusted Life Years),95,United Kingdom,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,27107.478563584355,30486.963849375563,24118.615449764107
+2,DALYs (Disability-Adjusted Life Years),95,United Kingdom,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,1990,2068.5770577554817,2259.793171072037,1895.5246152372697
+2,DALYs (Disability-Adjusted Life Years),66,Brunei Darussalam,3,Both,27,Age-standardized,687,Injuries,3,Rate,1990,4325.911453221588,4805.942088101791,3875.6091634365016
+2,DALYs (Disability-Adjusted Life Years),95,United Kingdom,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,1990,22788.793421583578,25891.88843635085,20127.13155490869
+2,DALYs (Disability-Adjusted Life Years),94,Switzerland,3,Both,27,Age-standardized,687,Injuries,3,Rate,1990,3718.841442947904,4211.869932476488,3345.1562519979902
+2,DALYs (Disability-Adjusted Life Years),85,Israel,3,Both,27,Age-standardized,687,Injuries,3,Rate,1990,2482.6097366191025,2818.324399093481,2213.31397036991
+2,DALYs (Disability-Adjusted Life Years),87,Luxembourg,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,27569.510494341954,30771.39857533553,24634.66600161666
+2,DALYs (Disability-Adjusted Life Years),87,Luxembourg,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,1990,1667.2761433860646,1869.775183088018,1501.8550762798084
+2,DALYs (Disability-Adjusted Life Years),86,Italy,3,Both,27,Age-standardized,687,Injuries,3,Rate,1990,2669.877068368315,3034.984256085881,2390.3589911995814
+2,DALYs (Disability-Adjusted Life Years),95,United Kingdom,3,Both,27,Age-standardized,687,Injuries,3,Rate,1990,2250.1080842452775,2583.1896403925193,1986.3936160046358
+2,DALYs (Disability-Adjusted Life Years),76,Belgium,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,1990,21104.5923821835,23977.383128976537,18591.21751881378
+2,DALYs (Disability-Adjusted Life Years),87,Luxembourg,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,1990,22227.28775319605,25002.263343563107,19669.668866717082
+2,DALYs (Disability-Adjusted Life Years),75,Austria,3,Both,27,Age-standardized,687,Injuries,3,Rate,1990,3428.1215786664566,3827.467149241592,3126.168631111578
+2,DALYs (Disability-Adjusted Life Years),88,Malta,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,24977.88487562017,28070.554075599095,22104.257284696672
+2,DALYs (Disability-Adjusted Life Years),88,Malta,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,1990,2041.6717291909713,2305.7676260638773,1835.6512894355508
+2,DALYs (Disability-Adjusted Life Years),88,Malta,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,1990,20925.243227999414,23728.36457486053,18362.074812404826
+2,DALYs (Disability-Adjusted Life Years),77,Cyprus,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,1990,2645.2888346425298,2970.930258318904,2359.37565374862
+2,DALYs (Disability-Adjusted Life Years),76,Belgium,3,Both,27,Age-standardized,687,Injuries,3,Rate,1990,3478.0247477969524,3859.7124110771456,3171.529762763349
+2,DALYs (Disability-Adjusted Life Years),77,Cyprus,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,28027.082190377423,31139.262752463852,25207.651511496537
+2,DALYs (Disability-Adjusted Life Years),77,Cyprus,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,1990,22332.38800896798,25104.159250463028,19869.534258370084
+2,DALYs (Disability-Adjusted Life Years),87,Luxembourg,3,Both,27,Age-standardized,687,Injuries,3,Rate,1990,3674.946597759833,4104.885681657135,3335.376708401907
+2,DALYs (Disability-Adjusted Life Years),68,Republic of Korea,3,Both,27,Age-standardized,294,All causes,3,Rate,2000,24748.93698531144,27711.765551603068,22195.90156384904
+2,DALYs (Disability-Adjusted Life Years),68,Republic of Korea,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2000,1902.150701073534,2173.1025798805213,1691.1356621354341
+2,DALYs (Disability-Adjusted Life Years),78,Denmark,3,Both,27,Age-standardized,687,Injuries,3,Rate,2000,2425.28056446324,2767.0932001729657,2163.3628228029665
+2,DALYs (Disability-Adjusted Life Years),66,Brunei Darussalam,3,Both,27,Age-standardized,294,All causes,3,Rate,2000,31404.484857686333,34851.704206674855,28279.347758531
+2,DALYs (Disability-Adjusted Life Years),66,Brunei Darussalam,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2000,2784.0817657506263,3141.5173561527563,2500.6332034544607
+2,DALYs (Disability-Adjusted Life Years),69,Singapore,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2010,13531.310549023532,15767.163632529053,11604.823908844644
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,294,All causes,3,Rate,2010,19913.865246885744,23014.747621698407,17197.731299884636
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2010,1364.8363959212052,1532.9372182217314,1217.7134682766746
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2010,16379.088211309081,19112.190957594084,13936.193112748824
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2000,17862.20912894812,20586.21764395172,15493.43928281493
+2,DALYs (Disability-Adjusted Life Years),69,Singapore,3,Both,27,Age-standardized,294,All causes,3,Rate,2010,16657.533382882815,19363.936406008135,14379.50102934478
+2,DALYs (Disability-Adjusted Life Years),69,Singapore,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2010,1625.013329540901,1804.8257081982058,1462.9045218027925
+2,DALYs (Disability-Adjusted Life Years),69,Singapore,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2000,16297.925375532188,18639.058212093496,14329.285131439217
+2,DALYs (Disability-Adjusted Life Years),68,Republic of Korea,3,Both,27,Age-standardized,687,Injuries,3,Rate,2000,3744.40087675896,4171.930592523628,3413.0950718362133
+2,DALYs (Disability-Adjusted Life Years),68,Republic of Korea,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2000,19102.385407478992,21492.887594176176,16976.68605182502
+2,DALYs (Disability-Adjusted Life Years),91,Portugal,3,Both,27,Age-standardized,294,All causes,3,Rate,2010,21508.31758837902,24848.76500352319,18574.921751127484
+2,DALYs (Disability-Adjusted Life Years),79,Finland,3,Both,27,Age-standardized,687,Injuries,3,Rate,2000,3692.042491688942,4260.892907228128,3251.126321212618
+2,DALYs (Disability-Adjusted Life Years),367,Monaco,3,Both,27,Age-standardized,687,Injuries,3,Rate,2000,2193.8669136764534,2592.788907722441,1808.0362479188593
+2,DALYs (Disability-Adjusted Life Years),90,Norway,3,Both,27,Age-standardized,294,All causes,3,Rate,2000,22574.448766100093,25782.554382443555,19648.23977857757
+2,DALYs (Disability-Adjusted Life Years),90,Norway,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2000,1243.7243996880002,1403.633472879527,1102.9659614433301
+2,DALYs (Disability-Adjusted Life Years),79,Finland,3,Both,27,Age-standardized,294,All causes,3,Rate,2000,23862.316892034152,27093.22032828719,20880.928249365126
+2,DALYs (Disability-Adjusted Life Years),79,Finland,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2000,1270.5246809418354,1436.4552755011487,1139.1511544323896
+2,DALYs (Disability-Adjusted Life Years),79,Finland,3,Both,27,Age-standardized,687,Injuries,3,Rate,2010,3075.339535503276,3633.3294000946053,2639.1033020364393
+2,DALYs (Disability-Adjusted Life Years),81,Germany,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2000,19696.00477281499,22571.26869774389,17199.95428444529
+2,DALYs (Disability-Adjusted Life Years),81,Germany,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2010,17892.320116904022,20789.061012221075,15372.826849232373
+2,DALYs (Disability-Adjusted Life Years),91,Portugal,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2000,20630.16332446111,23602.124813565515,17939.57975607393
+2,DALYs (Disability-Adjusted Life Years),91,Portugal,3,Both,27,Age-standardized,687,Injuries,3,Rate,2000,2977.613284130415,3287.467273805815,2738.6259208687056
+2,DALYs (Disability-Adjusted Life Years),82,Greece,3,Both,27,Age-standardized,294,All causes,3,Rate,2010,20874.29514847101,24047.851393460212,18099.18434726373
+2,DALYs (Disability-Adjusted Life Years),82,Greece,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2010,1068.1846623156753,1229.6102342393194,940.5601086674865
+2,DALYs (Disability-Adjusted Life Years),66,Brunei Darussalam,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2000,25561.986116834807,28405.804741254946,22899.008213223107
+2,DALYs (Disability-Adjusted Life Years),81,Germany,3,Both,27,Age-standardized,294,All causes,3,Rate,2010,20819.45520987155,24033.917759045456,17980.55046467248
+2,DALYs (Disability-Adjusted Life Years),81,Germany,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2010,1134.7845143717707,1291.1882473648868,1003.1577097596016
+2,DALYs (Disability-Adjusted Life Years),92,Spain,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2010,16042.727479023026,18804.47223505296,13643.426711421003
+2,DALYs (Disability-Adjusted Life Years),80,France,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2000,17944.30807570938,20761.054819125948,15506.86003127999
+2,DALYs (Disability-Adjusted Life Years),67,Japan,3,Both,27,Age-standardized,687,Injuries,3,Rate,2000,2417.2370511315467,2746.4192659764453,2172.851426728142
+2,DALYs (Disability-Adjusted Life Years),71,Australia,3,Both,27,Age-standardized,294,All causes,3,Rate,2010,20403.865742953294,23775.280681050244,17468.723679681207
+2,DALYs (Disability-Adjusted Life Years),71,Australia,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2010,1071.4106944201462,1218.2190534084207,947.2192376757126
+2,DALYs (Disability-Adjusted Life Years),69,Singapore,3,Both,27,Age-standardized,687,Injuries,3,Rate,2000,1963.3307873111926,2316.678903335987,1690.0038832932726
+2,DALYs (Disability-Adjusted Life Years),80,France,3,Both,27,Age-standardized,687,Injuries,3,Rate,2010,2561.8089116818296,2944.3125067922138,2266.601546240915
+2,DALYs (Disability-Adjusted Life Years),90,Norway,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2000,18854.566074403432,21719.262005339282,16347.953870664118
+2,DALYs (Disability-Adjusted Life Years),67,Japan,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2000,15153.202829958014,17676.601118722625,13016.353807008421
+2,DALYs (Disability-Adjusted Life Years),92,Spain,3,Both,27,Age-standardized,687,Injuries,3,Rate,2000,2377.2202482831804,2718.745793782324,2112.134463214911
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,294,All causes,3,Rate,2000,21747.444335065426,24815.256339179556,19079.493299496018
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2000,1411.5851183222146,1581.0299195595815,1274.122265149694
+2,DALYs (Disability-Adjusted Life Years),93,Sweden,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2010,15978.011818451312,18606.228174276694,13566.491457472215
+2,DALYs (Disability-Adjusted Life Years),71,Australia,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2000,18467.309798166414,21372.472150398266,15922.36310706321
+2,DALYs (Disability-Adjusted Life Years),93,Sweden,3,Both,27,Age-standardized,687,Injuries,3,Rate,2000,2178.5256041215134,2515.424369755564,1916.0874255254369
+2,DALYs (Disability-Adjusted Life Years),367,Monaco,3,Both,27,Age-standardized,294,All causes,3,Rate,2000,22380.41579831321,26566.592626793758,18725.09060910317
+2,DALYs (Disability-Adjusted Life Years),367,Monaco,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2000,1238.7429521640254,1469.5496412784353,1027.504298821929
+2,DALYs (Disability-Adjusted Life Years),84,Ireland,3,Both,27,Age-standardized,294,All causes,3,Rate,2010,20791.104041959497,24039.85827675924,17936.279101546992
+2,DALYs (Disability-Adjusted Life Years),84,Ireland,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2010,1072.572705630904,1211.6650411290836,952.26304764457
+2,DALYs (Disability-Adjusted Life Years),102,United States of America,3,Both,27,Age-standardized,687,Injuries,3,Rate,2010,2727.0723159721406,2997.8665725772435,2508.725215035329
+2,DALYs (Disability-Adjusted Life Years),66,Brunei Darussalam,3,Both,27,Age-standardized,687,Injuries,3,Rate,2000,3058.4169751009526,3452.848779677264,2726.8852749935
+2,DALYs (Disability-Adjusted Life Years),93,Sweden,3,Both,27,Age-standardized,294,All causes,3,Rate,2000,20680.491317274442,23718.04745793008,17951.25159064643
+2,DALYs (Disability-Adjusted Life Years),93,Sweden,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2000,1028.3464938946956,1187.2628384325822,902.9479709311231
+2,DALYs (Disability-Adjusted Life Years),71,Australia,3,Both,27,Age-standardized,294,All causes,3,Rate,2000,22814.906148537386,26206.32207829442,19841.911593803903
+2,DALYs (Disability-Adjusted Life Years),71,Australia,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2000,1274.57114164166,1433.8825975310253,1144.3053240745076
+2,DALYs (Disability-Adjusted Life Years),367,Monaco,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2000,18947.805932472766,22615.11810568579,15752.79275563707
+2,DALYs (Disability-Adjusted Life Years),81,Germany,3,Both,27,Age-standardized,687,Injuries,3,Rate,2000,2250.4808293370434,2569.9778814660417,1997.6375506357097
+2,DALYs (Disability-Adjusted Life Years),82,Greece,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2000,19154.271889442018,21990.018870573855,16661.129767903225
+2,DALYs (Disability-Adjusted Life Years),94,Switzerland,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2010,15896.655029892701,18809.944472920433,13351.66927802047
+2,DALYs (Disability-Adjusted Life Years),72,New Zealand,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2010,16914.743362486905,19590.580079025363,14530.26645392983
+2,DALYs (Disability-Adjusted Life Years),92,Spain,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2000,17916.259906737196,20666.078908712338,15460.32786257742
+2,DALYs (Disability-Adjusted Life Years),91,Portugal,3,Both,27,Age-standardized,687,Injuries,3,Rate,2010,1943.198648463509,2192.3115120806638,1743.6193387496294
+2,DALYs (Disability-Adjusted Life Years),90,Norway,3,Both,27,Age-standardized,687,Injuries,3,Rate,2010,2086.9870773414696,2439.0124726772283,1813.1661639273211
+2,DALYs (Disability-Adjusted Life Years),102,United States of America,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2010,20971.39487077314,24151.829566855933,18098.187562248026
+2,DALYs (Disability-Adjusted Life Years),89,Netherlands,3,Both,27,Age-standardized,687,Injuries,3,Rate,2000,1853.3167249961732,2111.114785055445,1656.982846582407
+2,DALYs (Disability-Adjusted Life Years),93,Sweden,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2000,17473.61921925819,20172.339989631648,15074.675142331915
+2,DALYs (Disability-Adjusted Life Years),91,Portugal,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2010,17945.325363502518,20974.974217324092,15283.583446396226
+2,DALYs (Disability-Adjusted Life Years),82,Greece,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2010,17784.515789461002,20726.97415061456,15297.350071411398
+2,DALYs (Disability-Adjusted Life Years),83,Iceland,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2010,15645.202326776796,18447.050887406043,13145.346761364817
+2,DALYs (Disability-Adjusted Life Years),72,New Zealand,3,Both,27,Age-standardized,294,All causes,3,Rate,2000,24400.98945658378,27701.025373692068,21348.68887201245
+2,DALYs (Disability-Adjusted Life Years),72,New Zealand,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2000,1303.5945105004937,1496.7336613977204,1149.4554431767754
+2,DALYs (Disability-Adjusted Life Years),81,Germany,3,Both,27,Age-standardized,687,Injuries,3,Rate,2010,1792.3505785957511,2097.262737388044,1552.5326761075366
+2,DALYs (Disability-Adjusted Life Years),80,France,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2010,16332.349368503912,19132.345390985312,13905.205636454946
+2,DALYs (Disability-Adjusted Life Years),69,Singapore,3,Both,27,Age-standardized,294,All causes,3,Rate,2000,20194.744416458878,22989.55816110191,17814.44021934527
+2,DALYs (Disability-Adjusted Life Years),69,Singapore,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2000,1933.4882536155083,2141.5902352566027,1764.5701337528903
+2,DALYs (Disability-Adjusted Life Years),84,Ireland,3,Both,27,Age-standardized,687,Injuries,3,Rate,2010,1985.5473904329967,2330.0075259151595,1723.1321743683538
+2,DALYs (Disability-Adjusted Life Years),396,San Marino,3,Both,27,Age-standardized,294,All causes,3,Rate,2000,19685.366201233126,23021.56282802352,16725.644797710676
+2,DALYs (Disability-Adjusted Life Years),396,San Marino,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2000,1322.896604009429,1568.7128332471284,1101.374646848588
+2,DALYs (Disability-Adjusted Life Years),79,Finland,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2000,18899.749719403353,21665.195314430126,16429.08312169062
+2,DALYs (Disability-Adjusted Life Years),102,United States of America,3,Both,27,Age-standardized,294,All causes,3,Rate,2010,25383.7693280811,28938.992509957352,22206.317785834235
+2,DALYs (Disability-Adjusted Life Years),102,United States of America,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2010,1685.302141335832,1860.847855322532,1534.1809791129633
+2,DALYs (Disability-Adjusted Life Years),102,United States of America,3,Both,27,Age-standardized,687,Injuries,3,Rate,2000,3036.2949362364366,3321.0676612856614,2811.918463933099
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,687,Injuries,3,Rate,2000,2473.6500877950875,2781.677318045022,2224.0071633162092
+2,DALYs (Disability-Adjusted Life Years),80,France,3,Both,27,Age-standardized,294,All causes,3,Rate,2000,22521.424747568297,25745.294512157525,19744.82109530337
+2,DALYs (Disability-Adjusted Life Years),80,France,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2000,1360.993119186119,1519.5095634409251,1225.2297029992692
+2,DALYs (Disability-Adjusted Life Years),82,Greece,3,Both,27,Age-standardized,294,All causes,3,Rate,2000,22863.313591017628,26071.82238276289,20095.082965571924
+2,DALYs (Disability-Adjusted Life Years),82,Greece,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2000,1349.9538386855525,1513.5349561348664,1205.4833603307845
+2,DALYs (Disability-Adjusted Life Years),80,France,3,Both,27,Age-standardized,294,All causes,3,Rate,2010,20021.072461527838,23182.576739168155,17221.54563075351
+2,DALYs (Disability-Adjusted Life Years),80,France,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2010,1126.9141813420651,1288.0717825862985,995.5634656575703
+2,DALYs (Disability-Adjusted Life Years),102,United States of America,3,Both,27,Age-standardized,294,All causes,3,Rate,2000,27132.50351342333,30620.122371693902,24032.811864290165
+2,DALYs (Disability-Adjusted Life Years),102,United States of America,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2000,1932.3824780351383,2092.2078845112237,1790.1467484665493
+2,DALYs (Disability-Adjusted Life Years),83,Iceland,3,Both,27,Age-standardized,294,All causes,3,Rate,2010,18398.5328556774,21573.741792729423,15526.336183816355
+2,DALYs (Disability-Adjusted Life Years),83,Iceland,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2010,976.6357655390733,1138.1809179315883,837.707519356816
+2,DALYs (Disability-Adjusted Life Years),81,Germany,3,Both,27,Age-standardized,294,All causes,3,Rate,2000,23137.663365349214,26352.679266534047,20326.882412639185
+2,DALYs (Disability-Adjusted Life Years),81,Germany,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2000,1191.1777631972102,1348.2640100048152,1057.323898926967
+2,DALYs (Disability-Adjusted Life Years),102,United States of America,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2000,22163.82609915177,25363.005367528818,19321.301301447565
+2,DALYs (Disability-Adjusted Life Years),82,Greece,3,Both,27,Age-standardized,687,Injuries,3,Rate,2000,2359.0878628900355,2701.360562229032,2092.889528077702
+2,DALYs (Disability-Adjusted Life Years),71,Australia,3,Both,27,Age-standardized,687,Injuries,3,Rate,2000,3073.0252087292956,3669.9468535487495,2633.6697436929167
+2,DALYs (Disability-Adjusted Life Years),74,Andorra,3,Both,27,Age-standardized,294,All causes,3,Rate,2010,19424.837906341214,22874.180824052004,16200.220696875656
+2,DALYs (Disability-Adjusted Life Years),74,Andorra,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2010,1063.113082580599,1480.3023850954617,848.4973315901982
+2,DALYs (Disability-Adjusted Life Years),74,Andorra,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2010,16289.781093879876,19304.0631354207,13407.86436155609
+2,DALYs (Disability-Adjusted Life Years),71,Australia,3,Both,27,Age-standardized,687,Injuries,3,Rate,2010,2707.121794044733,3310.4925292480734,2265.2839255850445
+2,DALYs (Disability-Adjusted Life Years),90,Norway,3,Both,27,Age-standardized,687,Injuries,3,Rate,2000,2476.1582920086653,2846.677236255955,2191.024127340576
+2,DALYs (Disability-Adjusted Life Years),69,Singapore,3,Both,27,Age-standardized,687,Injuries,3,Rate,2010,1501.209504318414,1834.4977042521225,1254.4377482494772
+2,DALYs (Disability-Adjusted Life Years),80,France,3,Both,27,Age-standardized,687,Injuries,3,Rate,2000,3216.123552672757,3606.7256750577967,2908.9703397171616
+2,DALYs (Disability-Adjusted Life Years),72,New Zealand,3,Both,27,Age-standardized,294,All causes,3,Rate,2010,21459.362761361466,24807.96120816817,18539.635513836314
+2,DALYs (Disability-Adjusted Life Years),72,New Zealand,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2010,1242.680338495258,1437.7475435842255,1085.9716537153693
+2,DALYs (Disability-Adjusted Life Years),396,San Marino,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2000,16349.143035235342,19345.56995942241,13794.01893581726
+2,DALYs (Disability-Adjusted Life Years),72,New Zealand,3,Both,27,Age-standardized,687,Injuries,3,Rate,2000,3834.1178035757434,4580.192714256801,3278.198076967086
+2,DALYs (Disability-Adjusted Life Years),72,New Zealand,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2000,19263.27714250756,21981.744406554826,16881.89544326367
+2,DALYs (Disability-Adjusted Life Years),83,Iceland,3,Both,27,Age-standardized,687,Injuries,3,Rate,2000,2195.8640470208684,2531.575283697129,1927.021498172201
+2,DALYs (Disability-Adjusted Life Years),93,Sweden,3,Both,27,Age-standardized,294,All causes,3,Rate,2010,18844.150376749454,21952.63943847213,16172.99297552967
+2,DALYs (Disability-Adjusted Life Years),93,Sweden,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2010,910.0025769252812,1069.7754799510762,771.5078385554244
+2,DALYs (Disability-Adjusted Life Years),83,Iceland,3,Both,27,Age-standardized,294,All causes,3,Rate,2000,20734.4125368241,23961.626711660174,17852.109636754893
+2,DALYs (Disability-Adjusted Life Years),83,Iceland,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2000,1199.5471243752863,1362.7965241931954,1053.6188349102713
+2,DALYs (Disability-Adjusted Life Years),82,Greece,3,Both,27,Age-standardized,687,Injuries,3,Rate,2010,2021.5946966943475,2345.798796641472,1774.761622709436
+2,DALYs (Disability-Adjusted Life Years),67,Japan,3,Both,27,Age-standardized,294,All causes,3,Rate,2000,18897.982268524756,21794.87889781277,16391.583703159446
+2,DALYs (Disability-Adjusted Life Years),67,Japan,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2000,1327.5423874351825,1527.8147959733203,1176.062901166946
+2,DALYs (Disability-Adjusted Life Years),91,Portugal,3,Both,27,Age-standardized,294,All causes,3,Rate,2000,25961.95257024063,29315.660230413203,23015.060698054876
+2,DALYs (Disability-Adjusted Life Years),91,Portugal,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2000,2354.1759616490403,2553.321736099309,2190.5371332113446
+2,DALYs (Disability-Adjusted Life Years),83,Iceland,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2000,17339.001365427917,20135.981416372724,14807.680011541228
+2,DALYs (Disability-Adjusted Life Years),91,Portugal,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2010,1619.7935764130602,1792.707945392305,1474.6980973617356
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,687,Injuries,3,Rate,2010,2169.940639655457,2472.330881244014,1921.198087929153
+2,DALYs (Disability-Adjusted Life Years),94,Switzerland,3,Both,27,Age-standardized,294,All causes,3,Rate,2010,19107.87137322797,22307.066033798535,16227.50339129565
+2,DALYs (Disability-Adjusted Life Years),94,Switzerland,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2010,1069.5193585820111,1208.1457064535443,939.2897128949501
+2,DALYs (Disability-Adjusted Life Years),92,Spain,3,Both,27,Age-standardized,687,Injuries,3,Rate,2010,1666.5498114024883,1981.1000165565172,1416.4330886092762
+2,DALYs (Disability-Adjusted Life Years),74,Andorra,3,Both,27,Age-standardized,687,Injuries,3,Rate,2010,2071.9437298807397,2495.0848812031463,1710.236877042209
+2,DALYs (Disability-Adjusted Life Years),92,Spain,3,Both,27,Age-standardized,294,All causes,3,Rate,2000,21750.676454140637,24829.06654837594,19029.60387153319
+2,DALYs (Disability-Adjusted Life Years),92,Spain,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2000,1457.1962991202606,1635.2506654091524,1309.1748326262914
+2,DALYs (Disability-Adjusted Life Years),94,Switzerland,3,Both,27,Age-standardized,687,Injuries,3,Rate,2000,2917.2227200369475,3431.2403526572284,2511.2629258765737
+2,DALYs (Disability-Adjusted Life Years),84,Ireland,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2010,17732.983945895587,20657.27247386316,15174.021424445174
+2,DALYs (Disability-Adjusted Life Years),71,Australia,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2010,16625.333254488418,19460.651600548612,14076.262357177477
+2,DALYs (Disability-Adjusted Life Years),92,Spain,3,Both,27,Age-standardized,294,All causes,3,Rate,2010,18873.3598597459,21973.459380426895,16127.5334830029
+2,DALYs (Disability-Adjusted Life Years),92,Spain,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2010,1164.0825693204017,1336.938790061472,1020.5721957686584
+2,DALYs (Disability-Adjusted Life Years),66,Brunei Darussalam,3,Both,27,Age-standardized,687,Injuries,3,Rate,2010,2480.842773666804,2841.2869217299617,2194.916042659983
+2,DALYs (Disability-Adjusted Life Years),94,Switzerland,3,Both,27,Age-standardized,294,All causes,3,Rate,2000,21917.001470660427,25196.80414557234,18945.500179631425
+2,DALYs (Disability-Adjusted Life Years),94,Switzerland,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2000,1282.421238188921,1432.2282844437516,1158.5375174629257
+2,DALYs (Disability-Adjusted Life Years),85,Israel,3,Both,27,Age-standardized,294,All causes,3,Rate,2010,18953.94871614339,22037.100661614793,16232.779722807658
+2,DALYs (Disability-Adjusted Life Years),85,Israel,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2010,1181.5952060576965,1350.4432420546916,1037.932819735093
+2,DALYs (Disability-Adjusted Life Years),95,United Kingdom,3,Both,27,Age-standardized,294,All causes,3,Rate,2010,21518.810519082985,24857.72919998289,18533.838335367538
+2,DALYs (Disability-Adjusted Life Years),95,United Kingdom,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2010,1493.7862265487838,1674.3019340991916,1334.981127810053
+2,DALYs (Disability-Adjusted Life Years),85,Israel,3,Both,27,Age-standardized,687,Injuries,3,Rate,2010,1863.877536180035,2170.9696788693686,1630.676673265518
+2,DALYs (Disability-Adjusted Life Years),85,Israel,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2010,15908.47597390567,18669.28085388931,13521.233669155241
+2,DALYs (Disability-Adjusted Life Years),94,Switzerland,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2000,17717.357512434555,20578.311038152704,15104.261866754228
+2,DALYs (Disability-Adjusted Life Years),95,United Kingdom,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2010,18394.357006854512,21434.25684250314,15712.730381928932
+2,DALYs (Disability-Adjusted Life Years),93,Sweden,3,Both,27,Age-standardized,687,Injuries,3,Rate,2010,1956.1359813728607,2290.6481457933805,1699.1920146278906
+2,DALYs (Disability-Adjusted Life Years),75,Austria,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2000,19347.63824295306,22173.205588276225,16843.039824756226
+2,DALYs (Disability-Adjusted Life Years),75,Austria,3,Both,27,Age-standardized,294,All causes,3,Rate,2000,23188.716307627958,26344.40832865032,20401.001503446696
+2,DALYs (Disability-Adjusted Life Years),75,Austria,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2000,1148.0441517031857,1301.4386624967965,1014.7763519435254
+2,DALYs (Disability-Adjusted Life Years),72,New Zealand,3,Both,27,Age-standardized,687,Injuries,3,Rate,2010,3301.9390603792754,4026.728565190349,2777.4257984376263
+2,DALYs (Disability-Adjusted Life Years),95,United Kingdom,3,Both,27,Age-standardized,687,Injuries,3,Rate,2000,1908.8781767245343,2221.5101008184556,1667.0520627222352
+2,DALYs (Disability-Adjusted Life Years),83,Iceland,3,Both,27,Age-standardized,687,Injuries,3,Rate,2010,1776.6947633615555,2105.921010123187,1518.0570887712872
+2,DALYs (Disability-Adjusted Life Years),74,Andorra,3,Both,27,Age-standardized,294,All causes,3,Rate,2000,20467.25096602379,24246.498085592277,17157.741360768712
+2,DALYs (Disability-Adjusted Life Years),74,Andorra,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2000,1174.535956283413,1658.7032901213709,922.5200537169093
+2,DALYs (Disability-Adjusted Life Years),84,Ireland,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2000,20896.962391878784,23750.784393329715,18291.950798916187
+2,DALYs (Disability-Adjusted Life Years),66,Brunei Darussalam,3,Both,27,Age-standardized,294,All causes,3,Rate,2010,28726.979091387333,32052.753403393723,25869.715021517142
+2,DALYs (Disability-Adjusted Life Years),66,Brunei Darussalam,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2010,2690.8712268162813,2984.408232068569,2449.5648047986533
+2,DALYs (Disability-Adjusted Life Years),84,Ireland,3,Both,27,Age-standardized,294,All causes,3,Rate,2000,25152.386680715485,28334.146509432518,22255.111069932565
+2,DALYs (Disability-Adjusted Life Years),84,Ireland,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2000,1682.569752155901,1835.1750894779282,1541.3730390455985
+2,DALYs (Disability-Adjusted Life Years),94,Switzerland,3,Both,27,Age-standardized,687,Injuries,3,Rate,2010,2141.696984753242,2579.809589338776,1807.1954488407753
+2,DALYs (Disability-Adjusted Life Years),74,Andorra,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2000,17023.174228773703,20259.3252631165,14134.133667570597
+2,DALYs (Disability-Adjusted Life Years),75,Austria,3,Both,27,Age-standardized,687,Injuries,3,Rate,2010,2193.782383092594,2558.154142946178,1919.925959242461
+2,DALYs (Disability-Adjusted Life Years),75,Austria,3,Both,27,Age-standardized,294,All causes,3,Rate,2010,20609.191100547912,23777.137305982877,17772.636499587978
+2,DALYs (Disability-Adjusted Life Years),75,Austria,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2010,1028.0496661104592,1184.1996452781607,888.0397081849765
+2,DALYs (Disability-Adjusted Life Years),86,Italy,3,Both,27,Age-standardized,687,Injuries,3,Rate,2010,1531.016101395258,1769.989812130741,1345.330834519536
+2,DALYs (Disability-Adjusted Life Years),66,Brunei Darussalam,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2010,23555.26509090435,26382.75377882479,21093.58273572722
+2,DALYs (Disability-Adjusted Life Years),76,Belgium,3,Both,27,Age-standardized,294,All causes,3,Rate,2000,23915.75079854445,27201.625030798892,20997.752570832865
+2,DALYs (Disability-Adjusted Life Years),76,Belgium,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2000,1468.7182268163222,1631.1994629523474,1327.9228350869478
+2,DALYs (Disability-Adjusted Life Years),75,Austria,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2010,17387.359051344876,20249.390068537898,14910.176202957478
+2,DALYs (Disability-Adjusted Life Years),95,United Kingdom,3,Both,27,Age-standardized,294,All causes,3,Rate,2000,24375.419188243308,27788.690731590345,21334.50186637443
+2,DALYs (Disability-Adjusted Life Years),95,United Kingdom,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2000,1887.8182656921128,2070.5156268646356,1710.3157621703183
+2,DALYs (Disability-Adjusted Life Years),95,United Kingdom,3,Both,27,Age-standardized,687,Injuries,3,Rate,2010,1630.6672856797263,1932.2507427116823,1400.154545143631
+2,DALYs (Disability-Adjusted Life Years),77,Cyprus,3,Both,27,Age-standardized,294,All causes,3,Rate,2000,24939.087024248267,28124.517006850132,22183.63060414768
+2,DALYs (Disability-Adjusted Life Years),76,Belgium,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2000,19084.70370704269,21919.48310037494,16556.865073119145
+2,DALYs (Disability-Adjusted Life Years),74,Andorra,3,Both,27,Age-standardized,687,Injuries,3,Rate,2000,2269.540780966684,2742.3685671534026,1859.3342192783364
+2,DALYs (Disability-Adjusted Life Years),77,Cyprus,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2000,20372.85304387191,23151.504944098797,17908.573527058285
+2,DALYs (Disability-Adjusted Life Years),95,United Kingdom,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2000,20578.72274582666,23727.215244980875,17865.81060887147
+2,DALYs (Disability-Adjusted Life Years),86,Italy,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2000,18524.465398097433,21391.989181565805,15910.568647942016
+2,DALYs (Disability-Adjusted Life Years),76,Belgium,3,Both,27,Age-standardized,687,Injuries,3,Rate,2010,3006.9201113277645,3515.4771988983257,2607.0821109563717
+2,DALYs (Disability-Adjusted Life Years),86,Italy,3,Both,27,Age-standardized,294,All causes,3,Rate,2010,19142.38968873192,22464.672337248358,16281.03614414196
+2,DALYs (Disability-Adjusted Life Years),86,Italy,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2010,1062.8605109824675,1230.1937514960907,920.9392652075871
+2,DALYs (Disability-Adjusted Life Years),85,Israel,3,Both,27,Age-standardized,294,All causes,3,Rate,2000,22122.29488568425,25262.074698770946,19418.03687947078
+2,DALYs (Disability-Adjusted Life Years),85,Israel,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2000,1439.333309435068,1623.313251983732,1286.474862126366
+2,DALYs (Disability-Adjusted Life Years),86,Italy,3,Both,27,Age-standardized,294,All causes,3,Rate,2000,22012.093295366743,25379.13819635156,19071.120238432344
+2,DALYs (Disability-Adjusted Life Years),86,Italy,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2000,1281.2666985306823,1447.4751078952982,1135.0580219239198
+2,DALYs (Disability-Adjusted Life Years),86,Italy,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2010,16548.513076354226,19451.24645887866,13942.967962372597
+2,DALYs (Disability-Adjusted Life Years),78,Denmark,3,Both,27,Age-standardized,294,All causes,3,Rate,2000,24614.08861960102,27842.509622438345,21719.557166493687
+2,DALYs (Disability-Adjusted Life Years),78,Denmark,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2000,1277.5058140012172,1450.3229342222676,1131.876185822425
+2,DALYs (Disability-Adjusted Life Years),84,Ireland,3,Both,27,Age-standardized,687,Injuries,3,Rate,2000,2572.8545366808066,2924.2868461966104,2292.2756496168477
+2,DALYs (Disability-Adjusted Life Years),78,Denmark,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2000,20911.302241136535,23755.71181384313,18424.10772129945
+2,DALYs (Disability-Adjusted Life Years),76,Belgium,3,Both,27,Age-standardized,294,All causes,3,Rate,2010,21711.41193870343,25034.068275878813,18688.461498005185
+2,DALYs (Disability-Adjusted Life Years),87,Luxembourg,3,Both,27,Age-standardized,687,Injuries,3,Rate,2010,2012.692921713757,2364.9119511524295,1723.1616392789424
+2,DALYs (Disability-Adjusted Life Years),68,Republic of Korea,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2010,15044.939802602223,17448.056732045363,12930.020606596248
+2,DALYs (Disability-Adjusted Life Years),67,Japan,3,Both,27,Age-standardized,294,All causes,3,Rate,2010,17156.546383673027,19960.610707191132,14713.07853402267
+2,DALYs (Disability-Adjusted Life Years),67,Japan,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2010,1095.1669508570767,1277.2396282390525,948.2623621704215
+2,DALYs (Disability-Adjusted Life Years),85,Israel,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2000,18319.000463929293,21091.03931328559,15938.139749262007
+2,DALYs (Disability-Adjusted Life Years),76,Belgium,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2010,1313.3442239622555,1468.2123041678633,1167.1044133045314
+2,DALYs (Disability-Adjusted Life Years),77,Cyprus,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2000,1629.6520108529937,1814.1349362539736,1462.1735310544207
+2,DALYs (Disability-Adjusted Life Years),67,Japan,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2010,13910.76132204562,16414.088446964284,11774.463514014136
+2,DALYs (Disability-Adjusted Life Years),77,Cyprus,3,Both,27,Age-standardized,687,Injuries,3,Rate,2010,2096.263683580404,2444.374179915506,1821.2934240796772
+2,DALYs (Disability-Adjusted Life Years),87,Luxembourg,3,Both,27,Age-standardized,294,All causes,3,Rate,2000,23725.672170451366,26874.078755995197,20861.01244429472
+2,DALYs (Disability-Adjusted Life Years),87,Luxembourg,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2000,1296.0018496242847,1473.7672024340886,1145.189063638441
+2,DALYs (Disability-Adjusted Life Years),76,Belgium,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2010,17391.14760341346,20240.03215932891,14856.684770511796
+2,DALYs (Disability-Adjusted Life Years),89,Netherlands,3,Both,27,Age-standardized,294,All causes,3,Rate,2000,22575.921170069734,25579.124449751274,19932.58675167772
+2,DALYs (Disability-Adjusted Life Years),89,Netherlands,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2000,1521.4833985577552,1683.5400395770064,1392.0309750496806
+2,DALYs (Disability-Adjusted Life Years),87,Luxembourg,3,Both,27,Age-standardized,294,All causes,3,Rate,2010,20132.086749442275,23358.080027962522,17224.155523734407
+2,DALYs (Disability-Adjusted Life Years),75,Austria,3,Both,27,Age-standardized,687,Injuries,3,Rate,2000,2693.033912971729,3064.687640487891,2399.365121698821
+2,DALYs (Disability-Adjusted Life Years),89,Netherlands,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2000,19201.12104651584,21892.568262969286,16780.324343580894
+2,DALYs (Disability-Adjusted Life Years),87,Luxembourg,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2000,19687.947009764364,22486.24284997546,17139.05613729136
+2,DALYs (Disability-Adjusted Life Years),88,Malta,3,Both,27,Age-standardized,687,Injuries,3,Rate,2010,1778.9010307247718,2152.6354227335255,1486.0322099011416
+2,DALYs (Disability-Adjusted Life Years),87,Luxembourg,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2010,1041.1579644329518,1208.3899215557212,885.630859358726
+2,DALYs (Disability-Adjusted Life Years),78,Denmark,3,Both,27,Age-standardized,687,Injuries,3,Rate,2010,1765.9763713093075,2084.997765029276,1511.167207157382
+2,DALYs (Disability-Adjusted Life Years),87,Luxembourg,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2010,17078.23586329556,19878.72321787702,14524.118687697071
+2,DALYs (Disability-Adjusted Life Years),67,Japan,3,Both,27,Age-standardized,687,Injuries,3,Rate,2010,2150.618110770318,2457.301912097785,1917.3641110998917
+2,DALYs (Disability-Adjusted Life Years),76,Belgium,3,Both,27,Age-standardized,687,Injuries,3,Rate,2000,3362.3288646853857,3793.179831389308,3012.086262874645
+2,DALYs (Disability-Adjusted Life Years),68,Republic of Korea,3,Both,27,Age-standardized,294,All causes,3,Rate,2010,19436.91263531255,22248.28467969245,16968.870521851382
+2,DALYs (Disability-Adjusted Life Years),68,Republic of Korea,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2010,1398.6811606712893,1604.1167480248996,1225.1944906071876
+2,DALYs (Disability-Adjusted Life Years),77,Cyprus,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2010,1110.1137079178022,1268.2190725252128,971.8612646782374
+2,DALYs (Disability-Adjusted Life Years),85,Israel,3,Both,27,Age-standardized,687,Injuries,3,Rate,2000,2363.9611123199093,2673.0470240277473,2124.5708877432894
+2,DALYs (Disability-Adjusted Life Years),89,Netherlands,3,Both,27,Age-standardized,687,Injuries,3,Rate,2010,1548.2403690584506,1811.7785800682811,1346.6233508553535
+2,DALYs (Disability-Adjusted Life Years),88,Malta,3,Both,27,Age-standardized,294,All causes,3,Rate,2000,22225.150223835084,25473.130352830027,19319.59368538747
+2,DALYs (Disability-Adjusted Life Years),88,Malta,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2000,1715.9291284076228,1946.4328392288007,1531.5587667637187
+2,DALYs (Disability-Adjusted Life Years),88,Malta,3,Both,27,Age-standardized,294,All causes,3,Rate,2010,20216.4885326524,23455.81493083414,17329.88108371236
+2,DALYs (Disability-Adjusted Life Years),88,Malta,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2010,1463.061420524882,1654.937841597786,1284.480533483577
+2,DALYs (Disability-Adjusted Life Years),68,Republic of Korea,3,Both,27,Age-standardized,687,Injuries,3,Rate,2010,2993.291672039088,3397.2151818577686,2633.5564010548233
+2,DALYs (Disability-Adjusted Life Years),396,San Marino,3,Both,27,Age-standardized,687,Injuries,3,Rate,2000,2013.3265619883625,2361.17389413461,1722.9176408944704
+2,DALYs (Disability-Adjusted Life Years),87,Luxembourg,3,Both,27,Age-standardized,687,Injuries,3,Rate,2000,2741.723311062688,3134.3246851920153,2422.042203261462
+2,DALYs (Disability-Adjusted Life Years),88,Malta,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2010,16974.526081402753,19826.051662810485,14406.651037823382
+2,DALYs (Disability-Adjusted Life Years),86,Italy,3,Both,27,Age-standardized,687,Injuries,3,Rate,2000,2206.361198738598,2532.612987802047,1951.218037114693
+2,DALYs (Disability-Adjusted Life Years),88,Malta,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2000,18660.25144509203,21487.470450428962,16109.456852213536
+2,DALYs (Disability-Adjusted Life Years),77,Cyprus,3,Both,27,Age-standardized,294,All causes,3,Rate,2010,21012.04041095589,24115.04816794769,18168.856471624298
+2,DALYs (Disability-Adjusted Life Years),77,Cyprus,3,Both,27,Age-standardized,687,Injuries,3,Rate,2000,2936.5819695233536,3306.811588701403,2622.029947824157
+2,DALYs (Disability-Adjusted Life Years),77,Cyprus,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2010,17805.663019457712,20533.218841368245,15274.28830309897
+2,DALYs (Disability-Adjusted Life Years),78,Denmark,3,Both,27,Age-standardized,294,All causes,3,Rate,2010,21546.8031729573,24674.253825024854,18757.208695227888
+2,DALYs (Disability-Adjusted Life Years),78,Denmark,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2010,1249.8894861180502,1412.0539306336618,1102.0830098090642
+2,DALYs (Disability-Adjusted Life Years),78,Denmark,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2010,18530.937315529925,21336.176214334995,16086.1661198074
+2,DALYs (Disability-Adjusted Life Years),88,Malta,3,Both,27,Age-standardized,687,Injuries,3,Rate,2000,1848.9696503354226,2192.493161922119,1576.2988411595722
+2,DALYs (Disability-Adjusted Life Years),79,Finland,3,Both,27,Age-standardized,294,All causes,3,Rate,2010,21285.20056082176,24544.753482494074,18401.859867408868
+2,DALYs (Disability-Adjusted Life Years),79,Finland,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2010,779.4975940797478,924.0645237764829,656.2569290636126
+2,DALYs (Disability-Adjusted Life Years),79,Finland,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2010,17430.36343123872,20207.70999249222,15017.114717769906
+2,DALYs (Disability-Adjusted Life Years),89,Netherlands,3,Both,27,Age-standardized,294,All causes,3,Rate,2010,19490.74243271606,22503.475888955552,16839.549613212337
+2,DALYs (Disability-Adjusted Life Years),89,Netherlands,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2010,1213.8865097173025,1362.0737638365229,1077.0528920487798
+2,DALYs (Disability-Adjusted Life Years),89,Netherlands,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2010,16728.615553940308,19411.087025345,14342.175248104519
+2,DALYs (Disability-Adjusted Life Years),90,Norway,3,Both,27,Age-standardized,294,All causes,3,Rate,2010,19928.661298120423,23115.66620723272,17089.167279362195
+2,DALYs (Disability-Adjusted Life Years),90,Norway,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2010,1045.0370308998965,1202.3952435768238,902.7503322504712
+2,DALYs (Disability-Adjusted Life Years),90,Norway,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2010,16796.63718987904,19671.304702305315,14328.24155255731
+2,DALYs (Disability-Adjusted Life Years),367,Monaco,3,Both,27,Age-standardized,294,All causes,3,Rate,2010,21976.789036938975,25526.18809657252,18563.883101986183
+2,DALYs (Disability-Adjusted Life Years),367,Monaco,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2010,1109.391901847285,1331.3180302870614,929.1709509600513
+2,DALYs (Disability-Adjusted Life Years),66,Brunei Darussalam,3,Both,27,Age-standardized,294,All causes,3,Rate,2019,27814.220821153358,31351.79221015596,24631.438460860823
+2,DALYs (Disability-Adjusted Life Years),367,Monaco,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2010,18754.209089617663,21965.503915928344,15729.536147260706
+2,DALYs (Disability-Adjusted Life Years),87,Luxembourg,3,Both,27,Age-standardized,294,All causes,3,Rate,2019,18634.22494819481,22023.268262749505,15642.104088895218
+2,DALYs (Disability-Adjusted Life Years),87,Luxembourg,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2019,948.3529713490884,1144.7530660589975,770.8785510414887
+2,DALYs (Disability-Adjusted Life Years),66,Brunei Darussalam,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2019,2680.2013210916875,3107.3727648714653,2334.696539526961
+2,DALYs (Disability-Adjusted Life Years),87,Luxembourg,3,Both,27,Age-standardized,687,Injuries,3,Rate,2019,1946.3402736644255,2317.7526108771694,1643.732457804032
+2,DALYs (Disability-Adjusted Life Years),66,Brunei Darussalam,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2019,22663.016714010566,25528.270764667206,20004.145441424433
+2,DALYs (Disability-Adjusted Life Years),88,Malta,3,Both,27,Age-standardized,687,Injuries,3,Rate,2019,1702.2423705676374,2077.2859727347386,1412.8760937581585
+2,DALYs (Disability-Adjusted Life Years),66,Brunei Darussalam,3,Both,27,Age-standardized,687,Injuries,3,Rate,2019,2471.002786051107,2871.699797272919,2138.7678565739875
+2,DALYs (Disability-Adjusted Life Years),367,Monaco,3,Both,27,Age-standardized,687,Injuries,3,Rate,2010,2113.1880454740485,2522.0661609732624,1765.8130384300314
+2,DALYs (Disability-Adjusted Life Years),76,Belgium,3,Both,27,Age-standardized,687,Injuries,3,Rate,2019,2476.329546291654,2882.5153674055064,2160.037681713475
+2,DALYs (Disability-Adjusted Life Years),77,Cyprus,3,Both,27,Age-standardized,294,All causes,3,Rate,2019,19742.958021893308,22879.904715024255,16837.67382595616
+2,DALYs (Disability-Adjusted Life Years),67,Japan,3,Both,27,Age-standardized,294,All causes,3,Rate,2019,15885.707907373187,18694.776084203888,13455.23635534223
+2,DALYs (Disability-Adjusted Life Years),67,Japan,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2019,957.1415332593954,1127.0937404705473,823.021334661981
+2,DALYs (Disability-Adjusted Life Years),77,Cyprus,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2019,16598.882522172047,19447.94027463645,14056.533232077014
+2,DALYs (Disability-Adjusted Life Years),89,Netherlands,3,Both,27,Age-standardized,687,Injuries,3,Rate,2019,1605.427513251085,1910.6609915582894,1368.3891251020586
+2,DALYs (Disability-Adjusted Life Years),67,Japan,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2019,13027.952091509298,15491.952025851651,10894.253548417923
+2,DALYs (Disability-Adjusted Life Years),77,Cyprus,3,Both,27,Age-standardized,687,Injuries,3,Rate,2019,2147.5784819580363,2509.3752045538354,1862.7645293668002
+2,DALYs (Disability-Adjusted Life Years),87,Luxembourg,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2019,15739.531703181272,18606.43975275967,13160.963640727874
+2,DALYs (Disability-Adjusted Life Years),77,Cyprus,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2019,996.4970177632142,1169.299830017646,831.8266909525822
+2,DALYs (Disability-Adjusted Life Years),78,Denmark,3,Both,27,Age-standardized,294,All causes,3,Rate,2019,19929.465551786867,23154.70504390274,17111.020999175373
+2,DALYs (Disability-Adjusted Life Years),78,Denmark,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2019,1125.5100793946262,1311.09489363864,971.4124403643639
+2,DALYs (Disability-Adjusted Life Years),78,Denmark,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2019,17165.592766276066,19954.93109876421,14671.5166272402
+2,DALYs (Disability-Adjusted Life Years),88,Malta,3,Both,27,Age-standardized,294,All causes,3,Rate,2019,18983.440312403247,22345.3629779708,16093.51623453192
+2,DALYs (Disability-Adjusted Life Years),88,Malta,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2019,1327.9652058857566,1632.4613191979292,1082.8049594428921
+2,DALYs (Disability-Adjusted Life Years),78,Denmark,3,Both,27,Age-standardized,687,Injuries,3,Rate,2019,1638.3627061161746,1976.8424323574197,1376.1074937192193
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,687,Injuries,3,Rate,2019,2076.682799346403,2391.17689491735,1831.7787663513254
+2,DALYs (Disability-Adjusted Life Years),88,Malta,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2019,15953.232735949876,18838.502554337312,13411.476416786089
+2,DALYs (Disability-Adjusted Life Years),79,Finland,3,Both,27,Age-standardized,294,All causes,3,Rate,2019,19569.468173694564,22871.534331243332,16724.36248555998
+2,DALYs (Disability-Adjusted Life Years),79,Finland,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2019,688.261711693657,835.4905115716784,568.5805206702717
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,294,All causes,3,Rate,2019,19683.722102499112,22813.80843645628,16877.058579218563
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2019,1254.5031935790805,1435.4404011594636,1102.5826961641915
+2,DALYs (Disability-Adjusted Life Years),67,Japan,3,Both,27,Age-standardized,687,Injuries,3,Rate,2019,1900.6142826045311,2223.666257567351,1654.4417906234614
+2,DALYs (Disability-Adjusted Life Years),68,Republic of Korea,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2019,13534.564973406643,15827.789380512324,11432.621830815382
+2,DALYs (Disability-Adjusted Life Years),79,Finland,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2019,16427.51394964552,19205.20443464449,13963.36706874493
+2,DALYs (Disability-Adjusted Life Years),68,Republic of Korea,3,Both,27,Age-standardized,294,All causes,3,Rate,2019,17191.57440838992,19958.16807651415,14738.476369873726
+2,DALYs (Disability-Adjusted Life Years),68,Republic of Korea,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2019,1217.0822703365961,1426.1899059255031,1039.7017543974077
+2,DALYs (Disability-Adjusted Life Years),89,Netherlands,3,Both,27,Age-standardized,294,All causes,3,Rate,2019,18887.720659620038,22000.27623272714,16189.66924049703
+2,DALYs (Disability-Adjusted Life Years),89,Netherlands,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2019,1067.3144412802637,1236.6514970666817,922.9733851386871
+2,DALYs (Disability-Adjusted Life Years),89,Netherlands,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2019,16214.978705088663,19002.45662453113,13796.708962044435
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2019,16352.536109573623,19155.337336822806,13875.986739708893
+2,DALYs (Disability-Adjusted Life Years),396,San Marino,3,Both,27,Age-standardized,294,All causes,3,Rate,2019,19158.855998557934,23965.460843860106,15068.048648443677
+2,DALYs (Disability-Adjusted Life Years),396,San Marino,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2019,1096.8961851795439,1361.478109211903,888.6577607108195
+2,DALYs (Disability-Adjusted Life Years),90,Norway,3,Both,27,Age-standardized,294,All causes,3,Rate,2019,18460.994092190296,21712.58426788003,15587.749921958932
+2,DALYs (Disability-Adjusted Life Years),90,Norway,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2019,954.0684454635236,1118.1203688631115,812.9291185087445
+2,DALYs (Disability-Adjusted Life Years),396,San Marino,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2019,16186.852519270875,20398.03182226948,12710.075850956984
+2,DALYs (Disability-Adjusted Life Years),90,Norway,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2019,15642.440705242036,18526.959081667323,13123.180723810268
+2,DALYs (Disability-Adjusted Life Years),102,United States of America,3,Both,27,Age-standardized,294,All causes,3,Rate,2019,26061.040511788546,29796.472804225592,22714.251783921347
+2,DALYs (Disability-Adjusted Life Years),102,United States of America,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2019,1597.4371413305187,1790.2887134307298,1436.2012913091555
+2,DALYs (Disability-Adjusted Life Years),69,Singapore,3,Both,27,Age-standardized,294,All causes,3,Rate,2019,15045.113518873657,17787.427649179233,12736.430062438352
+2,DALYs (Disability-Adjusted Life Years),69,Singapore,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2019,1375.27827315212,1551.5259540006846,1212.6742318383888
+2,DALYs (Disability-Adjusted Life Years),68,Republic of Korea,3,Both,27,Age-standardized,687,Injuries,3,Rate,2019,2439.927164646666,2844.220705315391,2101.912506954714
+2,DALYs (Disability-Adjusted Life Years),396,San Marino,3,Both,27,Age-standardized,687,Injuries,3,Rate,2019,1875.1072941075092,2456.445044783881,1422.2078880462193
+2,DALYs (Disability-Adjusted Life Years),69,Singapore,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2019,12309.911275133167,14559.360109713829,10316.906814986423
+2,DALYs (Disability-Adjusted Life Years),102,United States of America,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2019,21717.365296388867,25075.387021270657,18649.419210075383
+2,DALYs (Disability-Adjusted Life Years),91,Portugal,3,Both,27,Age-standardized,294,All causes,3,Rate,2019,19673.92067617467,22929.924848035447,16844.568196434797
+2,DALYs (Disability-Adjusted Life Years),91,Portugal,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2019,1385.7718988236563,1577.8379242904227,1217.7940071089804
+2,DALYs (Disability-Adjusted Life Years),91,Portugal,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2019,16664.485740595686,19599.019200427294,14085.093274362716
+2,DALYs (Disability-Adjusted Life Years),80,France,3,Both,27,Age-standardized,294,All causes,3,Rate,2019,18781.50811788194,21919.07387377922,16016.969563874292
+2,DALYs (Disability-Adjusted Life Years),80,France,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2019,1014.7459797761829,1166.4823927509833,878.3279466573061
+2,DALYs (Disability-Adjusted Life Years),396,San Marino,3,Both,27,Age-standardized,687,Injuries,3,Rate,2010,1829.7872017805919,2289.1313919365025,1430.3701640717106
+2,DALYs (Disability-Adjusted Life Years),80,France,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2019,15461.16729633198,18229.562974488534,13059.123884530893
+2,DALYs (Disability-Adjusted Life Years),71,Australia,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2019,16056.019727622142,18933.28798020214,13537.479652159805
+2,DALYs (Disability-Adjusted Life Years),71,Australia,3,Both,27,Age-standardized,294,All causes,3,Rate,2019,19607.613450225144,23005.34449166517,16655.721981949275
+2,DALYs (Disability-Adjusted Life Years),71,Australia,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2019,938.9247535289287,1090.1147596195408,808.8812203950617
+2,DALYs (Disability-Adjusted Life Years),396,San Marino,3,Both,27,Age-standardized,294,All causes,3,Rate,2010,19247.898112791667,23286.42321196981,15410.913635415429
+2,DALYs (Disability-Adjusted Life Years),396,San Marino,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2010,1150.11718867043,1408.8101816203214,923.9145730805315
+2,DALYs (Disability-Adjusted Life Years),396,San Marino,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2010,16267.993722340656,19788.436076173548,12981.115509090254
+2,DALYs (Disability-Adjusted Life Years),92,Spain,3,Both,27,Age-standardized,294,All causes,3,Rate,2019,18033.376362194547,21169.76106248657,15282.45977894864
+2,DALYs (Disability-Adjusted Life Years),92,Spain,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2019,1011.6181784043085,1194.133523434777,869.6593443917874
+2,DALYs (Disability-Adjusted Life Years),79,Finland,3,Both,27,Age-standardized,687,Injuries,3,Rate,2019,2453.692512355392,2913.6948851470506,2090.1299491114496
+2,DALYs (Disability-Adjusted Life Years),69,Singapore,3,Both,27,Age-standardized,687,Injuries,3,Rate,2019,1359.9239705883726,1703.8079138526189,1106.052542857161
+2,DALYs (Disability-Adjusted Life Years),102,United States of America,3,Both,27,Age-standardized,687,Injuries,3,Rate,2019,2746.2380740691374,3069.7616060112264,2493.9351738825826
+2,DALYs (Disability-Adjusted Life Years),81,Germany,3,Both,27,Age-standardized,294,All causes,3,Rate,2019,20075.1208693431,23315.348586749475,17158.066010584575
+2,DALYs (Disability-Adjusted Life Years),81,Germany,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2019,1036.3935986173346,1194.1426150769169,898.3083445737876
+2,DALYs (Disability-Adjusted Life Years),92,Spain,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2019,15453.708606561062,18340.686563953026,13046.473468548822
+2,DALYs (Disability-Adjusted Life Years),367,Monaco,3,Both,27,Age-standardized,294,All causes,3,Rate,2019,21141.126290704247,25063.614074452078,17596.76527974113
+2,DALYs (Disability-Adjusted Life Years),367,Monaco,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2019,1011.1252730405201,1257.1197359536404,837.4479902520268
+2,DALYs (Disability-Adjusted Life Years),367,Monaco,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2019,18085.99286045201,21454.73387843313,15031.768012589477
+2,DALYs (Disability-Adjusted Life Years),72,New Zealand,3,Both,27,Age-standardized,294,All causes,3,Rate,2019,20681.595522254378,24017.51274066534,17683.56701149725
+2,DALYs (Disability-Adjusted Life Years),72,New Zealand,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2019,1057.0536234419412,1254.509517950521,896.7823852276374
+2,DALYs (Disability-Adjusted Life Years),81,Germany,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2019,17277.050587070815,20233.138487565695,14709.885921641295
+2,DALYs (Disability-Adjusted Life Years),90,Norway,3,Both,27,Age-standardized,687,Injuries,3,Rate,2019,1864.4849414847147,2216.8423440641163,1589.5429619020904
+2,DALYs (Disability-Adjusted Life Years),71,Australia,3,Both,27,Age-standardized,687,Injuries,3,Rate,2019,2612.668969074076,3240.9984638525084,2142.3287622480934
+2,DALYs (Disability-Adjusted Life Years),72,New Zealand,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2019,16536.733096329514,19281.101804632435,14139.864810381083
+2,DALYs (Disability-Adjusted Life Years),82,Greece,3,Both,27,Age-standardized,687,Injuries,3,Rate,2019,1861.1293704327081,2186.912718556063,1619.3484887579111
+2,DALYs (Disability-Adjusted Life Years),83,Iceland,3,Both,27,Age-standardized,294,All causes,3,Rate,2019,17420.692025593908,20591.628457025232,14617.872560163363
+2,DALYs (Disability-Adjusted Life Years),93,Sweden,3,Both,27,Age-standardized,294,All causes,3,Rate,2019,18069.156994485034,21133.3318691614,15379.363713851093
+2,DALYs (Disability-Adjusted Life Years),93,Sweden,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2019,875.8775366629441,1041.5658102284856,739.353489287325
+2,DALYs (Disability-Adjusted Life Years),93,Sweden,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2019,15350.614779451063,18096.01665641054,12977.85504908314
+2,DALYs (Disability-Adjusted Life Years),83,Iceland,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2019,907.5522055135723,1103.9335868069406,753.0295962286764
+2,DALYs (Disability-Adjusted Life Years),82,Greece,3,Both,27,Age-standardized,294,All causes,3,Rate,2019,20200.89533314461,23369.954584689283,17423.262139077444
+2,DALYs (Disability-Adjusted Life Years),82,Greece,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2019,1117.408221770588,1286.6566320909208,968.968958291437
+2,DALYs (Disability-Adjusted Life Years),83,Iceland,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2019,14844.946595962549,17681.90807903196,12379.217850254503
+2,DALYs (Disability-Adjusted Life Years),91,Portugal,3,Both,27,Age-standardized,687,Injuries,3,Rate,2019,1623.6630367553655,1856.8906864543399,1441.3930376438338
+2,DALYs (Disability-Adjusted Life Years),95,United Kingdom,3,Both,27,Age-standardized,294,All causes,3,Rate,2019,20956.605886848796,24318.37432191628,17941.451472710996
+2,DALYs (Disability-Adjusted Life Years),95,United Kingdom,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2019,1380.8247103397202,1563.8108299176258,1218.785923927892
+2,DALYs (Disability-Adjusted Life Years),80,France,3,Both,27,Age-standardized,687,Injuries,3,Rate,2019,2305.594841773741,2678.3969951061063,2009.2460794534952
+2,DALYs (Disability-Adjusted Life Years),83,Iceland,3,Both,27,Age-standardized,687,Injuries,3,Rate,2019,1668.1932241177908,2000.095158893446,1396.063301259936
+2,DALYs (Disability-Adjusted Life Years),95,United Kingdom,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2019,18000.615653394245,21079.164413864437,15317.109060211558
+2,DALYs (Disability-Adjusted Life Years),84,Ireland,3,Both,27,Age-standardized,294,All causes,3,Rate,2019,19401.417953746575,22745.478109033167,16511.872163492386
+2,DALYs (Disability-Adjusted Life Years),84,Ireland,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2019,962.8443787612134,1109.5441986066844,828.8533314811855
+2,DALYs (Disability-Adjusted Life Years),72,New Zealand,3,Both,27,Age-standardized,687,Injuries,3,Rate,2019,3087.808802482933,3800.5184407293827,2559.3298663039877
+2,DALYs (Disability-Adjusted Life Years),93,Sweden,3,Both,27,Age-standardized,687,Injuries,3,Rate,2019,1842.6646783710057,2193.6225932579555,1576.6714582428253
+2,DALYs (Disability-Adjusted Life Years),84,Ireland,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2019,16792.220228295064,19734.613802422493,14165.72177822575
+2,DALYs (Disability-Adjusted Life Years),82,Greece,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2019,17222.35774094127,20067.587032237294,14700.04214237465
+2,DALYs (Disability-Adjusted Life Years),94,Switzerland,3,Both,27,Age-standardized,294,All causes,3,Rate,2019,17635.027308097913,20827.43182161703,14843.577532742062
+2,DALYs (Disability-Adjusted Life Years),94,Switzerland,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2019,972.5998370398829,1129.9686543965556,846.0510200091667
+2,DALYs (Disability-Adjusted Life Years),74,Andorra,3,Both,27,Age-standardized,294,All causes,3,Rate,2019,18988.555796385237,22821.48840278553,15548.930148169396
+2,DALYs (Disability-Adjusted Life Years),74,Andorra,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2019,937.1727018295495,1336.3362465609828,721.9969496130136
+2,DALYs (Disability-Adjusted Life Years),94,Switzerland,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2019,14760.745897696286,17562.86384121056,12347.178127023573
+2,DALYs (Disability-Adjusted Life Years),367,Monaco,3,Both,27,Age-standardized,687,Injuries,3,Rate,2019,2044.0081572117197,2491.1663429822293,1662.8339153070635
+2,DALYs (Disability-Adjusted Life Years),74,Andorra,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2019,16039.707688105704,19368.689186439307,13073.089491797498
+2,DALYs (Disability-Adjusted Life Years),85,Israel,3,Both,27,Age-standardized,294,All causes,3,Rate,2019,17799.583940589237,20838.93763384067,15143.280795120265
+2,DALYs (Disability-Adjusted Life Years),85,Israel,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2019,1056.3731572911674,1238.850439293143,905.0682421879036
+2,DALYs (Disability-Adjusted Life Years),81,Germany,3,Both,27,Age-standardized,687,Injuries,3,Rate,2019,1761.6766836549068,2090.9144034539463,1499.1796985865378
+2,DALYs (Disability-Adjusted Life Years),94,Switzerland,3,Both,27,Age-standardized,687,Injuries,3,Rate,2019,1901.681573361743,2314.9152355928977,1587.6714236457835
+2,DALYs (Disability-Adjusted Life Years),85,Israel,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2019,15090.441035774296,17823.946297001934,12748.717908775598
+2,DALYs (Disability-Adjusted Life Years),92,Spain,3,Both,27,Age-standardized,687,Injuries,3,Rate,2019,1568.0495772291597,1886.854093840294,1323.185330361812
+2,DALYs (Disability-Adjusted Life Years),74,Andorra,3,Both,27,Age-standardized,687,Injuries,3,Rate,2019,2011.6754064499871,2465.9305589297305,1605.3307340142646
+2,DALYs (Disability-Adjusted Life Years),84,Ireland,3,Both,27,Age-standardized,687,Injuries,3,Rate,2019,1646.3533466902988,1978.1476345693407,1384.1199822270246
+2,DALYs (Disability-Adjusted Life Years),75,Austria,3,Both,27,Age-standardized,687,Injuries,3,Rate,2019,1966.6782958813467,2319.042251088849,1693.9118145428909
+2,DALYs (Disability-Adjusted Life Years),95,United Kingdom,3,Both,27,Age-standardized,687,Injuries,3,Rate,2019,1575.165523114817,1897.8615947273115,1332.7381173705369
+2,DALYs (Disability-Adjusted Life Years),85,Israel,3,Both,27,Age-standardized,687,Injuries,3,Rate,2019,1652.769747523776,1972.6473687131509,1409.1746630102305
+2,DALYs (Disability-Adjusted Life Years),86,Italy,3,Both,27,Age-standardized,687,Injuries,3,Rate,2019,1489.097425636853,1764.218878463452,1272.3834173802854
+2,DALYs (Disability-Adjusted Life Years),75,Austria,3,Both,27,Age-standardized,294,All causes,3,Rate,2019,19104.090145225866,22252.883872986386,16292.476573211967
+2,DALYs (Disability-Adjusted Life Years),75,Austria,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2019,898.5356846032321,1047.3527453417666,760.6855345150287
+2,DALYs (Disability-Adjusted Life Years),75,Austria,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2019,16238.876164741287,19151.553298745068,13738.48262607274
+2,DALYs (Disability-Adjusted Life Years),76,Belgium,3,Both,27,Age-standardized,294,All causes,3,Rate,2019,20170.420750929676,23434.572192082167,17229.847463285107
+2,DALYs (Disability-Adjusted Life Years),76,Belgium,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2019,1181.4656953726749,1354.2451906635122,1036.3822039038173
+2,DALYs (Disability-Adjusted Life Years),76,Belgium,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2019,16512.625509265392,19413.15706619684,13920.441076659095
+2,DALYs (Disability-Adjusted Life Years),86,Italy,3,Both,27,Age-standardized,294,All causes,3,Rate,2019,18185.86400225848,21485.55058208634,15293.97316800244
+2,DALYs (Disability-Adjusted Life Years),86,Italy,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,2019,944.2699184239257,1117.370601816788,799.493436786248
+2,DALYs (Disability-Adjusted Life Years),86,Italy,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,2019,15752.496658197731,18645.540723123322,13159.379510992747

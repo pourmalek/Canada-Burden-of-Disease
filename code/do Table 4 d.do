@@ -30,7 +30,7 @@ log using "log Table 4 d.smcl", replace
 
 ** Table 4 Part 7: YLDs, Life expectancy
 * Input data: "IHME-GBD_2019_DATA-47.csv"
-* Output data: "Table 4.xlsx", sheet("Part7")
+* Output data: "Table 4 Part7.dta"
 
 
 
@@ -125,10 +125,9 @@ format Value Upper_UL Lower_UL %5.2fc
 	
 rename year Year 
 
-
 sort sex_id_new Year 
 
-drop sex_id sex_id_new 
+drop sex_id
 
 
 * gen Sex-Year combinations  
@@ -141,7 +140,7 @@ save "IHME-GBD_2019_DATA-47.dta", replace
 	
 
 
-bysort Sex_Year: egen rank = rank(Value)
+bysort Sex_Year: egen rank = rank(-Value)
 
 label var rank "rank of mean YLDs within Sex-Year group"
 
@@ -151,10 +150,30 @@ label var location_name "Country"
 
 keep if location_name == "Canada"
 
-export excel using "Table 4.xlsx", sheet("Part7") firstrow(varlabels) 
+*
+
+drop Value Lower_UL Upper_UL Sex_Year
+
+drop location_name 
+
+rename age_name Age
+
+order Measure Sex Age rank 
+
+reshape wide rank, i(Sex Age) j(Year)
+
+sort sex_id_new
+
+order Measure 
+
+drop sex_id_new
+
+qui compress
+
+save "Table 4 Part7.dta", replace
 
 
-/* "Table 4.xlsx", sheet("Part7") contents
+/* "Table 4 Part7.dta" contents
 
 Base values of 1990 2000 2010 2019
 

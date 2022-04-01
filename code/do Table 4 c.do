@@ -30,11 +30,11 @@ log using "log Table 4 c.smcl", replace
 
 ** Table 4 Part 5: YLDs, Age-standardized
 * Input data: "IHME-GBD_2019_DATA-45.csv"
-* Output data: "Table 4.xlsx", sheet("Part5")
+* Output data: "Table 4 Part5.dta"
 
 ** Table 4 Part 6: YLDs, Age: <5, 5-14, 15-49, 50-69, 70+
 * Input data: "IHME-GBD_2019_DATA-46.csv"
-* Output data: "Table 4.xlsx", sheet("Part6")
+* Output data: "Table 4 Part6.dta"
 
 
 
@@ -167,10 +167,22 @@ label var location_name "Country"
 
 keep if location_name == "Canada"
 
-export excel using "Table 4.xlsx", sheet("Part5") firstrow(varlabels) 
+*
+
+drop Value Lower_UL Upper_UL Sex_Year
+
+drop location_name Cause
+
+order Measure Sex Age rank 
+
+reshape wide rank, i(Measure Sex Age) j(Year)
+
+qui compress
+
+save "Table 4 Part5.dta", replace
 
 
-/* "Table 4.xlsx", sheet("Part5") contents
+/* "Table 4 Part5.dta" contents
 
 Base values of 1990 2000 2010 2019
 
@@ -342,10 +354,24 @@ label var location_name "Country"
 
 keep if location_name == "Canada"
 
-export excel using "Table 4.xlsx", sheet("Part6") firstrow(varlabels) 
+*
+
+drop Value Lower_UL Upper_UL Sex_Year
+
+drop location_name Cause
+
+order Measure Sex Age rank age_id_new
+
+reshape wide rank, i(Measure Sex Age) j(Year)
+
+drop age_id_new
+
+qui compress
+
+save "Table 4 Part6.dta", replace
 
 
-/* "Table 4.xlsx", sheet("Part6") contents
+/* "Table 4 Part6.dta" contents
 
 Base values of 1990 2000 2010 2019
 

@@ -71,6 +71,8 @@ grstyle color background white
 
 cd code
 
+* objective, input files, and output files are mentioned at the beginning of each do file
+
 do "do Table 1.do" 
 
 do "do Table 2.do" 
@@ -86,3 +88,11 @@ do "do Table 4 c.do"
 do "do Table 4 d.do" 
 
 do "do Table 4 e.do" 
+
+do "do Table 5 a.do"
+
+do "do Table 5 b.do"
+
+do "do Table 5 c.do"
+
+do "do Table 5 d.do"

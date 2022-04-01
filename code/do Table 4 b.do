@@ -1,4 +1,5 @@
 
+
 clear all
 
 cd "$pathCanadaBOD"
@@ -30,11 +31,11 @@ log using "log Table 4 b.smcl", replace
 
 ** Table 4 Part 3: YLLs, Age-standardized
 * Input data: "IHME-GBD_2019_DATA-43.csv"
-* Output data: "Table 4.xlsx", sheet("Part3")
+* Output data: "Table 4 Part3.dta"
 
 ** Table 4 Part 4: YLLs, Age: <5, 5-14, 15-49, 50-69, 70+
 * Input data: "IHME-GBD_2019_DATA-44.csv"
-* Output data: "Table 4.xlsx", sheet("Part4")
+* Output data: ""Table 4 Part4.dta"
 
 
 
@@ -167,10 +168,22 @@ label var location_name "Country"
 
 keep if location_name == "Canada"
 
-export excel using "Table 4.xlsx", sheet("Part3") firstrow(varlabels) 
+*
+
+drop Value Lower_UL Upper_UL Sex_Year
+
+drop location_name Cause
+
+order Measure Sex Age rank 
+
+reshape wide rank, i(Measure Sex Age) j(Year)
+
+qui compress
+
+save "Table 4 Part3.dta", replace
 
 
-/* "Table 4.xlsx", sheet("Part3") contents
+/* "Table 4 Part3.dta" contents
 
 Base values of 1990 2000 2010 2019
 
@@ -298,7 +311,7 @@ rename year Year
 
 sort sex_id_new Year 
 
-drop sex_id sex_id_new cause_id
+drop sex_id cause_id
 
 order Sex, after(Age)
 
@@ -342,10 +355,22 @@ label var location_name "Country"
 
 keep if location_name == "Canada"
 
-export excel using "Table 4.xlsx", sheet("Part4") firstrow(varlabels) 
+* 
+
+drop Value Lower_UL Upper_UL Sex_Year
+
+drop location_name Cause
+
+order Measure Sex Age rank 
+
+reshape wide rank, i(Measure Sex Age) j(Year)
+
+qui compress
+
+save "Table 4 Part4.dta", replace
 
 
-/* "Table 4.xlsx", sheet("Part4") contents
+/* "Table 4 Part4.dta" contents
 
 Base values of 1990 2000 2010 2019
 

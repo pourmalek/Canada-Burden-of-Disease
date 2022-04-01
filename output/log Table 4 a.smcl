@@ -1,9 +1,9 @@
 {smcl}
-{com}{sf}{ul off}{txt}{.-}
+{txt}{sf}{ul off}{.-}
       name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output/log Table 4 a.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res}30 Mar 2022, 10:41:02
+ {txt}opened on:  {res} 1 Apr 2022, 10:18:22
 {txt}
 {com}. 
 . ***************************************************************************
@@ -26,11 +26,11 @@
 . 
 . ** Table 4 Part 1: DALYs, Age-standardized
 . * Input data: "IHME-GBD_2019_DATA-41.csv"
-. * Output data: "Table 4.xlsx", sheet("Part1")
+. * Output data: "Table 4 Part1.dta"
 . 
 . ** Table 4 Part 2: DALYs, Age: <5, 5-14, 15-49, 50-69, 70+
 . * Input data: "IHME-GBD_2019_DATA-42.csv"
-. * Output data: "Table 4.xlsx", sheet("Part2")
+. * Output data: "Table 4 Part2.dta"
 . 
 . 
 . 
@@ -199,11 +199,12 @@
 {txt}
 {com}. 
 . save "IHME-GBD_2019_DATA-41.dta", replace
-{txt}file IHME-GBD_2019_DATA-41.dta saved
+{txt}(note: file IHME-GBD_2019_DATA-41.dta not found)
+file IHME-GBD_2019_DATA-41.dta saved
 
 {com}. 
 . 
-. * for DALYs 1990 2000 2010 2019 All Ages
+. * for DALYs 1990 2000 2010 2019 Age-standardized
 .         
 . keep if Measure == "DALYs"
 {txt}(0 observations deleted)
@@ -226,12 +227,40 @@
 {txt}(2,436 observations deleted)
 
 {com}. 
-. export excel using "Table 4.xlsx", replace sheet("Part1") firstrow(varlabels) 
-{res}{txt}file Table 4.xlsx saved
+. *
+. 
+. drop Value Lower_UL Upper_UL Sex_Year
+{txt}
+{com}. 
+. drop location_name Cause
+{txt}
+{com}. 
+. order Measure Sex Age rank 
+{txt}
+{com}. 
+. reshape wide rank, i(Measure Sex Age) j(Year)
+{txt}(note: j = 1990 2000 2010 2019)
+
+Data{col 36}long{col 43}->{col 48}wide
+{hline 77}
+Number of obs.                 {res}      12   {txt}->{res}       3
+{txt}Number of variables            {res}       5   {txt}->{res}       7
+{txt}j variable (4 values)              {res}Year   {txt}->   (dropped)
+xij variables:
+                                   {res}rank   {txt}->   {res}rank1990 rank2000 ... rank2019
+{txt}{hline 77}
+
+{com}. 
+. qui compress
+{txt}
+{com}. 
+. save "Table 4 Part1.dta", replace
+{txt}(note: file Table 4 Part1.dta not found)
+file Table 4 Part1.dta saved
 
 {com}. 
 . 
-. /* "Table 4.xlsx", sheet("Part1") contents
+. /* "Table 4 Part1.dta" contents
 > 
 > Base values of 1990 2000 2010 2019
 > 
@@ -466,7 +495,7 @@
 
 {com}. 
 . 
-. * for DALYs 1990 2000 2010 2019 All Ages
+. * for DALYs 1990 2000 2010 2019 Age-standardized
 .         
 . keep if Measure == "DALYs"
 {txt}(0 observations deleted)
@@ -489,12 +518,43 @@
 {txt}(12,180 observations deleted)
 
 {com}. 
-. export excel using "Table 4.xlsx", sheet("Part2") firstrow(varlabels) 
-{res}{txt}file Table 4.xlsx saved
+. *
+. 
+. drop Value Lower_UL Upper_UL Sex_Year
+{txt}
+{com}. 
+. drop location_name Cause
+{txt}
+{com}. 
+. order Measure Sex Age rank age_id_new
+{txt}
+{com}. 
+. reshape wide rank, i(Measure Sex Age) j(Year)
+{txt}(note: j = 1990 2000 2010 2019)
+
+Data{col 36}long{col 43}->{col 48}wide
+{hline 77}
+Number of obs.                 {res}      60   {txt}->{res}      15
+{txt}Number of variables            {res}       6   {txt}->{res}       8
+{txt}j variable (4 values)              {res}Year   {txt}->   (dropped)
+xij variables:
+                                   {res}rank   {txt}->   {res}rank1990 rank2000 ... rank2019
+{txt}{hline 77}
+
+{com}. 
+. drop age_id_new
+{txt}
+{com}. 
+. qui compress
+{txt}
+{com}. 
+. save "Table 4 Part2.dta", replace
+{txt}(note: file Table 4 Part2.dta not found)
+file Table 4 Part2.dta saved
 
 {com}. 
 . 
-. /* "Table 4.xlsx", sheet("Part2") contents
+. /* "Table 4 Part2.dta" contents
 > 
 > Base values of 1990 2000 2010 2019
 > 
@@ -515,13 +575,7 @@
 .  
 .  
 .  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
+. 
 .  
 . 
 . 
@@ -535,7 +589,7 @@
       {txt}name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output/log Table 4 a.smcl
   {txt}log type:  {res}smcl
- {txt}closed on:  {res}30 Mar 2022, 10:41:03
+ {txt}closed on:  {res} 1 Apr 2022, 10:18:23
 {txt}{.-}
 {smcl}
 {txt}{sf}{ul off}

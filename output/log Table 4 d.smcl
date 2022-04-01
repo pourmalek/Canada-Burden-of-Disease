@@ -1,9 +1,9 @@
 {smcl}
-{com}{sf}{ul off}{txt}{.-}
+{txt}{sf}{ul off}{.-}
       name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output/log Table 4 d.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res}30 Mar 2022, 10:41:06
+ {txt}opened on:  {res} 1 Apr 2022, 10:18:25
 {txt}
 {com}. 
 . ***************************************************************************
@@ -27,7 +27,7 @@
 . 
 . ** Table 4 Part 7: YLDs, Life expectancy
 . * Input data: "IHME-GBD_2019_DATA-47.csv"
-. * Output data: "Table 4.xlsx", sheet("Part7")
+. * Output data: "Table 4 Part7.dta"
 . 
 . 
 . 
@@ -166,11 +166,10 @@
 . rename year Year 
 {res}{txt}
 {com}. 
-. 
 . sort sex_id_new Year 
 {txt}
 {com}. 
-. drop sex_id sex_id_new 
+. drop sex_id
 {txt}
 {com}. 
 . 
@@ -183,12 +182,13 @@
 {txt}
 {com}. 
 . save "IHME-GBD_2019_DATA-47.dta", replace
-{txt}file IHME-GBD_2019_DATA-47.dta saved
+{txt}(note: file IHME-GBD_2019_DATA-47.dta not found)
+file IHME-GBD_2019_DATA-47.dta saved
 
 {com}.         
 . 
 . 
-. bysort Sex_Year: egen rank = rank(Value)
+. bysort Sex_Year: egen rank = rank(-Value)
 {txt}
 {com}. 
 . label var rank "rank of mean YLDs within Sex-Year group"
@@ -204,12 +204,52 @@
 {txt}(2,436 observations deleted)
 
 {com}. 
-. export excel using "Table 4.xlsx", sheet("Part7") firstrow(varlabels) 
-{res}{txt}file Table 4.xlsx saved
+. *
+. 
+. drop Value Lower_UL Upper_UL Sex_Year
+{txt}
+{com}. 
+. drop location_name 
+{txt}
+{com}. 
+. rename age_name Age
+{res}{txt}
+{com}. 
+. order Measure Sex Age rank 
+{txt}
+{com}. 
+. reshape wide rank, i(Sex Age) j(Year)
+{txt}(note: j = 1990 2000 2010 2019)
+
+Data{col 36}long{col 43}->{col 48}wide
+{hline 77}
+Number of obs.                 {res}      12   {txt}->{res}       3
+{txt}Number of variables            {res}       6   {txt}->{res}       8
+{txt}j variable (4 values)              {res}Year   {txt}->   (dropped)
+xij variables:
+                                   {res}rank   {txt}->   {res}rank1990 rank2000 ... rank2019
+{txt}{hline 77}
+
+{com}. 
+. sort sex_id_new
+{txt}
+{com}. 
+. order Measure 
+{txt}
+{com}. 
+. drop sex_id_new
+{txt}
+{com}. 
+. qui compress
+{txt}
+{com}. 
+. save "Table 4 Part7.dta", replace
+{txt}(note: file Table 4 Part7.dta not found)
+file Table 4 Part7.dta saved
 
 {com}. 
 . 
-. /* "Table 4.xlsx", sheet("Part7") contents
+. /* "Table 4 Part7.dta" contents
 > 
 > Base values of 1990 2000 2010 2019
 > 
@@ -237,7 +277,7 @@
       {txt}name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output/log Table 4 d.smcl
   {txt}log type:  {res}smcl
- {txt}closed on:  {res}30 Mar 2022, 10:41:06
+ {txt}closed on:  {res} 1 Apr 2022, 10:18:25
 {txt}{.-}
 {smcl}
 {txt}{sf}{ul off}

@@ -1,9 +1,9 @@
 {smcl}
-{com}{sf}{ul off}{txt}{.-}
+{txt}{sf}{ul off}{.-}
       name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output/log Table 1.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res}30 Mar 2022, 10:41:00
+ {txt}opened on:  {res} 1 Apr 2022, 10:18:18
 {txt}
 {com}. 
 . ***************************************************************************
@@ -27,24 +27,27 @@
 . 
 . ** Table 1 Part 1: DALYs YLLs YLDs, base values 1990 and 2019
 . * Input data: "IHME-GBD_2019_DATA-1.csv"
-. * Output data: Table 1.xlsx", sheet("Part1")
+. * Output data: "Table 1 Part1.dta"
 . 
 . ** Table 1 Part 2: DALYs YLLs YLDs, change % from 1990 to 2019
 . * Input data: "IHME-GBD_2019_DATA-2.csv"
-. * Output data: Table 1.xlsx", sheet("Part2")
+. * Output data: "Table 1 Part2.dta"
 . 
 . ** Table 1 Part 3: DALYs YLLs YLDs, change % from 1990 to 2019
 . * Input data: "IHME-GBD_2019_DATA-3.csv"
-. * Output data: Table 1.xlsx", sheet("Part3")
+. * Output data: "Table 1 Part3.dta"
 . 
 . ** Table 1 Part 4: Life expectancy (at birth) % from 1990 to 2019
 . * Input data: "IHME-GBD_2019_DATA-3.dta"
-. * Output data: Table 1.xlsx", sheet("Part4")
+. * Output data: "Table 1 Part4.dta"
 . 
 . ** Table 1 Part 5: Post-neonatal infant mortality rate 1990 2019
 . * Input data: "IHME-GBD_2019_DATA-4.csv"
-. * Output data: Table 1.xlsx", sheet("Part5")
+. * Output data: "Table 1 Part5.dta"
 . 
+. ** Table 1 Part 6: Post-neonatal infant mortality rate % change 1990 to 2019
+. * Input data: "IHME-GBD_2019_DATA-4.csv"
+. * Output data: "Table 1 Part6.dta"
 . 
 . 
 . 
@@ -214,30 +217,55 @@
 . rename year Year 
 {res}{txt}
 {com}. 
-. sort measure_id_new sex_id_new age_id_new Year
-{txt}
-{com}. 
-. drop sex_id     measure_id_new sex_id_new age_id_new
-{txt}
-{com}. 
-. order Sex, after(Age)
-{txt}
-{com}. 
-. 
-. save "IHME-GBD_2019_DATA-1.dta", replace
-{txt}file IHME-GBD_2019_DATA-1.dta saved
-
-{com}. 
-. keep if Year == 1990 | Year == 2019 // for Table 1
+. keep if Year == 1990 | Year == 2019
 {txt}(36 observations deleted)
 
-{com}.         
-. export excel using "Table 1.xlsx", replace sheet("Part1") firstrow(varlabels) 
-{res}{txt}file Table 1.xlsx saved
+{com}. 
+. order Measure Age Sex Year Value Lower_UL Upper_UL
+{txt}
+{com}. 
+. sort age_id_new sex_id_new Year
+{txt}
+{com}. 
+. reshape wide Value Lower_UL Upper_UL, i(Measure Age     Sex) j(Year)
+{txt}(note: j = 1990 2019)
+
+Data{col 36}long{col 43}->{col 48}wide
+{hline 77}
+Number of obs.                 {res}      36   {txt}->{res}      18
+{txt}Number of variables            {res}      11   {txt}->{res}      13
+{txt}j variable (2 values)              {res}Year   {txt}->   (dropped)
+xij variables:
+                                  {res}Value   {txt}->   {res}Value1990 Value2019
+                               Lower_UL   {txt}->   {res}Lower_UL1990 Lower_UL2019
+                               Upper_UL   {txt}->   {res}Upper_UL1990 Upper_UL2019
+{txt}{hline 77}
+
+{com}. 
+. drop sex_id measure_id_new age_id_new sex_id_new
+{txt}
+{com}. 
+. label var Value1990     "1990 Value"
+{txt}
+{com}. label var Lower_UL1990 "1990 Lower_UL"
+{txt}
+{com}. label var Upper_UL1990 "1990 Upper_UL"
+{txt}
+{com}. label var Value2019 "2019 Value"
+{txt}
+{com}. label var Lower_UL2019 "2019 Lower_UL"
+{txt}
+{com}. label var Upper_UL2019 "2019 Upper_UL"
+{txt}
+{com}. 
+. 
+. save "Table 1 Part1.dta", replace
+{txt}(note: file Table 1 Part1.dta not found)
+file Table 1 Part1.dta saved
 
 {com}. 
 . 
-. /* "Table 1.xlsx", sheet("Part1") contents
+. /* "Table 1 Part1.dta" contents
 > 
 > Base values of 1990 and 2019
 > 
@@ -250,10 +278,7 @@
 > All ages        Age-standardized
 > 
 > */
-. 
-. 
-. 
-. 
+.                                 
 . 
 . 
 . 
@@ -437,24 +462,31 @@
 {com}. 
 . order Sex, after(Age)
 {txt}
-{com}.   
-.   
-. save "IHME-GBD_2019_DATA-2.dta", replace // more details than Table 1
-{txt}file IHME-GBD_2019_DATA-2.dta saved
-
 {com}. 
-.   
-. keep if Year_start == 1990 & Year_end == 2019 // for Table 1
+. drop Lower_UL Upper_UL
+{txt}
+{com}. 
+. order Measure Age Sex Value 
+{txt}
+{com}. 
+. rename Value Relative_change_pct
+{res}{txt}
+{com}. 
+. label var Relative_change_pct "Relative change (%)"
+{txt}
+{com}. 
+. keep if Year_start == 1990 & Year_end == 2019 
 {txt}(36 observations deleted)
 
-{com}.         
-. 
-. export excel using "Table 1.xlsx", sheet("Part2") firstrow(varlabels) 
-{res}{txt}file Table 1.xlsx saved
-
 {com}. 
-. 
-. /* "Table 1.xlsx", sheet("Part2") contents
+.   
+. save "Table 1 Part2.dta", replace
+{txt}(note: file Table 1 Part2.dta not found)
+file Table 1 Part2.dta saved
+
+{com}.   
+.   
+. /* "Table 1 Part2.dta" contents
 > 
 > Relative change (%) from 1990 to 2019
 > 
@@ -467,6 +499,7 @@
 > All ages        Age-standardized
 > 
 > */
+. 
 . 
 . 
 . 
@@ -616,21 +649,76 @@
 . rename year Year
 {res}{txt}
 {com}. 
-. save "IHME-GBD_2019_DATA-3.dta", replace // more details than Table 1
-{txt}file IHME-GBD_2019_DATA-3.dta saved
-
-{com}. 
-. keep if Year == 1990 | Year == 2019 // for Table 1
+. keep if Year == 1990 | Year == 2019
 {txt}(6 observations deleted)
 
 {com}. 
 . 
-. export excel using "Table 1.xlsx", sheet("Part3") firstrow(varlabels) 
-{res}{txt}file Table 1.xlsx saved
+. order Measure Age Sex Year Value Lower_UL Upper_UL
+{txt}
+{com}. 
+. 
+. gen sex_id_new = .
+{txt}(6 missing values generated)
+
+{com}. replace sex_id_new = 1 if Sex == "Both sexes"
+{txt}(2 real changes made)
+
+{com}. replace sex_id_new = 2 if Sex == "Males"
+{txt}(2 real changes made)
+
+{com}. replace sex_id_new = 3 if Sex == "Females"
+{txt}(2 real changes made)
+
+{com}. 
+. sort sex_id_new Year
+{txt}
+{com}. 
+. 
+. reshape wide Value Lower_UL Upper_UL, i(Measure Age     Sex) j(Year)
+{txt}(note: j = 1990 2019)
+
+Data{col 36}long{col 43}->{col 48}wide
+{hline 77}
+Number of obs.                 {res}       6   {txt}->{res}       3
+{txt}Number of variables            {res}       8   {txt}->{res}      10
+{txt}j variable (2 values)              {res}Year   {txt}->   (dropped)
+xij variables:
+                                  {res}Value   {txt}->   {res}Value1990 Value2019
+                               Lower_UL   {txt}->   {res}Lower_UL1990 Lower_UL2019
+                               Upper_UL   {txt}->   {res}Upper_UL1990 Upper_UL2019
+{txt}{hline 77}
+
+{com}. 
+. drop sex_id_new
+{txt}
+{com}. 
+. label var Value1990     "1990 Value"
+{txt}
+{com}. label var Lower_UL1990 "1990 Lower_UL"
+{txt}
+{com}. label var Upper_UL1990 "1990 Upper_UL"
+{txt}
+{com}. label var Value2019 "2019 Value"
+{txt}
+{com}. label var Lower_UL2019 "2019 Lower_UL"
+{txt}
+{com}. label var Upper_UL2019 "2019 Upper_UL"
+{txt}
+{com}. 
+. 
+. rename (Value1990 Lower_UL1990 Upper_UL1990 Value2019 Lower_UL2019 Upper_UL2019) ///
+> (Y_1990_Value Y_1990_Lower_UL Y_1990_Upper_UL Y_2019_Value Y_2019_Lower_UL Y_2019_Upper_UL)
+{res}{txt}
+{com}. 
+. 
+. save "Table 1 Part3.dta", replace
+{txt}(note: file Table 1 Part3.dta not found)
+file Table 1 Part3.dta saved
 
 {com}. 
 . 
-. /* "Table 1.xlsx", sheet("Part3") contents
+. /* "Table 1 Part3.dta" contents
 > 
 > Life expectancy at birth 1990 2010
 > 
@@ -649,38 +737,31 @@
 . 
 . 
 . 
-. 
 . ***********************************************************************
 . * Prepare Table 1 Part 4
 . 
 . * Life expectancy (at birth) % from 1990 to 2019
 . 
 . 
-. * use input data from /output/ folder // Note: % change from year to year did not work for Life expectancy
+. * use input data from /output/ folder // Note: % change from year to year not working for Life expectancy
 . 
 . 
-. use "IHME-GBD_2019_DATA-3.dta", clear
+. use "Table 1 Part3.dta", clear
 {txt}
 {com}. 
+. // use "Table 1 Part3 long.dta", clear
 . 
-. reshape wide Value Upper_UL Lower_UL, i(Sex) j(Year)
-{txt}(note: j = 1990 2000 2010 2019)
-
-Data{col 36}long{col 43}->{col 48}wide
-{hline 77}
-Number of obs.                 {res}      12   {txt}->{res}       3
-{txt}Number of variables            {res}       7   {txt}->{res}      15
-{txt}j variable (4 values)              {res}Year   {txt}->   (dropped)
-xij variables:
-                                  {res}Value   {txt}->   {res}Value1990 Value2000 ... Value2019
-                               Upper_UL   {txt}->   {res}Upper_UL1990 Upper_UL2000 ... Upper_UL2019
-                               Lower_UL   {txt}->   {res}Lower_UL1990 Lower_UL2000 ... Lower_UL2019
-{txt}{hline 77}
-
-{com}. 
-. order Measure Age
-{txt}
-{com}. 
+. // use "IHME-GBD_2019_DATA-3.dta", clear
+. 
+. 
+. 
+. // reshape wide Value Upper_UL Lower_UL, i(Sex) j(Year)
+. 
+. // order Measure Age
+. 
+. 
+. 
+. 
 . gen sex_id_new = .
 {txt}(3 missing values generated)
 
@@ -702,11 +783,11 @@ xij variables:
 . 
 . * gen % Change = 100 * (New - Old) / Old
 . 
-. gen ChangeValue1990_2019 = 100 * (Value2019 - Value1990) / Value1990
+. gen ChangeValue1990_2019 = 100 * (Y_2019_Value - Y_1990_Value) / Y_1990_Value
 {txt}
-{com}. gen ChangeUpper_UL1990_2019 = 100 * (Upper_UL2019 - Upper_UL1990) / Upper_UL1990
+{com}. gen ChangeLower_UL1990_2019 = 100 * (Y_2019_Lower_UL - Y_1990_Lower_UL) / Y_1990_Lower_UL
 {txt}
-{com}. gen ChangeLower_UL1990_2019 = 100 * (Lower_UL2019 - Lower_UL1990) / Lower_UL1990
+{com}. gen ChangeUpper_UL1990_2019 = 100 * (Y_2019_Upper_UL - Y_1990_Upper_UL) / Y_1990_Upper_UL
 {txt}
 {com}. 
 . 
@@ -744,25 +825,36 @@ xij variables:
 {txt}
 {com}. 
 . 
+. 
+. order Measure Age Sex Value 
+{txt}
+{com}. 
+. rename Value Relative_change_pct
+{res}{txt}
+{com}. 
+. label var Relative_change_pct "Relative change (%)"
+{txt}
+{com}. 
+. drop Lower_UL Upper_UL
+{txt}
+{com}. 
+. 
 . * save output data in /output/ folder
 . 
-. save "Table 1 Part4.dta", replace // more details than Table 1
-{txt}file Table 1 Part4.dta saved
-
-{com}. 
-. export excel using "Table 1.xlsx", sheet("Part4") firstrow(varlabels) // for Table 1
-{res}{txt}file Table 1.xlsx saved
+. save "Table 1 Part4.dta", replace 
+{txt}(note: file Table 1 Part4.dta not found)
+file Table 1 Part4.dta saved
 
 {com}. 
 . 
-. /* "Table 1.xlsx", sheet("Part4") contents
+. 
+. /* "Table 1 Part4.dta" contents
 > 
 > Life expectancy at birth % change from 1990 to 2019
 > 
 > Both sexes      Males   Females
 > 
 > */
-. 
 . 
 . 
 . 
@@ -911,6 +1003,77 @@ xij variables:
 {txt}
 {com}. 
 . 
+. keep if Year == 1990 | Year == 2019
+{txt}(6 observations deleted)
+
+{com}. 
+. 
+. order Measure Age Sex Year Value Lower_UL Upper_UL
+{txt}
+{com}. 
+. 
+. gen sex_id_new = .
+{txt}(6 missing values generated)
+
+{com}. replace sex_id_new = 1 if Sex == "Both sexes"
+{txt}(2 real changes made)
+
+{com}. replace sex_id_new = 2 if Sex == "Males"
+{txt}(2 real changes made)
+
+{com}. replace sex_id_new = 3 if Sex == "Females"
+{txt}(2 real changes made)
+
+{com}. 
+. sort sex_id_new Year
+{txt}
+{com}. 
+. 
+. reshape wide Value Lower_UL Upper_UL, i(Measure Age     Sex) j(Year)
+{txt}(note: j = 1990 2019)
+
+Data{col 36}long{col 43}->{col 48}wide
+{hline 77}
+Number of obs.                 {res}       6   {txt}->{res}       3
+{txt}Number of variables            {res}       9   {txt}->{res}      11
+{txt}j variable (2 values)              {res}Year   {txt}->   (dropped)
+xij variables:
+                                  {res}Value   {txt}->   {res}Value1990 Value2019
+                               Lower_UL   {txt}->   {res}Lower_UL1990 Lower_UL2019
+                               Upper_UL   {txt}->   {res}Upper_UL1990 Upper_UL2019
+{txt}{hline 77}
+
+{com}. 
+. drop sex_id_new
+{txt}
+{com}. 
+. label var Value1990     "1990 Value"
+{txt}
+{com}. label var Lower_UL1990 "1990 Lower_UL"
+{txt}
+{com}. label var Upper_UL1990 "1990 Upper_UL"
+{txt}
+{com}. label var Value2019 "2019 Value"
+{txt}
+{com}. label var Lower_UL2019 "2019 Lower_UL"
+{txt}
+{com}. label var Upper_UL2019 "2019 Upper_UL"
+{txt}
+{com}. 
+. 
+. rename (Value1990 Lower_UL1990 Upper_UL1990 Value2019 Lower_UL2019 Upper_UL2019) ///
+> (Y_1990_Value Y_1990_Lower_UL Y_1990_Upper_UL Y_2019_Value Y_2019_Lower_UL Y_2019_Upper_UL)
+{res}{txt}
+{com}. 
+. replace Measure = "Post-neonatal infant mortality"
+{txt}variable {bf}Measure{sf} was {bf}{res}str14{sf}{txt} now {bf}{res}str30{sf}
+{txt}(3 real changes made)
+
+{com}. 
+. drop cause_name
+{txt}
+{com}. 
+. 
 . * save output data in /output/ folder
 . 
 . cd .. // Canada-Burden-of-Disease-main
@@ -922,22 +1085,430 @@ xij variables:
 {txt}
 {com}. 
 . 
-. save "IHME-GBD_2019_DATA-4.dta", replace 
-{txt}file IHME-GBD_2019_DATA-4.dta saved
-
-{com}. 
-. export excel using "Table 1.xlsx", sheet("Part5") firstrow(varlabels) 
-{res}{txt}file Table 1.xlsx saved
+. 
+. save "Table 1 Part5.dta", replace 
+{txt}(note: file Table 1 Part5.dta not found)
+file Table 1 Part5.dta saved
 
 {com}. 
 . 
-. /* "Table 1.xlsx", sheet("Part5") contents
+. /* "Table 1 Part5.dta" contents
 > 
 > Postneonatal Mortality Rate 1990 and 2019
 > 
 > Both sexes      Males   Females
 > 
 > */
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. ***********************************************************************
+. * Prepare Table 1 Part 6
+. 
+. * Post-neonatal infant mortality rate, % change 1990 to 2019
+. 
+. 
+. 
+. * use input data from /data/ folder
+. 
+. cd .. // Canada-Burden-of-Disease-main
+{res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main
+{txt}
+{com}. 
+. cd data
+{res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/data
+{txt}
+{com}. 
+. import delimited using "IHME-GBD_2019_DATA-5.csv", clear 
+{res}{text}(17 vars, 3 obs)
+
+{com}. 
+. 
+. /* "IHME-GBD_2019_DATA-5.csv" Metadata:
+> 
+> Permalink:
+> https://ghdx.healthdata.org/gbd-results-tool?params=gbd-api-2019-permalink/5399b053ee07e05980e588f9dabf449e
+> 
+> 
+> Data settings:
+> 
+> Base: Change
+> Location: Canada
+> Year range: 1990-2019
+> 
+> Context: Cause
+> Age: Post Neonatal
+> Metric: Rate
+> 
+> Measure: Deaths
+> Sex: Male, Female, Both
+> Cause: Total All Causes
+> 
+> 
+> Download settings: 
+> Both IDs and Names 
+> (ID = variable_id, Name = variable_name)
+> 
+> */
+. 
+. 
+. 
+. 
+. drop measure_id location_id     location_name sex_id age_id metric_id metric_name cause_id
+{txt}
+{com}. 
+. 
+. rename measure_name Measure
+{res}{txt}
+{com}. 
+. replace Measure = "Mortality rate" 
+{txt}variable {bf}Measure{sf} was {bf}{res}str6{sf}{txt} now {bf}{res}str14{sf}
+{txt}(3 real changes made)
+
+{com}. 
+. 
+. rename age_name Age
+{res}{txt}
+{com}. replace Age = "Post Neonatal"
+{txt}(0 real changes made)
+
+{com}. 
+. rename val Value
+{res}{txt}
+{com}. rename upper Upper_UL
+{res}{txt}
+{com}. rename lower Lower_UL
+{res}{txt}
+{com}. label var Upper_UL "Upper UL"
+{txt}
+{com}. label var Lower_UL "Lower UL"
+{txt}
+{com}. 
+. order Upper_UL, after(Lower_UL)
+{txt}
+{com}. 
+. replace Value = round(Value,0.01)
+{txt}(3 real changes made)
+
+{com}. replace Upper_UL = round(Upper_UL,0.1)
+{txt}(3 real changes made)
+
+{com}. replace Lower_UL = round(Lower_UL,0.1)
+{txt}(3 real changes made)
+
+{com}. format Value Upper_UL Lower_UL %5.2f
+{txt}
+{com}. 
+. gen sex_id_new = .
+{txt}(3 missing values generated)
+
+{com}. replace sex_id_new = 1 if sex_name == "Both"
+{txt}(1 real change made)
+
+{com}. replace sex_id_new = 2 if sex_name == "Male"
+{txt}(1 real change made)
+
+{com}. replace sex_id_new = 3 if sex_name == "Female"
+{txt}(1 real change made)
+
+{com}. 
+. rename sex_name Sex
+{res}{txt}
+{com}. replace Sex = "Both sexes" if Sex == "Both"
+{txt}variable {bf}Sex{sf} was {bf}{res}str6{sf}{txt} now {bf}{res}str10{sf}
+{txt}(1 real change made)
+
+{com}. replace Sex = "Males" if Sex == "Male"
+{txt}(1 real change made)
+
+{com}. replace Sex = "Females" if Sex == "Female"
+{txt}(1 real change made)
+
+{com}. 
+. sort sex_id_new  
+{txt}
+{com}. 
+. drop sex_id_new sex_id_new 
+{txt}
+{com}. 
+. order Sex, after(Age)
+{txt}
+{com}. 
+. 
+. 
+. gen sex_id_new = .
+{txt}(3 missing values generated)
+
+{com}. replace sex_id_new = 1 if Sex == "Both"
+{txt}(0 real changes made)
+
+{com}. replace sex_id_new = 2 if Sex == "Male"
+{txt}(0 real changes made)
+
+{com}. replace sex_id_new = 3 if Sex == "Female"
+{txt}(0 real changes made)
+
+{com}. sort sex_id_new 
+{txt}
+{com}. drop sex_id_new
+{txt}
+{com}. 
+. replace Value = round(Value,0.01)
+{txt}(0 real changes made)
+
+{com}. replace Upper_UL = round(Upper_UL,0.1)
+{txt}(0 real changes made)
+
+{com}. replace Lower_UL = round(Lower_UL,0.1)
+{txt}(0 real changes made)
+
+{com}. format Value Upper_UL Lower_UL %5.2f
+{txt}
+{com}. 
+. 
+. order Measure Age Sex Value Lower_UL Upper_UL
+{txt}
+{com}. 
+. replace Measure = "Post-neonatal infant mortality"
+{txt}variable {bf}Measure{sf} was {bf}{res}str14{sf}{txt} now {bf}{res}str30{sf}
+{txt}(3 real changes made)
+
+{com}. 
+. drop Lower_UL Upper_UL cause_name year_start year_end
+{txt}
+{com}. 
+. 
+. * save output data in /output/ folder
+. 
+. cd .. // Canada-Burden-of-Disease-main
+{res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main
+{txt}
+{com}. 
+. cd output 
+{res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output
+{txt}
+{com}. 
+. 
+. save "Table 1 Part6.dta", replace 
+{txt}(note: file Table 1 Part6.dta not found)
+file Table 1 Part6.dta saved
+
+{com}. 
+. 
+. /* "Table 1 Part6.dta" contents
+> 
+> Postneonatal Mortality Rate % change 1990 to 2019
+> 
+> Both sexes      Males   Females
+> 
+> */
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. ************************************************************************
+. * merge DALYs, YLLs, YLDs, Base values and relative changes
+. 
+. use "Table 1 Part1.dta", clear 
+{txt}
+{com}. 
+. merge 1:1 Measure Age Sex using "Table 1 Part2.dta"
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}               0
+{txt}{col 5}matched{col 30}{res}              18{txt}  (_merge==3)
+{col 5}{hline 41}
+
+{com}. 
+. drop Year_start Year_end _merge
+{txt}
+{com}. 
+. rename (Value1990 Lower_UL1990 Upper_UL1990 Value2019 Lower_UL2019 Upper_UL2019) ///
+> (Y_1990_Value Y_1990_Lower_UL Y_1990_Upper_UL Y_2019_Value Y_2019_Lower_UL Y_2019_Upper_UL)
+{res}{txt}
+{com}. 
+. save "Table 1 Part1and2.dta", replace 
+{txt}(note: file Table 1 Part1and2.dta not found)
+file Table 1 Part1and2.dta saved
+
+{com}. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. ************************************************************************
+. * merge Life expectancy, Base values and relative changes
+. 
+. use "Table 1 Part3.dta", clear 
+{txt}
+{com}. 
+. merge 1:1 Age Sex using "Table 1 Part4.dta"
+{res}{txt}{p 0 7 2}
+(note: variable
+Measure was 
+str15, now str37 to accommodate using data's values)
+{p_end}
+
+{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}               0
+{txt}{col 5}matched{col 30}{res}               3{txt}  (_merge==3)
+{col 5}{hline 41}
+
+{com}. 
+. drop _merge
+{txt}
+{com}. 
+. qui compress
+{txt}
+{com}. 
+. save "Table 1 Part3and4.dta", replace 
+{txt}(note: file Table 1 Part3and4.dta not found)
+file Table 1 Part3and4.dta saved
+
+{com}. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. ************************************************************************
+. * merge Post-neonatal mortality rate, Base values and relative changes
+. 
+. use "Table 1 Part5.dta", clear 
+{txt}
+{com}. 
+. merge 1:1 Sex using "Table 1 Part6.dta"
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}               0
+{txt}{col 5}matched{col 30}{res}               3{txt}  (_merge==3)
+{col 5}{hline 41}
+
+{com}. 
+. drop _merge
+{txt}
+{com}. 
+. rename Value Relative_change_pct
+{res}{txt}
+{com}. 
+. qui compress
+{txt}
+{com}. 
+. save "Table 1 Part5and6.dta", replace 
+{txt}(note: file Table 1 Part5and6.dta not found)
+file Table 1 Part5and6.dta saved
+
+{com}. 
+. 
+. 
+. 
+. 
+. 
+. ************************************************************************
+. * append (DALYs, YLLs, YLDs), (Life expectancy), (Post-neonatal mortality rate)
+. 
+. use "Table 1 Part1and2.dta", clear
+{txt}
+{com}. 
+. append using  "Table 1 Part3and4.dta"
+{txt}{p 0 7 2}
+(note: variable
+Measure was 
+str5, now str15 to accommodate using data's values)
+{p_end}
+
+{com}. 
+. append using  "Table 1 Part5and6.dta"
+{txt}{p 0 7 2}
+(note: variable
+Measure was 
+str15, now str30 to accommodate using data's values)
+{p_end}
+
+{com}. 
+. save "Table 1.dta", replace
+{txt}(note: file Table 1.dta not found)
+file Table 1.dta saved
+
+{com}. 
+. export excel using "Table 1.xlsx", replace firstrow(varlabels)
+{res}{txt}file Table 1.xlsx saved
+
+{com}. 
+. 
+. 
+. 
+. 
+. 
+. ********
+. 
+. * remove files no longer needed
+. 
+. shell rm -r "Table 1 Part1.dta"
+{txt}
+
+{com}. shell rm -r "Table 1 Part1and2.dta"
+{txt}
+
+{com}. shell rm -r "Table 1 Part2.dta"
+{txt}
+
+{com}. shell rm -r "Table 1 Part3.dta"
+{txt}
+
+{com}. shell rm -r "Table 1 Part3and4.dta"
+{txt}
+
+{com}. shell rm -r "Table 1 Part4.dta"
+{txt}
+
+{com}. shell rm -r "Table 1 Part5.dta"
+{txt}
+
+{com}. shell rm -r "Table 1 Part5and6.dta"
+{txt}
+
+{com}. shell rm -r "Table 1 Part3.dta"
+{txt}
+rm: Table 1 Part3.dta: No such file or directory
+
+{com}. shell rm -r "Table 1 Part6.dta"
+{txt}
+
+{com}. 
+. 
 . 
 . 
 . 
@@ -957,7 +1528,7 @@ xij variables:
       {txt}name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output/log Table 1.smcl
   {txt}log type:  {res}smcl
- {txt}closed on:  {res}30 Mar 2022, 10:41:01
+ {txt}closed on:  {res} 1 Apr 2022, 10:18:19
 {txt}{.-}
 {smcl}
 {txt}{sf}{ul off}

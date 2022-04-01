@@ -29,11 +29,11 @@ log using "log Table 4 a.smcl", replace
 
 ** Table 4 Part 1: DALYs, Age-standardized
 * Input data: "IHME-GBD_2019_DATA-41.csv"
-* Output data: "Table 4.xlsx", sheet("Part1")
+* Output data: "Table 4 Part1.dta"
 
 ** Table 4 Part 2: DALYs, Age: <5, 5-14, 15-49, 50-69, 70+
 * Input data: "IHME-GBD_2019_DATA-42.csv"
-* Output data: "Table 4.xlsx", sheet("Part2")
+* Output data: "Table 4 Part2.dta"
 
 
 
@@ -150,7 +150,7 @@ label var Sex_Year "Sex-Year group"
 save "IHME-GBD_2019_DATA-41.dta", replace
 
 
-* for DALYs 1990 2000 2010 2019 All Ages
+* for DALYs 1990 2000 2010 2019 Age-standardized
 	
 keep if Measure == "DALYs"
 
@@ -165,10 +165,22 @@ label var location_name "Country"
 
 keep if location_name == "Canada"
 
-export excel using "Table 4.xlsx", replace sheet("Part1") firstrow(varlabels) 
+*
+
+drop Value Lower_UL Upper_UL Sex_Year
+
+drop location_name Cause
+
+order Measure Sex Age rank 
+
+reshape wide rank, i(Measure Sex Age) j(Year)
+
+qui compress
+
+save "Table 4 Part1.dta", replace
 
 
-/* "Table 4.xlsx", sheet("Part1") contents
+/* "Table 4 Part1.dta" contents
 
 Base values of 1990 2000 2010 2019
 
@@ -325,7 +337,7 @@ label var Sex_Year_Age "Sex-Year-Age group"
 save "IHME-GBD_2019_DATA-41.dta", replace
 
 
-* for DALYs 1990 2000 2010 2019 All Ages
+* for DALYs 1990 2000 2010 2019 Age-standardized
 	
 keep if Measure == "DALYs"
 
@@ -340,10 +352,24 @@ label var location_name "Country"
 
 keep if location_name == "Canada"
 
-export excel using "Table 4.xlsx", sheet("Part2") firstrow(varlabels) 
+*
+
+drop Value Lower_UL Upper_UL Sex_Year
+
+drop location_name Cause
+
+order Measure Sex Age rank age_id_new
+
+reshape wide rank, i(Measure Sex Age) j(Year)
+
+drop age_id_new
+
+qui compress
+
+save "Table 4 Part2.dta", replace
 
 
-/* "Table 4.xlsx", sheet("Part2") contents
+/* "Table 4 Part2.dta" contents
 
 Base values of 1990 2000 2010 2019
 
@@ -364,13 +390,7 @@ All causes
  
  
  
- 
- 
- 
- 
- 
- 
- 
+
  
 
 

@@ -1,0 +1,4 @@
+measure_id,measure_name,location_id,location_name,sex_id,sex_name,age_id,age_name,cause_id,cause_name,metric_id,metric_name,year_start,year_end,val,upper,lower
+1,Deaths,101,Canada,1,Male,4,Post Neonatal,294,All causes,3,Rate,1990,2019,-0.5162397903667992,-0.43070017380552716,-0.5855818898995883
+1,Deaths,101,Canada,2,Female,4,Post Neonatal,294,All causes,3,Rate,1990,2019,-0.4739179393608122,-0.3863987332485001,-0.5444235087490241
+1,Deaths,101,Canada,3,Both,4,Post Neonatal,294,All causes,3,Rate,1990,2019,-0.4983609957577866,-0.4124288610929425,-0.5679483192519305

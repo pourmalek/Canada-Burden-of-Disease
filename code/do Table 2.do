@@ -28,11 +28,11 @@ log using "log Table 2.smcl", replace
 
 ** Table 2 Part 1: level 1 causes
 * Input data: "IHME-GBD_2019_DATA-21.csv"
-* Output data: "Table 2.xlsx", sheet("Part1")
+* Output data: "Table 2 Part1.dta"
 
 ** Table 2 Part 2: level 2 causes
 * Input data: "IHME-GBD_2019_DATA-22.csv"
-* Output data: "Table 2.xlsx", sheet("Part2")
+* Output data: "Table 2 Part2.dta"
 
 
 
@@ -100,9 +100,11 @@ replace cause_id_new = 1 if cause_name == "Communicable, maternal, neonatal, and
 replace cause_id_new = 2 if cause_name == "Non-communicable diseases"
 replace cause_id_new = 3 if cause_name == "Injuries"
 
+replace cause_name = "CMNN" if cause_name == "Communicable, maternal, neonatal, and nutritional diseases"
+replace cause_name = "NCDs" if cause_name == "Non-communicable diseases"
+
 
 drop measure_id location_id location_name age_id cause_id metric_id metric_name
-
 
 
 rename cause_name Cause
@@ -180,10 +182,38 @@ label var Sex_Year "Sex-Year group"
 label var rank "rank of mean DALYs within Sex-Year group"
 
 
-export excel using "Table 2.xlsx", replace sheet("Part1") firstrow(varlabels) 
 
 
-/* "Table 2.xlsx", sheet("Part1") contents
+keep if Sex == "Both sexes"
+
+drop Sex_Year
+
+order Cause Year Value Lower_UL Upper_UL rank
+
+reshape wide Value Lower_UL Upper_UL rank, i(Cause) j(Year)
+
+order rank1990 rank2019, last
+
+gen to = " to "
+
+egen Rank_change = concat(rank1990 to rank2019)
+label var Rank_change "Rank change"
+
+label var Value1990	"1990 Value"
+label var Lower_UL1990 "1990 Lower_UL"
+label var Upper_UL1990 "1990 Upper_UL"
+label var Value2019 "2019 Value"
+label var Lower_UL2019 "2019 Lower_UL"
+label var Upper_UL2019 "2019 Upper_UL"
+
+drop Measure Age Sex cause_id_new
+
+drop rank1990 rank2019 to
+
+
+save "Table 2 Part1.dta", replace
+
+/* "Table 2 Part1.dta" contents
 
 Base values of 1990 and 2019
 
@@ -198,8 +228,6 @@ All ages
 level 1 causes (i.e., 3 causes)
 
 */
-
-
 
 
 
@@ -276,6 +304,26 @@ replace cause_id_new = 16 if cause_name == "Unintentional injuries"
 replace cause_id_new = 17 if cause_name == "Self-harm and interpersonal violence"
 
 
+replace cause_name = "Maternal & neonatal" if cause_name == "Maternal and neonatal disorders"
+replace cause_name = "Respiratory infections" if cause_name == "Respiratory infections and tuberculosis"
+replace cause_name = "Neoplasms" if cause_name == "Neoplasms"
+replace cause_name = "Cardiovascular" if cause_name == "Cardiovascular diseases"
+replace cause_name = "Chronic respiratory" if cause_name == "Chronic respiratory diseases"
+replace cause_name = "Digestive" if cause_name == "Digestive diseases"
+replace cause_name = "Neurological" if cause_name == "Neurological disorders"
+replace cause_name = "Mental" if cause_name == "Mental disorders"
+replace cause_name = "Substance use" if cause_name == "Substance use disorders"
+replace cause_name = "Diabetes & kidney" if cause_name == "Diabetes and kidney diseases"
+replace cause_name = "Skin" if cause_name == "Skin and subcutaneous diseases"
+replace cause_name = "Sense organ" if cause_name == "Sense organ diseases"
+replace cause_name = "Musculoskeletal" if cause_name == "Musculoskeletal disorders"
+replace cause_name = "Other NCD" if cause_name == "Other non-communicable diseases"
+replace cause_name = "Transport injuries" if cause_name == "Transport injuries"
+replace cause_name = "Unintentional injuries" if cause_name == "Unintentional injuries"
+replace cause_name = "Self-harm and violence" if cause_name == "Self-harm and interpersonal violence"
+
+
+
 drop measure_id location_id location_name age_id cause_id metric_id metric_name
 
 
@@ -355,10 +403,39 @@ label var Sex_Year "Sex-Year group"
 label var rank "rank of mean DALYs within Sex-Year group"
 
 
-export excel using "Table 2.xlsx", sheet("Part2") firstrow(varlabels) 
 
 
-/* "Table 2.xlsx", sheet("Part2") contents
+keep if Sex == "Both sexes"
+
+drop Sex_Year
+
+order Cause Year Value Lower_UL Upper_UL rank
+
+reshape wide Value Lower_UL Upper_UL rank, i(Cause) j(Year)
+
+order rank1990 rank2019, last
+
+gen to = " to "
+
+egen Rank_change = concat(rank1990 to rank2019)
+label var Rank_change "Rank change"
+
+label var Value1990	"1990 Value"
+label var Lower_UL1990 "1990 Lower_UL"
+label var Upper_UL1990 "1990 Upper_UL"
+label var Value2019 "2019 Value"
+label var Lower_UL2019 "2019 Lower_UL"
+label var Upper_UL2019 "2019 Upper_UL"
+
+drop Measure Age Sex cause_id_new
+
+drop rank1990 rank2019 to
+
+
+
+save "Table 2 Part2.dta", replace
+
+/* Table 2 Part2.dta" contents
 
 Base values of 1990 and 2019
 
@@ -373,6 +450,30 @@ All ages
  level 2 causes (17 causes)
 
 */
+
+
+
+
+
+************************************************************************
+* append (level 1), (level 2) causes
+
+use "Table 2 Part1.dta", clear
+
+append using "Table 2 Part2.dta"
+
+save "Table 2.dta", replace
+
+export excel using "Table 2.xlsx", replace firstrow(varlabels)
+
+
+
+********
+
+* remove files no longer needed
+
+shell rm -r "Table 2 Part1.dta"
+shell rm -r "Table 2 Part2.dta"
 
 
 

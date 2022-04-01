@@ -1,3 +1,3 @@
 GBD results tool URL
 
-YLLs (Years of Life Lost)
+https://ghdx.healthdata.org/gbd-results-tool

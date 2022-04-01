@@ -1,0 +1,360 @@
+{smcl}
+{txt}{sf}{ul off}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output/log Table 5 b.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res} 1 Apr 2022, 10:18:27
+{txt}
+{com}. 
+. ***************************************************************************
+. * This is "do Table 5 b.do"
+. 
+. * Project: Canada Burden of Disease                                                                        
+. * Person: Farshad Pourmalek pourmalek_farshad at yahoo dotcom
+. * Time (initial): 2022 March 28
+. ***************************************************************************
+. 
+. 
+. 
+. ** Prepares Table 5
+. * Table 5: Changes in age-standardized DALY rates in Canada and comparator locations 
+. * and Canada’s rank in 1990-2019
+. 
+. * level 1 causes, Canada's Rank in 1990 and Rank in 2019 for Age-standardized DALYs rate among 33 countries:
+. * Canada, United States, Western Europe, Australasia, Asia-Pacific (see below)
+. 
+. 
+. * Metadata for input data described below,
+. * under each -import delimited using "IHME-GBD_2019_DATA-??.csv"-
+. 
+. 
+. ** Table 5 Part 2: Level 1 Grouping of Conditions, Canada's Rank in 1990 and Rank in 2019 
+. * Input data: "IHME-GBD_2019_DATA-52.csv"
+. * Output data: "Table 5 Part2.dta"
+. 
+. 
+. 
+. 
+. 
+. 
+. ***********************************************************************
+. * Prepare Table 5 Part2
+. 
+. ** Prepares Table 5, Level 1 Grouping of Conditions
+. * Table 5: Changes in age-standardized DALY rates in Canada and comparator locations 
+. * and Canada’s rank in 1990-2019
+. 
+. * level 1 causes, Canada's Rank in 1990 and Rank in 2019 for Age-standardized DALYs rate among 33 countries:
+. * Canada, United States, Western Europe, Australasia, Asia-Pacific (see below)
+. 
+. 
+. * use input data from /data/ folder
+. 
+. cd .. // Canada-Burden-of-Disease-main
+{res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main
+{txt}
+{com}. 
+. cd data
+{res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/data
+{txt}
+{com}. 
+. import delimited using "IHME-GBD_2019_DATA-52.csv", clear 
+{res}{text}(16 vars, 512 obs)
+
+{com}. 
+. 
+. /* "IHME-GBD_2019_DATA-52.csv" Metadata:
+> 
+> Permalink:
+> https://ghdx.healthdata.org/gbd-results-tool?params=gbd-api-2019-permalink/16a7338f4ceaed26069b9d7e038e6879
+> 
+> Data settings:
+> 
+> Base: Single
+> Location: Canada, United States, Western Europe, Australasia, Asia-Pacific (33 countries) See below
+> Year: 1990, 2000, 2010, 2019
+> 
+> Context: Cause
+> Age: Age-standardized
+> Metric: Rate
+> 
+> Measure: DALYs
+> Sex: Both
+> Cause: level 1
+> 
+> 
+> Download settings: 
+> Both IDs and Names 
+> (ID = variable_id, Name = variable_name)
+> 
+> 
+> * Countries in Table 5:
+> Canada, United States, Western Europe (25), Australasia (2), Asia-Pacific (4) (33 countries)
+> 
+> 
+> Western Europe:
+> 1       Andorra
+> 2       Austria
+> 3       Belgium
+> 4       Cyprus
+> 5       Denmark
+> 6       Finland
+> 7       France
+> 8       Germany
+> 9       Greece
+> 10      Iceland
+> 11      Ireland
+> 12      Israel
+> 13      Italy
+> 14      Japan
+> 15      Luxembourg
+> 16      Malta
+> 17      Monaco
+> 18      Netherlands
+> 19      Norway
+> 20      Portugal
+> 21      San Marino
+> 22      Spain
+> 23      Sweden
+> 24      Switzerland
+> 25      United Kingdom
+> 
+> Australasia: Australia, New Zealand
+> 
+> High-income Asia-Pacific:
+> 1       Brunei Darussalam
+> 2       Japan
+> 3       Republic of Korea
+> 4       Singapore
+> 
+> 
+> * 33 countries:
+> 
+> 1       Andorra
+> 2       Australia
+> 3       Austria
+> 4       Belgium
+> 5       Brunei Darussalam
+> 6       Canada
+> 7       Cyprus
+> 8       Denmark
+> 9       Finland
+> 10      France
+> 11      Germany
+> 12      Greece
+> 13      Iceland
+> 14      Ireland
+> 15      Israel
+> 16      Italy
+> 17      Japan
+> 18      Japan
+> 19      Luxembourg
+> 20      Malta
+> 21      Monaco
+> 22      Netherlands
+> 23      New Zealend
+> 24      Norway
+> 25      Portugal
+> 26      Republic of Korea
+> 27      San Marino
+> 28      Singapore
+> 29      Spain
+> 30      Sweden
+> 31      Switzerland
+> 32      United Kingdom
+> 33      United States of America
+> 
+> */
+. 
+. 
+. * save output data in /output/ folder
+. 
+. cd .. // Canada-Burden-of-Disease-main
+{res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main
+{txt}
+{com}. 
+. cd output 
+{res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output
+{txt}
+{com}. 
+. drop measure_id location_id age_id metric_id metric_name
+{txt}
+{com}. 
+. rename measure_name Measure
+{res}{txt}
+{com}. 
+. order Measure age_name, last
+{txt}
+{com}. 
+. order sex_id sex_name cause_id, last
+{txt}
+{com}. 
+. rename  val Value
+{res}{txt}
+{com}. rename upper Upper_UL
+{res}{txt}
+{com}. rename lower Lower_UL
+{res}{txt}
+{com}. 
+. order Upper_UL, after(Lower_UL)
+{txt}
+{com}. 
+. label var Upper_UL "Upper UL"
+{txt}
+{com}. label var Lower_UL "Lower UL"
+{txt}
+{com}. 
+. replace Value = round(Value,0.01)
+{txt}(470 real changes made)
+
+{com}. replace Upper_UL = round(Upper_UL,0.1)
+{txt}(509 real changes made)
+
+{com}. replace Lower_UL = round(Lower_UL,0.1)
+{txt}(509 real changes made)
+
+{com}. format Value Upper_UL Lower_UL %5.2fc
+{txt}
+{com}.         
+. rename year Year 
+{res}{txt}
+{com}. 
+. rename location_name Location 
+{res}{txt}
+{com}. 
+. 
+. sort Location cause_name
+{txt}
+{com}. 
+. rename cause_name Cause
+{res}{txt}
+{com}. 
+. 
+. gen cause_id_new = . 
+{txt}(512 missing values generated)
+
+{com}. replace cause_id_new = 0 if Cause == "All causes"
+{txt}(128 real changes made)
+
+{com}. replace cause_id_new = 1 if Cause == "Communicable, maternal, neonatal, and nutritional diseases"
+{txt}(128 real changes made)
+
+{com}. replace cause_id_new = 2 if Cause == "Non-communicable diseases"
+{txt}(128 real changes made)
+
+{com}. replace cause_id_new = 3 if Cause == "Injuries"
+{txt}(128 real changes made)
+
+{com}. 
+. 
+. sort cause_id_new
+{txt}
+{com}. 
+. replace Cause = "CMNN" if Cause == "Communicable, maternal, neonatal, and nutritional diseases"
+{txt}(128 real changes made)
+
+{com}. replace Cause = "NCDs" if Cause == "Non-communicable diseases"
+{txt}(128 real changes made)
+
+{com}. 
+. 
+. keep if Year == 1990 | Year == 2019
+{txt}(256 observations deleted)
+
+{com}. 
+. 
+. 
+. qui compress
+{txt}
+{com}. 
+. keep Location Cause Year Value cause_id_new
+{txt}
+{com}. 
+. order Cause Year Location Value cause_id_new
+{txt}
+{com}. 
+. sort Cause Year Location
+{txt}
+{com}. 
+. 
+. bysort Year: egen rank = rank(Value)
+{txt}
+{com}. 
+. label var rank "rank of mean DALYs within Year"
+{txt}
+{com}. 
+. sort Year rank
+{txt}
+{com}. 
+. keep if Location == "Canada"
+{txt}(248 observations deleted)
+
+{com}. 
+. sort Year cause_id_new
+{txt}
+{com}. 
+. drop cause_id_new Location Value
+{txt}
+{com}. 
+. reshape wide rank, i(Cause) j(Year)
+{txt}(note: j = 1990 2019)
+
+Data{col 36}long{col 43}->{col 48}wide
+{hline 77}
+Number of obs.                 {res}       8   {txt}->{res}       4
+{txt}Number of variables            {res}       3   {txt}->{res}       3
+{txt}j variable (2 values)              {res}Year   {txt}->   (dropped)
+xij variables:
+                                   {res}rank   {txt}->   {res}rank1990 rank2019
+{txt}{hline 77}
+
+{com}. 
+. rename rank1990 Rank_in_1990
+{res}{txt}
+{com}. rename rank2019 Rank_in_2019
+{res}{txt}
+{com}. 
+. label var Rank_in_1990 "Rank in 1990"
+{txt}
+{com}. label var Rank_in_2019 "Rank in 2019"
+{txt}
+{com}. 
+. qui compress
+{txt}
+{com}. 
+. save "Table 5 Part2.dta", replace 
+{txt}(note: file Table 5 Part2.dta not found)
+file Table 5 Part2.dta saved
+
+{com}. 
+. 
+. /* "Table 5 Part2.dta" contents
+> 
+> 
+> 
+> DALYs comparator countries
+> 
+> Both sexes      
+> 
+> */
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. **********************
+. 
+. view "log Table 5 b.smcl"
+{txt}
+{com}. 
+. log close
+      {txt}name:  {res}<unnamed>
+       {txt}log:  {res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output/log Table 5 b.smcl
+  {txt}log type:  {res}smcl
+ {txt}closed on:  {res} 1 Apr 2022, 10:18:27
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}

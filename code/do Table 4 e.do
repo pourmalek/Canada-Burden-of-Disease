@@ -28,9 +28,9 @@ log using "log Table 4 e.smcl", replace
 * under each -import delimited using "IHME-GBD_2019_DATA-??.csv"-
 
 
-** Table 4 Part 7: YLDs, Life expectancy
+** Table 4 Part 8: Post Neonatal mortality 
 * Input data: "IHME-GBD_2019_DATA-48.csv"
-* Output data: "Table 4.xlsx", sheet("Part8")
+* Output data: Table 4 Part8.dta"
 
 
 
@@ -38,7 +38,7 @@ log using "log Table 4 e.smcl", replace
 
 
 ***********************************************************************
-* Prepare Table 4 Part7
+* Prepare Table 4 Part8
 
 * Table 4: Canada’s rank in the world for 5 health indicators (age-standardized rates) 
 * from 1990 to 2019, by sex and age
@@ -128,7 +128,7 @@ rename year Year
 
 sort sex_id_new Year 
 
-drop sex_id sex_id_new 
+drop sex_id  
 
 
 * gen Sex-Year combinations  
@@ -151,10 +151,30 @@ label var location_name "Country"
 
 keep if location_name == "Canada"
 
-export excel using "Table 4.xlsx", sheet("Part8") firstrow(varlabels) 
+*
+
+drop Value Lower_UL Upper_UL Sex_Year
+
+drop location_name 
+
+rename age_name Age
+
+order Measure Sex Age rank 
+
+reshape wide rank, i(Sex Age) j(Year)
+
+sort sex_id_new
+
+order Measure 
+
+drop sex_id_new
+
+qui compress
+
+save "Table 4 Part8.dta", replace
 
 
-/* "Table 4.xlsx", sheet("Part7") contents
+/* "Table 4 Part8.dta" contents
 
 Base values of 1990 2000 2010 2019
 
@@ -165,6 +185,74 @@ Life expectancy
 Both sexes	Males	Females
 
 */
+
+
+
+
+
+
+
+
+*****************************************************
+* Append parts of Table 4
+
+use "Table 4 Part1.dta", clear // Part1, DALYs, Age-standardized
+
+append using "Table 4 Part2.dta" // Part2, DALYS, Age: <5, 5-14, 15-49, 50-69, 70+
+
+drop if Sex	== "Females" & Age != "Age-standardized"
+drop if Sex	== "Males" & Age != "Age-standardized"
+
+append using "Table 4 Part3.dta" // Part3, YLLs, Age-standardized
+
+append using "Table 4 Part4.dta" // Part3, YLLs, Age: <5, 5-14, 15-49, 50-69, 70+
+
+drop if Sex	== "Females" & Age != "Age-standardized"
+drop if Sex	== "Males" & Age != "Age-standardized"
+
+append using "Table 4 Part5.dta" // Part5, YLDs, Age-standardized
+
+append using "Table 4 Part6.dta" // Part6, YLDs, Age: <5, 5-14, 15-49, 50-69, 70+
+
+drop if Sex	== "Females" & Age != "Age-standardized"
+drop if Sex	== "Males" & Age != "Age-standardized"
+
+append using "Table 4 Part7.dta" // Part7, Life expectancy, <1 year
+
+append using "Table 4 Part8.dta" // Part8, Postneonatal mortality, Postneonatal
+
+replace Measure = "Postneonatal mortality" if Measure == "Deaths"
+
+drop sex_id_new age_id_new cause_id cause_name
+
+qui compress
+
+save "Table 4.dta", replace
+
+export excel using "Table 4.xlsx", replace firstrow(varlabels)
+
+			
+
+			
+			
+********
+
+* remove files no longer needed
+
+shell rm -r "Table 4 Part4.dta"
+shell rm -r "Table 4 Part1.dta"
+shell rm -r "Table 4 Part2.dta"
+shell rm -r "Table 4 Part3.dta"
+shell rm -r "Table 4 Part5.dta"
+shell rm -r "Table 4 Part6.dta"
+shell rm -r "Table 4 Part7.dta"
+shell rm -r "Table 4 Part8.dta"
+		
+
+
+
+
+
 
 
 
