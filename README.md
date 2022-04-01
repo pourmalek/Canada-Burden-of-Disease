@@ -39,7 +39,7 @@ Previously produced Excel (xlsx) copies of manuscript tables can be downloaded a
 
 [Table 4 - Canada’s rank in the world for 5 health indicators (age-standardized rates) from 1990 to 2019, by sex and age](https://github.com/pourmalek/Canada-Burden-of-Disease/blob/main/output/Table%204.xlsx)
 
-[Table 5 - Changes in age-standardized DALY rates in Canada and comparator locations and Canada’s rank in 1990-2019]()
+[Table 5 - Changes in age-standardized DALY rates in Canada and comparator locations and Canada’s rank in 1990-2019](https://github.com/pourmalek/Canada-Burden-of-Disease/blob/main/output/Table%205.xlsx)
 
 *
 
