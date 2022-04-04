@@ -1,9 +1,9 @@
 {smcl}
-{txt}{sf}{ul off}{.-}
+{com}{sf}{ul off}{txt}{.-}
       name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output/log Table 5 d.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res} 1 Apr 2022, 10:18:27
+ {txt}opened on:  {res} 4 Apr 2022, 16:29:37
 {txt}
 {com}. 
 . ***************************************************************************
@@ -89,7 +89,7 @@
 > 
 > 
 > * Countries in Table 5:
-> Canada, United States, Western Europe (26), Australasia (2), Asia-Pacific (4) (33 countries)
+> Canada, United States, Western Europe (24), Australasia (2), Asia-Pacific (4) (32 countries)
 > 
 > 
 > Western Europe:
@@ -106,29 +106,29 @@
 > 11      Ireland
 > 12      Israel
 > 13      Italy
-> 14      Japan
-> 15      Luxembourg
-> 16      Malta
-> 17      Monaco
-> 18      Netherlands
-> 19      Norway
-> 20      Portugal
-> 21      San Marino
-> 22      Spain
-> 23      Sweden
-> 25  Switzerland
-> 26      United Kingdom
+> 14      Luxembourg
+> 15      Malta
+> 16      Monaco
+> 17      Netherlands
+> 18      Norway
+> 19      Portugal
+> 20      San Marino
+> 21      Spain
+> 22      Sweden
+> 23      Switzerland
+> 24      United Kingdom
 > 
 > Australasia: Australia, New Zealand
 > 
 > High-income Asia-Pacific:
-> 1  Brunei Darussalam
-> 2  Japan
-> 3  Republic of Korea
-> 4  Singapore
+> 1       Brunei Darussalam
+> 2       Japan
+> 3       Republic of Korea
+> 4       Singapore
 > 
 > 
-> * 33 countries:
+> * 32 countries:
+> 
 > 1       Andorra
 > 2       Australia
 > 3       Austria
@@ -146,23 +146,21 @@
 > 15      Israel
 > 16      Italy
 > 17      Japan
-> 18      Japan
-> 19      Luxembourg
-> 20      Malta
-> 21      Monaco
-> 22      Netherlands
-> 23      New Zealand
-> 25      Norway
-> 25      Portugal
-> 26      Republic of Korea
-> 27      San Marino
-> 28      Singapore
-> 29      Spain
-> 30      Sweden
-> 31      Switzerland
-> 32      United Kingdom
-> 33      United States of America
-> 
+> 18      Luxembourg
+> 19      Malta
+> 20      Monaco
+> 21      Netherlands
+> 22      New Zealend
+> 23      Norway
+> 24      Portugal
+> 25      Republic of Korea
+> 26      San Marino
+> 27      Singapore
+> 28      Spain
+> 29      Sweden
+> 30      Switzerland
+> 31      United Kingdom
+> 32      United States of America
 > 
 > */
 . 
@@ -213,8 +211,8 @@
 {com}. replace Cause = "Substance use" if Cause == "Substance use disorders"
 {txt}(128 real changes made)
 
-{com}. replace Cause = "Diabetes & kidney" if Cause == "book"
-{txt}(0 real changes made)
+{com}. replace Cause = "Diabetes & kidney" if Cause == "Diabetes and kidney diseases"
+{txt}(128 real changes made)
 
 {com}. replace Cause = "Skin" if Cause == "Skin and subcutaneous diseases"
 {txt}(128 real changes made)
@@ -269,7 +267,7 @@
 {txt}(128 real changes made)
 
 {com}. replace cause_id_new = 10 if Cause == "Diabetes & kidney"
-{txt}(0 real changes made)
+{txt}(128 real changes made)
 
 {com}. replace cause_id_new = 11 if Cause == "Skin"
 {txt}(128 real changes made)
@@ -294,7 +292,6 @@
 
 {com}. 
 . 
-. 
 . drop if Cause == "Enteric infections"
 {txt}(128 observations deleted)
 
@@ -311,7 +308,6 @@
 {txt}(128 observations deleted)
 
 {com}. 
-. 
 . 
 . 
 . gen Sex = ""
@@ -411,10 +407,10 @@
 {com}. 
 . * 
 . 
-. bysort Year: egen rank = rank(Value)
+. bysort Year Cause: egen rank = rank(Value)
 {txt}
 {com}. 
-. label var rank "rank of mean DALYs within Year"
+. label var rank "Canada's rank of mean DALYs within Country-Cause-Year"
 {txt}
 {com}. 
 . sort Year rank
@@ -427,7 +423,7 @@
 . sort Year cause_id_new
 {txt}
 {com}. 
-. drop cause_id_new Location Value
+. drop Location Value
 {txt}
 {com}. 
 . reshape wide rank, i(Cause) j(Year)
@@ -436,12 +432,15 @@
 Data{col 36}long{col 43}->{col 48}wide
 {hline 77}
 Number of obs.                 {res}      34   {txt}->{res}      17
-{txt}Number of variables            {res}       3   {txt}->{res}       3
+{txt}Number of variables            {res}       4   {txt}->{res}       4
 {txt}j variable (2 values)              {res}Year   {txt}->   (dropped)
 xij variables:
                                    {res}rank   {txt}->   {res}rank1990 rank2019
 {txt}{hline 77}
 
+{com}. 
+. sort cause_id_new
+{txt}
 {com}. 
 . rename rank1990 Rank_in_1990
 {res}{txt}
@@ -451,6 +450,9 @@ xij variables:
 . label var Rank_in_1990 "Rank in 1990"
 {txt}
 {com}. label var Rank_in_2019 "Rank in 2019"
+{txt}
+{com}. 
+. drop cause_id_new
 {txt}
 {com}. 
 . qui compress
@@ -500,11 +502,17 @@ file Table 5 Part4.dta saved
 {txt}{col 5}Result{col 38}# of obs.
 {col 5}{hline 41}
 {col 5}not matched{col 30}{res}               0
-{txt}{col 5}matched{col 30}{res}               4{txt}  (_merge==3)
+{txt}{col 5}matched{col 30}{res}               3{txt}  (_merge==3)
 {col 5}{hline 41}
 
 {com}. 
 . drop _merge
+{txt}
+{com}. 
+. sort cause_id_new
+{txt}
+{com}. 
+. drop cause_id_new
 {txt}
 {com}. 
 . save "Table 5 Part1andPart2.dta", replace
@@ -532,6 +540,10 @@ file Table 5 Part1andPart2.dta saved
 . drop _merge
 {txt}
 {com}. 
+. drop location_id_newAsia_Pacific location_id_newAustralasia location_id_newCanada ///
+> location_id_newUnited_States location_id_newWestern_Europe 
+{txt}
+{com}. 
 . save "Table 5 Part3andPart4.dta", replace
 {txt}(note: file Table 5 Part3andPart4.dta not found)
 file Table 5 Part3andPart4.dta saved
@@ -550,16 +562,35 @@ file Table 5 Part3andPart4.dta saved
 {txt}{p 0 7 2}
 (note: variable
 Cause was 
-str10, now str28 to accommodate using data's values)
+str8, now str22 to accommodate using data's values)
 {p_end}
 
+{com}. 
+. replace cause_id_new = cause_id_new + 3
+{txt}(17 real changes made)
+
+{com}. 
+. replace cause_id_new = 1 in 1 
+{txt}(1 real change made)
+
+{com}. replace cause_id_new = 2 in 2
+{txt}(1 real change made)
+
+{com}. replace cause_id_new = 3 in 3 
+{txt}(1 real change made)
+
+{com}. 
+. sort cause_id_new
+{txt}
+{com}. 
+. drop cause_id_new
+{txt}
 {com}. 
 . qui compress
 {txt}
 {com}. 
 . save "Table 5.dta", replace
-{txt}(note: file Table 5.dta not found)
-file Table 5.dta saved
+{txt}file Table 5.dta saved
 
 {com}. 
 . export excel using "Table 5.xlsx", replace firstrow(varlabels)
@@ -595,9 +626,15 @@ file Table 5.dta saved
 . 
 . 
 . 
-. 
-. 
-. 
+. /*
+> 
+> * restore native scheme (of the local machine)
+> 
+> set scheme $nativescheme
+> 
+> di c(scheme)
+> 
+> */
 . 
 . 
 . 
@@ -610,7 +647,7 @@ file Table 5.dta saved
       {txt}name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output/log Table 5 d.smcl
   {txt}log type:  {res}smcl
- {txt}closed on:  {res} 1 Apr 2022, 10:18:28
+ {txt}closed on:  {res} 4 Apr 2022, 16:29:38
 {txt}{.-}
 {smcl}
 {txt}{sf}{ul off}

@@ -193,11 +193,11 @@ replace location_id_new = 5 if location_name == "High-income Asia Pacific"
 
 
 gen cause_id_new = . 
-replace cause_id_new = 0 if cause_name == "All causes"
 replace cause_id_new = 1 if cause_name == "Communicable, maternal, neonatal, and nutritional diseases"
 replace cause_id_new = 2 if cause_name == "Non-communicable diseases"
 replace cause_id_new = 3 if cause_name == "Injuries"
 
+drop if cause_name == "All causes"
 
 gen Sex = ""
 replace Sex = "Both sexes" if sex_name == "Both"
@@ -210,6 +210,12 @@ gen sex_id_new = .
 replace sex_id_new = 1 if Sex == "Both sexes"
 replace sex_id_new = 2 if Sex == "Males"
 replace sex_id_new = 3 if Sex == "Females"
+
+
+* gen percent = proportion * 100
+replace val = val * 100
+replace upper = upper * 100
+replace lower = lower * 100
 
 rename	val Value
 rename upper Upper_UL
@@ -252,7 +258,7 @@ replace Location = "Western_Europe" if Location == "Western Europe"
 
 qui compress
 
-keep Location Sex Cause Value
+keep Location Sex Cause Value cause_id_new
 
 keep if Sex == "Both sexes"
 
@@ -260,6 +266,9 @@ drop Sex
 
 
 reshape wide Value , i(Cause) j(Location) string
+
+sort cause_id_new
+
 
 rename ///
 (ValueAsia_Pacific ValueAustralasia ValueUnited_States ValueWestern_Europe) ///
@@ -273,6 +282,8 @@ order Cause Canada United_States Western_Europe Australasia Asia_Pacific
 label var United_States "United States"
 label var Western_Europe "Western Europe"
 label var Asia_Pacific "Asia Pacific"
+
+
 
 save "Table 5 Part1.dta", replace
 

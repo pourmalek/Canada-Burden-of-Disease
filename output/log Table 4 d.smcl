@@ -1,9 +1,9 @@
 {smcl}
-{txt}{sf}{ul off}{.-}
+{com}{sf}{ul off}{txt}{.-}
       name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output/log Table 4 d.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res} 1 Apr 2022, 10:18:25
+ {txt}opened on:  {res} 4 Apr 2022, 16:29:34
 {txt}
 {com}. 
 . ***************************************************************************
@@ -182,8 +182,7 @@
 {txt}
 {com}. 
 . save "IHME-GBD_2019_DATA-47.dta", replace
-{txt}(note: file IHME-GBD_2019_DATA-47.dta not found)
-file IHME-GBD_2019_DATA-47.dta saved
+{txt}file IHME-GBD_2019_DATA-47.dta saved
 
 {com}.         
 . 
@@ -277,7 +276,7 @@ file Table 4 Part7.dta saved
       {txt}name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output/log Table 4 d.smcl
   {txt}log type:  {res}smcl
- {txt}closed on:  {res} 1 Apr 2022, 10:18:25
+ {txt}closed on:  {res} 4 Apr 2022, 16:29:35
 {txt}{.-}
 {smcl}
 {txt}{sf}{ul off}

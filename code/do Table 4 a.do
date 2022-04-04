@@ -136,7 +136,7 @@ rename year Year
 
 sort sex_id_new Year 
 
-drop sex_id sex_id_new cause_id
+drop sex_id cause_id
 
 order Sex, after(Age)
 
@@ -153,7 +153,6 @@ save "IHME-GBD_2019_DATA-41.dta", replace
 * for DALYs 1990 2000 2010 2019 Age-standardized
 	
 keep if Measure == "DALYs"
-
 
 bysort Sex_Year: egen rank = rank(Value)
 
@@ -174,6 +173,10 @@ drop location_name Cause
 order Measure Sex Age rank 
 
 reshape wide rank, i(Measure Sex Age) j(Year)
+
+sort sex_id_new
+
+drop sex_id_new
 
 qui compress
 
@@ -308,7 +311,7 @@ rename year Year
 
 sort sex_id_new Year 
 
-drop sex_id sex_id_new cause_id
+drop sex_id cause_id
 
 order Sex, after(Age)
 
@@ -362,7 +365,9 @@ order Measure Sex Age rank age_id_new
 
 reshape wide rank, i(Measure Sex Age) j(Year)
 
-drop age_id_new
+sort sex_id_new age_id_new
+
+drop sex_id_new age_id_new
 
 qui compress
 

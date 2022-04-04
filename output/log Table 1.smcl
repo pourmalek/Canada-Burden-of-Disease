@@ -1,9 +1,9 @@
 {smcl}
-{txt}{sf}{ul off}{.-}
+{com}{sf}{ul off}{txt}{.-}
       name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output/log Table 1.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res} 1 Apr 2022, 10:18:18
+ {txt}opened on:  {res} 4 Apr 2022, 16:29:28
 {txt}
 {com}. 
 . ***************************************************************************
@@ -242,6 +242,9 @@ xij variables:
 {txt}{hline 77}
 
 {com}. 
+. sort measure_id_new age_id_new sex_id_new
+{txt}
+{com}. 
 . drop sex_id measure_id_new age_id_new sex_id_new
 {txt}
 {com}. 
@@ -419,15 +422,35 @@ file Table 1 Part1.dta saved
 {txt}(18 real changes made)
 
 {com}. 
-. rename  val Value
+. rename  val change_proportion_mean
 {res}{txt}
-{com}. rename upper Upper_UL
+{com}. rename upper change_proportion_upper
 {res}{txt}
-{com}. rename lower Lower_UL
+{com}. rename lower change_proportion_lower
 {res}{txt}
-{com}. label var Upper_UL "Upper UL"
+{com}. 
+. gen change_percent_mean = change_proportion_mean * 100
 {txt}
-{com}. label var Lower_UL "Lower UL"
+{com}. gen change_percent_upper = change_proportion_upper * 100
+{txt}
+{com}. gen change_percent_lower = change_proportion_lower * 100
+{txt}
+{com}. 
+. drop change_proportion_*
+{txt}
+{com}. 
+. rename change_percent_mean Value
+{res}{txt}
+{com}. rename change_percent_upper Lower_UL
+{res}{txt}
+{com}. rename change_percent_lower Upper_UL
+{res}{txt}
+{com}. 
+. label var Value "Relative change (%)"
+{txt}
+{com}. label var Lower_UL "Relative change (%) Lower UL"
+{txt}
+{com}. label var Upper_UL "Relative change (%) Upper UL"
 {txt}
 {com}. 
 . order Upper_UL, after(Lower_UL)
@@ -469,23 +492,17 @@ file Table 1 Part1.dta saved
 . order Measure Age Sex Value 
 {txt}
 {com}. 
-. rename Value Relative_change_pct
-{res}{txt}
-{com}. 
-. label var Relative_change_pct "Relative change (%)"
-{txt}
-{com}. 
 . keep if Year_start == 1990 & Year_end == 2019 
 {txt}(36 observations deleted)
 
 {com}. 
-.   
 . save "Table 1 Part2.dta", replace
 {txt}(note: file Table 1 Part2.dta not found)
 file Table 1 Part2.dta saved
 
-{com}.   
-.   
+{com}. 
+. 
+. 
 . /* "Table 1 Part2.dta" contents
 > 
 > Relative change (%) from 1990 to 2019
@@ -690,7 +707,9 @@ xij variables:
 {txt}{hline 77}
 
 {com}. 
-. drop sex_id_new
+. sort sex_id_new
+{txt}
+{com}. drop sex_id_new
 {txt}
 {com}. 
 . label var Value1990     "1990 Value"
@@ -749,49 +768,35 @@ file Table 1 Part3.dta saved
 . use "Table 1 Part3.dta", clear
 {txt}
 {com}. 
-. // use "Table 1 Part3 long.dta", clear
-. 
-. // use "IHME-GBD_2019_DATA-3.dta", clear
-. 
-. 
-. 
-. // reshape wide Value Upper_UL Lower_UL, i(Sex) j(Year)
-. 
-. // order Measure Age
-. 
-. 
-. 
 . 
 . gen sex_id_new = .
 {txt}(3 missing values generated)
 
-{com}. replace sex_id_new = 1 if Sex == "Both"
-{txt}(0 real changes made)
+{com}. replace sex_id_new = 1 if Sex == "Both sexes"
+{txt}(1 real change made)
 
-{com}. replace sex_id_new = 2 if Sex == "Male"
-{txt}(0 real changes made)
+{com}. replace sex_id_new = 2 if Sex == "Males"
+{txt}(1 real change made)
 
-{com}. replace sex_id_new = 3 if Sex == "Female"
-{txt}(0 real changes made)
+{com}. replace sex_id_new = 3 if Sex == "Females"
+{txt}(1 real change made)
 
 {com}. sort sex_id_new 
 {txt}
-{com}. drop sex_id_new
-{txt}
 {com}. 
 . 
 . 
-. * gen % Change = 100 * (New - Old) / Old
 . 
-. gen ChangeValue1990_2019 = 100 * (Y_2019_Value - Y_1990_Value) / Y_1990_Value
+. * gen % Change = - 100 * (Old - New) / Old; 1990 = Old, 2019 = new
+. 
+. gen ChangeValue1990_2019 = - 100 * (Y_1990_Value - Y_2019_Value) / Y_1990_Value
 {txt}
-{com}. gen ChangeLower_UL1990_2019 = 100 * (Y_2019_Lower_UL - Y_1990_Lower_UL) / Y_1990_Lower_UL
+{com}. gen ChangeLower_UL1990_2019 = - 100 * (Y_1990_Lower_UL - Y_2019_Lower_UL) / Y_1990_Lower_UL
 {txt}
-{com}. gen ChangeUpper_UL1990_2019 = 100 * (Y_2019_Upper_UL - Y_1990_Upper_UL) / Y_1990_Upper_UL
+{com}. gen ChangeUpper_UL1990_2019 = - 100 * (Y_1990_Upper_UL - Y_2019_Upper_UL) / Y_1990_Upper_UL
 {txt}
 {com}. 
-. 
-. keep Measure Age Sex ChangeValue1990_2019 ChangeUpper_UL1990_2019 ChangeLower_UL1990_2019
+. keep Measure Age Sex ChangeValue1990_2019 ChangeUpper_UL1990_2019 ChangeLower_UL1990_2019 sex_id_new
 {txt}
 {com}. 
 . 
@@ -825,14 +830,7 @@ file Table 1 Part3.dta saved
 {txt}
 {com}. 
 . 
-. 
-. order Measure Age Sex Value 
-{txt}
-{com}. 
-. rename Value Relative_change_pct
-{res}{txt}
-{com}. 
-. label var Relative_change_pct "Relative change (%)"
+. order Measure Age Sex Value  
 {txt}
 {com}. 
 . drop Lower_UL Upper_UL
@@ -964,7 +962,7 @@ file Table 1 Part4.dta saved
 . sort sex_id_new  
 {txt}
 {com}. 
-. drop sex_id_new sex_id_new 
+. drop sex_id_new  
 {txt}
 {com}. 
 . order Sex, after(Age)
@@ -1029,6 +1027,7 @@ file Table 1 Part4.dta saved
 {txt}
 {com}. 
 . 
+. 
 . reshape wide Value Lower_UL Upper_UL, i(Measure Age     Sex) j(Year)
 {txt}(note: j = 1990 2019)
 
@@ -1043,6 +1042,9 @@ xij variables:
                                Upper_UL   {txt}->   {res}Upper_UL1990 Upper_UL2019
 {txt}{hline 77}
 
+{com}. 
+. sort sex_id_new
+{txt}
 {com}. 
 . drop sex_id_new
 {txt}
@@ -1177,6 +1179,19 @@ file Table 1 Part5.dta saved
 {txt}(0 real changes made)
 
 {com}. 
+. 
+. * gen percent = proportion * 100
+. replace val = val * 100
+{txt}(3 real changes made)
+
+{com}. replace upper = upper * 100
+{txt}(3 real changes made)
+
+{com}. replace lower = lower * 100
+{txt}(3 real changes made)
+
+{com}. 
+. 
 . rename val Value
 {res}{txt}
 {com}. rename upper Upper_UL
@@ -1243,18 +1258,20 @@ file Table 1 Part5.dta saved
 . gen sex_id_new = .
 {txt}(3 missing values generated)
 
-{com}. replace sex_id_new = 1 if Sex == "Both"
-{txt}(0 real changes made)
+{com}. replace sex_id_new = 1 if Sex == "Both sexes"
+{txt}(1 real change made)
 
-{com}. replace sex_id_new = 2 if Sex == "Male"
-{txt}(0 real changes made)
+{com}. replace sex_id_new = 2 if Sex == "Males"
+{txt}(1 real change made)
 
-{com}. replace sex_id_new = 3 if Sex == "Female"
-{txt}(0 real changes made)
+{com}. replace sex_id_new = 3 if Sex == "Females"
+{txt}(1 real change made)
 
-{com}. sort sex_id_new 
+{com}. 
+. sort sex_id_new 
 {txt}
-{com}. drop sex_id_new
+{com}. 
+. drop sex_id_new
 {txt}
 {com}. 
 . replace Value = round(Value,0.01)
@@ -1346,13 +1363,52 @@ file Table 1 Part6.dta saved
 > (Y_1990_Value Y_1990_Lower_UL Y_1990_Upper_UL Y_2019_Value Y_2019_Lower_UL Y_2019_Upper_UL)
 {res}{txt}
 {com}. 
+. gen measure_id_new = .
+{txt}(18 missing values generated)
+
+{com}. replace measure_id_new = 1 if Measure == "DALYs"
+{txt}(6 real changes made)
+
+{com}. replace measure_id_new = 2 if Measure == "YLLs"
+{txt}(6 real changes made)
+
+{com}. replace measure_id_new = 3 if Measure == "YLDs"
+{txt}(6 real changes made)
+
+{com}. 
+. gen sex_id_new = .
+{txt}(18 missing values generated)
+
+{com}. replace sex_id_new = 1 if Sex == "Both sexes"
+{txt}(6 real changes made)
+
+{com}. replace sex_id_new = 2 if Sex == "Males"
+{txt}(6 real changes made)
+
+{com}. replace sex_id_new = 3 if Sex == "Females"
+{txt}(6 real changes made)
+
+{com}. 
+. gen age_id_new = .
+{txt}(18 missing values generated)
+
+{com}. replace age_id_new = 1 if Age == "All Ages"
+{txt}(9 real changes made)
+
+{com}. replace age_id_new = 2 if Age == "Age-standardized"
+{txt}(9 real changes made)
+
+{com}. 
+. sort measure_id_new age_id_new sex_id_new
+{txt}
+{com}. drop measure_id_new age_id_new sex_id_new
+{txt}
+{com}. 
 . save "Table 1 Part1and2.dta", replace 
 {txt}(note: file Table 1 Part1and2.dta not found)
 file Table 1 Part1and2.dta saved
 
 {com}. 
-. 
-. 
 . 
 . 
 . 
@@ -1381,6 +1437,12 @@ str15, now str37 to accommodate using data's values)
 
 {com}. 
 . drop _merge
+{txt}
+{com}. 
+. sort sex_id_new 
+{txt}
+{com}. 
+. drop sex_id_new
 {txt}
 {com}. 
 . qui compress
@@ -1420,8 +1482,24 @@ file Table 1 Part3and4.dta saved
 . drop _merge
 {txt}
 {com}. 
-. rename Value Relative_change_pct
-{res}{txt}
+. gen sex_id_new = .
+{txt}(3 missing values generated)
+
+{com}. replace sex_id_new = 1 if Sex == "Both sexes"
+{txt}(1 real change made)
+
+{com}. replace sex_id_new = 2 if Sex == "Males"
+{txt}(1 real change made)
+
+{com}. replace sex_id_new = 3 if Sex == "Females"
+{txt}(1 real change made)
+
+{com}. 
+. sort sex_id_new 
+{txt}
+{com}. 
+. drop sex_id_new
+{txt}
 {com}. 
 . qui compress
 {txt}
@@ -1459,8 +1537,7 @@ str15, now str30 to accommodate using data's values)
 
 {com}. 
 . save "Table 1.dta", replace
-{txt}(note: file Table 1.dta not found)
-file Table 1.dta saved
+{txt}file Table 1.dta saved
 
 {com}. 
 . export excel using "Table 1.xlsx", replace firstrow(varlabels)
@@ -1528,7 +1605,7 @@ rm: Table 1 Part3.dta: No such file or directory
       {txt}name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output/log Table 1.smcl
   {txt}log type:  {res}smcl
- {txt}closed on:  {res} 1 Apr 2022, 10:18:19
+ {txt}closed on:  {res} 4 Apr 2022, 16:29:29
 {txt}{.-}
 {smcl}
 {txt}{sf}{ul off}

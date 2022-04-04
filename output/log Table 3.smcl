@@ -1,9 +1,9 @@
 {smcl}
-{txt}{sf}{ul off}{.-}
+{com}{sf}{ul off}{txt}{.-}
       name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output/log Table 3.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res} 1 Apr 2022, 10:18:19
+ {txt}opened on:  {res} 4 Apr 2022, 16:29:30
 {txt}
 {com}. 
 . ***************************************************************************
@@ -245,8 +245,7 @@
 {txt}
 {com}. 
 . save "IHME-GBD_2019_DATA-31.dta", replace
-{txt}(note: file IHME-GBD_2019_DATA-31.dta not found)
-file IHME-GBD_2019_DATA-31.dta saved
+{txt}file IHME-GBD_2019_DATA-31.dta saved
 
 {com}. 
 . 
@@ -284,94 +283,68 @@ file IHME-GBD_2019_DATA-31.dta saved
 . drop Sex_Year_Age 
 {txt}
 {com}. 
-. reshape wide rank, i(Cause Age Sex) j(Year)
-{txt}(note: j = 1990 2019)
-
-Data{col 36}long{col 43}->{col 48}wide
-{hline 77}
-Number of obs.                 {res}      80   {txt}->{res}      49
-{txt}Number of variables            {res}       9   {txt}->{res}       9
-{txt}j variable (2 values)              {res}Year   {txt}->   (dropped)
-xij variables:
-                                   {res}rank   {txt}->   {res}rank1990 rank2019
-{txt}{hline 77}
-
+. drop sex_id
+{txt}
+{com}. 
+. *
+. 
+. sort age_id_new sex_id_new
+{txt}
 {com}. 
 . save "IHME-GBD_2019_DATA-31 DALYs.dta", replace 
-{txt}(note: file IHME-GBD_2019_DATA-31 DALYs.dta not found)
-file IHME-GBD_2019_DATA-31 DALYs.dta saved
+{txt}file IHME-GBD_2019_DATA-31 DALYs.dta saved
 
 {com}. 
-. 
-. 
 . 
 . * DALYs 1990
 . 
 . use "IHME-GBD_2019_DATA-31 DALYs.dta", clear 
 {txt}
 {com}. 
-. keep Age Sex Cause rank1990 age_id_new sex_id_new Measure
-{txt}
-{com}. 
-. order Measure, last
-{txt}
-{com}. 
-. sort age_id_new sex_id_new rank1990
-{txt}
-{com}. 
-. drop if rank1990 == . 
-{txt}(9 observations deleted)
+. keep if Year == 1990
+{txt}(40 observations deleted)
 
 {com}. 
-. drop age_id_new sex_id_new      
+. sort age_id_new sex_id_new
 {txt}
 {com}. 
-. rename Cause Cause1990
+. rename rank Rank1990
+{res}{txt}
+{com}. rename Cause Cause1990
 {res}{txt}
 {com}. 
 . gen row = _n
 {txt}
 {com}. 
-. save "Table 3 Part1.dta", replace
-{txt}(note: file Table 3 Part1.dta not found)
-file Table 3 Part1.dta saved
+. save "IHME-GBD_2019_DATA-31 DALYs 1990.dta", replace
+{txt}file IHME-GBD_2019_DATA-31 DALYs 1990.dta saved
 
 {com}. 
-. 
 . 
 . * DALYs 2019
 . 
 . use "IHME-GBD_2019_DATA-31 DALYs.dta", clear 
 {txt}
 {com}. 
-. keep Age Sex Cause rank2019 age_id_new sex_id_new Measure
-{txt}
-{com}. 
-. order Measure, last
-{txt}
-{com}. 
-. sort age_id_new sex_id_new rank2019
-{txt}
-{com}. 
-. drop if rank2019 == . 
-{txt}(9 observations deleted)
+. keep if Year == 2019
+{txt}(40 observations deleted)
 
 {com}. 
-. drop age_id_new sex_id_new      
+. sort age_id_new sex_id_new
 {txt}
 {com}. 
-. rename Cause Cause2019
+. rename rank Rank2019
+{res}{txt}
+{com}. rename Cause Cause2019
 {res}{txt}
 {com}. 
 . gen row = _n
 {txt}
 {com}. 
-. save "Table 3 Part2.dta", replace
-{txt}(note: file Table 3 Part2.dta not found)
-file Table 3 Part2.dta saved
+. save "IHME-GBD_2019_DATA-31 DALYs 2019.dta", replace
+{txt}file IHME-GBD_2019_DATA-31 DALYs 2019.dta saved
 
 {com}. 
-. 
 . 
 . 
 . 
@@ -586,99 +559,70 @@ file Table 3 Part2.dta saved
 . drop Sex_Year_Age 
 {txt}
 {com}. 
-. reshape wide rank, i(Cause Age Sex) j(Year)
-{txt}(note: j = 1990 2019)
-
-Data{col 36}long{col 43}->{col 48}wide
-{hline 77}
-Number of obs.                 {res}      80   {txt}->{res}      48
-{txt}Number of variables            {res}       9   {txt}->{res}       9
-{txt}j variable (2 values)              {res}Year   {txt}->   (dropped)
-xij variables:
-                                   {res}rank   {txt}->   {res}rank1990 rank2019
-{txt}{hline 77}
-
+. drop sex_id
+{txt}
+{com}. 
+. *
+. 
+. sort age_id_new sex_id_new
+{txt}
 {com}. 
 . save "IHME-GBD_2019_DATA-31 YLLs.dta", replace 
-{txt}(note: file IHME-GBD_2019_DATA-31 YLLs.dta not found)
-file IHME-GBD_2019_DATA-31 YLLs.dta saved
+{txt}file IHME-GBD_2019_DATA-31 YLLs.dta saved
 
 {com}. 
-. 
-. 
 . 
 . * YLLs 1990
 . 
 . use "IHME-GBD_2019_DATA-31 YLLs.dta", clear 
 {txt}
 {com}. 
-. keep Age Sex Cause rank1990 age_id_new sex_id_new Measure
-{txt}
-{com}. 
-. order Measure, last
-{txt}
-{com}. 
-. sort age_id_new sex_id_new rank1990 Measure
-{txt}
-{com}. 
-. order Measure, last
-{txt}
-{com}. 
-. drop if rank1990 == . 
-{txt}(8 observations deleted)
+. keep if Year == 1990
+{txt}(40 observations deleted)
 
 {com}. 
-. drop age_id_new sex_id_new      
+. sort age_id_new sex_id_new
 {txt}
+{com}. 
+. rename rank Rank1990
+{res}{txt}
+{com}. rename Cause Cause1990
+{res}{txt}
 {com}. 
 . gen row = _n
 {txt}
 {com}. 
-. rename Cause Cause1990
-{res}{txt}
-{com}. 
-. save "Table 3 Part3.dta", replace
-{txt}(note: file Table 3 Part3.dta not found)
-file Table 3 Part3.dta saved
+. save "IHME-GBD_2019_DATA-31 YLLs 1990.dta", replace
+{txt}file IHME-GBD_2019_DATA-31 YLLs 1990.dta saved
 
 {com}. 
-. 
 . 
 . * YLLs 2019
 . 
 . use "IHME-GBD_2019_DATA-31 YLLs.dta", clear 
 {txt}
 {com}. 
-. keep Age Sex Cause rank2019 age_id_new sex_id_new Measure
-{txt}
-{com}. 
-. order Measure, last
-{txt}
-{com}. 
-. sort age_id_new sex_id_new rank2019 Measure
-{txt}
-{com}. 
-. order Measure, last
-{txt}
-{com}. 
-. drop if rank2019 == . 
-{txt}(8 observations deleted)
+. keep if Year == 2019
+{txt}(40 observations deleted)
 
 {com}. 
-. drop age_id_new sex_id_new      
+. sort age_id_new sex_id_new
 {txt}
+{com}. 
+. rename rank Rank2019
+{res}{txt}
+{com}. rename Cause Cause2019
+{res}{txt}
 {com}. 
 . gen row = _n
 {txt}
 {com}. 
-. rename Cause Cause2019
-{res}{txt}
-{com}. 
-. save "Table 3 Part4.dta", replace
-{txt}(note: file Table 3 Part4.dta not found)
-file Table 3 Part4.dta saved
+. save "IHME-GBD_2019_DATA-31 YLLs 2019.dta", replace
+{txt}file IHME-GBD_2019_DATA-31 YLLs 2019.dta saved
 
 {com}. 
+. 
+. 
 . 
 . 
 . 
@@ -898,99 +842,69 @@ file Table 3 Part4.dta saved
 . drop Sex_Year_Age 
 {txt}
 {com}. 
-. reshape wide rank, i(Cause Age Sex) j(Year)
-{txt}(note: j = 1990 2019)
-
-Data{col 36}long{col 43}->{col 48}wide
-{hline 77}
-Number of obs.                 {res}      80   {txt}->{res}      47
-{txt}Number of variables            {res}       9   {txt}->{res}       9
-{txt}j variable (2 values)              {res}Year   {txt}->   (dropped)
-xij variables:
-                                   {res}rank   {txt}->   {res}rank1990 rank2019
-{txt}{hline 77}
-
+. drop sex_id
+{txt}
+{com}. 
+. *
+. 
+. sort age_id_new sex_id_new
+{txt}
 {com}. 
 . save "IHME-GBD_2019_DATA-31 YLDs.dta", replace 
-{txt}(note: file IHME-GBD_2019_DATA-31 YLDs.dta not found)
-file IHME-GBD_2019_DATA-31 YLDs.dta saved
+{txt}file IHME-GBD_2019_DATA-31 YLDs.dta saved
 
 {com}. 
-. 
-. 
 . 
 . * YLDs 1990
 . 
 . use "IHME-GBD_2019_DATA-31 YLDs.dta", clear 
 {txt}
 {com}. 
-. keep Age Sex Cause rank1990 age_id_new sex_id_new Measure
-{txt}
-{com}. 
-. order Measure, last
-{txt}
-{com}. 
-. sort age_id_new sex_id_new rank1990 Measure 
-{txt}
-{com}. 
-. order Measure, last
-{txt}
-{com}. 
-. drop if rank1990 == . 
-{txt}(7 observations deleted)
+. keep if Year == 1990
+{txt}(40 observations deleted)
 
 {com}. 
-. drop age_id_new sex_id_new      
+. sort age_id_new sex_id_new
 {txt}
+{com}. 
+. rename rank Rank1990
+{res}{txt}
+{com}. rename Cause Cause1990
+{res}{txt}
 {com}. 
 . gen row = _n
 {txt}
 {com}. 
-. rename Cause Cause1990
-{res}{txt}
-{com}. 
-. save "Table 3 Part5.dta", replace
-{txt}(note: file Table 3 Part5.dta not found)
-file Table 3 Part5.dta saved
+. save "IHME-GBD_2019_DATA-31 YLDs 1990.dta", replace
+{txt}file IHME-GBD_2019_DATA-31 YLDs 1990.dta saved
 
 {com}. 
-. 
 . 
 . * YLDs 2019
 . 
 . use "IHME-GBD_2019_DATA-31 YLDs.dta", clear 
 {txt}
 {com}. 
-. keep Age Sex Cause rank2019 age_id_new sex_id_new Measure
-{txt}
-{com}. 
-. order Measure, last
-{txt}
-{com}. 
-. sort age_id_new sex_id_new rank2019 Measure
-{txt}
-{com}. 
-. order Measure, last
-{txt}
-{com}. 
-. drop if rank2019 == . 
-{txt}(7 observations deleted)
+. keep if Year == 2019
+{txt}(40 observations deleted)
 
 {com}. 
-. drop age_id_new sex_id_new      
+. sort age_id_new sex_id_new
 {txt}
+{com}. 
+. rename rank Rank2019
+{res}{txt}
+{com}. rename Cause Cause2019
+{res}{txt}
 {com}. 
 . gen row = _n
 {txt}
 {com}. 
-. rename Cause Cause2019
-{res}{txt}
-{com}. 
-. save "Table 3 Part6.dta", replace
-{txt}(note: file Table 3 Part6.dta not found)
-file Table 3 Part6.dta saved
+. save "IHME-GBD_2019_DATA-31 YLDs 2019.dta", replace
+{txt}file IHME-GBD_2019_DATA-31 YLDs 2019.dta saved
 
 {com}. 
+. 
 . 
 . 
 . 
@@ -1002,10 +916,10 @@ file Table 3 Part6.dta saved
 . 
 . * merge DALYs 1990 and DALYs 2019 
 . 
-. use "Table 3 Part1.dta", clear
+. use "IHME-GBD_2019_DATA-31 DALYs 1990.dta", clear
 {txt}
 {com}. 
-. merge m:m row using "Table 3 Part2.dta"
+. merge m:m row using "IHME-GBD_2019_DATA-31 DALYs 2019.dta"
 {res}
 {txt}{col 5}Result{col 38}# of obs.
 {col 5}{hline 41}
@@ -1023,9 +937,9 @@ file Table 3 Part6.dta saved
 . order row, last
 {txt}
 {com}. 
-. order rank1990, before(Cause1990)
+. order Rank1990, before(Cause1990)
 {txt}
-{com}. order rank2019, before(Cause2019)
+{com}. order Rank2019, before(Cause2019)
 {txt}
 {com}. 
 . rename Cause1990 DALYsCause1990
@@ -1033,9 +947,15 @@ file Table 3 Part6.dta saved
 {com}. rename Cause2019 DALYsCause2019
 {res}{txt}
 {com}. 
-. save "Table 3 Part1and2.dta", replace
-{txt}(note: file Table 3 Part1and2.dta not found)
-file Table 3 Part1and2.dta saved
+. drop Year
+{txt}
+{com}. 
+. order age_id_new sex_id_new, last
+{txt}
+{com}. 
+. save "Table 3 DALYs.dta", replace
+{txt}(note: file Table 3 DALYs.dta not found)
+file Table 3 DALYs.dta saved
 
 {com}. 
 . 
@@ -1043,15 +963,14 @@ file Table 3 Part1and2.dta saved
 . 
 . 
 . 
-. 
 . *************************************************************************
 . 
-. * merge YLLs 1990 and DALYs 2019 
+. * merge YLLs 1990 and YLLs 2019 
 . 
-. use "Table 3 Part3.dta", clear
+. use "IHME-GBD_2019_DATA-31 YLLs 1990.dta", clear
 {txt}
 {com}. 
-. merge m:m row using "Table 3 Part4.dta"
+. merge m:m row using "IHME-GBD_2019_DATA-31 YLLs 2019.dta"
 {res}
 {txt}{col 5}Result{col 38}# of obs.
 {col 5}{hline 41}
@@ -1069,9 +988,9 @@ file Table 3 Part1and2.dta saved
 . order row, last
 {txt}
 {com}. 
-. order rank1990, before(Cause1990)
+. order Rank1990, before(Cause1990)
 {txt}
-{com}. order rank2019, before(Cause2019)
+{com}. order Rank2019, before(Cause2019)
 {txt}
 {com}. 
 . rename Cause1990 YLLsCause1990
@@ -1079,9 +998,15 @@ file Table 3 Part1and2.dta saved
 {com}. rename Cause2019 YLLsCause2019
 {res}{txt}
 {com}. 
-. save "Table 3 Part3and4.dta", replace
-{txt}(note: file Table 3 Part3and4.dta not found)
-file Table 3 Part3and4.dta saved
+. drop Year
+{txt}
+{com}. 
+. order age_id_new sex_id_new, last
+{txt}
+{com}. 
+. save "Table 3 YLLs.dta", replace
+{txt}(note: file Table 3 YLLs.dta not found)
+file Table 3 YLLs.dta saved
 
 {com}. 
 . 
@@ -1090,15 +1015,14 @@ file Table 3 Part3and4.dta saved
 . 
 . 
 . 
-. 
 . *************************************************************************
 . 
-. * merge YLDs 1990 and DALYs 2019 
+. * merge YLDs 1990 and YLDs 2019 
 . 
-. use "Table 3 Part5.dta", clear
+. use "IHME-GBD_2019_DATA-31 YLDs 1990.dta", clear
 {txt}
 {com}. 
-. merge m:m row using "Table 3 Part6.dta"
+. merge m:m row using "IHME-GBD_2019_DATA-31 YLDs 2019.dta"
 {res}
 {txt}{col 5}Result{col 38}# of obs.
 {col 5}{hline 41}
@@ -1116,9 +1040,9 @@ file Table 3 Part3and4.dta saved
 . order row, last
 {txt}
 {com}. 
-. order rank1990, before(Cause1990)
+. order Rank1990, before(Cause1990)
 {txt}
-{com}. order rank2019, before(Cause2019)
+{com}. order Rank2019, before(Cause2019)
 {txt}
 {com}. 
 . rename Cause1990 YLDsCause1990
@@ -1126,11 +1050,18 @@ file Table 3 Part3and4.dta saved
 {com}. rename Cause2019 YLDsCause2019
 {res}{txt}
 {com}. 
-. save "Table 3 Part5and6.dta", replace
-{txt}(note: file Table 3 Part5and6.dta not found)
-file Table 3 Part5and6.dta saved
+. drop Year
+{txt}
+{com}. 
+. order age_id_new sex_id_new, last
+{txt}
+{com}. 
+. save "Table 3 YLDs.dta", replace
+{txt}(note: file Table 3 YLDs.dta not found)
+file Table 3 YLDs.dta saved
 
 {com}. 
+. 
 . 
 . 
 . 
@@ -1141,12 +1072,12 @@ file Table 3 Part5and6.dta saved
 . 
 . *************************************************************************
 . 
-. * append DALYs, YLLS, and YLDs 
+. * append DALYs, YLLs, and YLDs 
 . 
-. use "Table 3 Part1and2.dta", clear
+. use "Table 3 DALYs.dta", clear
 {txt}
 {com}. 
-. merge m:m row using "Table 3 Part3and4.dta"
+. merge m:m row using "Table 3 YLLs.dta"
 {res}
 {txt}{col 5}Result{col 38}# of obs.
 {col 5}{hline 41}
@@ -1158,16 +1089,16 @@ file Table 3 Part5and6.dta saved
 . drop _merge
 {txt}
 {com}. 
-. rename rank1990 Rank
+. rename Rank1990 Rank
 {res}{txt}
 {com}. 
-. drop rank2019
+. drop Rank2019
 {txt}
 {com}. 
 . drop Measure
 {txt}
 {com}. 
-. merge m:m row using "Table 3 Part5and6.dta"
+. merge m:m row using "Table 3 YLDs.dta"
 {res}
 {txt}{col 5}Result{col 38}# of obs.
 {col 5}{hline 41}
@@ -1179,7 +1110,7 @@ file Table 3 Part5and6.dta saved
 . drop _merge
 {txt}
 {com}. 
-. drop rank1990 rank2019 row Measure
+. drop Rank1990 Rank2019 row Measure age_id_new   sex_id_new
 {txt}
 {com}. 
 . 
@@ -1192,7 +1123,7 @@ file Table 3 Part5and6.dta saved
 {txt}  5{com}. replace `var' = "Breast cancer" if `var' == "Breast cancer"
 {txt}  6{com}. replace `var' = "COPD" if `var' == "Chronic obstructive pulmonary disease"
 {txt}  7{com}. replace `var' = "Cirrhosis" if `var' == "Cirrhosis and other chronic liver diseases"
-{txt}  8{com}. replace `var' = "Colrectal Ca" if `var' == "Colon and rectum cancer"
+{txt}  8{com}. replace `var' = "Colorectal Ca" if `var' == "Colon and rectum cancer"
 {txt}  9{com}. replace `var' = "Congenital" if `var' == "Congenital birth defects"
 {txt} 10{com}. replace `var' = "Depression" if `var' == "Depressive disorders"
 {txt} 11{com}. replace `var' = "Diabetes" if `var' == "Diabetes mellitus"
@@ -1226,8 +1157,7 @@ file Table 3 Part5and6.dta saved
 {com}. 
 . 
 . save "Table 3.dta", replace
-{txt}(note: file Table 3.dta not found)
-file Table 3.dta saved
+{txt}file Table 3.dta saved
 
 {com}. 
 . export excel using "Table 3.xlsx", replace firstrow(varlabels)
@@ -1241,51 +1171,19 @@ file Table 3.dta saved
 . 
 . * remove files no longer needed
 . 
-. shell rm -r "IHME-GBD_2019_DATA-31 DALYs 1990.dta"
-{txt}
-rm: IHME-GBD_2019_DATA-31 DALYs 1990.dta: No such file or directory
-
-{com}. shell rm -r "IHME-GBD_2019_DATA-31 DALYs 2019.dta"
-{txt}
-rm: IHME-GBD_2019_DATA-31 DALYs 2019.dta: No such file or directory
-
-{com}. shell rm -r "IHME-GBD_2019_DATA-31 DALYs.dta"
+. shell rm -r "Table 3 DALYs.dta"
 {txt}
 
-{com}. shell rm -r "IHME-GBD_2019_DATA-31 YLDs.dta"
+{com}. shell rm -r "Table 3 YLDs.dta"
 {txt}
 
-{com}. shell rm -r "IHME-GBD_2019_DATA-31 YLLs.dta"
-{txt}
-
-{com}. shell rm -r "Table 3 Part1.dta"
-{txt}
-
-{com}. shell rm -r "Table 3 Part1and2.dta"
-{txt}
-
-{com}. shell rm -r "Table 3 Part2.dta"
-{txt}
-
-{com}. shell rm -r "Table 3 Part3.dta"
-{txt}
-
-{com}. shell rm -r "Table 3 Part3and4.dta"
-{txt}
-
-{com}. shell rm -r "Table 3 Part4.dta"
-{txt}
-
-{com}. shell rm -r "Table 3 Part5.dta"
-{txt}
-
-{com}. shell rm -r "Table 3 Part5and6.dta"
-{txt}
-
-{com}. shell rm -r "Table 3 Part6.dta"
+{com}. shell rm -r "Table 3 YLLs.dta"
 {txt}
 
 {com}. 
+. 
+. 
+. 
 . 
 . 
 . 
@@ -1319,7 +1217,7 @@ rm: IHME-GBD_2019_DATA-31 DALYs 2019.dta: No such file or directory
       {txt}name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output/log Table 3.smcl
   {txt}log type:  {res}smcl
- {txt}closed on:  {res} 1 Apr 2022, 10:18:22
+ {txt}closed on:  {res} 4 Apr 2022, 16:29:31
 {txt}{.-}
 {smcl}
 {txt}{sf}{ul off}

@@ -1,9 +1,9 @@
 {smcl}
-{txt}{sf}{ul off}{.-}
+{com}{sf}{ul off}{txt}{.-}
       name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output/log Table 5 b.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res} 1 Apr 2022, 10:18:27
+ {txt}opened on:  {res} 4 Apr 2022, 16:29:36
 {txt}
 {com}. 
 . ***************************************************************************
@@ -20,7 +20,7 @@
 . * Table 5: Changes in age-standardized DALY rates in Canada and comparator locations 
 . * and Canada’s rank in 1990-2019
 . 
-. * level 1 causes, Canada's Rank in 1990 and Rank in 2019 for Age-standardized DALYs rate among 33 countries:
+. * level 1 causes, Canada's Rank in 1990 and Rank in 2019 for Age-standardized DALYs rate among 32 countries:
 . * Canada, United States, Western Europe, Australasia, Asia-Pacific (see below)
 . 
 . 
@@ -44,7 +44,7 @@
 . * Table 5: Changes in age-standardized DALY rates in Canada and comparator locations 
 . * and Canada’s rank in 1990-2019
 . 
-. * level 1 causes, Canada's Rank in 1990 and Rank in 2019 for Age-standardized DALYs rate among 33 countries:
+. * level 1 causes, Canada's Rank in 1990 and Rank in 2019 for Age-standardized DALYs rate among 32 countries:
 . * Canada, United States, Western Europe, Australasia, Asia-Pacific (see below)
 . 
 . 
@@ -71,7 +71,7 @@
 > Data settings:
 > 
 > Base: Single
-> Location: Canada, United States, Western Europe, Australasia, Asia-Pacific (33 countries) See below
+> Location: Canada, United States, Western Europe, Australasia, Asia-Pacific (32 countries) See below
 > Year: 1990, 2000, 2010, 2019
 > 
 > Context: Cause
@@ -89,7 +89,7 @@
 > 
 > 
 > * Countries in Table 5:
-> Canada, United States, Western Europe (25), Australasia (2), Asia-Pacific (4) (33 countries)
+> Canada, United States, Western Europe (24), Australasia (2), Asia-Pacific (4) (32 countries)
 > 
 > 
 > Western Europe:
@@ -106,18 +106,17 @@
 > 11      Ireland
 > 12      Israel
 > 13      Italy
-> 14      Japan
-> 15      Luxembourg
-> 16      Malta
-> 17      Monaco
-> 18      Netherlands
-> 19      Norway
-> 20      Portugal
-> 21      San Marino
-> 22      Spain
-> 23      Sweden
-> 24      Switzerland
-> 25      United Kingdom
+> 14      Luxembourg
+> 15      Malta
+> 16      Monaco
+> 17      Netherlands
+> 18      Norway
+> 19      Portugal
+> 20      San Marino
+> 21      Spain
+> 22      Sweden
+> 23      Switzerland
+> 24      United Kingdom
 > 
 > Australasia: Australia, New Zealand
 > 
@@ -128,7 +127,7 @@
 > 4       Singapore
 > 
 > 
-> * 33 countries:
+> * 32 countries:
 > 
 > 1       Andorra
 > 2       Australia
@@ -147,22 +146,21 @@
 > 15      Israel
 > 16      Italy
 > 17      Japan
-> 18      Japan
-> 19      Luxembourg
-> 20      Malta
-> 21      Monaco
-> 22      Netherlands
-> 23      New Zealend
-> 24      Norway
-> 25      Portugal
-> 26      Republic of Korea
-> 27      San Marino
-> 28      Singapore
-> 29      Spain
-> 30      Sweden
-> 31      Switzerland
-> 32      United Kingdom
-> 33      United States of America
+> 18      Luxembourg
+> 19      Malta
+> 20      Monaco
+> 21      Netherlands
+> 22      New Zealend
+> 23      Norway
+> 24      Portugal
+> 25      Republic of Korea
+> 26      San Marino
+> 27      Singapore
+> 28      Spain
+> 29      Sweden
+> 30      Switzerland
+> 31      United Kingdom
+> 32      United States of America
 > 
 > */
 . 
@@ -223,6 +221,7 @@
 {res}{txt}
 {com}. 
 . 
+. 
 . sort Location cause_name
 {txt}
 {com}. 
@@ -233,10 +232,8 @@
 . gen cause_id_new = . 
 {txt}(512 missing values generated)
 
-{com}. replace cause_id_new = 0 if Cause == "All causes"
-{txt}(128 real changes made)
-
-{com}. replace cause_id_new = 1 if Cause == "Communicable, maternal, neonatal, and nutritional diseases"
+{com}. 
+. replace cause_id_new = 1 if Cause == "Communicable, maternal, neonatal, and nutritional diseases"
 {txt}(128 real changes made)
 
 {com}. replace cause_id_new = 2 if Cause == "Non-communicable diseases"
@@ -246,7 +243,10 @@
 {txt}(128 real changes made)
 
 {com}. 
-. 
+. drop if Cause == "All causes"
+{txt}(128 observations deleted)
+
+{com}. 
 . sort cause_id_new
 {txt}
 {com}. 
@@ -259,7 +259,7 @@
 {com}. 
 . 
 . keep if Year == 1990 | Year == 2019
-{txt}(256 observations deleted)
+{txt}(192 observations deleted)
 
 {com}. 
 . 
@@ -277,23 +277,23 @@
 {txt}
 {com}. 
 . 
-. bysort Year: egen rank = rank(Value)
+. bysort Year Cause: egen rank = rank(Value)
 {txt}
 {com}. 
-. label var rank "rank of mean DALYs within Year"
+. label var rank "Canada's rank of mean DALYs within Country-Cause-Year"
 {txt}
 {com}. 
 . sort Year rank
 {txt}
 {com}. 
 . keep if Location == "Canada"
-{txt}(248 observations deleted)
+{txt}(186 observations deleted)
 
 {com}. 
 . sort Year cause_id_new
 {txt}
 {com}. 
-. drop cause_id_new Location Value
+. drop Location Value
 {txt}
 {com}. 
 . reshape wide rank, i(Cause) j(Year)
@@ -301,8 +301,8 @@
 
 Data{col 36}long{col 43}->{col 48}wide
 {hline 77}
-Number of obs.                 {res}       8   {txt}->{res}       4
-{txt}Number of variables            {res}       3   {txt}->{res}       3
+Number of obs.                 {res}       6   {txt}->{res}       3
+{txt}Number of variables            {res}       4   {txt}->{res}       4
 {txt}j variable (2 values)              {res}Year   {txt}->   (dropped)
 xij variables:
                                    {res}rank   {txt}->   {res}rank1990 rank2019
@@ -317,6 +317,13 @@ xij variables:
 . label var Rank_in_1990 "Rank in 1990"
 {txt}
 {com}. label var Rank_in_2019 "Rank in 2019"
+{txt}
+{com}. 
+. sort cause_id_new
+{txt}
+{com}. 
+. 
+. drop cause_id_new
 {txt}
 {com}. 
 . qui compress
@@ -354,7 +361,7 @@ file Table 5 Part2.dta saved
       {txt}name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output/log Table 5 b.smcl
   {txt}log type:  {res}smcl
- {txt}closed on:  {res} 1 Apr 2022, 10:18:27
+ {txt}closed on:  {res} 4 Apr 2022, 16:29:36
 {txt}{.-}
 {smcl}
 {txt}{sf}{ul off}

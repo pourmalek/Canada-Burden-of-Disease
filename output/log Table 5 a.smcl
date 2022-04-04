@@ -1,9 +1,9 @@
 {smcl}
-{txt}{sf}{ul off}{.-}
+{com}{sf}{ul off}{txt}{.-}
       name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output/log Table 5 a.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res} 1 Apr 2022, 10:18:26
+ {txt}opened on:  {res} 4 Apr 2022, 16:29:36
 {txt}
 {com}. 
 . ***************************************************************************
@@ -218,9 +218,6 @@
 . gen cause_id_new = . 
 {txt}(60 missing values generated)
 
-{com}. replace cause_id_new = 0 if cause_name == "All causes"
-{txt}(15 real changes made)
-
 {com}. replace cause_id_new = 1 if cause_name == "Communicable, maternal, neonatal, and nutritional diseases"
 {txt}(15 real changes made)
 
@@ -231,35 +228,50 @@
 {txt}(15 real changes made)
 
 {com}. 
-. 
+. drop if cause_name == "All causes"
+{txt}(15 observations deleted)
+
+{com}. 
 . gen Sex = ""
-{txt}(60 missing values generated)
+{txt}(45 missing values generated)
 
 {com}. replace Sex = "Both sexes" if sex_name == "Both"
 {txt}variable {bf}Sex{sf} was {bf}{res}str1{sf}{txt} now {bf}{res}str10{sf}
-{txt}(20 real changes made)
+{txt}(15 real changes made)
 
 {com}. replace Sex = "Males" if sex_name == "Male"
-{txt}(20 real changes made)
+{txt}(15 real changes made)
 
 {com}. replace Sex = "Females" if sex_name == "Female"
-{txt}(20 real changes made)
+{txt}(15 real changes made)
 
 {com}. drop sex_name
 {txt}
 {com}. 
 . 
 . gen sex_id_new = .
-{txt}(60 missing values generated)
+{txt}(45 missing values generated)
 
 {com}. replace sex_id_new = 1 if Sex == "Both sexes"
-{txt}(20 real changes made)
+{txt}(15 real changes made)
 
 {com}. replace sex_id_new = 2 if Sex == "Males"
-{txt}(20 real changes made)
+{txt}(15 real changes made)
 
 {com}. replace sex_id_new = 3 if Sex == "Females"
-{txt}(20 real changes made)
+{txt}(15 real changes made)
+
+{com}. 
+. 
+. * gen percent = proportion * 100
+. replace val = val * 100
+{txt}(45 real changes made)
+
+{com}. replace upper = upper * 100
+{txt}(45 real changes made)
+
+{com}. replace lower = lower * 100
+{txt}(45 real changes made)
 
 {com}. 
 . rename  val Value
@@ -278,13 +290,13 @@
 {txt}
 {com}. 
 . replace Value = round(Value,0.01)
-{txt}(60 real changes made)
+{txt}(45 real changes made)
 
 {com}. replace Upper_UL = round(Upper_UL,0.1)
-{txt}(60 real changes made)
+{txt}(45 real changes made)
 
 {com}. replace Lower_UL = round(Lower_UL,0.1)
-{txt}(60 real changes made)
+{txt}(45 real changes made)
 
 {com}. format Value Upper_UL Lower_UL %5.2fc
 {txt}
@@ -319,13 +331,13 @@
 {com}. 
 . 
 . replace Location = "United_States" if Location == "United States of America"
-{txt}(12 real changes made)
+{txt}(9 real changes made)
 
 {com}. replace Location = "Asia_Pacific" if Location == "High-income Asia Pacific"
-{txt}(12 real changes made)
+{txt}(9 real changes made)
 
 {com}. replace Location = "Western_Europe" if Location == "Western Europe"
-{txt}(12 real changes made)
+{txt}(9 real changes made)
 
 {com}. 
 . 
@@ -334,11 +346,11 @@
 . qui compress
 {txt}
 {com}. 
-. keep Location Sex Cause Value
+. keep Location Sex Cause Value cause_id_new
 {txt}
 {com}. 
 . keep if Sex == "Both sexes"
-{txt}(40 observations deleted)
+{txt}(30 observations deleted)
 
 {com}. 
 . drop Sex
@@ -350,14 +362,18 @@
 
 Data{col 36}long{col 43}->{col 48}wide
 {hline 77}
-Number of obs.                 {res}      20   {txt}->{res}       4
-{txt}Number of variables            {res}       3   {txt}->{res}       6
+Number of obs.                 {res}      15   {txt}->{res}       3
+{txt}Number of variables            {res}       4   {txt}->{res}       7
 {txt}j variable (5 values)          {res}Location   {txt}->   (dropped)
 xij variables:
                                   {res}Value   {txt}->   {res}ValueAsia_Pacific ValueAustralasia ... ValueWestern_Europe
 {txt}{hline 77}
 
 {com}. 
+. sort cause_id_new
+{txt}
+{com}. 
+. 
 . rename ///
 > (ValueAsia_Pacific ValueAustralasia ValueUnited_States ValueWestern_Europe) ///
 > (Asia_Pacific Australasia United_States Western_Europe)
@@ -378,6 +394,8 @@ xij variables:
 {com}. label var Asia_Pacific "Asia Pacific"
 {txt}
 {com}. 
+. 
+. 
 . save "Table 5 Part1.dta", replace
 {txt}(note: file Table 5 Part1.dta not found)
 file Table 5 Part1.dta saved
@@ -410,7 +428,7 @@ file Table 5 Part1.dta saved
       {txt}name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output/log Table 5 a.smcl
   {txt}log type:  {res}smcl
- {txt}closed on:  {res} 1 Apr 2022, 10:18:27
+ {txt}closed on:  {res} 4 Apr 2022, 16:29:36
 {txt}{.-}
 {smcl}
 {txt}{sf}{ul off}

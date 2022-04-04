@@ -47,6 +47,7 @@ cd "$pathCanadaBOD"
 
 
 
+/*
 
 * preserve native scheme (of the local machine; will be eventually restored at the end of "do CanadaBOD merge.do")
 
@@ -68,6 +69,7 @@ grstyle init
 set scheme _GRSTYLE_ 
 grstyle color background white
 
+*/
 
 cd code
 

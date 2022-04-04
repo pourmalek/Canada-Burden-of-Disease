@@ -162,6 +162,8 @@ sort age_id_new sex_id_new Year
 
 reshape wide Value Lower_UL Upper_UL, i(Measure Age	Sex) j(Year)
 
+sort measure_id_new age_id_new sex_id_new
+
 drop sex_id measure_id_new age_id_new sex_id_new
 
 label var Value1990	"1990 Value"
@@ -278,11 +280,23 @@ replace sex_id_new = 1 if Sex == "Both sexes"
 replace sex_id_new = 2 if Sex == "Males"
 replace sex_id_new = 3 if Sex == "Females"
 
-rename	val Value
-rename upper Upper_UL
-rename lower Lower_UL
-label var Upper_UL "Upper UL"
-label var Lower_UL "Lower UL"
+rename	val change_proportion_mean
+rename upper change_proportion_upper
+rename lower change_proportion_lower
+
+gen change_percent_mean = change_proportion_mean * 100
+gen change_percent_upper = change_proportion_upper * 100
+gen change_percent_lower = change_proportion_lower * 100
+
+drop change_proportion_*
+
+rename change_percent_mean Value
+rename change_percent_upper Lower_UL
+rename change_percent_lower Upper_UL
+
+label var Value "Relative change (%)"
+label var Lower_UL "Relative change (%) Lower UL"
+label var Upper_UL "Relative change (%) Upper UL"
 
 order Upper_UL, after(Lower_UL)
 
@@ -307,16 +321,12 @@ drop Lower_UL Upper_UL
 
 order Measure Age Sex Value 
 
-rename Value Relative_change_pct
-
-label var Relative_change_pct "Relative change (%)"
-
 keep if Year_start == 1990 & Year_end == 2019 
 
-  
 save "Table 1 Part2.dta", replace
-  
-  
+
+
+
 /* "Table 1 Part2.dta" contents
 
 Relative change (%) from 1990 to 2019
@@ -447,6 +457,7 @@ sort sex_id_new Year
 
 reshape wide Value Lower_UL Upper_UL, i(Measure Age	Sex) j(Year)
 
+sort sex_id_new
 drop sex_id_new
 
 label var Value1990	"1990 Value"
@@ -494,36 +505,23 @@ Both sexes	Males	Females
 
 use "Table 1 Part3.dta", clear
 
-// use "Table 1 Part3 long.dta", clear
-
-// use "IHME-GBD_2019_DATA-3.dta", clear
-
-
-
-// reshape wide Value Upper_UL Lower_UL, i(Sex) j(Year)
-
-// order Measure Age
-
-
-
 
 gen sex_id_new = .
-replace sex_id_new = 1 if Sex == "Both"
-replace sex_id_new = 2 if Sex == "Male"
-replace sex_id_new = 3 if Sex == "Female"
+replace sex_id_new = 1 if Sex == "Both sexes"
+replace sex_id_new = 2 if Sex == "Males"
+replace sex_id_new = 3 if Sex == "Females"
 sort sex_id_new 
-drop sex_id_new
 
 
 
-* gen % Change = 100 * (New - Old) / Old
 
-gen ChangeValue1990_2019 = 100 * (Y_2019_Value - Y_1990_Value) / Y_1990_Value
-gen ChangeLower_UL1990_2019 = 100 * (Y_2019_Lower_UL - Y_1990_Lower_UL) / Y_1990_Lower_UL
-gen ChangeUpper_UL1990_2019 = 100 * (Y_2019_Upper_UL - Y_1990_Upper_UL) / Y_1990_Upper_UL
+* gen % Change = - 100 * (Old - New) / Old; 1990 = Old, 2019 = new
 
+gen ChangeValue1990_2019 = - 100 * (Y_1990_Value - Y_2019_Value) / Y_1990_Value
+gen ChangeLower_UL1990_2019 = - 100 * (Y_1990_Lower_UL - Y_2019_Lower_UL) / Y_1990_Lower_UL
+gen ChangeUpper_UL1990_2019 = - 100 * (Y_1990_Upper_UL - Y_2019_Upper_UL) / Y_1990_Upper_UL
 
-keep Measure Age Sex ChangeValue1990_2019 ChangeUpper_UL1990_2019 ChangeLower_UL1990_2019
+keep Measure Age Sex ChangeValue1990_2019 ChangeUpper_UL1990_2019 ChangeLower_UL1990_2019 sex_id_new
 
 
 replace Measure = "Life expectancy % Change 1990 to 2019"
@@ -541,12 +539,7 @@ replace Lower_UL = round(Lower_UL,0.1)
 format Value Upper_UL Lower_UL %5.2f
 
 
-
-order Measure Age Sex Value 
-
-rename Value Relative_change_pct
-
-label var Relative_change_pct "Relative change (%)"
+order Measure Age Sex Value  
 
 drop Lower_UL Upper_UL
 
@@ -629,7 +622,7 @@ replace Sex = "Females" if Sex == "Female"
 
 sort sex_id_new  
 
-drop sex_id_new sex_id_new 
+drop sex_id_new  
 
 order Sex, after(Age)
 
@@ -662,7 +655,10 @@ replace sex_id_new = 3 if Sex == "Females"
 sort sex_id_new Year
 
 
+
 reshape wide Value Lower_UL Upper_UL, i(Measure Age	Sex) j(Year)
+
+sort sex_id_new
 
 drop sex_id_new
 
@@ -764,6 +760,13 @@ replace Measure = "Mortality rate"
 rename age_name Age
 replace Age = "Post Neonatal"
 
+
+* gen percent = proportion * 100
+replace val = val * 100
+replace upper = upper * 100
+replace lower = lower * 100
+
+
 rename val Value
 rename upper Upper_UL
 rename lower Lower_UL
@@ -796,10 +799,12 @@ order Sex, after(Age)
 
 
 gen sex_id_new = .
-replace sex_id_new = 1 if Sex == "Both"
-replace sex_id_new = 2 if Sex == "Male"
-replace sex_id_new = 3 if Sex == "Female"
+replace sex_id_new = 1 if Sex == "Both sexes"
+replace sex_id_new = 2 if Sex == "Males"
+replace sex_id_new = 3 if Sex == "Females"
+
 sort sex_id_new 
+
 drop sex_id_new
 
 replace Value = round(Value,0.01)
@@ -862,9 +867,24 @@ drop Year_start Year_end _merge
 rename (Value1990 Lower_UL1990 Upper_UL1990 Value2019 Lower_UL2019 Upper_UL2019) ///
 (Y_1990_Value Y_1990_Lower_UL Y_1990_Upper_UL Y_2019_Value Y_2019_Lower_UL Y_2019_Upper_UL)
 
+gen measure_id_new = .
+replace measure_id_new = 1 if Measure == "DALYs"
+replace measure_id_new = 2 if Measure == "YLLs"
+replace measure_id_new = 3 if Measure == "YLDs"
+
+gen sex_id_new = .
+replace sex_id_new = 1 if Sex == "Both sexes"
+replace sex_id_new = 2 if Sex == "Males"
+replace sex_id_new = 3 if Sex == "Females"
+
+gen age_id_new = .
+replace age_id_new = 1 if Age == "All Ages"
+replace age_id_new = 2 if Age == "Age-standardized"
+
+sort measure_id_new age_id_new sex_id_new
+drop measure_id_new age_id_new sex_id_new
+
 save "Table 1 Part1and2.dta", replace 
-
-
 
 
 
@@ -881,6 +901,10 @@ use "Table 1 Part3.dta", clear
 merge 1:1 Age Sex using "Table 1 Part4.dta"
 
 drop _merge
+
+sort sex_id_new 
+
+drop sex_id_new
 
 qui compress
 
@@ -906,7 +930,14 @@ merge 1:1 Sex using "Table 1 Part6.dta"
 
 drop _merge
 
-rename Value Relative_change_pct
+gen sex_id_new = .
+replace sex_id_new = 1 if Sex == "Both sexes"
+replace sex_id_new = 2 if Sex == "Males"
+replace sex_id_new = 3 if Sex == "Females"
+
+sort sex_id_new 
+
+drop sex_id_new
 
 qui compress
 

@@ -1,9 +1,9 @@
 {smcl}
-{txt}{sf}{ul off}{.-}
+{com}{sf}{ul off}{txt}{.-}
       name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output/log Table 4 b.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res} 1 Apr 2022, 10:18:23
+ {txt}opened on:  {res} 4 Apr 2022, 16:29:32
 {txt}
 {com}. 
 . ***************************************************************************
@@ -185,7 +185,7 @@
 . sort sex_id_new Year 
 {txt}
 {com}. 
-. drop sex_id sex_id_new cause_id
+. drop sex_id cause_id
 {txt}
 {com}. 
 . order Sex, after(Age)
@@ -201,8 +201,7 @@
 {txt}
 {com}. 
 . save "IHME-GBD_2019_DATA-43.dta", replace
-{txt}(note: file IHME-GBD_2019_DATA-43.dta not found)
-file IHME-GBD_2019_DATA-43.dta saved
+{txt}file IHME-GBD_2019_DATA-43.dta saved
 
 {com}. 
 . 
@@ -246,12 +245,18 @@ file IHME-GBD_2019_DATA-43.dta saved
 Data{col 36}long{col 43}->{col 48}wide
 {hline 77}
 Number of obs.                 {res}      12   {txt}->{res}       3
-{txt}Number of variables            {res}       5   {txt}->{res}       7
+{txt}Number of variables            {res}       6   {txt}->{res}       8
 {txt}j variable (4 values)              {res}Year   {txt}->   (dropped)
 xij variables:
                                    {res}rank   {txt}->   {res}rank1990 rank2000 ... rank2019
 {txt}{hline 77}
 
+{com}. 
+. sort sex_id_new
+{txt}
+{com}. 
+. drop sex_id_new
+{txt}
 {com}. 
 . qui compress
 {txt}
@@ -493,8 +498,7 @@ file Table 4 Part3.dta saved
 {txt}
 {com}. 
 . save "IHME-GBD_2019_DATA-44.dta", replace
-{txt}(note: file IHME-GBD_2019_DATA-44.dta not found)
-file IHME-GBD_2019_DATA-44.dta saved
+{txt}file IHME-GBD_2019_DATA-44.dta saved
 
 {com}. 
 . 
@@ -544,6 +548,12 @@ xij variables:
                                    {res}rank   {txt}->   {res}rank1990 rank2000 ... rank2019
 {txt}{hline 77}
 
+{com}. 
+. sort sex_id_new age_id_new
+{txt}
+{com}. 
+. drop sex_id_new age_id_new
+{txt}
 {com}. 
 . qui compress
 {txt}
@@ -595,7 +605,7 @@ file Table 4 Part4.dta saved
       {txt}name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output/log Table 4 b.smcl
   {txt}log type:  {res}smcl
- {txt}closed on:  {res} 1 Apr 2022, 10:18:24
+ {txt}closed on:  {res} 4 Apr 2022, 16:29:33
 {txt}{.-}
 {smcl}
 {txt}{sf}{ul off}

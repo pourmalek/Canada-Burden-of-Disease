@@ -223,7 +223,7 @@ append using "Table 4 Part8.dta" // Part8, Postneonatal mortality, Postneonatal
 
 replace Measure = "Postneonatal mortality" if Measure == "Deaths"
 
-drop sex_id_new age_id_new cause_id cause_name
+drop cause_id cause_name
 
 qui compress
 

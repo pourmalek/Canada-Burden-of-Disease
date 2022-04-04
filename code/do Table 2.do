@@ -160,8 +160,6 @@ keep if Year == 1990 | Year == 2019
 	
 sort measure_id_new sex_id_new age_id_new Year cause_id_new
 
-drop sex_id	measure_id_new sex_id_new age_id_new
-
 order Sex, after(Age)
 
 keep if Measure == "DALYs"
@@ -193,6 +191,8 @@ order Cause Year Value Lower_UL Upper_UL rank
 reshape wide Value Lower_UL Upper_UL rank, i(Cause) j(Year)
 
 order rank1990 rank2019, last
+
+sort cause_id_new
 
 gen to = " to "
 
@@ -304,6 +304,7 @@ replace cause_id_new = 16 if cause_name == "Unintentional injuries"
 replace cause_id_new = 17 if cause_name == "Self-harm and interpersonal violence"
 
 
+
 replace cause_name = "Maternal & neonatal" if cause_name == "Maternal and neonatal disorders"
 replace cause_name = "Respiratory infections" if cause_name == "Respiratory infections and tuberculosis"
 replace cause_name = "Neoplasms" if cause_name == "Neoplasms"
@@ -381,8 +382,6 @@ keep if Year == 1990 | Year == 2019
 	
 sort measure_id_new sex_id_new age_id_new Year cause_id_new
 
-drop sex_id	measure_id_new sex_id_new age_id_new
-
 order Sex, after(Age)
 
 keep if Measure == "DALYs"
@@ -413,6 +412,8 @@ order Cause Year Value Lower_UL Upper_UL rank
 
 reshape wide Value Lower_UL Upper_UL rank, i(Cause) j(Year)
 
+sort measure_id_new sex_id_new age_id_new cause_id_new
+
 order rank1990 rank2019, last
 
 gen to = " to "
@@ -431,7 +432,7 @@ drop Measure Age Sex cause_id_new
 
 drop rank1990 rank2019 to
 
-
+drop sex_id measure_id_new age_id_new sex_id_new
 
 save "Table 2 Part2.dta", replace
 
@@ -461,6 +462,8 @@ All ages
 use "Table 2 Part1.dta", clear
 
 append using "Table 2 Part2.dta"
+
+drop sex_id measure_id_new age_id_new sex_id_new
 
 save "Table 2.dta", replace
 

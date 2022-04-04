@@ -23,7 +23,7 @@ log using "log Table 5 b.smcl", replace
 * Table 5: Changes in age-standardized DALY rates in Canada and comparator locations 
 * and Canada’s rank in 1990-2019
 
-* level 1 causes, Canada's Rank in 1990 and Rank in 2019 for Age-standardized DALYs rate among 33 countries:
+* level 1 causes, Canada's Rank in 1990 and Rank in 2019 for Age-standardized DALYs rate among 32 countries:
 * Canada, United States, Western Europe, Australasia, Asia-Pacific (see below)
 
 
@@ -47,7 +47,7 @@ log using "log Table 5 b.smcl", replace
 * Table 5: Changes in age-standardized DALY rates in Canada and comparator locations 
 * and Canada’s rank in 1990-2019
 
-* level 1 causes, Canada's Rank in 1990 and Rank in 2019 for Age-standardized DALYs rate among 33 countries:
+* level 1 causes, Canada's Rank in 1990 and Rank in 2019 for Age-standardized DALYs rate among 32 countries:
 * Canada, United States, Western Europe, Australasia, Asia-Pacific (see below)
 
 
@@ -68,7 +68,7 @@ https://ghdx.healthdata.org/gbd-results-tool?params=gbd-api-2019-permalink/16a73
 Data settings:
 
 Base: Single
-Location: Canada, United States, Western Europe, Australasia, Asia-Pacific (33 countries) See below
+Location: Canada, United States, Western Europe, Australasia, Asia-Pacific (32 countries) See below
 Year: 1990, 2000, 2010, 2019
 
 Context: Cause
@@ -86,7 +86,7 @@ Both IDs and Names
 
 
 * Countries in Table 5:
-Canada, United States, Western Europe (25), Australasia (2), Asia-Pacific (4) (33 countries)
+Canada, United States, Western Europe (24), Australasia (2), Asia-Pacific (4) (32 countries)
 
 
 Western Europe:
@@ -103,18 +103,17 @@ Western Europe:
 11	Ireland
 12	Israel
 13	Italy
-14	Japan
-15	Luxembourg
-16	Malta
-17	Monaco
-18	Netherlands
-19	Norway
-20	Portugal
-21	San Marino
-22	Spain
-23	Sweden
-24	Switzerland
-25	United Kingdom
+14	Luxembourg
+15	Malta
+16	Monaco
+17	Netherlands
+18	Norway
+19	Portugal
+20	San Marino
+21	Spain
+22	Sweden
+23	Switzerland
+24	United Kingdom
 
 Australasia: Australia, New Zealand
 
@@ -125,7 +124,7 @@ High-income Asia-Pacific:
 4	Singapore
 
 
-* 33 countries:
+* 32 countries:
 
 1	Andorra
 2	Australia
@@ -144,22 +143,21 @@ High-income Asia-Pacific:
 15	Israel
 16	Italy
 17	Japan
-18	Japan
-19	Luxembourg
-20	Malta
-21	Monaco
-22	Netherlands
-23	New Zealend
-24	Norway
-25	Portugal
-26	Republic of Korea
-27	San Marino
-28	Singapore
-29	Spain
-30	Sweden
-31	Switzerland
-32	United Kingdom
-33	United States of America
+18	Luxembourg
+19	Malta
+20	Monaco
+21	Netherlands
+22	New Zealend
+23	Norway
+24	Portugal
+25	Republic of Korea
+26	San Marino
+27	Singapore
+28	Spain
+29	Sweden
+30	Switzerland
+31	United Kingdom
+32	United States of America
 
 */
 
@@ -197,17 +195,19 @@ rename year Year
 rename location_name Location 
 
 
+
 sort Location cause_name
 
 rename cause_name Cause
 
 
 gen cause_id_new = . 
-replace cause_id_new = 0 if Cause == "All causes"
+
 replace cause_id_new = 1 if Cause == "Communicable, maternal, neonatal, and nutritional diseases"
 replace cause_id_new = 2 if Cause == "Non-communicable diseases"
 replace cause_id_new = 3 if Cause == "Injuries"
 
+drop if Cause == "All causes"
 
 sort cause_id_new
 
@@ -228,9 +228,9 @@ order Cause Year Location Value cause_id_new
 sort Cause Year Location
 
 
-bysort Year: egen rank = rank(Value)
+bysort Year Cause: egen rank = rank(Value)
 
-label var rank "rank of mean DALYs within Year"
+label var rank "Canada's rank of mean DALYs within Country-Cause-Year"
 
 sort Year rank
 
@@ -238,7 +238,7 @@ keep if Location == "Canada"
 
 sort Year cause_id_new
 
-drop cause_id_new Location Value
+drop Location Value
 
 reshape wide rank, i(Cause) j(Year)
 
@@ -247,6 +247,11 @@ rename rank2019	Rank_in_2019
 
 label var Rank_in_1990 "Rank in 1990"
 label var Rank_in_2019 "Rank in 2019"
+
+sort cause_id_new
+
+
+drop cause_id_new
 
 qui compress
 

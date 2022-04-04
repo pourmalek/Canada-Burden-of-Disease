@@ -197,55 +197,45 @@ keep if rank <= 10
 
 drop Sex_Year_Age 
 
-reshape wide rank, i(Cause Age Sex) j(Year)
+drop sex_id
+
+*
+
+sort age_id_new	sex_id_new
 
 save "IHME-GBD_2019_DATA-31 DALYs.dta", replace 
-
-
 
 
 * DALYs 1990
 
 use "IHME-GBD_2019_DATA-31 DALYs.dta", clear 
 
-keep Age Sex Cause rank1990 age_id_new sex_id_new Measure
+keep if Year == 1990
 
-order Measure, last
+sort age_id_new	sex_id_new
 
-sort age_id_new sex_id_new rank1990
-
-drop if rank1990 == . 
-
-drop age_id_new	sex_id_new	
-
+rename rank Rank1990
 rename Cause Cause1990
 
 gen row = _n
 
-save "Table 3 Part1.dta", replace
-
+save "IHME-GBD_2019_DATA-31 DALYs 1990.dta", replace
 
 
 * DALYs 2019
 
 use "IHME-GBD_2019_DATA-31 DALYs.dta", clear 
 
-keep Age Sex Cause rank2019 age_id_new sex_id_new Measure
+keep if Year == 2019
 
-order Measure, last
+sort age_id_new	sex_id_new
 
-sort age_id_new sex_id_new rank2019
-
-drop if rank2019 == . 
-
-drop age_id_new	sex_id_new	
-
+rename rank Rank2019
 rename Cause Cause2019
 
 gen row = _n
 
-save "Table 3 Part2.dta", replace
-
+save "IHME-GBD_2019_DATA-31 DALYs 2019.dta", replace
 
 
 
@@ -372,58 +362,47 @@ keep if rank <= 10
 
 drop Sex_Year_Age 
 
-reshape wide rank, i(Cause Age Sex) j(Year)
+drop sex_id
+
+*
+
+sort age_id_new	sex_id_new
 
 save "IHME-GBD_2019_DATA-31 YLLs.dta", replace 
-
-
 
 
 * YLLs 1990
 
 use "IHME-GBD_2019_DATA-31 YLLs.dta", clear 
 
-keep Age Sex Cause rank1990 age_id_new sex_id_new Measure
+keep if Year == 1990
 
-order Measure, last
+sort age_id_new	sex_id_new
 
-sort age_id_new sex_id_new rank1990 Measure
-
-order Measure, last
-
-drop if rank1990 == . 
-
-drop age_id_new	sex_id_new	
+rename rank Rank1990
+rename Cause Cause1990
 
 gen row = _n
 
-rename Cause Cause1990
-
-save "Table 3 Part3.dta", replace
-
+save "IHME-GBD_2019_DATA-31 YLLs 1990.dta", replace
 
 
 * YLLs 2019
 
 use "IHME-GBD_2019_DATA-31 YLLs.dta", clear 
 
-keep Age Sex Cause rank2019 age_id_new sex_id_new Measure
+keep if Year == 2019
 
-order Measure, last
+sort age_id_new	sex_id_new
 
-sort age_id_new sex_id_new rank2019 Measure
-
-order Measure, last
-
-drop if rank2019 == . 
-
-drop age_id_new	sex_id_new	
+rename rank Rank2019
+rename Cause Cause2019
 
 gen row = _n
 
-rename Cause Cause2019
+save "IHME-GBD_2019_DATA-31 YLLs 2019.dta", replace
 
-save "Table 3 Part4.dta", replace
+
 
 
 
@@ -555,58 +534,46 @@ keep if rank <= 10
 
 drop Sex_Year_Age 
 
-reshape wide rank, i(Cause Age Sex) j(Year)
+drop sex_id
+
+*
+
+sort age_id_new	sex_id_new
 
 save "IHME-GBD_2019_DATA-31 YLDs.dta", replace 
-
-
 
 
 * YLDs 1990
 
 use "IHME-GBD_2019_DATA-31 YLDs.dta", clear 
 
-keep Age Sex Cause rank1990 age_id_new sex_id_new Measure
+keep if Year == 1990
 
-order Measure, last
+sort age_id_new	sex_id_new
 
-sort age_id_new sex_id_new rank1990 Measure 
-
-order Measure, last
-
-drop if rank1990 == . 
-
-drop age_id_new	sex_id_new	
+rename rank Rank1990
+rename Cause Cause1990
 
 gen row = _n
 
-rename Cause Cause1990
-
-save "Table 3 Part5.dta", replace
-
+save "IHME-GBD_2019_DATA-31 YLDs 1990.dta", replace
 
 
 * YLDs 2019
 
 use "IHME-GBD_2019_DATA-31 YLDs.dta", clear 
 
-keep Age Sex Cause rank2019 age_id_new sex_id_new Measure
+keep if Year == 2019
 
-order Measure, last
+sort age_id_new	sex_id_new
 
-sort age_id_new sex_id_new rank2019 Measure
-
-order Measure, last
-
-drop if rank2019 == . 
-
-drop age_id_new	sex_id_new	
+rename rank Rank2019
+rename Cause Cause2019
 
 gen row = _n
 
-rename Cause Cause2019
+save "IHME-GBD_2019_DATA-31 YLDs 2019.dta", replace
 
-save "Table 3 Part6.dta", replace
 
 
 
@@ -619,9 +586,9 @@ save "Table 3 Part6.dta", replace
 
 * merge DALYs 1990 and DALYs 2019 
 
-use "Table 3 Part1.dta", clear
+use "IHME-GBD_2019_DATA-31 DALYs 1990.dta", clear
 
-merge m:m row using "Table 3 Part2.dta"
+merge m:m row using "IHME-GBD_2019_DATA-31 DALYs 2019.dta"
 
 drop _merge
 
@@ -629,14 +596,17 @@ order Measure
 
 order row, last
 
-order rank1990, before(Cause1990)
-order rank2019, before(Cause2019)
+order Rank1990, before(Cause1990)
+order Rank2019, before(Cause2019)
 
 rename Cause1990 DALYsCause1990
 rename Cause2019 DALYsCause2019
 
-save "Table 3 Part1and2.dta", replace
+drop Year
 
+order age_id_new sex_id_new, last
+
+save "Table 3 DALYs.dta", replace
 
 
 
@@ -645,11 +615,11 @@ save "Table 3 Part1and2.dta", replace
 
 *************************************************************************
 
-* merge YLLs 1990 and DALYs 2019 
+* merge YLLs 1990 and YLLs 2019 
 
-use "Table 3 Part3.dta", clear
+use "IHME-GBD_2019_DATA-31 YLLs 1990.dta", clear
 
-merge m:m row using "Table 3 Part4.dta"
+merge m:m row using "IHME-GBD_2019_DATA-31 YLLs 2019.dta"
 
 drop _merge
 
@@ -657,14 +627,17 @@ order Measure
 
 order row, last
 
-order rank1990, before(Cause1990)
-order rank2019, before(Cause2019)
+order Rank1990, before(Cause1990)
+order Rank2019, before(Cause2019)
 
 rename Cause1990 YLLsCause1990
 rename Cause2019 YLLsCause2019
 
-save "Table 3 Part3and4.dta", replace
+drop Year
 
+order age_id_new sex_id_new, last
+
+save "Table 3 YLLs.dta", replace
 
 
 
@@ -674,11 +647,11 @@ save "Table 3 Part3and4.dta", replace
 
 *************************************************************************
 
-* merge YLDs 1990 and DALYs 2019 
+* merge YLDs 1990 and YLDs 2019 
 
-use "Table 3 Part5.dta", clear
+use "IHME-GBD_2019_DATA-31 YLDs 1990.dta", clear
 
-merge m:m row using "Table 3 Part6.dta"
+merge m:m row using "IHME-GBD_2019_DATA-31 YLDs 2019.dta"
 
 drop _merge
 
@@ -686,13 +659,18 @@ order Measure
 
 order row, last
 
-order rank1990, before(Cause1990)
-order rank2019, before(Cause2019)
+order Rank1990, before(Cause1990)
+order Rank2019, before(Cause2019)
 
 rename Cause1990 YLDsCause1990
 rename Cause2019 YLDsCause2019
 
-save "Table 3 Part5and6.dta", replace
+drop Year
+
+order age_id_new sex_id_new, last
+
+save "Table 3 YLDs.dta", replace
+
 
 
 
@@ -704,25 +682,25 @@ save "Table 3 Part5and6.dta", replace
 
 *************************************************************************
 
-* append DALYs, YLLS, and YLDs 
+* append DALYs, YLLs, and YLDs 
 
-use "Table 3 Part1and2.dta", clear
+use "Table 3 DALYs.dta", clear
 
-merge m:m row using "Table 3 Part3and4.dta"
+merge m:m row using "Table 3 YLLs.dta"
 
 drop _merge
 
-rename rank1990 Rank
+rename Rank1990 Rank
 
-drop rank2019
+drop Rank2019
 
 drop Measure
 
-merge m:m row using "Table 3 Part5and6.dta"
+merge m:m row using "Table 3 YLDs.dta"
 
 drop _merge
 
-drop rank1990 rank2019 row Measure
+drop Rank1990 Rank2019 row Measure age_id_new	sex_id_new
 
 
 
@@ -734,7 +712,7 @@ replace `var' = "Anxiety" if `var' == "Anxiety disorders"
 replace `var' = "Breast cancer" if `var' == "Breast cancer"
 replace `var' = "COPD" if `var' == "Chronic obstructive pulmonary disease"
 replace `var' = "Cirrhosis" if `var' == "Cirrhosis and other chronic liver diseases"
-replace `var' = "Colrectal Ca" if `var' == "Colon and rectum cancer"
+replace `var' = "Colorectal Ca" if `var' == "Colon and rectum cancer"
 replace `var' = "Congenital" if `var' == "Congenital birth defects"
 replace `var' = "Depression" if `var' == "Depressive disorders"
 replace `var' = "Diabetes" if `var' == "Diabetes mellitus"
@@ -776,20 +754,12 @@ export excel using "Table 3.xlsx", replace firstrow(varlabels)
 
 * remove files no longer needed
 
-shell rm -r "IHME-GBD_2019_DATA-31 DALYs 1990.dta"
-shell rm -r "IHME-GBD_2019_DATA-31 DALYs 2019.dta"
-shell rm -r "IHME-GBD_2019_DATA-31 DALYs.dta"
-shell rm -r "IHME-GBD_2019_DATA-31 YLDs.dta"
-shell rm -r "IHME-GBD_2019_DATA-31 YLLs.dta"
-shell rm -r "Table 3 Part1.dta"
-shell rm -r "Table 3 Part1and2.dta"
-shell rm -r "Table 3 Part2.dta"
-shell rm -r "Table 3 Part3.dta"
-shell rm -r "Table 3 Part3and4.dta"
-shell rm -r "Table 3 Part4.dta"
-shell rm -r "Table 3 Part5.dta"
-shell rm -r "Table 3 Part5and6.dta"
-shell rm -r "Table 3 Part6.dta"
+shell rm -r "Table 3 DALYs.dta"
+shell rm -r "Table 3 YLDs.dta"
+shell rm -r "Table 3 YLLs.dta"
+
+
+
 
 
 

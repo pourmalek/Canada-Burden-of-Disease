@@ -187,7 +187,7 @@ replace Cause = "Digestive" if Cause == "Digestive diseases"
 replace Cause = "Neurological" if Cause == "Neurological disorders"
 replace Cause = "Mental" if Cause == "Mental disorders"
 replace Cause = "Substance use" if Cause == "Substance use disorders"
-replace Cause = "Diabetes & kidney" if Cause == "book"
+replace Cause = "Diabetes & kidney" if Cause == "Diabetes and kidney diseases"
 replace Cause = "Skin" if Cause == "Skin and subcutaneous diseases"
 replace Cause = "Sense organ" if Cause == "Sense organ diseases"
 replace Cause = "Musculoskeletal" if Cause == "Musculoskeletal disorders"
@@ -238,6 +238,12 @@ replace sex_id_new = 1 if Sex == "Both sexes"
 replace sex_id_new = 2 if Sex == "Males"
 replace sex_id_new = 3 if Sex == "Females"
 
+
+* gen percent = proportion * 100
+replace val = val * 100
+replace upper = upper * 100
+replace lower = lower * 100
+
 rename	val Value
 rename upper Upper_UL
 rename lower Lower_UL
@@ -268,7 +274,7 @@ qui compress
 
 keep if year_start == 1990 & year_end == 2019
 
-keep Location Sex Cause Value
+keep Location Sex Cause Value cause_id_new 
 
 keep if Sex == "Both sexes"
 
@@ -278,7 +284,19 @@ replace Location = "United_States" if Location == "United States of America"
 replace Location = "Asia_Pacific" if Location == "High-income Asia Pacific"
 replace Location = "Western_Europe" if Location == "Western Europe"
 
-reshape wide Value , i(Cause) j(Location) string
+
+gen location_id_new = .
+replace location_id_new = 1 if Location == "Canada"
+replace location_id_new = 2 if Location == "United_States"
+replace location_id_new = 3 if Location == "Western_Europe"
+replace location_id_new = 4 if Location == "Australasia"
+replace location_id_new = 5 if Location == "Asia_Pacific"
+
+sort location_id_new cause_id_new
+
+reshape wide Value location_id_new, i(Cause) j(Location) string
+
+sort cause_id_new
 
 rename ///
 (ValueAsia_Pacific ValueAustralasia ValueUnited_States ValueWestern_Europe) ///

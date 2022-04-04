@@ -1,9 +1,9 @@
 {smcl}
-{txt}{sf}{ul off}{.-}
+{com}{sf}{ul off}{txt}{.-}
       name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output/log Table 5 c.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res} 1 Apr 2022, 10:18:27
+ {txt}opened on:  {res} 4 Apr 2022, 16:29:36
 {txt}
 {com}. 
 . ***************************************************************************
@@ -215,8 +215,8 @@
 {com}. replace Cause = "Substance use" if Cause == "Substance use disorders"
 {txt}(15 real changes made)
 
-{com}. replace Cause = "Diabetes & kidney" if Cause == "book"
-{txt}(0 real changes made)
+{com}. replace Cause = "Diabetes & kidney" if Cause == "Diabetes and kidney diseases"
+{txt}(15 real changes made)
 
 {com}. replace Cause = "Skin" if Cause == "Skin and subcutaneous diseases"
 {txt}(15 real changes made)
@@ -271,7 +271,7 @@
 {txt}(15 real changes made)
 
 {com}. replace cause_id_new = 10 if Cause == "Diabetes & kidney"
-{txt}(0 real changes made)
+{txt}(15 real changes made)
 
 {com}. replace cause_id_new = 11 if Cause == "Skin"
 {txt}(15 real changes made)
@@ -346,6 +346,18 @@
 {txt}(0 real changes made)
 
 {com}. 
+. 
+. * gen percent = proportion * 100
+. replace val = val * 100
+{txt}(255 real changes made)
+
+{com}. replace upper = upper * 100
+{txt}(255 real changes made)
+
+{com}. replace lower = lower * 100
+{txt}(255 real changes made)
+
+{com}. 
 . rename  val Value
 {res}{txt}
 {com}. rename upper Upper_UL
@@ -398,7 +410,7 @@
 {txt}(170 observations deleted)
 
 {com}. 
-. keep Location Sex Cause Value
+. keep Location Sex Cause Value cause_id_new 
 {txt}
 {com}. 
 . keep if Sex == "Both sexes"
@@ -418,18 +430,45 @@
 {txt}(17 real changes made)
 
 {com}. 
-. reshape wide Value , i(Cause) j(Location) string
+. 
+. gen location_id_new = .
+{txt}(85 missing values generated)
+
+{com}. replace location_id_new = 1 if Location == "Canada"
+{txt}(17 real changes made)
+
+{com}. replace location_id_new = 2 if Location == "United_States"
+{txt}(17 real changes made)
+
+{com}. replace location_id_new = 3 if Location == "Western_Europe"
+{txt}(17 real changes made)
+
+{com}. replace location_id_new = 4 if Location == "Australasia"
+{txt}(17 real changes made)
+
+{com}. replace location_id_new = 5 if Location == "Asia_Pacific"
+{txt}(17 real changes made)
+
+{com}. 
+. sort location_id_new cause_id_new
+{txt}
+{com}. 
+. reshape wide Value location_id_new, i(Cause) j(Location) string
 {txt}(note: j = Asia_Pacific Australasia Canada United_States Western_Europe)
 
 Data{col 36}long{col 43}->{col 48}wide
 {hline 77}
 Number of obs.                 {res}      85   {txt}->{res}      17
-{txt}Number of variables            {res}       3   {txt}->{res}       6
+{txt}Number of variables            {res}       5   {txt}->{res}      12
 {txt}j variable (5 values)          {res}Location   {txt}->   (dropped)
 xij variables:
                                   {res}Value   {txt}->   {res}ValueAsia_Pacific ValueAustralasia ... ValueWestern_Europe
+                        location_id_new   {txt}->   {res}location_id_newAsia_Pacific location_id_newAustralasia ... location_id_newWestern_Europe
 {txt}{hline 77}
 
+{com}. 
+. sort cause_id_new
+{txt}
 {com}. 
 . rename ///
 > (ValueAsia_Pacific ValueAustralasia ValueUnited_States ValueWestern_Europe) ///
@@ -488,7 +527,7 @@ file Table 5 Part3.dta saved
       {txt}name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output/log Table 5 c.smcl
   {txt}log type:  {res}smcl
- {txt}closed on:  {res} 1 Apr 2022, 10:18:27
+ {txt}closed on:  {res} 4 Apr 2022, 16:29:37
 {txt}{.-}
 {smcl}
 {txt}{sf}{ul off}

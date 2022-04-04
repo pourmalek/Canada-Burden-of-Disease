@@ -86,7 +86,7 @@ Both IDs and Names
 
 
 * Countries in Table 5:
-Canada, United States, Western Europe (26), Australasia (2), Asia-Pacific (4) (33 countries)
+Canada, United States, Western Europe (24), Australasia (2), Asia-Pacific (4) (32 countries)
 
 
 Western Europe:
@@ -103,29 +103,29 @@ Western Europe:
 11	Ireland
 12	Israel
 13	Italy
-14	Japan
-15	Luxembourg
-16	Malta
-17	Monaco
-18	Netherlands
-19	Norway
-20	Portugal
-21	San Marino
-22	Spain
-23	Sweden
-25  Switzerland
-26	United Kingdom
+14	Luxembourg
+15	Malta
+16	Monaco
+17	Netherlands
+18	Norway
+19	Portugal
+20	San Marino
+21	Spain
+22	Sweden
+23	Switzerland
+24	United Kingdom
 
 Australasia: Australia, New Zealand
 
 High-income Asia-Pacific:
-1  Brunei Darussalam
-2  Japan
-3  Republic of Korea
-4  Singapore
+1	Brunei Darussalam
+2	Japan
+3	Republic of Korea
+4	Singapore
 
 
-* 33 countries:
+* 32 countries:
+
 1	Andorra
 2	Australia
 3	Austria
@@ -143,23 +143,21 @@ High-income Asia-Pacific:
 15	Israel
 16	Italy
 17	Japan
-18	Japan
-19	Luxembourg
-20	Malta
-21	Monaco
-22	Netherlands
-23	New Zealand
-25	Norway
-25	Portugal
-26	Republic of Korea
-27	San Marino
-28	Singapore
-29	Spain
-30	Sweden
-31	Switzerland
-32	United Kingdom
-33	United States of America
-
+18	Luxembourg
+19	Malta
+20	Monaco
+21	Netherlands
+22	New Zealend
+23	Norway
+24	Portugal
+25	Republic of Korea
+26	San Marino
+27	Singapore
+28	Spain
+29	Sweden
+30	Switzerland
+31	United Kingdom
+32	United States of America
 
 */
 
@@ -185,7 +183,7 @@ replace Cause = "Digestive" if Cause == "Digestive diseases"
 replace Cause = "Neurological" if Cause == "Neurological disorders"
 replace Cause = "Mental" if Cause == "Mental disorders"
 replace Cause = "Substance use" if Cause == "Substance use disorders"
-replace Cause = "Diabetes & kidney" if Cause == "book"
+replace Cause = "Diabetes & kidney" if Cause == "Diabetes and kidney diseases"
 replace Cause = "Skin" if Cause == "Skin and subcutaneous diseases"
 replace Cause = "Sense organ" if Cause == "Sense organ diseases"
 replace Cause = "Musculoskeletal" if Cause == "Musculoskeletal disorders"
@@ -214,13 +212,11 @@ replace cause_id_new = 16 if Cause == "Unintentional injuries"
 replace cause_id_new = 17 if Cause == "Self-harm and violence"
 
 
-
 drop if Cause == "Enteric infections"
 drop if Cause == "HIV/AIDS and sexually transmitted infections"
 drop if Cause == "Neglected tropical diseases and malaria"
 drop if Cause == "Nutritional deficiencies"
 drop if Cause == "Other infectious diseases"
-
 
 
 
@@ -276,9 +272,9 @@ drop Sex
 
 * 
 
-bysort Year: egen rank = rank(Value)
+bysort Year Cause: egen rank = rank(Value)
 
-label var rank "rank of mean DALYs within Year"
+label var rank "Canada's rank of mean DALYs within Country-Cause-Year"
 
 sort Year rank
 
@@ -286,15 +282,19 @@ keep if Location == "Canada"
 
 sort Year cause_id_new
 
-drop cause_id_new Location Value
+drop Location Value
 
 reshape wide rank, i(Cause) j(Year)
+
+sort cause_id_new
 
 rename rank1990	Rank_in_1990
 rename rank2019	Rank_in_2019
 
 label var Rank_in_1990 "Rank in 1990"
 label var Rank_in_2019 "Rank in 2019"
+
+drop cause_id_new
 
 qui compress
 
@@ -337,6 +337,10 @@ merge m:m Cause using "Table 5 Part2.dta"
 
 drop _merge
 
+sort cause_id_new
+
+drop cause_id_new
+
 save "Table 5 Part1andPart2.dta", replace
 
 
@@ -350,6 +354,9 @@ merge m:m Cause using "Table 5 Part4.dta"
 
 drop _merge
 
+drop location_id_newAsia_Pacific location_id_newAustralasia location_id_newCanada ///
+location_id_newUnited_States location_id_newWestern_Europe 
+
 save "Table 5 Part3andPart4.dta", replace
 
 
@@ -361,6 +368,16 @@ save "Table 5 Part3andPart4.dta", replace
 use "Table 5 Part1andPart2.dta", clear 
 
 append using "Table 5 Part3andPart4.dta"
+
+replace cause_id_new = cause_id_new + 3
+
+replace cause_id_new = 1 in 1 
+replace cause_id_new = 2 in 2
+replace cause_id_new = 3 in 3 
+
+sort cause_id_new
+
+drop cause_id_new
 
 qui compress
 
@@ -385,9 +402,15 @@ shell rm -r "Table 5 Part4.dta"
 
 
 
+/*
 
+* restore native scheme (of the local machine)
 
+set scheme $nativescheme
 
+di c(scheme)
+
+*/
 
 
 

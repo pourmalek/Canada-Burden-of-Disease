@@ -1,9 +1,9 @@
 {smcl}
-{txt}{sf}{ul off}{.-}
+{com}{sf}{ul off}{txt}{.-}
       name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output/log Table 4 e.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res} 1 Apr 2022, 10:18:25
+ {txt}opened on:  {res} 4 Apr 2022, 16:29:35
 {txt}
 {com}. 
 . ***************************************************************************
@@ -183,8 +183,7 @@
 {txt}
 {com}. 
 . save "IHME-GBD_2019_DATA-48.dta", replace
-{txt}(note: file IHME-GBD_2019_DATA-48.dta not found)
-file IHME-GBD_2019_DATA-48.dta saved
+{txt}file IHME-GBD_2019_DATA-48.dta saved
 
 {com}.         
 . 
@@ -357,15 +356,14 @@ int, now float to accommodate using data's values)
 {txt}(3 real changes made)
 
 {com}. 
-. drop sex_id_new age_id_new cause_id cause_name
+. drop cause_id cause_name
 {txt}
 {com}. 
 . qui compress
 {txt}
 {com}. 
 . save "Table 4.dta", replace
-{txt}(note: file Table 4.dta not found)
-file Table 4.dta saved
+{txt}file Table 4.dta saved
 
 {com}. 
 . export excel using "Table 4.xlsx", replace firstrow(varlabels)
@@ -427,7 +425,7 @@ file Table 4.dta saved
       {txt}name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output/log Table 4 e.smcl
   {txt}log type:  {res}smcl
- {txt}closed on:  {res} 1 Apr 2022, 10:18:26
+ {txt}closed on:  {res} 4 Apr 2022, 16:29:36
 {txt}{.-}
 {smcl}
 {txt}{sf}{ul off}

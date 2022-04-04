@@ -1,9 +1,9 @@
 {smcl}
-{txt}{sf}{ul off}{.-}
+{com}{sf}{ul off}{txt}{.-}
       name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output/log Table 2.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res} 1 Apr 2022, 10:18:19
+ {txt}opened on:  {res} 4 Apr 2022, 16:29:29
 {txt}
 {com}. 
 . ***************************************************************************
@@ -91,8 +91,7 @@
 {txt}
 {com}. 
 . save "IHME-GBD_2019_DATA-21.dta", replace
-{txt}(note: file IHME-GBD_2019_DATA-21.dta not found)
-file IHME-GBD_2019_DATA-21.dta saved
+{txt}file IHME-GBD_2019_DATA-21.dta saved
 
 {com}. 
 . 
@@ -244,9 +243,6 @@ file IHME-GBD_2019_DATA-21.dta saved
 . sort measure_id_new sex_id_new age_id_new Year cause_id_new
 {txt}
 {com}. 
-. drop sex_id     measure_id_new sex_id_new age_id_new
-{txt}
-{com}. 
 . order Sex, after(Age)
 {txt}
 {com}. 
@@ -297,7 +293,7 @@ file IHME-GBD_2019_DATA-21.dta saved
 Data{col 36}long{col 43}->{col 48}wide
 {hline 77}
 Number of obs.                 {res}       6   {txt}->{res}       3
-{txt}Number of variables            {res}      10   {txt}->{res}      13
+{txt}Number of variables            {res}      14   {txt}->{res}      17
 {txt}j variable (2 values)              {res}Year   {txt}->   (dropped)
 xij variables:
                                   {res}Value   {txt}->   {res}Value1990 Value2019
@@ -308,6 +304,9 @@ xij variables:
 
 {com}. 
 . order rank1990 rank2019, last
+{txt}
+{com}. 
+. sort cause_id_new
 {txt}
 {com}. 
 . gen to = " to "
@@ -422,8 +421,7 @@ file Table 2 Part1.dta saved
 {txt}
 {com}. 
 . save "IHME-GBD_2019_DATA-22.dta", replace
-{txt}(note: file IHME-GBD_2019_DATA-22.dta not found)
-file IHME-GBD_2019_DATA-22.dta saved
+{txt}file IHME-GBD_2019_DATA-22.dta saved
 
 {com}. 
 . 
@@ -482,6 +480,7 @@ file IHME-GBD_2019_DATA-22.dta saved
 {txt}(72 real changes made)
 
 {com}. 
+. 
 . 
 . replace cause_name = "Maternal & neonatal" if cause_name == "Maternal and neonatal disorders"
 {txt}(72 real changes made)
@@ -654,9 +653,6 @@ file IHME-GBD_2019_DATA-22.dta saved
 . sort measure_id_new sex_id_new age_id_new Year cause_id_new
 {txt}
 {com}. 
-. drop sex_id     measure_id_new sex_id_new age_id_new
-{txt}
-{com}. 
 . order Sex, after(Age)
 {txt}
 {com}. 
@@ -707,7 +703,7 @@ file IHME-GBD_2019_DATA-22.dta saved
 Data{col 36}long{col 43}->{col 48}wide
 {hline 77}
 Number of obs.                 {res}      34   {txt}->{res}      17
-{txt}Number of variables            {res}      10   {txt}->{res}      13
+{txt}Number of variables            {res}      14   {txt}->{res}      17
 {txt}j variable (2 values)              {res}Year   {txt}->   (dropped)
 xij variables:
                                   {res}Value   {txt}->   {res}Value1990 Value2019
@@ -716,6 +712,9 @@ xij variables:
                                    rank   {txt}->   {res}rank1990 rank2019
 {txt}{hline 77}
 
+{com}. 
+. sort measure_id_new sex_id_new age_id_new cause_id_new
+{txt}
 {com}. 
 . order rank1990 rank2019, last
 {txt}
@@ -747,8 +746,9 @@ xij variables:
 . drop rank1990 rank2019 to
 {txt}
 {com}. 
-. 
-. 
+. drop sex_id measure_id_new age_id_new sex_id_new
+{txt}
+{com}. 
 . save "Table 2 Part2.dta", replace
 {txt}(note: file Table 2 Part2.dta not found)
 file Table 2 Part2.dta saved
@@ -793,9 +793,11 @@ str6, now str8 to accommodate using data's values)
 {p_end}
 
 {com}. 
+. drop sex_id measure_id_new age_id_new sex_id_new
+{txt}
+{com}. 
 . save "Table 2.dta", replace
-{txt}(note: file Table 2.dta not found)
-file Table 2.dta saved
+{txt}file Table 2.dta saved
 
 {com}. 
 . export excel using "Table 2.xlsx", replace firstrow(varlabels)
@@ -833,7 +835,7 @@ file Table 2.dta saved
       {txt}name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output/log Table 2.smcl
   {txt}log type:  {res}smcl
- {txt}closed on:  {res} 1 Apr 2022, 10:18:19
+ {txt}closed on:  {res} 4 Apr 2022, 16:29:29
 {txt}{.-}
 {smcl}
 {txt}{sf}{ul off}
