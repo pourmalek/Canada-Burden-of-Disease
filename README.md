@@ -47,7 +47,7 @@ Previously produced Excel (xlsx) copies of manuscript tables can be downloaded a
 
 [Table 4: Relative (%) changes in age-standardized DALY rates in Canada and comparator locations and Canada’s rank in 1990-2019 among all high-income countries. ](https://github.com/pourmalek/Canada-Burden-of-Disease/blob/main/output/Table%204.xlsx)
 
-[All Tables]()
+[All Tables](https://github.com/pourmalek/Canada-Burden-of-Disease/blob/main/output/Tables.xlsx)
 
 *
 
