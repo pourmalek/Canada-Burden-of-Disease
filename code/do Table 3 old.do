@@ -757,6 +757,21 @@ export excel using "Table 3.xlsx", replace firstrow(varlabels)
 shell rm -r "Table 3 DALYs.dta"
 shell rm -r "Table 3 YLDs.dta"
 shell rm -r "Table 3 YLLs.dta"
+shell rm -r "IHME-GBD_2019_DATA-31 DALYs 1990.dta"
+shell rm -r "IHME-GBD_2019_DATA-31 DALYs 2019.dta"
+shell rm -r "IHME-GBD_2019_DATA-31 DALYs.dta"
+shell rm -r "IHME-GBD_2019_DATA-31 YLDs 1990.dta"
+shell rm -r "IHME-GBD_2019_DATA-31 YLDs 2019.dta"
+shell rm -r "IHME-GBD_2019_DATA-31 YLDs.dta"
+shell rm -r "IHME-GBD_2019_DATA-31 YLLs 1990.dta"
+shell rm -r "IHME-GBD_2019_DATA-31 YLLs 2019.dta"
+shell rm -r "IHME-GBD_2019_DATA-31 YLLs.dta"
+
+
+
+
+
+
 
 
 

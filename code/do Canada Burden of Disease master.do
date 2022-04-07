@@ -79,22 +79,28 @@ do "do Table 1.do"
 
 do "do Table 2.do" 
 
-do "do Table 3.do" 
+do "do Table 3 a.do" 
 
-do "do Table 4 a.do" 
+do "do Table 3 b.do" 
 
-do "do Table 4 b.do" 
+do "do Table 3 c.do" 
 
-do "do Table 4 c.do" 
+do "do Table 3 d.do" 
 
-do "do Table 4 d.do" 
+do "do Table 3 e.do" 
 
-do "do Table 4 e.do" 
+do "do Table 4 a.do"
 
-do "do Table 5 a.do"
+do "do Table 4 b.do"
 
-do "do Table 5 b.do"
+do "do Table 4 c.do"
 
-do "do Table 5 c.do"
+do "do Table 4 d.do"
 
-do "do Table 5 d.do"
+/*
+do "do Figure 1.do"
+
+do "do Figure 2.do"
+
+
+

@@ -1,0 +1,121 @@
+measure_id,measure_name,location_id,location_name,sex_id,sex_name,age_id,age_name,cause_id,cause_name,metric_id,metric_name,year_start,year_end,val,upper,lower
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,22,All Ages,409,Non-communicable diseases,3,Rate,1990,2019,0.05894262355713531,0.08495168188895319,0.03383558836165432
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,22,All Ages,409,Non-communicable diseases,3,Rate,1990,2019,0.09641148662766018,0.11824063889737918,0.07435123618883466
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,22,All Ages,409,Non-communicable diseases,3,Rate,1990,2019,0.07750855611404675,0.09967714236464617,0.05592903282924623
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,27,Age-standardized,409,Non-communicable diseases,3,Rate,1990,2019,-0.22271564521744106,-0.1931917272707513,-0.25458231696451455
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,27,Age-standardized,409,Non-communicable diseases,3,Rate,1990,2019,-0.11592626325712638,-0.0900853838754986,-0.14601641125291745
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,409,Non-communicable diseases,3,Rate,1990,2019,-0.16542834281753382,-0.1385271223036645,-0.19632903630177653
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,22,All Ages,410,Neoplasms,3,Rate,1990,2019,0.10571002058665699,0.15707235410371378,0.053462114991634
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,22,All Ages,410,Neoplasms,3,Rate,1990,2019,0.15843320050960905,0.20678594504897757,0.11027297826496267
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,22,All Ages,410,Neoplasms,3,Rate,1990,2019,0.12924048396594587,0.1735406859531706,0.08027970361034836
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,27,Age-standardized,410,Neoplasms,3,Rate,1990,2019,-0.2940120296998678,-0.26323431015716064,-0.32513265351980747
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,27,Age-standardized,410,Neoplasms,3,Rate,1990,2019,-0.19481929499510234,-0.16205012389145787,-0.22604719450935673
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,410,Neoplasms,3,Rate,1990,2019,-0.2410004995949726,-0.21308363174786002,-0.2703519556093774
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,22,All Ages,542,Neurological disorders,3,Rate,1990,2019,0.36390389857699723,0.5960596552207621,0.19691019136994384
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,22,All Ages,542,Neurological disorders,3,Rate,1990,2019,0.20801650852065778,0.4679527850729519,0.06555445812721475
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,22,All Ages,542,Neurological disorders,3,Rate,1990,2019,0.2646112443854176,0.5138805920212264,0.11445497842629408
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,27,Age-standardized,542,Neurological disorders,3,Rate,1990,2019,-0.019718494982711932,0.07682681455734905,-0.1052448024773346
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,27,Age-standardized,542,Neurological disorders,3,Rate,1990,2019,-0.020637507150019253,0.05669320413083704,-0.08854650982564423
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,542,Neurological disorders,3,Rate,1990,2019,-0.02074004361678186,0.060140290701952176,-0.09301690758802043
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,22,All Ages,558,Mental disorders,3,Rate,1990,2019,-0.012283631162365504,0.041338694409070606,-0.05803861432113442
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,22,All Ages,558,Mental disorders,3,Rate,1990,2019,-0.03859508010839552,0.029872501644788517,-0.09627229101888722
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,22,All Ages,558,Mental disorders,3,Rate,1990,2019,-0.02667625412086859,0.029072765182831948,-0.07234760636017247
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,27,Age-standardized,558,Mental disorders,3,Rate,1990,2019,0.01759990291047078,0.07368295540006986,-0.031052387005845863
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,27,Age-standardized,558,Mental disorders,3,Rate,1990,2019,-0.001234319519439413,0.07154138711807212,-0.065087952013003
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,558,Mental disorders,3,Rate,1990,2019,0.0068213804639914374,0.06688337354849093,-0.04274870464448222
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,22,All Ages,669,Sense organ diseases,3,Rate,1990,2019,0.39194494314161116,0.45841773230917293,0.34214800250234956
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,22,All Ages,669,Sense organ diseases,3,Rate,1990,2019,0.34299246181736104,0.40086397172470456,0.2901964736707594
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,22,All Ages,669,Sense organ diseases,3,Rate,1990,2019,0.3663665411935194,0.4134543581210598,0.3229381169534834
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,27,Age-standardized,669,Sense organ diseases,3,Rate,1990,2019,-0.05200449226962897,-0.017636841339555655,-0.08674559281434994
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,27,Age-standardized,669,Sense organ diseases,3,Rate,1990,2019,-0.04624152375033053,-0.011723038375195062,-0.08256363395035801
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,669,Sense organ diseases,3,Rate,1990,2019,-0.049749278223599584,-0.02111427929127231,-0.0780268813870253
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,22,All Ages,687,Injuries,3,Rate,1990,2019,-0.29755059604260825,-0.26048561320922875,-0.33264048628884346
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,22,All Ages,687,Injuries,3,Rate,1990,2019,-0.02196150619588951,0.031723878730473304,-0.07933610679815167
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,22,All Ages,687,Injuries,3,Rate,1990,2019,-0.2098088883722522,-0.1657056576574776,-0.2533106913424483
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,27,Age-standardized,687,Injuries,3,Rate,1990,2019,-0.3563988822940353,-0.3301333020916452,-0.3814271702776957
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,27,Age-standardized,687,Injuries,3,Rate,1990,2019,-0.21859244703222874,-0.18539265944797495,-0.25597069556642094
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,687,Injuries,3,Rate,1990,2019,-0.3135200948487524,-0.2849954768527578,-0.34086403710195395
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,22,All Ages,688,Transport injuries,3,Rate,1990,2019,-0.5528216611012395,-0.5211013828310794,-0.5835517202094656
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,22,All Ages,688,Transport injuries,3,Rate,1990,2019,-0.4736401831830951,-0.43123858627247486,-0.5131287993946704
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,22,All Ages,688,Transport injuries,3,Rate,1990,2019,-0.5292094227376256,-0.49673851404117775,-0.5601961129884611
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,27,Age-standardized,688,Transport injuries,3,Rate,1990,2019,-0.5592945914364454,-0.5299786299675529,-0.5896141358499434
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,27,Age-standardized,688,Transport injuries,3,Rate,1990,2019,-0.515776761551571,-0.4803527106762423,-0.5477529652074333
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,688,Transport injuries,3,Rate,1990,2019,-0.5464511774817297,-0.521254715674743,-0.5722758200662018
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,22,All Ages,962,Maternal and neonatal disorders,3,Rate,1990,2019,-0.3728080412143704,-0.2792661220496641,-0.46638329115107413
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,22,All Ages,962,Maternal and neonatal disorders,3,Rate,1990,2019,-0.27611171710746757,-0.1716065310002558,-0.3660491338016479
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,22,All Ages,962,Maternal and neonatal disorders,3,Rate,1990,2019,-0.3290427787374875,-0.23964731208347886,-0.4186118425420019
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,27,Age-standardized,962,Maternal and neonatal disorders,3,Rate,1990,2019,-0.19508747170014556,-0.06728381912215668,-0.3197995272533697
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,27,Age-standardized,962,Maternal and neonatal disorders,3,Rate,1990,2019,-0.08247914682126799,0.04855001124836106,-0.2025593423538672
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,962,Maternal and neonatal disorders,3,Rate,1990,2019,-0.14535784916987854,-0.027540164049839316,-0.2611394318955464
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,22,All Ages,973,Substance use disorders,3,Rate,1990,2019,0.7914368012570406,1.0035436842913363,0.6054173163634008
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,22,All Ages,973,Substance use disorders,3,Rate,1990,2019,0.7775631695850275,0.9960818033797951,0.5812717610007518
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,22,All Ages,973,Substance use disorders,3,Rate,1990,2019,0.7850541450439551,0.9734727758072599,0.6180375643948873
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,27,Age-standardized,973,Substance use disorders,3,Rate,1990,2019,0.9410271578967703,1.1743885643078897,0.7351941399006701
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,27,Age-standardized,973,Substance use disorders,3,Rate,1990,2019,0.942951674540685,1.1985061380922928,0.7217424500899269
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,973,Substance use disorders,3,Rate,1990,2019,0.9463283239396053,1.14976430490697,0.7680391361800449
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,22,All Ages,974,Diabetes and kidney diseases,3,Rate,1990,2019,0.8436880231155882,0.9713905600604357,0.7121249787529561
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,22,All Ages,974,Diabetes and kidney diseases,3,Rate,1990,2019,0.5620521534395624,0.6845831535928718,0.44262003505554526
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,22,All Ages,974,Diabetes and kidney diseases,3,Rate,1990,2019,0.7034906635785168,0.8160449113095336,0.5829951451735205
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,27,Age-standardized,974,Diabetes and kidney diseases,3,Rate,1990,2019,0.17309083236146927,0.26082943786633994,0.0855717668583096
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,27,Age-standardized,974,Diabetes and kidney diseases,3,Rate,1990,2019,0.0928948452135168,0.18138970451333833,0.005624254705629128
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,974,Diabetes and kidney diseases,3,Rate,1990,2019,0.14588766658248953,0.2237582951085259,0.06340078786967746
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,22,All Ages,696,Unintentional injuries,3,Rate,1990,2019,-0.07021409444178484,-0.028040289704629746,-0.12518307348221247
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,22,All Ages,696,Unintentional injuries,3,Rate,1990,2019,0.35242369426392955,0.40145098254084705,0.3023052034987854
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,22,All Ages,696,Unintentional injuries,3,Rate,1990,2019,0.09283986566114855,0.13529894587272626,0.04073931081767294
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,27,Age-standardized,696,Unintentional injuries,3,Rate,1990,2019,-0.26155827012289273,-0.22729035740640846,-0.3046288436018655
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,27,Age-standardized,696,Unintentional injuries,3,Rate,1990,2019,-0.04543470099638866,-0.011968665195176947,-0.0847460831615715
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,696,Unintentional injuries,3,Rate,1990,2019,-0.1828969586868764,-0.14811388125304203,-0.22548471394638311
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,22,All Ages,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,1990,2019,-0.30102096326764466,-0.2487315775973015,-0.35509538963846243
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,22,All Ages,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,1990,2019,-0.11466439202584885,-0.054334525208584714,-0.1724803735578289
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,22,All Ages,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,1990,2019,-0.22115081219397378,-0.17067369824039044,-0.2721168486816006
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,1990,2019,-0.3083679238259282,-0.24472354587448125,-0.37110076247367674
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,1990,2019,-0.1332667520472537,-0.06555332545339265,-0.201532156951469
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,295,"Communicable, maternal, neonatal, and nutritional diseases",3,Rate,1990,2019,-0.2296419623727938,-0.1661139539256104,-0.2909039892730708
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,22,All Ages,491,Cardiovascular diseases,3,Rate,1990,2019,-0.2789366905562421,-0.24778082683327585,-0.31134138740389644
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,22,All Ages,491,Cardiovascular diseases,3,Rate,1990,2019,-0.24710258762693654,-0.20445850719900396,-0.286658696932135
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,22,All Ages,491,Cardiovascular diseases,3,Rate,1990,2019,-0.2659273147389618,-0.2366338566644722,-0.2975572349008453
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,27,Age-standardized,491,Cardiovascular diseases,3,Rate,1990,2019,-0.5548183093600663,-0.5364008936195886,-0.5732011041950105
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,27,Age-standardized,491,Cardiovascular diseases,3,Rate,1990,2019,-0.5104070647197965,-0.48470704438213685,-0.5341005006153224
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,491,Cardiovascular diseases,3,Rate,1990,2019,-0.532865860310733,-0.5150877601921763,-0.5514024853957871
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,22,All Ages,526,Digestive diseases,3,Rate,1990,2019,0.10337054125864473,0.15922330234790796,0.04908661234232922
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,22,All Ages,526,Digestive diseases,3,Rate,1990,2019,0.154612888354207,0.21457363549105746,0.10124865166182291
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,22,All Ages,526,Digestive diseases,3,Rate,1990,2019,0.12625237570036368,0.17706473888158752,0.07793766151426497
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,27,Age-standardized,526,Digestive diseases,3,Rate,1990,2019,-0.2186422109256713,-0.1818577602489088,-0.255842622226824
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,27,Age-standardized,526,Digestive diseases,3,Rate,1990,2019,-0.1176369426283019,-0.07658251706162872,-0.1569711263335573
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,526,Digestive diseases,3,Rate,1990,2019,-0.171640939954333,-0.13728913347564772,-0.20728654261509316
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,22,All Ages,508,Chronic respiratory diseases,3,Rate,1990,2019,0.09305792299449235,0.19762932667669558,0.0010325577680275844
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,22,All Ages,508,Chronic respiratory diseases,3,Rate,1990,2019,0.4376122818758026,0.6149546157452932,0.18732950863814568
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,22,All Ages,508,Chronic respiratory diseases,3,Rate,1990,2019,0.23791599928621765,0.3373655313246633,0.11445108181751255
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,27,Age-standardized,508,Chronic respiratory diseases,3,Rate,1990,2019,-0.2886035200577868,-0.22847420859888357,-0.3483503523596728
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,27,Age-standardized,508,Chronic respiratory diseases,3,Rate,1990,2019,0.015635500739275547,0.11158191630322571,-0.13032312605249163
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,508,Chronic respiratory diseases,3,Rate,1990,2019,-0.14241739815123097,-0.08481731609389917,-0.2181953719131783
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,22,All Ages,653,Skin and subcutaneous diseases,3,Rate,1990,2019,0.05616087184003644,0.09611080704102871,0.012316905080990379
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,22,All Ages,653,Skin and subcutaneous diseases,3,Rate,1990,2019,0.007578152365752994,0.03918341118054498,-0.022583850219051828
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,22,All Ages,653,Skin and subcutaneous diseases,3,Rate,1990,2019,0.028049866182087997,0.058017901590856735,-0.0024121382210486163
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,27,Age-standardized,653,Skin and subcutaneous diseases,3,Rate,1990,2019,0.00036393129984876605,0.029384062074342066,-0.03223715117639086
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,27,Age-standardized,653,Skin and subcutaneous diseases,3,Rate,1990,2019,0.007356359636951775,0.029805962714652724,-0.017138238616257743
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,653,Skin and subcutaneous diseases,3,Rate,1990,2019,0.004787086112614522,0.02504972775103497,-0.01813882929473519
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,22,All Ages,626,Musculoskeletal disorders,3,Rate,1990,2019,0.2823232434113276,0.36815676495429894,0.20647965357285925
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,22,All Ages,626,Musculoskeletal disorders,3,Rate,1990,2019,0.2823733088265601,0.35676967458999836,0.20818011891939808
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,22,All Ages,626,Musculoskeletal disorders,3,Rate,1990,2019,0.2829129176477829,0.35476909758139813,0.21608882114452088
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,27,Age-standardized,626,Musculoskeletal disorders,3,Rate,1990,2019,0.06455609033826558,0.1308340815467551,0.004583589515253986
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,27,Age-standardized,626,Musculoskeletal disorders,3,Rate,1990,2019,0.08398192145491025,0.14613147231034887,0.024486052616662087
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,626,Musculoskeletal disorders,3,Rate,1990,2019,0.07325069821453545,0.13038609800409964,0.018159938186720702
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,22,All Ages,640,Other non-communicable diseases,3,Rate,1990,2019,-0.16230711947488147,-0.046866737833729924,-0.247373345517771
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,22,All Ages,640,Other non-communicable diseases,3,Rate,1990,2019,-0.07345914628457687,-0.02552604669063884,-0.11965322993829587
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,22,All Ages,640,Other non-communicable diseases,3,Rate,1990,2019,-0.10907915220006048,-0.041937358794691876,-0.1699887751442304
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,27,Age-standardized,640,Other non-communicable diseases,3,Rate,1990,2019,-0.30779949910671334,-0.2011167370143999,-0.3780332586893279
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,27,Age-standardized,640,Other non-communicable diseases,3,Rate,1990,2019,-0.17957202312975756,-0.125898229497941,-0.2307230078838671
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,640,Other non-communicable diseases,3,Rate,1990,2019,-0.23449796445665946,-0.16386086476483025,-0.290412484214251
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,22,All Ages,717,Self-harm and interpersonal violence,3,Rate,1990,2019,-0.2650221761031795,-0.22293945732182446,-0.30812608533371166
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,22,All Ages,717,Self-harm and interpersonal violence,3,Rate,1990,2019,-0.13778662728840016,-0.08821538695668173,-0.1915426076772288
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,22,All Ages,717,Self-harm and interpersonal violence,3,Rate,1990,2019,-0.23371381140926129,-0.1980784286076693,-0.2712893206151445
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,27,Age-standardized,717,Self-harm and interpersonal violence,3,Rate,1990,2019,-0.2322906793966024,-0.187978113553487,-0.27626230940222113
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,27,Age-standardized,717,Self-harm and interpersonal violence,3,Rate,1990,2019,-0.10687123261374293,-0.0544497470191939,-0.16268340767727632
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,717,Self-harm and interpersonal violence,3,Rate,1990,2019,-0.20043851772200566,-0.16153996682865215,-0.24040501284175733
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,22,All Ages,956,Respiratory infections and tuberculosis,3,Rate,1990,2019,-0.2149597064793307,-0.16119063433011654,-0.2725465592358056
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,22,All Ages,956,Respiratory infections and tuberculosis,3,Rate,1990,2019,-0.10113627331803579,-0.03236634665893032,-0.1654982558068589
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,22,All Ages,956,Respiratory infections and tuberculosis,3,Rate,1990,2019,-0.1617962781002086,-0.10708274633589725,-0.21614713464751273
+2,DALYs (Disability-Adjusted Life Years),101,Canada,1,Male,27,Age-standardized,956,Respiratory infections and tuberculosis,3,Rate,1990,2019,-0.43870842860662224,-0.3854840209685928,-0.4918287052888298
+2,DALYs (Disability-Adjusted Life Years),101,Canada,2,Female,27,Age-standardized,956,Respiratory infections and tuberculosis,3,Rate,1990,2019,-0.30039376885019586,-0.24681694884638597,-0.3586012232491976
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,956,Respiratory infections and tuberculosis,3,Rate,1990,2019,-0.3658583771451157,-0.3144401184757467,-0.420778380761385

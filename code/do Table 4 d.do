@@ -19,18 +19,21 @@ log using "log Table 4 d.smcl", replace
 
 
 
-** Prepares Table 4, Life expectancy
-* Table 4: Canada’s rank in the world for 5 health indicators (age-standardized rates) 
-* from 1990 to 2019, by sex and age
+** Prepares Table 4
+* Table 4: Relative (%) changes in age-standardized DALY rates in Canada and comparator locations 
+* and Canada’s rank in 1990-2019 among all high-income countries. 
+
+* level 2 causes, Canada's Rank in 1990 and Rank in 2019 for Age-standardized DALYs rate in each of 5 group of countries:
+* Canada, United States, Western Europe, Australasia, Asia-Pacific
 
 
 * Metadata for input data described below,
 * under each -import delimited using "IHME-GBD_2019_DATA-??.csv"-
 
 
-** Table 4 Part 7: YLDs, Life expectancy
-* Input data: "IHME-GBD_2019_DATA-47.csv"
-* Output data: "Table 4 Part7.dta"
+** Table 4 Part 3: Level 2 Grouping of Conditions, % change in values 1990-2019
+* Input data: "IHME-GBD_2019_DATA-54.csv"
+* Output data: "Table 4 Part4.dta"
 
 
 
@@ -38,15 +41,14 @@ log using "log Table 4 d.smcl", replace
 
 
 ***********************************************************************
-* Prepare Table 4 Part7
+* Prepare Table 4 Part4
 
-* Table 4: Canada’s rank in the world for 5 health indicators (age-standardized rates) 
-* from 1990 to 2019, by sex and age
+** Prepares Table 4, Level 2 Grouping of Conditions
+* Table 4: Relative (%) changes in age-standardized DALY rates in Canada and comparator locations 
+* and Canada’s rank in 1990-2019 among all high-income countries. 
 
-* DALYS	1990	2000	2010	2019
-
-* Life expectancy
-
+* level 2 causes, Canada's Rank in 1990 and Rank in 2019 for Age-standardized DALYs rate in each of 6 group of countries:
+* Canada, United States, Western Europe, Australasia, Asia-Pacific, Southern Latin America
 
 
 * use input data from /data/ folder
@@ -55,32 +57,38 @@ cd .. // Canada-Burden-of-Disease-main
 
 cd data
 
-import delimited using "IHME-GBD_2019_DATA-47.csv", clear 
+import delimited using "IHME-GBD_2019_DATA-54.csv", clear 
 
 
-/* "IHME-GBD_2019_DATA-47.csv" Metadata:
+/* "IHME-GBD_2019_DATA-54.csv" Metadata:
 
 Permalink:
-https://ghdx.healthdata.org/gbd-results-tool?params=gbd-api-2019-permalink/4c375987a7c0058913173149e7847518
+https://ghdx.healthdata.org/gbd-results-tool?params=gbd-api-2019-permalink/5a652f794f564ee9988223d051289d0b
 
 Data settings:
 
 Base: Single
-Location: Countries and territories (204)
-Year: 1990, 2000, 2010, 2019
+Location: 36 countries (See "do Table 4 a.do")
+Year: 1990, 2019
 
-Context: All Cause Mortality
-Age: <1 year
-Metric: Years
+Context: Cause
+Age: Age-standardized
+Metric: Rate
 
-Measure: Life Expectancy
+Measure: DALYs
 Sex: Male, Female, Both
-Cause: (Not applicable)
+Cause: level 2
 
 
 Download settings: 
 Both IDs and Names 
 (ID = variable_id, Name = variable_name)
+
+
+* Countries in Table 4:
+
+see "do Table 4 a.do"
+
 
 */
 
@@ -94,6 +102,52 @@ cd output
 drop measure_id location_id age_id metric_id metric_name
 
 rename measure_name Measure
+
+rename cause_name Cause
+
+replace Cause = "Maternal & neonatal" if Cause == "Maternal and neonatal disorders"
+replace Cause = "Respiratory infections" if Cause == "Respiratory infections and tuberculosis"
+replace Cause = "Neoplasms" if Cause == "Neoplasms"
+replace Cause = "Cardiovascular" if Cause == "Cardiovascular diseases"
+replace Cause = "Chronic respiratory" if Cause == "Chronic respiratory diseases"
+replace Cause = "Digestive" if Cause == "Digestive diseases"
+replace Cause = "Neurological" if Cause == "Neurological disorders"
+replace Cause = "Mental" if Cause == "Mental disorders"
+replace Cause = "Substance use" if Cause == "Substance use disorders"
+replace Cause = "Diabetes & kidney" if Cause == "Diabetes and kidney diseases"
+replace Cause = "Skin" if Cause == "Skin and subcutaneous diseases"
+replace Cause = "Sense organ" if Cause == "Sense organ diseases"
+replace Cause = "Musculoskeletal" if Cause == "Musculoskeletal disorders"
+replace Cause = "Other NCD" if Cause == "Other non-communicable diseases"
+replace Cause = "Transport injuries" if Cause == "Transport injuries"
+replace Cause = "Unintentional injuries" if Cause == "Unintentional injuries"
+replace Cause = "Self-harm and violence" if Cause == "Self-harm and interpersonal violence"
+
+gen cause_id_new = .
+replace cause_id_new = 1 if Cause == "Maternal & neonatal"
+replace cause_id_new = 2 if Cause == "Respiratory infections"
+replace cause_id_new = 3 if Cause == "Neoplasms"
+replace cause_id_new = 4 if Cause == "Cardiovascular"
+replace cause_id_new = 5 if Cause == "Chronic respiratory"
+replace cause_id_new = 6 if Cause == "Digestive"
+replace cause_id_new = 7 if Cause == "Neurological"
+replace cause_id_new = 8 if Cause == "Mental"
+replace cause_id_new = 9 if Cause == "Substance use"
+replace cause_id_new = 10 if Cause == "Diabetes & kidney"
+replace cause_id_new = 11 if Cause == "Skin"
+replace cause_id_new = 12 if Cause == "Sense organ"
+replace cause_id_new = 13 if Cause == "Musculoskeletal"
+replace cause_id_new = 14 if Cause == "Other NCD"
+replace cause_id_new = 15 if Cause == "Transport injuries"
+replace cause_id_new = 16 if Cause == "Unintentional injuries"
+replace cause_id_new = 17 if Cause == "Self-harm and violence"
+
+
+drop if Cause == "Enteric infections"
+drop if Cause == "HIV/AIDS and sexually transmitted infections"
+drop if Cause == "Neglected tropical diseases and malaria"
+drop if Cause == "Nutritional deficiencies"
+drop if Cause == "Other infectious diseases"
 
 
 
@@ -123,65 +177,70 @@ replace Upper_UL = round(Upper_UL,0.1)
 replace Lower_UL = round(Lower_UL,0.1)
 format Value Upper_UL Lower_UL %5.2fc
 	
-rename year Year 
+rename year Year
 
-sort sex_id_new Year 
-
-drop sex_id
-
-
-* gen Sex-Year combinations  
-
-egen Sex_Year = group(Sex Year), lname(name)
-
-label var Sex_Year "Sex-Year group"
-
-save "IHME-GBD_2019_DATA-47.dta", replace
+keep if Year == 1990 | Year == 2019
 	
+order sex_id cause_id Year, last
 
+order Sex, after(age_name)
 
-bysort Sex_Year: egen rank = rank(-Value)
+rename location_name Location
 
-label var rank "rank of mean YLDs within Sex-Year group"
+order Measure age_name, last
 
-sort Sex_Year rank
+sort Location Sex cause_id_new
 
-label var location_name "Country"
-
-keep if location_name == "Canada"
-
-*
-
-drop Value Lower_UL Upper_UL Sex_Year
-
-drop location_name 
-
-rename age_name Age
-
-order Measure Sex Age rank 
-
-reshape wide rank, i(Sex Age) j(Year)
-
-sort sex_id_new
-
-order Measure 
-
-drop sex_id_new
+sort sex_id_new 
 
 qui compress
 
-save "Table 4 Part7.dta", replace
+keep Location Sex Cause Value Year cause_id_new
+
+keep if Sex == "Both sexes"
+
+drop Sex
+
+* 
+
+bysort Year Cause: egen rank = rank(Value)
+
+label var rank "Canada's rank of mean DALYs within Country-Cause-Year"
+
+sort Year rank
+
+keep if Location == "Canada"
+
+sort Year cause_id_new
+
+drop Location Value
+
+reshape wide rank, i(Cause) j(Year)
+
+sort cause_id_new
+
+rename rank1990	Rank_in_1990
+rename rank2019	Rank_in_2019
+
+label var Rank_in_1990 "Rank in 1990"
+label var Rank_in_2019 "Rank in 2019"
+
+drop cause_id_new
+
+qui compress
+
+save "Table 4 Part4.dta", replace
 
 
-/* "Table 4 Part7.dta" contents
+/* "Table 4 Part4.dta" contents
 
-Base values of 1990 2000 2010 2019
+% change values 1990-2019
 
-Value	Lower UL	Upper UL
+DALYs comparator country groups
 
-Life expectancy 
+Both sexes	
 
-Both sexes	Males	Females
+level 2 causes
 
 */
 
@@ -189,6 +248,100 @@ Both sexes	Males	Females
 
 
 
+
+
+
+
+
+
+
+
+
+******************************************************************
+
+* merge Table 4 Part1 and Part2, (% change in values 1990-2019) and (Canada's Rank in 1990 and Rank in 2019)
+* Level 1 Grouping of Conditions
+
+use "Table 4 Part1.dta", clear
+
+merge m:m Cause using "Table 4 Part2.dta"
+
+drop _merge
+
+sort cause_id_new
+
+drop cause_id_new
+
+save "Table 4 Part1andPart2.dta", replace
+
+
+
+* merge Table 4 Part3 and Part4, (% change in values 1990-2019) and (Canada's Rank in 1990 and Rank in 2019)
+* level 2 causes
+
+use "Table 4 Part3.dta", clear
+
+merge m:m Cause using "Table 4 Part4.dta"
+
+drop _merge
+
+drop location_id_newAsia_Pacific location_id_newAustralasia location_id_newCanada ///
+location_id_newUnited_States location_id_newWestern_Europe 
+
+save "Table 4 Part3andPart4.dta", replace
+
+
+
+
+
+* append level 1 and level 2 causes 
+
+use "Table 4 Part1andPart2.dta", clear 
+
+append using "Table 4 Part3andPart4.dta"
+
+replace cause_id_new = cause_id_new + 3
+
+replace cause_id_new = 1 in 1 
+replace cause_id_new = 2 in 2
+replace cause_id_new = 3 in 3 
+
+sort cause_id_new
+
+drop cause_id_new location_id_newSouthern_Latin
+
+qui compress
+
+save "Table 4.dta", replace
+
+export excel using "Table 4.xlsx", replace firstrow(varlabels)
+
+
+
+
+********
+
+* remove files no longer needed
+
+shell rm -r "Table 4 Part1andPart2.dta"
+shell rm -r "Table 4 Part1.dta"
+shell rm -r "Table 4 Part2.dta"
+shell rm -r "Table 4 Part3.dta"
+shell rm -r "Table 4 Part3andPart4.dta"
+shell rm -r "Table 4 Part4.dta"
+
+
+
+
+/*
+
+* restore native scheme (of the local machine)
+
+set scheme $nativescheme
+
+di c(scheme)
+
+*/
 
 
 

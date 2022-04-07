@@ -20,7 +20,7 @@ log using "log Table 1.smcl", replace
 
 
 ** Prepares Table 1
-* Table 1: Crude (all-age) and age-standardized summary measures of population health indicators 
+* Table 1: All-age (crude) and age-standardized summary measures of population health 
 * in Canada for males and females in 1990 and 2019
 
 
@@ -149,6 +149,7 @@ replace Value = round(Value,0.1)
 replace Upper_UL = round(Upper_UL,0.1)
 replace Lower_UL = round(Lower_UL,0.1)
 format Value Upper_UL Lower_UL %5.1fc
+
 
 rename age_name Age
 	
@@ -300,10 +301,10 @@ label var Upper_UL "Relative change (%) Upper UL"
 
 order Upper_UL, after(Lower_UL)
 
-replace Value = round(Value,0.01)
+replace Value = round(Value,0.1)
 replace Upper_UL = round(Upper_UL,0.1)
 replace Lower_UL = round(Lower_UL,0.1)
-format Value Upper_UL Lower_UL %5.2f
+format Value Upper_UL Lower_UL %5.1f
 
 rename age_name Age
 	
@@ -984,6 +985,8 @@ shell rm -r "Table 1 Part6.dta"
 
 
 
+
+ 
 
 
 

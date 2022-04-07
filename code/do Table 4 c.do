@@ -19,39 +19,36 @@ log using "log Table 4 c.smcl", replace
 
 
 
-** Prepares Table 4, YLDs
-* Table 4: Canada’s rank in the world for 5 health indicators (age-standardized rates) 
-* from 1990 to 2019, by sex and age
+** Prepares Table 4
+* Table 4: Relative (%) changes in age-standardized DALY rates in Canada and comparator locations 
+* and Canada’s rank in 1990-2019 among all high-income countries. 
+
+* level 2 causes, % change in Age-standardized DALYs rate in each of 5 group of countries:
+* Canada, United States, Western Europe, Australasia, Asia-Pacific
 
 
 * Metadata for input data described below,
 * under each -import delimited using "IHME-GBD_2019_DATA-??.csv"-
 
 
-** Table 4 Part 5: YLDs, Age-standardized
-* Input data: "IHME-GBD_2019_DATA-45.csv"
-* Output data: "Table 4 Part5.dta"
+** Table 4 Part 3: Level 2 Grouping of Conditions, % change in values 1990-2019
+* Input data: "IHME-GBD_2019_DATA-51.csv"
+* Output data: "Table 4 Part3.dta"
 
-** Table 4 Part 6: YLDs, Age: <5, 5-14, 15-49, 50-69, 70+
-* Input data: "IHME-GBD_2019_DATA-46.csv"
-* Output data: "Table 4 Part6.dta"
+
 
 
 
 
 ***********************************************************************
-* Prepare Table 4 Part5
+* Prepare Table 4 Part3
 
-* Table 4: Canada’s rank in the world for 5 health indicators (age-standardized rates) 
-* from 1990 to 2019, by sex and age
+** Prepares Table 4, Level 2 Grouping of Conditions
+* Table 4: Relative (%) changes in age-standardized DALY rates in Canada and comparator locations 
+* and Canada’s rank in 1990-2019 among all high-income countries. 
 
-* DALYS	1990	2000	2010	2019
-
-* (age-standardized rates)
-*    Both	
-*    Male	
-*    Female	
-
+* level 2 causes, % change in Age-standardized DALYs rate in each of 5 group of countries:
+* Canada, United States, Western Europe, Australasia, Asia-Pacific
 
 
 * use input data from /data/ folder
@@ -60,32 +57,38 @@ cd .. // Canada-Burden-of-Disease-main
 
 cd data
 
-import delimited using "IHME-GBD_2019_DATA-45.csv", clear 
+import delimited using "IHME-GBD_2019_DATA-53.csv", clear 
 
 
-/* "IHME-GBD_2019_DATA-45.csv" Metadata:
+/* "IHME-GBD_2019_DATA-53.csv" Metadata:
 
 Permalink:
-https://ghdx.healthdata.org/gbd-results-tool?params=gbd-api-2019-permalink/9768d126557df1e38cde353950498730
+https://ghdx.healthdata.org/gbd-results-tool?params=gbd-api-2019-permalink/1011225e13f95ca0f155b98653f3c4f3
 
 Data settings:
 
-Base: Single
-Location: Countries and territories (204)
-Year: 1990, 2000, 2010, 2019
+Base: Change
+Location: 6 groups of countries (See "do Table 4 a.do")
+Year range: 1990-2010
 
 Context: Cause
 Age: Age-standardized
 Metric: Rate
 
-Measure: YLDs
+Measure: DALYs
 Sex: Male, Female, Both
-Cause: Total All Causes
+Cause: level 2
 
 
 Download settings: 
 Both IDs and Names 
 (ID = variable_id, Name = variable_name)
+
+
+* Countries in Table 4:
+
+see "do Table 4 a.do"
+
 
 */
 
@@ -98,11 +101,56 @@ cd output
 
 drop measure_id location_id age_id metric_id metric_name
 
+rename measure_name Measure
+
 rename cause_name Cause
 
-rename measure_name Measure
-replace Measure = "YLDs" if Measure == "YLDs (Years Lived with Disability)"
-qui compress
+replace Cause = "Maternal & neonatal" if Cause == "Maternal and neonatal disorders"
+replace Cause = "Respiratory infections" if Cause == "Respiratory infections and tuberculosis"
+replace Cause = "Neoplasms" if Cause == "Neoplasms"
+replace Cause = "Cardiovascular" if Cause == "Cardiovascular diseases"
+replace Cause = "Chronic respiratory" if Cause == "Chronic respiratory diseases"
+replace Cause = "Digestive" if Cause == "Digestive diseases"
+replace Cause = "Neurological" if Cause == "Neurological disorders"
+replace Cause = "Mental" if Cause == "Mental disorders"
+replace Cause = "Substance use" if Cause == "Substance use disorders"
+replace Cause = "Diabetes & kidney" if Cause == "Diabetes and kidney diseases"
+replace Cause = "Skin" if Cause == "Skin and subcutaneous diseases"
+replace Cause = "Sense organ" if Cause == "Sense organ diseases"
+replace Cause = "Musculoskeletal" if Cause == "Musculoskeletal disorders"
+replace Cause = "Other NCD" if Cause == "Other non-communicable diseases"
+replace Cause = "Transport injuries" if Cause == "Transport injuries"
+replace Cause = "Unintentional injuries" if Cause == "Unintentional injuries"
+replace Cause = "Self-harm and violence" if Cause == "Self-harm and interpersonal violence"
+
+gen cause_id_new = .
+replace cause_id_new = 1 if Cause == "Maternal & neonatal"
+replace cause_id_new = 2 if Cause == "Respiratory infections"
+replace cause_id_new = 3 if Cause == "Neoplasms"
+replace cause_id_new = 4 if Cause == "Cardiovascular"
+replace cause_id_new = 5 if Cause == "Chronic respiratory"
+replace cause_id_new = 6 if Cause == "Digestive"
+replace cause_id_new = 7 if Cause == "Neurological"
+replace cause_id_new = 8 if Cause == "Mental"
+replace cause_id_new = 9 if Cause == "Substance use"
+replace cause_id_new = 10 if Cause == "Diabetes & kidney"
+replace cause_id_new = 11 if Cause == "Skin"
+replace cause_id_new = 12 if Cause == "Sense organ"
+replace cause_id_new = 13 if Cause == "Musculoskeletal"
+replace cause_id_new = 14 if Cause == "Other NCD"
+replace cause_id_new = 15 if Cause == "Transport injuries"
+replace cause_id_new = 16 if Cause == "Unintentional injuries"
+replace cause_id_new = 17 if Cause == "Self-harm and violence"
+
+
+
+drop if Cause == "Enteric infections"
+drop if Cause == "HIV/AIDS and sexually transmitted infections"
+drop if Cause == "Neglected tropical diseases and malaria"
+drop if Cause == "Nutritional deficiencies"
+drop if Cause == "Other infectious diseases"
+
+
 
 
 gen Sex = ""
@@ -117,181 +165,11 @@ replace sex_id_new = 1 if Sex == "Both sexes"
 replace sex_id_new = 2 if Sex == "Males"
 replace sex_id_new = 3 if Sex == "Females"
 
-rename	val Value
-rename upper Upper_UL
-rename lower Lower_UL
 
-order Upper_UL, after(Lower_UL)
-
-label var Upper_UL "Upper UL"
-label var Lower_UL "Lower UL"
-
-replace Value = round(Value,0.1)
-replace Upper_UL = round(Upper_UL,0.1)
-replace Lower_UL = round(Lower_UL,0.1)
-format Value Upper_UL Lower_UL %5.1fc
-
-rename age_name Age
-	
-rename year Year 
-
-
-sort sex_id_new Year 
-
-drop sex_id cause_id
-
-order Sex, after(Age)
-
-
-* gen Sex-Year combinations  
-
-egen Sex_Year = group(Sex Year), lname(name)
-
-label var Sex_Year "Sex-Year group"
-
-save "IHME-GBD_2019_DATA-45.dta", replace
-
-
-* for YLDs 1990 2000 2010 2019 All Ages
-	
-keep if Measure == "YLDs"
-
-
-bysort Sex_Year: egen rank = rank(Value)
-
-label var rank "rank of mean YLDs within Sex-Year group"
-
-sort Sex_Year rank
-
-label var location_name "Country"
-
-keep if location_name == "Canada"
-
-*
-
-drop Value Lower_UL Upper_UL Sex_Year
-
-drop location_name Cause
-
-order Measure Sex Age rank 
-
-reshape wide rank, i(Measure Sex Age) j(Year)
-
-sort sex_id_new
-
-drop sex_id_new
-
-qui compress
-
-save "Table 4 Part5.dta", replace
-
-
-/* "Table 4 Part5.dta" contents
-
-Base values of 1990 2000 2010 2019
-
-Value	Lower UL	Upper UL
-
-YLDs 
-
-Both sexes	Males	Females
-
-Age-standardized	
-
-All causes
-
-*/
-
-
-
-
-
-
-
-
-
-
-***********************************************************************
-* Prepare Table 4 Part6
-
-* Table 4: Canada’s rank in the world for 5 health indicators (age-standardized rates) 
-* from 1990 to 2019, by sex and age
-
-* DALYS	1990	2000	2010	2019
-
-* Age (Both sexes)
-*     <5	
-*     5-14	
-*     15-49	
-*     50-69	
-*     70+	
- 
- 
-
-* use input data from /data/ folder
-
-cd .. // Canada-Burden-of-Disease-main
-
-cd data
-
-import delimited using "IHME-GBD_2019_DATA-46.csv", clear 
-
-
-/* "IHME-GBD_2019_DATA-46.csv" Metadata:
-
-Permalink:
-https://ghdx.healthdata.org/gbd-results-tool?params=gbd-api-2019-permalink/2a09b71da809e3d65e90c125c726da0d
-
-Data settings:
-
-Base: Single
-Location: Countries and territories (204)
-Year: 1990, 2000, 2010, 2019
-
-Context: Cause
-Age: <5, 5-14, 15-49, 50-69, 70+
-Metric: Rate
-
-Measure: YLDs
-Sex: Male, Female, Both
-Cause: Total All Causes
-
-
-Download settings: 
-Both IDs and Names 
-(ID = variable_id, Name = variable_name)
-
-*/
-
-
- 
-
-* save output data in /output/ folder
-
-cd .. // Canada-Burden-of-Disease-main
-
-cd output 
-
-drop measure_id location_id age_id metric_id metric_name
-
-rename cause_name Cause
-
-rename measure_name Measure
-replace Measure = "YLDs" if Measure == "YLDs (Years Lived with Disability)"
-qui compress
-
-
-gen Sex = ""
-replace Sex = "Both sexes" if sex_name == "Both"
-replace Sex = "Males" if sex_name == "Male"
-replace Sex = "Females" if sex_name == "Female"
-drop sex_name
-
-
-gen sex_id_new = .
-replace sex_id_new = 1 if Sex == "Both sexes"
-replace sex_id_new = 2 if Sex == "Males"
-replace sex_id_new = 3 if Sex == "Females"
+* gen percent = proportion * 100
+replace val = val * 100
+replace upper = upper * 100
+replace lower = lower * 100
 
 rename	val Value
 rename upper Upper_UL
@@ -306,106 +184,87 @@ replace Value = round(Value,0.1)
 replace Upper_UL = round(Upper_UL,0.1)
 replace Lower_UL = round(Lower_UL,0.1)
 format Value Upper_UL Lower_UL %5.1fc
-
-rename age_name Age
 	
-rename year Year 
+order sex_id cause_id year_start year_end, last
 
+order Sex, after(age_name)
 
-sort sex_id_new Year 
+rename location_name Location
 
-drop sex_id cause_id
+order Measure age_name, last
 
-order Sex, after(Age)
+sort Location Sex cause_id_new
 
-
-
-gen age_id_new = .
-replace age_id_new = 1 if Age == "Under 5"
-replace age_id_new = 2 if Age == "5-14 years"
-replace age_id_new = 3 if Age == "15-49 years"
-replace age_id_new = 4 if Age == "50-69 years"
-replace age_id_new = 5 if Age == "70+ years"
-
-replace Age = "0-5" if Age == "Under 5"
-replace Age = "5-14" if Age == "5-14 years"
-replace Age = "15-49" if Age == "15-49 years"
-replace Age = "50-69" if Age == "50-69 years"
-replace Age = "70+" if Age == "70+ years"
- 
-
-* gen Sex-Year-Age combinations  
-
-egen Sex_Year_Age = group(Sex Year Age), lname(name)
-
-label var Sex_Year_Age "Sex-Year-Age group"
-
-save "IHME-GBD_2019_DATA-44.dta", replace
-
-
-* for YLDs 1990 2000 2010 2019 All Ages
-	
-keep if Measure == "YLDs"
-
-
-bysort Sex_Year_Age: egen rank = rank(Value)
-
-label var rank "rank of mean YLDs within Sex_Year_Age group"
-
-sort Sex_Year_Age rank
-
-label var location_name "Country"
-
-keep if location_name == "Canada"
-
-*
-
-drop Value Lower_UL Upper_UL Sex_Year
-
-drop location_name Cause
-
-order Measure Sex Age rank age_id_new
-
-reshape wide rank, i(Measure Sex Age) j(Year)
-
-sort sex_id_new age_id_new
-
-drop sex_id_new age_id_new
+sort sex_id_new 
 
 qui compress
 
-save "Table 4 Part6.dta", replace
+keep if year_start == 1990 & year_end == 2019
+
+keep Location Sex Cause Value cause_id_new 
+
+keep if Sex == "Both sexes"
+
+drop Sex
+
+replace Location = "United_States" if Location == "United States of America"
+replace Location = "Asia_Pacific" if Location == "High-income Asia Pacific"
+replace Location = "Western_Europe" if Location == "Western Europe"
+replace Location = "Western_Europe" if Location == "Western Europe"
+replace Location = "Southern_Latin" if Location == "Southern Latin America" // Southern_Latin_America
 
 
-/* "Table 4 Part6.dta" contents
+gen location_id_new = .
+replace location_id_new = 1 if Location == "Canada"
+replace location_id_new = 2 if Location == "United_States"
+replace location_id_new = 3 if Location == "Western_Europe"
+replace location_id_new = 4 if Location == "Australasia"
+replace location_id_new = 5 if Location == "Asia_Pacific"
+replace location_id_new = 6 if Location == "Southern_Latin" // Southern_Latin_America
 
-Base values of 1990 2000 2010 2019
+sort location_id_new cause_id_new
 
-Value	Lower UL	Upper UL
+reshape wide Value location_id_new, i(Cause) j(Location) string
 
-YLDs 
+sort cause_id_new
 
-Both sexes	Males	Females
 
-Age: <5, 5-14, 15-49, 50-69, 70+	
 
-All causes
+rename ///
+(ValueAsia_Pacific ValueAustralasia ValueUnited_States ValueWestern_Europe ValueSouthern_Latin) ///
+(Asia_Pacific Australasia United_States Western_Europe Southern_Latin_America)
+
+rename ValueCanada Canada
+label var Canada Canada
+
+order Cause Canada United_States Western_Europe Australasia Asia_Pacific Southern_Latin_America
+
+label var United_States "United States"
+label var Western_Europe "Western Europe"
+label var Asia_Pacific "Asia Pacific"
+label var Southern_Latin_America "Southern Latin America"
+
+qui compress
+
+save "Table 4 Part3.dta", replace
+
+
+/* "Table 4 Part3.dta" contents
+
+% change values 1990-2019
+
+DALYs comparator country groups
+
+Both sexes	
+
+level 2 causes
 
 */
 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+
+
+
+
 
 
 

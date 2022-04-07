@@ -3,7 +3,7 @@
       name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output/log Table 4 c.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res} 4 Apr 2022, 16:29:33
+ {txt}opened on:  {res} 7 Apr 2022, 08:02:16
 {txt}
 {com}. 
 . ***************************************************************************
@@ -16,39 +16,36 @@
 . 
 . 
 . 
-. ** Prepares Table 4, YLDs
-. * Table 4: Canada’s rank in the world for 5 health indicators (age-standardized rates) 
-. * from 1990 to 2019, by sex and age
+. ** Prepares Table 4
+. * Table 4: Relative (%) changes in age-standardized DALY rates in Canada and comparator locations 
+. * and Canada’s rank in 1990-2019 among all high-income countries. 
+. 
+. * level 2 causes, % change in Age-standardized DALYs rate in each of 5 group of countries:
+. * Canada, United States, Western Europe, Australasia, Asia-Pacific
 . 
 . 
 . * Metadata for input data described below,
 . * under each -import delimited using "IHME-GBD_2019_DATA-??.csv"-
 . 
 . 
-. ** Table 4 Part 5: YLDs, Age-standardized
-. * Input data: "IHME-GBD_2019_DATA-45.csv"
-. * Output data: "Table 4 Part5.dta"
+. ** Table 4 Part 3: Level 2 Grouping of Conditions, % change in values 1990-2019
+. * Input data: "IHME-GBD_2019_DATA-51.csv"
+. * Output data: "Table 4 Part3.dta"
 . 
-. ** Table 4 Part 6: YLDs, Age: <5, 5-14, 15-49, 50-69, 70+
-. * Input data: "IHME-GBD_2019_DATA-46.csv"
-. * Output data: "Table 4 Part6.dta"
+. 
 . 
 . 
 . 
 . 
 . ***********************************************************************
-. * Prepare Table 4 Part5
+. * Prepare Table 4 Part3
 . 
-. * Table 4: Canada’s rank in the world for 5 health indicators (age-standardized rates) 
-. * from 1990 to 2019, by sex and age
+. ** Prepares Table 4, Level 2 Grouping of Conditions
+. * Table 4: Relative (%) changes in age-standardized DALY rates in Canada and comparator locations 
+. * and Canada’s rank in 1990-2019 among all high-income countries. 
 . 
-. * DALYS 1990    2000    2010    2019
-. 
-. * (age-standardized rates)
-. *    Both       
-. *    Male       
-. *    Female     
-. 
+. * level 2 causes, % change in Age-standardized DALYs rate in each of 5 group of countries:
+. * Canada, United States, Western Europe, Australasia, Asia-Pacific
 . 
 . 
 . * use input data from /data/ folder
@@ -61,34 +58,40 @@
 {res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/data
 {txt}
 {com}. 
-. import delimited using "IHME-GBD_2019_DATA-45.csv", clear 
-{res}{text}(16 vars, 2,448 obs)
+. import delimited using "IHME-GBD_2019_DATA-53.csv", clear 
+{res}{text}(17 vars, 102 obs)
 
 {com}. 
 . 
-. /* "IHME-GBD_2019_DATA-45.csv" Metadata:
+. /* "IHME-GBD_2019_DATA-53.csv" Metadata:
 > 
 > Permalink:
-> https://ghdx.healthdata.org/gbd-results-tool?params=gbd-api-2019-permalink/9768d126557df1e38cde353950498730
+> https://ghdx.healthdata.org/gbd-results-tool?params=gbd-api-2019-permalink/1011225e13f95ca0f155b98653f3c4f3
 > 
 > Data settings:
 > 
-> Base: Single
-> Location: Countries and territories (204)
-> Year: 1990, 2000, 2010, 2019
+> Base: Change
+> Location: 6 groups of countries (See "do Table 4 a.do")
+> Year range: 1990-2010
 > 
 > Context: Cause
 > Age: Age-standardized
 > Metric: Rate
 > 
-> Measure: YLDs
+> Measure: DALYs
 > Sex: Male, Female, Both
-> Cause: Total All Causes
+> Cause: level 2
 > 
 > 
 > Download settings: 
 > Both IDs and Names 
 > (ID = variable_id, Name = variable_name)
+> 
+> 
+> * Countries in Table 4:
+> 
+> see "do Table 4 a.do"
+> 
 > 
 > */
 . 
@@ -106,46 +109,180 @@
 . drop measure_id location_id age_id metric_id metric_name
 {txt}
 {com}. 
+. rename measure_name Measure
+{res}{txt}
+{com}. 
 . rename cause_name Cause
 {res}{txt}
 {com}. 
-. rename measure_name Measure
-{res}{txt}
-{com}. replace Measure = "YLDs" if Measure == "YLDs (Years Lived with Disability)"
-{txt}(2,448 real changes made)
+. replace Cause = "Maternal & neonatal" if Cause == "Maternal and neonatal disorders"
+{txt}(6 real changes made)
 
-{com}. qui compress
-{txt}
+{com}. replace Cause = "Respiratory infections" if Cause == "Respiratory infections and tuberculosis"
+{txt}(0 real changes made)
+
+{com}. replace Cause = "Neoplasms" if Cause == "Neoplasms"
+{txt}(0 real changes made)
+
+{com}. replace Cause = "Cardiovascular" if Cause == "Cardiovascular diseases"
+{txt}(6 real changes made)
+
+{com}. replace Cause = "Chronic respiratory" if Cause == "Chronic respiratory diseases"
+{txt}(6 real changes made)
+
+{com}. replace Cause = "Digestive" if Cause == "Digestive diseases"
+{txt}(6 real changes made)
+
+{com}. replace Cause = "Neurological" if Cause == "Neurological disorders"
+{txt}(6 real changes made)
+
+{com}. replace Cause = "Mental" if Cause == "Mental disorders"
+{txt}(6 real changes made)
+
+{com}. replace Cause = "Substance use" if Cause == "Substance use disorders"
+{txt}(6 real changes made)
+
+{com}. replace Cause = "Diabetes & kidney" if Cause == "Diabetes and kidney diseases"
+{txt}(6 real changes made)
+
+{com}. replace Cause = "Skin" if Cause == "Skin and subcutaneous diseases"
+{txt}(6 real changes made)
+
+{com}. replace Cause = "Sense organ" if Cause == "Sense organ diseases"
+{txt}(6 real changes made)
+
+{com}. replace Cause = "Musculoskeletal" if Cause == "Musculoskeletal disorders"
+{txt}(6 real changes made)
+
+{com}. replace Cause = "Other NCD" if Cause == "Other non-communicable diseases"
+{txt}(6 real changes made)
+
+{com}. replace Cause = "Transport injuries" if Cause == "Transport injuries"
+{txt}(0 real changes made)
+
+{com}. replace Cause = "Unintentional injuries" if Cause == "Unintentional injuries"
+{txt}(0 real changes made)
+
+{com}. replace Cause = "Self-harm and violence" if Cause == "Self-harm and interpersonal violence"
+{txt}(6 real changes made)
+
+{com}. 
+. gen cause_id_new = .
+{txt}(102 missing values generated)
+
+{com}. replace cause_id_new = 1 if Cause == "Maternal & neonatal"
+{txt}(6 real changes made)
+
+{com}. replace cause_id_new = 2 if Cause == "Respiratory infections"
+{txt}(0 real changes made)
+
+{com}. replace cause_id_new = 3 if Cause == "Neoplasms"
+{txt}(6 real changes made)
+
+{com}. replace cause_id_new = 4 if Cause == "Cardiovascular"
+{txt}(6 real changes made)
+
+{com}. replace cause_id_new = 5 if Cause == "Chronic respiratory"
+{txt}(6 real changes made)
+
+{com}. replace cause_id_new = 6 if Cause == "Digestive"
+{txt}(6 real changes made)
+
+{com}. replace cause_id_new = 7 if Cause == "Neurological"
+{txt}(6 real changes made)
+
+{com}. replace cause_id_new = 8 if Cause == "Mental"
+{txt}(6 real changes made)
+
+{com}. replace cause_id_new = 9 if Cause == "Substance use"
+{txt}(6 real changes made)
+
+{com}. replace cause_id_new = 10 if Cause == "Diabetes & kidney"
+{txt}(6 real changes made)
+
+{com}. replace cause_id_new = 11 if Cause == "Skin"
+{txt}(6 real changes made)
+
+{com}. replace cause_id_new = 12 if Cause == "Sense organ"
+{txt}(6 real changes made)
+
+{com}. replace cause_id_new = 13 if Cause == "Musculoskeletal"
+{txt}(6 real changes made)
+
+{com}. replace cause_id_new = 14 if Cause == "Other NCD"
+{txt}(6 real changes made)
+
+{com}. replace cause_id_new = 15 if Cause == "Transport injuries"
+{txt}(6 real changes made)
+
+{com}. replace cause_id_new = 16 if Cause == "Unintentional injuries"
+{txt}(6 real changes made)
+
+{com}. replace cause_id_new = 17 if Cause == "Self-harm and violence"
+{txt}(6 real changes made)
+
 {com}. 
 . 
+. 
+. drop if Cause == "Enteric infections"
+{txt}(0 observations deleted)
+
+{com}. drop if Cause == "HIV/AIDS and sexually transmitted infections"
+{txt}(0 observations deleted)
+
+{com}. drop if Cause == "Neglected tropical diseases and malaria"
+{txt}(0 observations deleted)
+
+{com}. drop if Cause == "Nutritional deficiencies"
+{txt}(6 observations deleted)
+
+{com}. drop if Cause == "Other infectious diseases"
+{txt}(0 observations deleted)
+
+{com}. 
+. 
+. 
+. 
 . gen Sex = ""
-{txt}(2,448 missing values generated)
+{txt}(96 missing values generated)
 
 {com}. replace Sex = "Both sexes" if sex_name == "Both"
 {txt}variable {bf}Sex{sf} was {bf}{res}str1{sf}{txt} now {bf}{res}str10{sf}
-{txt}(816 real changes made)
+{txt}(96 real changes made)
 
 {com}. replace Sex = "Males" if sex_name == "Male"
-{txt}(816 real changes made)
+{txt}(0 real changes made)
 
 {com}. replace Sex = "Females" if sex_name == "Female"
-{txt}(816 real changes made)
+{txt}(0 real changes made)
 
 {com}. drop sex_name
 {txt}
 {com}. 
 . 
 . gen sex_id_new = .
-{txt}(2,448 missing values generated)
+{txt}(96 missing values generated)
 
 {com}. replace sex_id_new = 1 if Sex == "Both sexes"
-{txt}(816 real changes made)
+{txt}(96 real changes made)
 
 {com}. replace sex_id_new = 2 if Sex == "Males"
-{txt}(816 real changes made)
+{txt}(0 real changes made)
 
 {com}. replace sex_id_new = 3 if Sex == "Females"
-{txt}(816 real changes made)
+{txt}(0 real changes made)
+
+{com}. 
+. 
+. * gen percent = proportion * 100
+. replace val = val * 100
+{txt}(96 real changes made)
+
+{com}. replace upper = upper * 100
+{txt}(96 real changes made)
+
+{com}. replace lower = lower * 100
+{txt}(96 real changes made)
 
 {com}. 
 . rename  val Value
@@ -164,435 +301,160 @@
 {txt}
 {com}. 
 . replace Value = round(Value,0.1)
-{txt}(2,418 real changes made)
+{txt}(96 real changes made)
 
 {com}. replace Upper_UL = round(Upper_UL,0.1)
-{txt}(2,428 real changes made)
+{txt}(96 real changes made)
 
 {com}. replace Lower_UL = round(Lower_UL,0.1)
-{txt}(2,432 real changes made)
+{txt}(96 real changes made)
 
 {com}. format Value Upper_UL Lower_UL %5.1fc
 {txt}
-{com}. 
-. rename age_name Age
-{res}{txt}
 {com}.         
-. rename year Year 
+. order sex_id cause_id year_start year_end, last
+{txt}
+{com}. 
+. order Sex, after(age_name)
+{txt}
+{com}. 
+. rename location_name Location
 {res}{txt}
 {com}. 
-. 
-. sort sex_id_new Year 
+. order Measure age_name, last
 {txt}
 {com}. 
-. drop sex_id cause_id
+. sort Location Sex cause_id_new
 {txt}
 {com}. 
-. order Sex, after(Age)
-{txt}
-{com}. 
-. 
-. * gen Sex-Year combinations  
-. 
-. egen Sex_Year = group(Sex Year), lname(name)
-{txt}
-{com}. 
-. label var Sex_Year "Sex-Year group"
-{txt}
-{com}. 
-. save "IHME-GBD_2019_DATA-45.dta", replace
-{txt}file IHME-GBD_2019_DATA-45.dta saved
-
-{com}. 
-. 
-. * for YLDs 1990 2000 2010 2019 All Ages
-.         
-. keep if Measure == "YLDs"
-{txt}(0 observations deleted)
-
-{com}. 
-. 
-. bysort Sex_Year: egen rank = rank(Value)
-{txt}
-{com}. 
-. label var rank "rank of mean YLDs within Sex-Year group"
-{txt}
-{com}. 
-. sort Sex_Year rank
-{txt}
-{com}. 
-. label var location_name "Country"
-{txt}
-{com}. 
-. keep if location_name == "Canada"
-{txt}(2,436 observations deleted)
-
-{com}. 
-. *
-. 
-. drop Value Lower_UL Upper_UL Sex_Year
-{txt}
-{com}. 
-. drop location_name Cause
-{txt}
-{com}. 
-. order Measure Sex Age rank 
-{txt}
-{com}. 
-. reshape wide rank, i(Measure Sex Age) j(Year)
-{txt}(note: j = 1990 2000 2010 2019)
-
-Data{col 36}long{col 43}->{col 48}wide
-{hline 77}
-Number of obs.                 {res}      12   {txt}->{res}       3
-{txt}Number of variables            {res}       6   {txt}->{res}       8
-{txt}j variable (4 values)              {res}Year   {txt}->   (dropped)
-xij variables:
-                                   {res}rank   {txt}->   {res}rank1990 rank2000 ... rank2019
-{txt}{hline 77}
-
-{com}. 
-. sort sex_id_new
-{txt}
-{com}. 
-. drop sex_id_new
+. sort sex_id_new 
 {txt}
 {com}. 
 . qui compress
 {txt}
 {com}. 
-. save "Table 4 Part5.dta", replace
-{txt}(note: file Table 4 Part5.dta not found)
-file Table 4 Part5.dta saved
-
-{com}. 
-. 
-. /* "Table 4 Part5.dta" contents
-> 
-> Base values of 1990 2000 2010 2019
-> 
-> Value   Lower UL        Upper UL
-> 
-> YLDs 
-> 
-> Both sexes      Males   Females
-> 
-> Age-standardized        
-> 
-> All causes
-> 
-> */
-. 
-. 
-. 
-. 
-. 
-. 
-. 
-. 
-. 
-. 
-. ***********************************************************************
-. * Prepare Table 4 Part6
-. 
-. * Table 4: Canada’s rank in the world for 5 health indicators (age-standardized rates) 
-. * from 1990 to 2019, by sex and age
-. 
-. * DALYS 1990    2000    2010    2019
-. 
-. * Age (Both sexes)
-. *     <5        
-. *     5-14      
-. *     15-49     
-. *     50-69     
-. *     70+       
-.  
-.  
-. 
-. * use input data from /data/ folder
-. 
-. cd .. // Canada-Burden-of-Disease-main
-{res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main
-{txt}
-{com}. 
-. cd data
-{res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/data
-{txt}
-{com}. 
-. import delimited using "IHME-GBD_2019_DATA-46.csv", clear 
-{res}{text}(16 vars, 12,240 obs)
-
-{com}. 
-. 
-. /* "IHME-GBD_2019_DATA-46.csv" Metadata:
-> 
-> Permalink:
-> https://ghdx.healthdata.org/gbd-results-tool?params=gbd-api-2019-permalink/2a09b71da809e3d65e90c125c726da0d
-> 
-> Data settings:
-> 
-> Base: Single
-> Location: Countries and territories (204)
-> Year: 1990, 2000, 2010, 2019
-> 
-> Context: Cause
-> Age: <5, 5-14, 15-49, 50-69, 70+
-> Metric: Rate
-> 
-> Measure: YLDs
-> Sex: Male, Female, Both
-> Cause: Total All Causes
-> 
-> 
-> Download settings: 
-> Both IDs and Names 
-> (ID = variable_id, Name = variable_name)
-> 
-> */
-. 
-. 
-.  
-. 
-. * save output data in /output/ folder
-. 
-. cd .. // Canada-Burden-of-Disease-main
-{res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main
-{txt}
-{com}. 
-. cd output 
-{res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output
-{txt}
-{com}. 
-. drop measure_id location_id age_id metric_id metric_name
-{txt}
-{com}. 
-. rename cause_name Cause
-{res}{txt}
-{com}. 
-. rename measure_name Measure
-{res}{txt}
-{com}. replace Measure = "YLDs" if Measure == "YLDs (Years Lived with Disability)"
-{txt}(12,240 real changes made)
-
-{com}. qui compress
-{txt}
-{com}. 
-. 
-. gen Sex = ""
-{txt}(12,240 missing values generated)
-
-{com}. replace Sex = "Both sexes" if sex_name == "Both"
-{txt}variable {bf}Sex{sf} was {bf}{res}str1{sf}{txt} now {bf}{res}str10{sf}
-{txt}(4,080 real changes made)
-
-{com}. replace Sex = "Males" if sex_name == "Male"
-{txt}(4,080 real changes made)
-
-{com}. replace Sex = "Females" if sex_name == "Female"
-{txt}(4,080 real changes made)
-
-{com}. drop sex_name
-{txt}
-{com}. 
-. 
-. gen sex_id_new = .
-{txt}(12,240 missing values generated)
-
-{com}. replace sex_id_new = 1 if Sex == "Both sexes"
-{txt}(4,080 real changes made)
-
-{com}. replace sex_id_new = 2 if Sex == "Males"
-{txt}(4,080 real changes made)
-
-{com}. replace sex_id_new = 3 if Sex == "Females"
-{txt}(4,080 real changes made)
-
-{com}. 
-. rename  val Value
-{res}{txt}
-{com}. rename upper Upper_UL
-{res}{txt}
-{com}. rename lower Lower_UL
-{res}{txt}
-{com}. 
-. order Upper_UL, after(Lower_UL)
-{txt}
-{com}. 
-. label var Upper_UL "Upper UL"
-{txt}
-{com}. label var Lower_UL "Lower UL"
-{txt}
-{com}. 
-. replace Value = round(Value,0.1)
-{txt}(12,119 real changes made)
-
-{com}. replace Upper_UL = round(Upper_UL,0.1)
-{txt}(12,076 real changes made)
-
-{com}. replace Lower_UL = round(Lower_UL,0.1)
-{txt}(12,140 real changes made)
-
-{com}. format Value Upper_UL Lower_UL %5.1fc
-{txt}
-{com}. 
-. rename age_name Age
-{res}{txt}
-{com}.         
-. rename year Year 
-{res}{txt}
-{com}. 
-. 
-. sort sex_id_new Year 
-{txt}
-{com}. 
-. drop sex_id cause_id
-{txt}
-{com}. 
-. order Sex, after(Age)
-{txt}
-{com}. 
-. 
-. 
-. gen age_id_new = .
-{txt}(12,240 missing values generated)
-
-{com}. replace age_id_new = 1 if Age == "Under 5"
-{txt}(2,448 real changes made)
-
-{com}. replace age_id_new = 2 if Age == "5-14 years"
-{txt}(2,448 real changes made)
-
-{com}. replace age_id_new = 3 if Age == "15-49 years"
-{txt}(2,448 real changes made)
-
-{com}. replace age_id_new = 4 if Age == "50-69 years"
-{txt}(2,448 real changes made)
-
-{com}. replace age_id_new = 5 if Age == "70+ years"
-{txt}(2,448 real changes made)
-
-{com}. 
-. replace Age = "0-5" if Age == "Under 5"
-{txt}(2,448 real changes made)
-
-{com}. replace Age = "5-14" if Age == "5-14 years"
-{txt}(2,448 real changes made)
-
-{com}. replace Age = "15-49" if Age == "15-49 years"
-{txt}(2,448 real changes made)
-
-{com}. replace Age = "50-69" if Age == "50-69 years"
-{txt}(2,448 real changes made)
-
-{com}. replace Age = "70+" if Age == "70+ years"
-{txt}(2,448 real changes made)
-
-{com}.  
-. 
-. * gen Sex-Year-Age combinations  
-. 
-. egen Sex_Year_Age = group(Sex Year Age), lname(name)
-{txt}
-{com}. 
-. label var Sex_Year_Age "Sex-Year-Age group"
-{txt}
-{com}. 
-. save "IHME-GBD_2019_DATA-44.dta", replace
-{txt}file IHME-GBD_2019_DATA-44.dta saved
-
-{com}. 
-. 
-. * for YLDs 1990 2000 2010 2019 All Ages
-.         
-. keep if Measure == "YLDs"
+. keep if year_start == 1990 & year_end == 2019
 {txt}(0 observations deleted)
 
 {com}. 
-. 
-. bysort Sex_Year_Age: egen rank = rank(Value)
+. keep Location Sex Cause Value cause_id_new 
 {txt}
 {com}. 
-. label var rank "rank of mean YLDs within Sex_Year_Age group"
-{txt}
-{com}. 
-. sort Sex_Year_Age rank
-{txt}
-{com}. 
-. label var location_name "Country"
-{txt}
-{com}. 
-. keep if location_name == "Canada"
-{txt}(12,180 observations deleted)
+. keep if Sex == "Both sexes"
+{txt}(0 observations deleted)
 
 {com}. 
-. *
+. drop Sex
+{txt}
+{com}. 
+. replace Location = "United_States" if Location == "United States of America"
+{txt}(16 real changes made)
+
+{com}. replace Location = "Asia_Pacific" if Location == "High-income Asia Pacific"
+{txt}(16 real changes made)
+
+{com}. replace Location = "Western_Europe" if Location == "Western Europe"
+{txt}(16 real changes made)
+
+{com}. replace Location = "Western_Europe" if Location == "Western Europe"
+{txt}(0 real changes made)
+
+{com}. replace Location = "Southern_Latin" if Location == "Southern Latin America" // Southern_Latin_America
+{txt}(16 real changes made)
+
+{com}. 
 . 
-. drop Value Lower_UL Upper_UL Sex_Year
+. gen location_id_new = .
+{txt}(96 missing values generated)
+
+{com}. replace location_id_new = 1 if Location == "Canada"
+{txt}(16 real changes made)
+
+{com}. replace location_id_new = 2 if Location == "United_States"
+{txt}(16 real changes made)
+
+{com}. replace location_id_new = 3 if Location == "Western_Europe"
+{txt}(16 real changes made)
+
+{com}. replace location_id_new = 4 if Location == "Australasia"
+{txt}(16 real changes made)
+
+{com}. replace location_id_new = 5 if Location == "Asia_Pacific"
+{txt}(16 real changes made)
+
+{com}. replace location_id_new = 6 if Location == "Southern_Latin" // Southern_Latin_America
+{txt}(16 real changes made)
+
+{com}. 
+. sort location_id_new cause_id_new
 {txt}
 {com}. 
-. drop location_name Cause
-{txt}
-{com}. 
-. order Measure Sex Age rank age_id_new
-{txt}
-{com}. 
-. reshape wide rank, i(Measure Sex Age) j(Year)
-{txt}(note: j = 1990 2000 2010 2019)
+. reshape wide Value location_id_new, i(Cause) j(Location) string
+{txt}(note: j = Asia_Pacific Australasia Canada Southern_Latin United_States Western_Europe)
 
 Data{col 36}long{col 43}->{col 48}wide
 {hline 77}
-Number of obs.                 {res}      60   {txt}->{res}      15
-{txt}Number of variables            {res}       7   {txt}->{res}       9
-{txt}j variable (4 values)              {res}Year   {txt}->   (dropped)
+Number of obs.                 {res}      96   {txt}->{res}      16
+{txt}Number of variables            {res}       5   {txt}->{res}      14
+{txt}j variable (6 values)          {res}Location   {txt}->   (dropped)
 xij variables:
-                                   {res}rank   {txt}->   {res}rank1990 rank2000 ... rank2019
+                                  {res}Value   {txt}->   {res}ValueAsia_Pacific ValueAustralasia ... ValueWestern_Europe
+                        location_id_new   {txt}->   {res}location_id_newAsia_Pacific location_id_newAustralasia ... location_id_newWestern_Europe
 {txt}{hline 77}
 
 {com}. 
-. sort sex_id_new age_id_new
+. sort cause_id_new
 {txt}
 {com}. 
-. drop sex_id_new age_id_new
+. 
+. 
+. rename ///
+> (ValueAsia_Pacific ValueAustralasia ValueUnited_States ValueWestern_Europe ValueSouthern_Latin) ///
+> (Asia_Pacific Australasia United_States Western_Europe Southern_Latin_America)
+{res}{txt}
+{com}. 
+. rename ValueCanada Canada
+{res}{txt}
+{com}. label var Canada Canada
+{txt}
+{com}. 
+. order Cause Canada United_States Western_Europe Australasia Asia_Pacific Southern_Latin_America
+{txt}
+{com}. 
+. label var United_States "United States"
+{txt}
+{com}. label var Western_Europe "Western Europe"
+{txt}
+{com}. label var Asia_Pacific "Asia Pacific"
+{txt}
+{com}. label var Southern_Latin_America "Southern Latin America"
 {txt}
 {com}. 
 . qui compress
 {txt}
 {com}. 
-. save "Table 4 Part6.dta", replace
-{txt}(note: file Table 4 Part6.dta not found)
-file Table 4 Part6.dta saved
+. save "Table 4 Part3.dta", replace
+{txt}(note: file Table 4 Part3.dta not found)
+file Table 4 Part3.dta saved
 
 {com}. 
 . 
-. /* "Table 4 Part6.dta" contents
+. /* "Table 4 Part3.dta" contents
 > 
-> Base values of 1990 2000 2010 2019
+> % change values 1990-2019
 > 
-> Value   Lower UL        Upper UL
+> DALYs comparator country groups
 > 
-> YLDs 
+> Both sexes      
 > 
-> Both sexes      Males   Females
-> 
-> Age: <5, 5-14, 15-49, 50-69, 70+        
-> 
-> All causes
+> level 2 causes
 > 
 > */
 . 
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
+. 
+. 
+. 
+. 
 . 
 . 
 . 
@@ -605,7 +467,7 @@ file Table 4 Part6.dta saved
       {txt}name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output/log Table 4 c.smcl
   {txt}log type:  {res}smcl
- {txt}closed on:  {res} 4 Apr 2022, 16:29:34
+ {txt}closed on:  {res} 7 Apr 2022, 08:02:17
 {txt}{.-}
 {smcl}
 {txt}{sf}{ul off}
