@@ -116,10 +116,10 @@ order Upper_UL, after(Lower_UL)
 label var Upper_UL "Upper UL"
 label var Lower_UL "Lower UL"
 
-replace Value = round(Value,0.01)
+replace Value = round(Value,0.1)
 replace Upper_UL = round(Upper_UL,0.1)
 replace Lower_UL = round(Lower_UL,0.1)
-format Value Upper_UL Lower_UL %5.2fc
+format Value Upper_UL Lower_UL %5.1fc
 	
 rename year Year 
 

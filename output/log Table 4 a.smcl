@@ -3,7 +3,7 @@
       name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output/log Table 4 a.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res} 7 Apr 2022, 09:10:35
+ {txt}opened on:  {res} 7 Apr 2022, 09:15:53
 {txt}
 {com}. 
 . ***************************************************************************
@@ -309,7 +309,7 @@
 {com}. label var Lower_UL "Lower UL"
 {txt}
 {com}. 
-. replace Value = round(Value,0.01)
+. replace Value = round(Value,0.1)
 {txt}(54 real changes made)
 
 {com}. replace Upper_UL = round(Upper_UL,0.1)
@@ -318,7 +318,7 @@
 {com}. replace Lower_UL = round(Lower_UL,0.1)
 {txt}(54 real changes made)
 
-{com}. format Value Upper_UL Lower_UL %5.2fc
+{com}. format Value Upper_UL Lower_UL %5.1fc
 {txt}
 {com}.         
 . order sex_id cause_id year_start year_end, last
@@ -453,7 +453,7 @@ file Table 4 Part1.dta saved
       {txt}name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output/log Table 4 a.smcl
   {txt}log type:  {res}smcl
- {txt}closed on:  {res} 7 Apr 2022, 09:10:35
+ {txt}closed on:  {res} 7 Apr 2022, 09:15:54
 {txt}{.-}
 {smcl}
 {txt}{sf}{ul off}

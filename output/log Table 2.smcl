@@ -3,7 +3,7 @@
       name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output/log Table 2.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res} 7 Apr 2022, 09:10:30
+ {txt}opened on:  {res} 7 Apr 2022, 09:15:48
 {txt}
 {com}. 
 . ***************************************************************************
@@ -1355,7 +1355,7 @@ rm: IHME-GBD_2019_DATA-23 level1.dta: No such file or directory
       {txt}name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output/log Table 2.smcl
   {txt}log type:  {res}smcl
- {txt}closed on:  {res} 7 Apr 2022, 09:10:30
+ {txt}closed on:  {res} 7 Apr 2022, 09:15:49
 {txt}{.-}
 {smcl}
 {txt}{sf}{ul off}

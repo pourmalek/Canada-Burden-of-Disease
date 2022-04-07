@@ -3,7 +3,7 @@
       name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output/log Table 4 d.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res} 7 Apr 2022, 09:10:36
+ {txt}opened on:  {res} 7 Apr 2022, 09:15:54
 {txt}
 {com}. 
 . ***************************************************************************
@@ -578,7 +578,7 @@ str16, now str22 to accommodate using data's values)
       {txt}name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output/log Table 4 d.smcl
   {txt}log type:  {res}smcl
- {txt}closed on:  {res} 7 Apr 2022, 09:10:37
+ {txt}closed on:  {res} 7 Apr 2022, 09:15:55
 {txt}{.-}
 {smcl}
 {txt}{sf}{ul off}
