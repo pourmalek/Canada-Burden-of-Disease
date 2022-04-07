@@ -419,10 +419,10 @@ label var Lower_UL "Lower UL"
 
 order Upper_UL, after(Lower_UL)
 
-replace Value = round(Value,0.01)
+replace Value = round(Value,0.1)
 replace Upper_UL = round(Upper_UL,0.1)
 replace Lower_UL = round(Lower_UL,0.1)
-format Value Upper_UL Lower_UL %5.2f
+format Value Upper_UL Lower_UL %5.1f
 
 gen sex_id_new = .
 replace sex_id_new = 1 if sex_name == "Both"
@@ -534,10 +534,10 @@ rename ChangeLower_UL1990_2019 Lower_UL
 label var Upper_UL "Upper UL"
 label var Lower_UL "Lower UL"
 
-replace Value = round(Value,0.01)
+replace Value = round(Value,0.1)
 replace Upper_UL = round(Upper_UL,0.1)
 replace Lower_UL = round(Lower_UL,0.1)
-format Value Upper_UL Lower_UL %5.2f
+format Value Upper_UL Lower_UL %5.1f
 
 
 order Measure Age Sex Value  
@@ -606,10 +606,10 @@ label var Lower_UL "Lower UL"
 
 order Upper_UL, after(Lower_UL)
 
-replace Value = round(Value,0.01)
+replace Value = round(Value,0.1)
 replace Upper_UL = round(Upper_UL,0.1)
 replace Lower_UL = round(Lower_UL,0.1)
-format Value Upper_UL Lower_UL %5.2f
+format Value Upper_UL Lower_UL %5.1f
 
 gen sex_id_new = .
 replace sex_id_new = 1 if sex_name == "Both"
@@ -636,10 +636,10 @@ replace sex_id_new = 3 if Sex == "Female"
 sort sex_id_new 
 drop sex_id_new
 
-replace Value = round(Value,0.01)
+replace Value = round(Value,0.1)
 replace Upper_UL = round(Upper_UL,0.1)
 replace Lower_UL = round(Lower_UL,0.1)
-format Value Upper_UL Lower_UL %5.2f
+format Value Upper_UL Lower_UL %5.1f
 
 
 keep if Year == 1990 | Year == 2019
@@ -776,10 +776,10 @@ label var Lower_UL "Lower UL"
 
 order Upper_UL, after(Lower_UL)
 
-replace Value = round(Value,0.01)
+replace Value = round(Value,0.1)
 replace Upper_UL = round(Upper_UL,0.1)
 replace Lower_UL = round(Lower_UL,0.1)
-format Value Upper_UL Lower_UL %5.2f
+format Value Upper_UL Lower_UL %5.1f
 
 gen sex_id_new = .
 replace sex_id_new = 1 if sex_name == "Both"
@@ -808,10 +808,10 @@ sort sex_id_new
 
 drop sex_id_new
 
-replace Value = round(Value,0.01)
+replace Value = round(Value,0.1)
 replace Upper_UL = round(Upper_UL,0.1)
 replace Lower_UL = round(Lower_UL,0.1)
-format Value Upper_UL Lower_UL %5.2f
+format Value Upper_UL Lower_UL %5.1f
 
 
 order Measure Age Sex Value Lower_UL Upper_UL
