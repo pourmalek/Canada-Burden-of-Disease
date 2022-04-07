@@ -3,7 +3,7 @@
       name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output/log Table 4 c.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res} 7 Apr 2022, 08:02:16
+ {txt}opened on:  {res} 7 Apr 2022, 09:10:35
 {txt}
 {com}. 
 . ***************************************************************************
@@ -59,14 +59,14 @@
 {txt}
 {com}. 
 . import delimited using "IHME-GBD_2019_DATA-53.csv", clear 
-{res}{text}(17 vars, 102 obs)
+{res}{text}(17 vars, 108 obs)
 
 {com}. 
 . 
 . /* "IHME-GBD_2019_DATA-53.csv" Metadata:
 > 
 > Permalink:
-> https://ghdx.healthdata.org/gbd-results-tool?params=gbd-api-2019-permalink/1011225e13f95ca0f155b98653f3c4f3
+> https://ghdx.healthdata.org/gbd-results-tool?params=gbd-api-2019-permalink/6db6961bfbc56bc8b68e9c14755d6313
 > 
 > Data settings:
 > 
@@ -115,11 +115,12 @@
 . rename cause_name Cause
 {res}{txt}
 {com}. 
+. 
 . replace Cause = "Maternal & neonatal" if Cause == "Maternal and neonatal disorders"
 {txt}(6 real changes made)
 
 {com}. replace Cause = "Respiratory infections" if Cause == "Respiratory infections and tuberculosis"
-{txt}(0 real changes made)
+{txt}(6 real changes made)
 
 {com}. replace Cause = "Neoplasms" if Cause == "Neoplasms"
 {txt}(0 real changes made)
@@ -168,13 +169,13 @@
 
 {com}. 
 . gen cause_id_new = .
-{txt}(102 missing values generated)
+{txt}(108 missing values generated)
 
 {com}. replace cause_id_new = 1 if Cause == "Maternal & neonatal"
 {txt}(6 real changes made)
 
 {com}. replace cause_id_new = 2 if Cause == "Respiratory infections"
-{txt}(0 real changes made)
+{txt}(6 real changes made)
 
 {com}. replace cause_id_new = 3 if Cause == "Neoplasms"
 {txt}(6 real changes made)
@@ -244,11 +245,11 @@
 . 
 . 
 . gen Sex = ""
-{txt}(96 missing values generated)
+{txt}(102 missing values generated)
 
 {com}. replace Sex = "Both sexes" if sex_name == "Both"
 {txt}variable {bf}Sex{sf} was {bf}{res}str1{sf}{txt} now {bf}{res}str10{sf}
-{txt}(96 real changes made)
+{txt}(102 real changes made)
 
 {com}. replace Sex = "Males" if sex_name == "Male"
 {txt}(0 real changes made)
@@ -261,10 +262,10 @@
 {com}. 
 . 
 . gen sex_id_new = .
-{txt}(96 missing values generated)
+{txt}(102 missing values generated)
 
 {com}. replace sex_id_new = 1 if Sex == "Both sexes"
-{txt}(96 real changes made)
+{txt}(102 real changes made)
 
 {com}. replace sex_id_new = 2 if Sex == "Males"
 {txt}(0 real changes made)
@@ -276,13 +277,13 @@
 . 
 . * gen percent = proportion * 100
 . replace val = val * 100
-{txt}(96 real changes made)
+{txt}(102 real changes made)
 
 {com}. replace upper = upper * 100
-{txt}(96 real changes made)
+{txt}(102 real changes made)
 
 {com}. replace lower = lower * 100
-{txt}(96 real changes made)
+{txt}(102 real changes made)
 
 {com}. 
 . rename  val Value
@@ -301,13 +302,13 @@
 {txt}
 {com}. 
 . replace Value = round(Value,0.1)
-{txt}(96 real changes made)
+{txt}(102 real changes made)
 
 {com}. replace Upper_UL = round(Upper_UL,0.1)
-{txt}(96 real changes made)
+{txt}(102 real changes made)
 
 {com}. replace Lower_UL = round(Lower_UL,0.1)
-{txt}(96 real changes made)
+{txt}(102 real changes made)
 
 {com}. format Value Upper_UL Lower_UL %5.1fc
 {txt}
@@ -348,42 +349,42 @@
 {txt}
 {com}. 
 . replace Location = "United_States" if Location == "United States of America"
-{txt}(16 real changes made)
+{txt}(17 real changes made)
 
 {com}. replace Location = "Asia_Pacific" if Location == "High-income Asia Pacific"
-{txt}(16 real changes made)
+{txt}(17 real changes made)
 
 {com}. replace Location = "Western_Europe" if Location == "Western Europe"
-{txt}(16 real changes made)
+{txt}(17 real changes made)
 
 {com}. replace Location = "Western_Europe" if Location == "Western Europe"
 {txt}(0 real changes made)
 
 {com}. replace Location = "Southern_Latin" if Location == "Southern Latin America" // Southern_Latin_America
-{txt}(16 real changes made)
+{txt}(17 real changes made)
 
 {com}. 
 . 
 . gen location_id_new = .
-{txt}(96 missing values generated)
+{txt}(102 missing values generated)
 
 {com}. replace location_id_new = 1 if Location == "Canada"
-{txt}(16 real changes made)
+{txt}(17 real changes made)
 
 {com}. replace location_id_new = 2 if Location == "United_States"
-{txt}(16 real changes made)
+{txt}(17 real changes made)
 
 {com}. replace location_id_new = 3 if Location == "Western_Europe"
-{txt}(16 real changes made)
+{txt}(17 real changes made)
 
 {com}. replace location_id_new = 4 if Location == "Australasia"
-{txt}(16 real changes made)
+{txt}(17 real changes made)
 
 {com}. replace location_id_new = 5 if Location == "Asia_Pacific"
-{txt}(16 real changes made)
+{txt}(17 real changes made)
 
 {com}. replace location_id_new = 6 if Location == "Southern_Latin" // Southern_Latin_America
-{txt}(16 real changes made)
+{txt}(17 real changes made)
 
 {com}. 
 . sort location_id_new cause_id_new
@@ -394,7 +395,7 @@
 
 Data{col 36}long{col 43}->{col 48}wide
 {hline 77}
-Number of obs.                 {res}      96   {txt}->{res}      16
+Number of obs.                 {res}     102   {txt}->{res}      17
 {txt}Number of variables            {res}       5   {txt}->{res}      14
 {txt}j variable (6 values)          {res}Location   {txt}->   (dropped)
 xij variables:
@@ -467,7 +468,7 @@ file Table 4 Part3.dta saved
       {txt}name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output/log Table 4 c.smcl
   {txt}log type:  {res}smcl
- {txt}closed on:  {res} 7 Apr 2022, 08:02:17
+ {txt}closed on:  {res} 7 Apr 2022, 09:10:36
 {txt}{.-}
 {smcl}
 {txt}{sf}{ul off}

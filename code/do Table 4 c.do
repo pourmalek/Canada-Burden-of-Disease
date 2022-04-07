@@ -63,7 +63,7 @@ import delimited using "IHME-GBD_2019_DATA-53.csv", clear
 /* "IHME-GBD_2019_DATA-53.csv" Metadata:
 
 Permalink:
-https://ghdx.healthdata.org/gbd-results-tool?params=gbd-api-2019-permalink/1011225e13f95ca0f155b98653f3c4f3
+https://ghdx.healthdata.org/gbd-results-tool?params=gbd-api-2019-permalink/6db6961bfbc56bc8b68e9c14755d6313
 
 Data settings:
 
@@ -104,6 +104,7 @@ drop measure_id location_id age_id metric_id metric_name
 rename measure_name Measure
 
 rename cause_name Cause
+
 
 replace Cause = "Maternal & neonatal" if Cause == "Maternal and neonatal disorders"
 replace Cause = "Respiratory infections" if Cause == "Respiratory infections and tuberculosis"

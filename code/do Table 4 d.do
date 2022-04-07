@@ -63,7 +63,7 @@ import delimited using "IHME-GBD_2019_DATA-54.csv", clear
 /* "IHME-GBD_2019_DATA-54.csv" Metadata:
 
 Permalink:
-https://ghdx.healthdata.org/gbd-results-tool?params=gbd-api-2019-permalink/5a652f794f564ee9988223d051289d0b
+https://ghdx.healthdata.org/gbd-results-tool?params=gbd-api-2019-permalink/340b3f095e419b5ec2b40dc0d44d98e2
 
 Data settings:
 

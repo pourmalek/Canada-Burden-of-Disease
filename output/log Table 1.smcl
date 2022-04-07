@@ -3,7 +3,7 @@
       name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output/log Table 1.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res} 7 Apr 2022, 08:02:08
+ {txt}opened on:  {res} 7 Apr 2022, 09:10:29
 {txt}
 {com}. 
 . ***************************************************************************
@@ -617,7 +617,7 @@ file Table 1 Part2.dta saved
 . order Upper_UL, after(Lower_UL)
 {txt}
 {com}. 
-. replace Value = round(Value,0.01)
+. replace Value = round(Value,0.1)
 {txt}(12 real changes made)
 
 {com}. replace Upper_UL = round(Upper_UL,0.1)
@@ -626,7 +626,7 @@ file Table 1 Part2.dta saved
 {com}. replace Lower_UL = round(Lower_UL,0.1)
 {txt}(12 real changes made)
 
-{com}. format Value Upper_UL Lower_UL %5.2f
+{com}. format Value Upper_UL Lower_UL %5.1f
 {txt}
 {com}. 
 . gen sex_id_new = .
@@ -818,7 +818,7 @@ file Table 1 Part3.dta saved
 {com}. label var Lower_UL "Lower UL"
 {txt}
 {com}. 
-. replace Value = round(Value,0.01)
+. replace Value = round(Value,0.1)
 {txt}(3 real changes made)
 
 {com}. replace Upper_UL = round(Upper_UL,0.1)
@@ -827,7 +827,7 @@ file Table 1 Part3.dta saved
 {com}. replace Lower_UL = round(Lower_UL,0.1)
 {txt}(3 real changes made)
 
-{com}. format Value Upper_UL Lower_UL %5.2f
+{com}. format Value Upper_UL Lower_UL %5.1f
 {txt}
 {com}. 
 . 
@@ -922,7 +922,7 @@ file Table 1 Part4.dta saved
 . order Upper_UL, after(Lower_UL)
 {txt}
 {com}. 
-. replace Value = round(Value,0.01)
+. replace Value = round(Value,0.1)
 {txt}(12 real changes made)
 
 {com}. replace Upper_UL = round(Upper_UL,0.1)
@@ -931,7 +931,7 @@ file Table 1 Part4.dta saved
 {com}. replace Lower_UL = round(Lower_UL,0.1)
 {txt}(12 real changes made)
 
-{com}. format Value Upper_UL Lower_UL %5.2f
+{com}. format Value Upper_UL Lower_UL %5.1f
 {txt}
 {com}. 
 . gen sex_id_new = .
@@ -989,7 +989,7 @@ file Table 1 Part4.dta saved
 {com}. drop sex_id_new
 {txt}
 {com}. 
-. replace Value = round(Value,0.01)
+. replace Value = round(Value,0.1)
 {txt}(0 real changes made)
 
 {com}. replace Upper_UL = round(Upper_UL,0.1)
@@ -998,7 +998,7 @@ file Table 1 Part4.dta saved
 {com}. replace Lower_UL = round(Lower_UL,0.1)
 {txt}(0 real changes made)
 
-{com}. format Value Upper_UL Lower_UL %5.2f
+{com}. format Value Upper_UL Lower_UL %5.1f
 {txt}
 {com}. 
 . 
@@ -1207,7 +1207,7 @@ file Table 1 Part5.dta saved
 . order Upper_UL, after(Lower_UL)
 {txt}
 {com}. 
-. replace Value = round(Value,0.01)
+. replace Value = round(Value,0.1)
 {txt}(3 real changes made)
 
 {com}. replace Upper_UL = round(Upper_UL,0.1)
@@ -1216,7 +1216,7 @@ file Table 1 Part5.dta saved
 {com}. replace Lower_UL = round(Lower_UL,0.1)
 {txt}(3 real changes made)
 
-{com}. format Value Upper_UL Lower_UL %5.2f
+{com}. format Value Upper_UL Lower_UL %5.1f
 {txt}
 {com}. 
 . gen sex_id_new = .
@@ -1275,7 +1275,7 @@ file Table 1 Part5.dta saved
 . drop sex_id_new
 {txt}
 {com}. 
-. replace Value = round(Value,0.01)
+. replace Value = round(Value,0.1)
 {txt}(0 real changes made)
 
 {com}. replace Upper_UL = round(Upper_UL,0.1)
@@ -1284,7 +1284,7 @@ file Table 1 Part5.dta saved
 {com}. replace Lower_UL = round(Lower_UL,0.1)
 {txt}(0 real changes made)
 
-{com}. format Value Upper_UL Lower_UL %5.2f
+{com}. format Value Upper_UL Lower_UL %5.1f
 {txt}
 {com}. 
 . 
@@ -1608,7 +1608,7 @@ rm: Table 1 Part3.dta: No such file or directory
       {txt}name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output/log Table 1.smcl
   {txt}log type:  {res}smcl
- {txt}closed on:  {res} 7 Apr 2022, 08:02:10
+ {txt}closed on:  {res} 7 Apr 2022, 09:10:30
 {txt}{.-}
 {smcl}
 {txt}{sf}{ul off}

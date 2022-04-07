@@ -1,103 +1,109 @@
 measure_id,measure_name,location_id,location_name,sex_id,sex_name,age_id,age_name,cause_id,cause_name,metric_id,metric_name,year_start,year_end,val,upper,lower
+2,DALYs (Disability-Adjusted Life Years),102,United States of America,3,Both,27,Age-standardized,653,Skin and subcutaneous diseases,3,Rate,1990,2019,-0.041824386595810364,-0.027874640540893492,-0.057759906812642925
+2,DALYs (Disability-Adjusted Life Years),102,United States of America,3,Both,27,Age-standardized,956,Respiratory infections and tuberculosis,3,Rate,1990,2019,-0.3252881079976926,-0.2865458257323034,-0.3593983533901342
 2,DALYs (Disability-Adjusted Life Years),102,United States of America,3,Both,27,Age-standardized,688,Transport injuries,3,Rate,1990,2019,-0.39680031051680786,-0.37602095287542375,-0.42973238069906083
 2,DALYs (Disability-Adjusted Life Years),102,United States of America,3,Both,27,Age-standardized,962,Maternal and neonatal disorders,3,Rate,1990,2019,-0.28603613290264973,-0.22946543500166752,-0.339762550543275
-2,DALYs (Disability-Adjusted Life Years),65,High-income Asia Pacific,3,Both,27,Age-standardized,640,Other non-communicable diseases,3,Rate,1990,2019,-0.2918460531533181,-0.23754366278348868,-0.3502313949579119
+2,DALYs (Disability-Adjusted Life Years),102,United States of America,3,Both,27,Age-standardized,973,Substance use disorders,3,Rate,1990,2019,1.6137525663211707,1.9298233004624739,1.3492311585768455
+2,DALYs (Disability-Adjusted Life Years),102,United States of America,3,Both,27,Age-standardized,974,Diabetes and kidney diseases,3,Rate,1990,2019,0.33501589268830934,0.37393913294199477,0.2981076947019036
+2,DALYs (Disability-Adjusted Life Years),65,High-income Asia Pacific,3,Both,27,Age-standardized,410,Neoplasms,3,Rate,1990,2019,-0.3052230582898804,-0.28305979375995033,-0.33539837474735085
+2,DALYs (Disability-Adjusted Life Years),65,High-income Asia Pacific,3,Both,27,Age-standardized,558,Mental disorders,3,Rate,1990,2019,0.0035187296299047685,0.015598817604309955,-0.008556090050580344
+2,DALYs (Disability-Adjusted Life Years),65,High-income Asia Pacific,3,Both,27,Age-standardized,386,Nutritional deficiencies,3,Rate,1990,2019,-0.48112996536894204,-0.4045154608940342,-0.5514446938248455
+2,DALYs (Disability-Adjusted Life Years),65,High-income Asia Pacific,3,Both,27,Age-standardized,526,Digestive diseases,3,Rate,1990,2019,-0.46007932715555033,-0.4245586162597712,-0.4964215655530731
+2,DALYs (Disability-Adjusted Life Years),65,High-income Asia Pacific,3,Both,27,Age-standardized,688,Transport injuries,3,Rate,1990,2019,-0.7030341996324957,-0.6614750681158392,-0.7250605698427884
+2,DALYs (Disability-Adjusted Life Years),65,High-income Asia Pacific,3,Both,27,Age-standardized,696,Unintentional injuries,3,Rate,1990,2019,-0.3152962359486841,-0.2663821562654235,-0.37565846906887995
+2,DALYs (Disability-Adjusted Life Years),65,High-income Asia Pacific,3,Both,27,Age-standardized,974,Diabetes and kidney diseases,3,Rate,1990,2019,-0.1386865322118657,-0.07942038313223335,-0.2024396458121532
 2,DALYs (Disability-Adjusted Life Years),65,High-income Asia Pacific,3,Both,27,Age-standardized,542,Neurological disorders,3,Rate,1990,2019,0.041047462806653376,0.09365260685684942,-0.003935442573527546
 2,DALYs (Disability-Adjusted Life Years),65,High-income Asia Pacific,3,Both,27,Age-standardized,653,Skin and subcutaneous diseases,3,Rate,1990,2019,0.024455076955201833,0.037539022632662185,0.009675251194812476
+2,DALYs (Disability-Adjusted Life Years),65,High-income Asia Pacific,3,Both,27,Age-standardized,669,Sense organ diseases,3,Rate,1990,2019,-0.053028243395435916,-0.03414226787737221,-0.07306125920964718
 2,DALYs (Disability-Adjusted Life Years),65,High-income Asia Pacific,3,Both,27,Age-standardized,491,Cardiovascular diseases,3,Rate,1990,2019,-0.5931385151014805,-0.5634298643139619,-0.6129514095295312
+2,DALYs (Disability-Adjusted Life Years),65,High-income Asia Pacific,3,Both,27,Age-standardized,956,Respiratory infections and tuberculosis,3,Rate,1990,2019,-0.5442058767737004,-0.5073820872206123,-0.5809599076813412
+2,DALYs (Disability-Adjusted Life Years),65,High-income Asia Pacific,3,Both,27,Age-standardized,962,Maternal and neonatal disorders,3,Rate,1990,2019,-0.5213343971943497,-0.4619263671951744,-0.5767828803195268
+2,DALYs (Disability-Adjusted Life Years),96,Southern Latin America,3,Both,27,Age-standardized,410,Neoplasms,3,Rate,1990,2019,-0.19357198363356357,-0.1638427537876993,-0.22212147045998248
+2,DALYs (Disability-Adjusted Life Years),65,High-income Asia Pacific,3,Both,27,Age-standardized,973,Substance use disorders,3,Rate,1990,2019,-0.026792653290510022,0.045551651318128904,-0.08959737768508305
+2,DALYs (Disability-Adjusted Life Years),96,Southern Latin America,3,Both,27,Age-standardized,542,Neurological disorders,3,Rate,1990,2019,0.025908090681916632,0.12837303553725124,-0.06077333642110725
+2,DALYs (Disability-Adjusted Life Years),96,Southern Latin America,3,Both,27,Age-standardized,558,Mental disorders,3,Rate,1990,2019,-0.020813921461537335,0.007049409232987538,-0.04814010252192629
 2,DALYs (Disability-Adjusted Life Years),65,High-income Asia Pacific,3,Both,27,Age-standardized,508,Chronic respiratory diseases,3,Rate,1990,2019,-0.4408488422867989,-0.39724679121194734,-0.46894035177721805
 2,DALYs (Disability-Adjusted Life Years),65,High-income Asia Pacific,3,Both,27,Age-standardized,626,Musculoskeletal disorders,3,Rate,1990,2019,-0.011707109809046193,0.00663890873723819,-0.029048996146035292
 2,DALYs (Disability-Adjusted Life Years),65,High-income Asia Pacific,3,Both,27,Age-standardized,717,Self-harm and interpersonal violence,3,Rate,1990,2019,0.01654958799236312,0.08970109154853587,-0.2059878191835527
-2,DALYs (Disability-Adjusted Life Years),65,High-income Asia Pacific,3,Both,27,Age-standardized,526,Digestive diseases,3,Rate,1990,2019,-0.46007932715555033,-0.4245586162597712,-0.4964215655530731
-2,DALYs (Disability-Adjusted Life Years),102,United States of America,3,Both,27,Age-standardized,973,Substance use disorders,3,Rate,1990,2019,1.6137525663211707,1.9298233004624739,1.3492311585768455
-2,DALYs (Disability-Adjusted Life Years),102,United States of America,3,Both,27,Age-standardized,974,Diabetes and kidney diseases,3,Rate,1990,2019,0.33501589268830934,0.37393913294199477,0.2981076947019036
-2,DALYs (Disability-Adjusted Life Years),65,High-income Asia Pacific,3,Both,27,Age-standardized,386,Nutritional deficiencies,3,Rate,1990,2019,-0.48112996536894204,-0.4045154608940342,-0.5514446938248455
-2,DALYs (Disability-Adjusted Life Years),65,High-income Asia Pacific,3,Both,27,Age-standardized,669,Sense organ diseases,3,Rate,1990,2019,-0.053028243395435916,-0.03414226787737221,-0.07306125920964718
-2,DALYs (Disability-Adjusted Life Years),65,High-income Asia Pacific,3,Both,27,Age-standardized,962,Maternal and neonatal disorders,3,Rate,1990,2019,-0.5213343971943497,-0.4619263671951744,-0.5767828803195268
-2,DALYs (Disability-Adjusted Life Years),65,High-income Asia Pacific,3,Both,27,Age-standardized,973,Substance use disorders,3,Rate,1990,2019,-0.026792653290510022,0.045551651318128904,-0.08959737768508305
-2,DALYs (Disability-Adjusted Life Years),102,United States of America,3,Both,27,Age-standardized,653,Skin and subcutaneous diseases,3,Rate,1990,2019,-0.041824386595810364,-0.027874640540893492,-0.057759906812642925
-2,DALYs (Disability-Adjusted Life Years),96,Southern Latin America,3,Both,27,Age-standardized,386,Nutritional deficiencies,3,Rate,1990,2019,-0.5196771722449518,-0.44457402500665794,-0.5931213445534449
-2,DALYs (Disability-Adjusted Life Years),96,Southern Latin America,3,Both,27,Age-standardized,526,Digestive diseases,3,Rate,1990,2019,-0.25669182172066235,-0.22478417295155845,-0.28842301773927254
-2,DALYs (Disability-Adjusted Life Years),96,Southern Latin America,3,Both,27,Age-standardized,653,Skin and subcutaneous diseases,3,Rate,1990,2019,0.04314935599760332,0.08353879964826211,-0.007645703582830117
-2,DALYs (Disability-Adjusted Life Years),70,Australasia,3,Both,27,Age-standardized,386,Nutritional deficiencies,3,Rate,1990,2019,-0.30106870736691294,-0.09687469643615293,-0.4698078677872789
-2,DALYs (Disability-Adjusted Life Years),65,High-income Asia Pacific,3,Both,27,Age-standardized,410,Neoplasms,3,Rate,1990,2019,-0.3052230582898804,-0.28305979375995033,-0.33539837474735085
-2,DALYs (Disability-Adjusted Life Years),96,Southern Latin America,3,Both,27,Age-standardized,491,Cardiovascular diseases,3,Rate,1990,2019,-0.4855318595422424,-0.4662706262320466,-0.5048243011986142
-2,DALYs (Disability-Adjusted Life Years),96,Southern Latin America,3,Both,27,Age-standardized,508,Chronic respiratory diseases,3,Rate,1990,2019,-0.06390855754853425,-0.0076531908148860265,-0.12998937430993276
-2,DALYs (Disability-Adjusted Life Years),70,Australasia,3,Both,27,Age-standardized,626,Musculoskeletal disorders,3,Rate,1990,2019,0.00737516368511039,0.04323729209914603,-0.031606909308158695
-2,DALYs (Disability-Adjusted Life Years),70,Australasia,3,Both,27,Age-standardized,640,Other non-communicable diseases,3,Rate,1990,2019,-0.3138449336615077,-0.25824729397990215,-0.3687721468032867
-2,DALYs (Disability-Adjusted Life Years),70,Australasia,3,Both,27,Age-standardized,696,Unintentional injuries,3,Rate,1990,2019,-0.08181235937676158,-0.05418757362638071,-0.11767624941386787
-2,DALYs (Disability-Adjusted Life Years),96,Southern Latin America,3,Both,27,Age-standardized,696,Unintentional injuries,3,Rate,1990,2019,-0.3937839061121853,-0.3432295510944468,-0.4420460125465418
-2,DALYs (Disability-Adjusted Life Years),70,Australasia,3,Both,27,Age-standardized,526,Digestive diseases,3,Rate,1990,2019,-0.22765015591288695,-0.19350952190316326,-0.26396282048809167
-2,DALYs (Disability-Adjusted Life Years),65,High-income Asia Pacific,3,Both,27,Age-standardized,974,Diabetes and kidney diseases,3,Rate,1990,2019,-0.1386865322118657,-0.07942038313223335,-0.2024396458121532
-2,DALYs (Disability-Adjusted Life Years),70,Australasia,3,Both,27,Age-standardized,962,Maternal and neonatal disorders,3,Rate,1990,2019,-0.42543569239963924,-0.3423954500991261,-0.5076056886309677
-2,DALYs (Disability-Adjusted Life Years),70,Australasia,3,Both,27,Age-standardized,508,Chronic respiratory diseases,3,Rate,1990,2019,-0.3128797138038475,-0.2608615704141572,-0.36040878903031437
-2,DALYs (Disability-Adjusted Life Years),65,High-income Asia Pacific,3,Both,27,Age-standardized,558,Mental disorders,3,Rate,1990,2019,0.0035187296299047685,0.015598817604309955,-0.008556090050580344
-2,DALYs (Disability-Adjusted Life Years),70,Australasia,3,Both,27,Age-standardized,653,Skin and subcutaneous diseases,3,Rate,1990,2019,0.0008377724023749173,0.02144198285849862,-0.025903980825696168
-2,DALYs (Disability-Adjusted Life Years),96,Southern Latin America,3,Both,27,Age-standardized,640,Other non-communicable diseases,3,Rate,1990,2019,-0.1718050925733589,-0.08024341091946614,-0.2697119554179318
-2,DALYs (Disability-Adjusted Life Years),96,Southern Latin America,3,Both,27,Age-standardized,717,Self-harm and interpersonal violence,3,Rate,1990,2019,-0.10444405424016087,-0.06651945149043202,-0.14108708976658613
-2,DALYs (Disability-Adjusted Life Years),65,High-income Asia Pacific,3,Both,27,Age-standardized,688,Transport injuries,3,Rate,1990,2019,-0.7030341996324957,-0.6614750681158392,-0.7250605698427884
-2,DALYs (Disability-Adjusted Life Years),65,High-income Asia Pacific,3,Both,27,Age-standardized,696,Unintentional injuries,3,Rate,1990,2019,-0.3152962359486841,-0.2663821562654235,-0.37565846906887995
-2,DALYs (Disability-Adjusted Life Years),70,Australasia,3,Both,27,Age-standardized,717,Self-harm and interpersonal violence,3,Rate,1990,2019,-0.2155467995705022,-0.17744843654448988,-0.24898552331903456
-2,DALYs (Disability-Adjusted Life Years),96,Southern Latin America,3,Both,27,Age-standardized,626,Musculoskeletal disorders,3,Rate,1990,2019,0.050082746665959584,0.07741279804109868,0.02116430394968002
-2,DALYs (Disability-Adjusted Life Years),70,Australasia,3,Both,27,Age-standardized,491,Cardiovascular diseases,3,Rate,1990,2019,-0.6113812945821406,-0.5959932463447926,-0.6278379953290869
-2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,410,Neoplasms,3,Rate,1990,2019,-0.2410004995949726,-0.21308363174786002,-0.2703519556093774
-2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,542,Neurological disorders,3,Rate,1990,2019,-0.02074004361678186,0.060140290701952176,-0.09301690758802043
-2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,558,Mental disorders,3,Rate,1990,2019,0.0068213804639914374,0.06688337354849093,-0.04274870464448222
-2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,669,Sense organ diseases,3,Rate,1990,2019,-0.049749278223599584,-0.02111427929127231,-0.0780268813870253
-2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,688,Transport injuries,3,Rate,1990,2019,-0.5464511774817297,-0.521254715674743,-0.5722758200662018
-2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,962,Maternal and neonatal disorders,3,Rate,1990,2019,-0.14535784916987854,-0.027540164049839316,-0.2611394318955464
-2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,491,Cardiovascular diseases,3,Rate,1990,2019,-0.532865860310733,-0.5150877601921763,-0.5514024853957871
-2,DALYs (Disability-Adjusted Life Years),73,Western Europe,3,Both,27,Age-standardized,688,Transport injuries,3,Rate,1990,2019,-0.6522748427038788,-0.6377066905027937,-0.6670910462057261
-2,DALYs (Disability-Adjusted Life Years),73,Western Europe,3,Both,27,Age-standardized,696,Unintentional injuries,3,Rate,1990,2019,-0.2207536088816249,-0.1802507483069291,-0.26703821033339126
-2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,508,Chronic respiratory diseases,3,Rate,1990,2019,-0.14241739815123097,-0.08481731609389917,-0.2181953719131783
-2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,973,Substance use disorders,3,Rate,1990,2019,0.9463283239396053,1.14976430490697,0.7680391361800449
-2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,974,Diabetes and kidney diseases,3,Rate,1990,2019,0.14588766658248953,0.2237582951085259,0.06340078786967746
-2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,626,Musculoskeletal disorders,3,Rate,1990,2019,0.07325069821453545,0.13038609800409964,0.018159938186720702
-2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,640,Other non-communicable diseases,3,Rate,1990,2019,-0.23449796445665946,-0.16386086476483025,-0.290412484214251
-2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,717,Self-harm and interpersonal violence,3,Rate,1990,2019,-0.20043851772200566,-0.16153996682865215,-0.24040501284175733
-2,DALYs (Disability-Adjusted Life Years),73,Western Europe,3,Both,27,Age-standardized,491,Cardiovascular diseases,3,Rate,1990,2019,-0.5662289837702906,-0.5542966831857855,-0.579062002586223
-2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,696,Unintentional injuries,3,Rate,1990,2019,-0.1828969586868764,-0.14811388125304203,-0.22548471394638311
-2,DALYs (Disability-Adjusted Life Years),73,Western Europe,3,Both,27,Age-standardized,626,Musculoskeletal disorders,3,Rate,1990,2019,-0.00796100381492586,0.004863363008871456,-0.019888598038423563
-2,DALYs (Disability-Adjusted Life Years),102,United States of America,3,Both,27,Age-standardized,410,Neoplasms,3,Rate,1990,2019,-0.23882929885611803,-0.20908255088092334,-0.2567364748749008
-2,DALYs (Disability-Adjusted Life Years),102,United States of America,3,Both,27,Age-standardized,542,Neurological disorders,3,Rate,1990,2019,-0.010610786610955962,0.028016688917158836,-0.041450045552032196
-2,DALYs (Disability-Adjusted Life Years),73,Western Europe,3,Both,27,Age-standardized,717,Self-harm and interpersonal violence,3,Rate,1990,2019,-0.36934954639326856,-0.34178011897349014,-0.3888882285935003
-2,DALYs (Disability-Adjusted Life Years),102,United States of America,3,Both,27,Age-standardized,558,Mental disorders,3,Rate,1990,2019,0.10457907783829355,0.12162482585760878,0.08681120580127862
-2,DALYs (Disability-Adjusted Life Years),102,United States of America,3,Both,27,Age-standardized,669,Sense organ diseases,3,Rate,1990,2019,-0.013864894960110657,0.0025848849518605773,-0.030324436399580358
-2,DALYs (Disability-Adjusted Life Years),102,United States of America,3,Both,27,Age-standardized,696,Unintentional injuries,3,Rate,1990,2019,-0.1831900999530774,-0.16469035585065883,-0.2031570920453459
-2,DALYs (Disability-Adjusted Life Years),96,Southern Latin America,3,Both,27,Age-standardized,410,Neoplasms,3,Rate,1990,2019,-0.19357198363356357,-0.1638427537876993,-0.22212147045998248
-2,DALYs (Disability-Adjusted Life Years),96,Southern Latin America,3,Both,27,Age-standardized,542,Neurological disorders,3,Rate,1990,2019,0.025908090681916632,0.12837303553725124,-0.06077333642110725
-2,DALYs (Disability-Adjusted Life Years),96,Southern Latin America,3,Both,27,Age-standardized,558,Mental disorders,3,Rate,1990,2019,-0.020813921461537335,0.007049409232987538,-0.04814010252192629
-2,DALYs (Disability-Adjusted Life Years),73,Western Europe,3,Both,27,Age-standardized,386,Nutritional deficiencies,3,Rate,1990,2019,-0.191626814976971,-0.12379343389877104,-0.25630853871407766
-2,DALYs (Disability-Adjusted Life Years),73,Western Europe,3,Both,27,Age-standardized,508,Chronic respiratory diseases,3,Rate,1990,2019,-0.25582433767928786,-0.22826794631897518,-0.28941716635096587
 2,DALYs (Disability-Adjusted Life Years),96,Southern Latin America,3,Both,27,Age-standardized,669,Sense organ diseases,3,Rate,1990,2019,-0.07346203422793987,-0.05016584430799974,-0.09498004941246149
-2,DALYs (Disability-Adjusted Life Years),70,Australasia,3,Both,27,Age-standardized,410,Neoplasms,3,Rate,1990,2019,-0.2669238920266633,-0.23760833630907532,-0.2934901079764564
-2,DALYs (Disability-Adjusted Life Years),102,United States of America,3,Both,27,Age-standardized,491,Cardiovascular diseases,3,Rate,1990,2019,-0.3850498722809878,-0.37141062281171483,-0.40039713146110345
+2,DALYs (Disability-Adjusted Life Years),65,High-income Asia Pacific,3,Both,27,Age-standardized,640,Other non-communicable diseases,3,Rate,1990,2019,-0.2918460531533181,-0.23754366278348868,-0.3502313949579119
 2,DALYs (Disability-Adjusted Life Years),96,Southern Latin America,3,Both,27,Age-standardized,688,Transport injuries,3,Rate,1990,2019,-0.14504844237181017,-0.10229443008853507,-0.1874020491717672
 2,DALYs (Disability-Adjusted Life Years),96,Southern Latin America,3,Both,27,Age-standardized,962,Maternal and neonatal disorders,3,Rate,1990,2019,-0.578029679714583,-0.47869953862085324,-0.6555276373475897
 2,DALYs (Disability-Adjusted Life Years),96,Southern Latin America,3,Both,27,Age-standardized,973,Substance use disorders,3,Rate,1990,2019,-0.059348114239991756,0.001296927477400173,-0.11444517250035267
 2,DALYs (Disability-Adjusted Life Years),96,Southern Latin America,3,Both,27,Age-standardized,974,Diabetes and kidney diseases,3,Rate,1990,2019,0.12501337076715854,0.1831280821068656,0.068730007845356
+2,DALYs (Disability-Adjusted Life Years),96,Southern Latin America,3,Both,27,Age-standardized,386,Nutritional deficiencies,3,Rate,1990,2019,-0.5196771722449518,-0.44457402500665794,-0.5931213445534449
+2,DALYs (Disability-Adjusted Life Years),70,Australasia,3,Both,27,Age-standardized,410,Neoplasms,3,Rate,1990,2019,-0.2669238920266633,-0.23760833630907532,-0.2934901079764564
+2,DALYs (Disability-Adjusted Life Years),96,Southern Latin America,3,Both,27,Age-standardized,526,Digestive diseases,3,Rate,1990,2019,-0.25669182172066235,-0.22478417295155845,-0.28842301773927254
 2,DALYs (Disability-Adjusted Life Years),70,Australasia,3,Both,27,Age-standardized,542,Neurological disorders,3,Rate,1990,2019,-0.002632866540905906,0.0883120523819146,-0.08688944586113784
 2,DALYs (Disability-Adjusted Life Years),70,Australasia,3,Both,27,Age-standardized,558,Mental disorders,3,Rate,1990,2019,0.03284409507236981,0.06576346031237645,0.002629762770891187
-2,DALYs (Disability-Adjusted Life Years),73,Western Europe,3,Both,27,Age-standardized,526,Digestive diseases,3,Rate,1990,2019,-0.3090628084556017,-0.2832167799855838,-0.3340709176630218
-2,DALYs (Disability-Adjusted Life Years),73,Western Europe,3,Both,27,Age-standardized,640,Other non-communicable diseases,3,Rate,1990,2019,-0.23916532456413966,-0.18463824453435293,-0.290139023898996
-2,DALYs (Disability-Adjusted Life Years),102,United States of America,3,Both,27,Age-standardized,626,Musculoskeletal disorders,3,Rate,1990,2019,0.06274901938946247,0.10715788574884044,0.01746084085180913
-2,DALYs (Disability-Adjusted Life Years),102,United States of America,3,Both,27,Age-standardized,717,Self-harm and interpersonal violence,3,Rate,1990,2019,-0.22240199133148564,-0.2069725961718837,-0.24246798272416586
-2,DALYs (Disability-Adjusted Life Years),73,Western Europe,3,Both,27,Age-standardized,653,Skin and subcutaneous diseases,3,Rate,1990,2019,-0.0003987167322208865,0.011358217930714757,-0.015049549408893869
+2,DALYs (Disability-Adjusted Life Years),96,Southern Latin America,3,Both,27,Age-standardized,653,Skin and subcutaneous diseases,3,Rate,1990,2019,0.04314935599760332,0.08353879964826211,-0.007645703582830117
 2,DALYs (Disability-Adjusted Life Years),70,Australasia,3,Both,27,Age-standardized,669,Sense organ diseases,3,Rate,1990,2019,-0.05729503050142406,-0.0240626109918239,-0.09144023264814845
+2,DALYs (Disability-Adjusted Life Years),96,Southern Latin America,3,Both,27,Age-standardized,956,Respiratory infections and tuberculosis,3,Rate,1990,2019,-0.20688556347607842,-0.1517830745010242,-0.25497125555780903
 2,DALYs (Disability-Adjusted Life Years),70,Australasia,3,Both,27,Age-standardized,688,Transport injuries,3,Rate,1990,2019,-0.6198610001993216,-0.5988607736609021,-0.6400283663948639
 2,DALYs (Disability-Adjusted Life Years),70,Australasia,3,Both,27,Age-standardized,973,Substance use disorders,3,Rate,1990,2019,0.31923250584749396,0.4201561990884139,0.23403882868208944
 2,DALYs (Disability-Adjusted Life Years),70,Australasia,3,Both,27,Age-standardized,974,Diabetes and kidney diseases,3,Rate,1990,2019,0.13328598879985443,0.21439746204305127,0.053890046369738535
+2,DALYs (Disability-Adjusted Life Years),96,Southern Latin America,3,Both,27,Age-standardized,696,Unintentional injuries,3,Rate,1990,2019,-0.3937839061121853,-0.3432295510944468,-0.4420460125465418
 2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,386,Nutritional deficiencies,3,Rate,1990,2019,-0.2611873284495947,-0.09611342594266786,-0.39614175686755315
-2,DALYs (Disability-Adjusted Life Years),73,Western Europe,3,Both,27,Age-standardized,410,Neoplasms,3,Rate,1990,2019,-0.24167814293774428,-0.222555829028427,-0.26206084044972583
+2,DALYs (Disability-Adjusted Life Years),96,Southern Latin America,3,Both,27,Age-standardized,491,Cardiovascular diseases,3,Rate,1990,2019,-0.4855318595422424,-0.4662706262320466,-0.5048243011986142
+2,DALYs (Disability-Adjusted Life Years),96,Southern Latin America,3,Both,27,Age-standardized,508,Chronic respiratory diseases,3,Rate,1990,2019,-0.06390855754853425,-0.0076531908148860265,-0.12998937430993276
 2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,526,Digestive diseases,3,Rate,1990,2019,-0.171640939954333,-0.13728913347564772,-0.20728654261509316
+2,DALYs (Disability-Adjusted Life Years),70,Australasia,3,Both,27,Age-standardized,386,Nutritional deficiencies,3,Rate,1990,2019,-0.30106870736691294,-0.09687469643615293,-0.4698078677872789
+2,DALYs (Disability-Adjusted Life Years),73,Western Europe,3,Both,27,Age-standardized,410,Neoplasms,3,Rate,1990,2019,-0.24167814293774428,-0.222555829028427,-0.26206084044972583
+2,DALYs (Disability-Adjusted Life Years),96,Southern Latin America,3,Both,27,Age-standardized,626,Musculoskeletal disorders,3,Rate,1990,2019,0.050082746665959584,0.07741279804109868,0.02116430394968002
+2,DALYs (Disability-Adjusted Life Years),70,Australasia,3,Both,27,Age-standardized,526,Digestive diseases,3,Rate,1990,2019,-0.22765015591288695,-0.19350952190316326,-0.26396282048809167
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,653,Skin and subcutaneous diseases,3,Rate,1990,2019,0.004787086112614522,0.02504972775103497,-0.01813882929473519
 2,DALYs (Disability-Adjusted Life Years),73,Western Europe,3,Both,27,Age-standardized,542,Neurological disorders,3,Rate,1990,2019,0.01238403475095941,0.058321455302630484,-0.03203462866695733
 2,DALYs (Disability-Adjusted Life Years),73,Western Europe,3,Both,27,Age-standardized,558,Mental disorders,3,Rate,1990,2019,-0.003673428288202489,0.010357774091838792,-0.017396429632212947
-2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,653,Skin and subcutaneous diseases,3,Rate,1990,2019,0.004787086112614522,0.02504972775103497,-0.01813882929473519
+2,DALYs (Disability-Adjusted Life Years),96,Southern Latin America,3,Both,27,Age-standardized,640,Other non-communicable diseases,3,Rate,1990,2019,-0.1718050925733589,-0.08024341091946614,-0.2697119554179318
+2,DALYs (Disability-Adjusted Life Years),96,Southern Latin America,3,Both,27,Age-standardized,717,Self-harm and interpersonal violence,3,Rate,1990,2019,-0.10444405424016087,-0.06651945149043202,-0.14108708976658613
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,956,Respiratory infections and tuberculosis,3,Rate,1990,2019,-0.3658583771451157,-0.3144401184757467,-0.420778380761385
+2,DALYs (Disability-Adjusted Life Years),70,Australasia,3,Both,27,Age-standardized,653,Skin and subcutaneous diseases,3,Rate,1990,2019,0.0008377724023749173,0.02144198285849862,-0.025903980825696168
 2,DALYs (Disability-Adjusted Life Years),73,Western Europe,3,Both,27,Age-standardized,669,Sense organ diseases,3,Rate,1990,2019,-0.05987258581263235,-0.04516669400528241,-0.07504763805039616
 2,DALYs (Disability-Adjusted Life Years),73,Western Europe,3,Both,27,Age-standardized,962,Maternal and neonatal disorders,3,Rate,1990,2019,-0.4509249137592273,-0.3771658799226977,-0.5257679725282558
 2,DALYs (Disability-Adjusted Life Years),73,Western Europe,3,Both,27,Age-standardized,973,Substance use disorders,3,Rate,1990,2019,0.14244960394823275,0.18903462867375997,0.10512458717788394
 2,DALYs (Disability-Adjusted Life Years),73,Western Europe,3,Both,27,Age-standardized,974,Diabetes and kidney diseases,3,Rate,1990,2019,0.07259964867237727,0.145952089902339,-0.003959248864222358
 2,DALYs (Disability-Adjusted Life Years),102,United States of America,3,Both,27,Age-standardized,386,Nutritional deficiencies,3,Rate,1990,2019,0.02454579371352844,0.18304904295487542,-0.11766984500438124
 2,DALYs (Disability-Adjusted Life Years),102,United States of America,3,Both,27,Age-standardized,508,Chronic respiratory diseases,3,Rate,1990,2019,0.06718316639065412,0.11052167309639895,-0.031278372886615176
+2,DALYs (Disability-Adjusted Life Years),70,Australasia,3,Both,27,Age-standardized,956,Respiratory infections and tuberculosis,3,Rate,1990,2019,-0.3427019278865882,-0.2887261955393326,-0.39907041901188434
+2,DALYs (Disability-Adjusted Life Years),70,Australasia,3,Both,27,Age-standardized,962,Maternal and neonatal disorders,3,Rate,1990,2019,-0.42543569239963924,-0.3423954500991261,-0.5076056886309677
 2,DALYs (Disability-Adjusted Life Years),102,United States of America,3,Both,27,Age-standardized,526,Digestive diseases,3,Rate,1990,2019,-0.10345185708326751,-0.08160135880223326,-0.1252927120353752
 2,DALYs (Disability-Adjusted Life Years),102,United States of America,3,Both,27,Age-standardized,640,Other non-communicable diseases,3,Rate,1990,2019,-0.21201257555658387,-0.1735594544796112,-0.2424609292989982
+2,DALYs (Disability-Adjusted Life Years),70,Australasia,3,Both,27,Age-standardized,491,Cardiovascular diseases,3,Rate,1990,2019,-0.6113812945821406,-0.5959932463447926,-0.6278379953290869
+2,DALYs (Disability-Adjusted Life Years),70,Australasia,3,Both,27,Age-standardized,508,Chronic respiratory diseases,3,Rate,1990,2019,-0.3128797138038475,-0.2608615704141572,-0.36040878903031437
+2,DALYs (Disability-Adjusted Life Years),70,Australasia,3,Both,27,Age-standardized,696,Unintentional injuries,3,Rate,1990,2019,-0.08181235937676158,-0.05418757362638071,-0.11767624941386787
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,491,Cardiovascular diseases,3,Rate,1990,2019,-0.532865860310733,-0.5150877601921763,-0.5514024853957871
+2,DALYs (Disability-Adjusted Life Years),70,Australasia,3,Both,27,Age-standardized,626,Musculoskeletal disorders,3,Rate,1990,2019,0.00737516368511039,0.04323729209914603,-0.031606909308158695
+2,DALYs (Disability-Adjusted Life Years),70,Australasia,3,Both,27,Age-standardized,640,Other non-communicable diseases,3,Rate,1990,2019,-0.3138449336615077,-0.25824729397990215,-0.3687721468032867
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,508,Chronic respiratory diseases,3,Rate,1990,2019,-0.14241739815123097,-0.08481731609389917,-0.2181953719131783
+2,DALYs (Disability-Adjusted Life Years),73,Western Europe,3,Both,27,Age-standardized,386,Nutritional deficiencies,3,Rate,1990,2019,-0.191626814976971,-0.12379343389877104,-0.25630853871407766
+2,DALYs (Disability-Adjusted Life Years),73,Western Europe,3,Both,27,Age-standardized,508,Chronic respiratory diseases,3,Rate,1990,2019,-0.25582433767928786,-0.22826794631897518,-0.28941716635096587
+2,DALYs (Disability-Adjusted Life Years),70,Australasia,3,Both,27,Age-standardized,717,Self-harm and interpersonal violence,3,Rate,1990,2019,-0.2155467995705022,-0.17744843654448988,-0.24898552331903456
+2,DALYs (Disability-Adjusted Life Years),73,Western Europe,3,Both,27,Age-standardized,526,Digestive diseases,3,Rate,1990,2019,-0.3090628084556017,-0.2832167799855838,-0.3340709176630218
+2,DALYs (Disability-Adjusted Life Years),73,Western Europe,3,Both,27,Age-standardized,640,Other non-communicable diseases,3,Rate,1990,2019,-0.23916532456413966,-0.18463824453435293,-0.290139023898996
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,626,Musculoskeletal disorders,3,Rate,1990,2019,0.07325069821453545,0.13038609800409964,0.018159938186720702
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,640,Other non-communicable diseases,3,Rate,1990,2019,-0.23449796445665946,-0.16386086476483025,-0.290412484214251
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,717,Self-harm and interpersonal violence,3,Rate,1990,2019,-0.20043851772200566,-0.16153996682865215,-0.24040501284175733
+2,DALYs (Disability-Adjusted Life Years),73,Western Europe,3,Both,27,Age-standardized,653,Skin and subcutaneous diseases,3,Rate,1990,2019,-0.0003987167322208865,0.011358217930714757,-0.015049549408893869
+2,DALYs (Disability-Adjusted Life Years),73,Western Europe,3,Both,27,Age-standardized,956,Respiratory infections and tuberculosis,3,Rate,1990,2019,-0.3896630561105507,-0.3484581535274715,-0.4299927270378179
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,696,Unintentional injuries,3,Rate,1990,2019,-0.1828969586868764,-0.14811388125304203,-0.22548471394638311
+2,DALYs (Disability-Adjusted Life Years),102,United States of America,3,Both,27,Age-standardized,491,Cardiovascular diseases,3,Rate,1990,2019,-0.3850498722809878,-0.37141062281171483,-0.40039713146110345
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,410,Neoplasms,3,Rate,1990,2019,-0.2410004995949726,-0.21308363174786002,-0.2703519556093774
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,542,Neurological disorders,3,Rate,1990,2019,-0.02074004361678186,0.060140290701952176,-0.09301690758802043
+2,DALYs (Disability-Adjusted Life Years),102,United States of America,3,Both,27,Age-standardized,626,Musculoskeletal disorders,3,Rate,1990,2019,0.06274901938946247,0.10715788574884044,0.01746084085180913
+2,DALYs (Disability-Adjusted Life Years),102,United States of America,3,Both,27,Age-standardized,717,Self-harm and interpersonal violence,3,Rate,1990,2019,-0.22240199133148564,-0.2069725961718837,-0.24246798272416586
+2,DALYs (Disability-Adjusted Life Years),102,United States of America,3,Both,27,Age-standardized,696,Unintentional injuries,3,Rate,1990,2019,-0.1831900999530774,-0.16469035585065883,-0.2031570920453459
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,558,Mental disorders,3,Rate,1990,2019,0.0068213804639914374,0.06688337354849093,-0.04274870464448222
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,669,Sense organ diseases,3,Rate,1990,2019,-0.049749278223599584,-0.02111427929127231,-0.0780268813870253
+2,DALYs (Disability-Adjusted Life Years),73,Western Europe,3,Both,27,Age-standardized,688,Transport injuries,3,Rate,1990,2019,-0.6522748427038788,-0.6377066905027937,-0.6670910462057261
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,688,Transport injuries,3,Rate,1990,2019,-0.5464511774817297,-0.521254715674743,-0.5722758200662018
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,962,Maternal and neonatal disorders,3,Rate,1990,2019,-0.14535784916987854,-0.027540164049839316,-0.2611394318955464
+2,DALYs (Disability-Adjusted Life Years),73,Western Europe,3,Both,27,Age-standardized,491,Cardiovascular diseases,3,Rate,1990,2019,-0.5662289837702906,-0.5542966831857855,-0.579062002586223
+2,DALYs (Disability-Adjusted Life Years),73,Western Europe,3,Both,27,Age-standardized,696,Unintentional injuries,3,Rate,1990,2019,-0.2207536088816249,-0.1802507483069291,-0.26703821033339126
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,973,Substance use disorders,3,Rate,1990,2019,0.9463283239396053,1.14976430490697,0.7680391361800449
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,974,Diabetes and kidney diseases,3,Rate,1990,2019,0.14588766658248953,0.2237582951085259,0.06340078786967746
+2,DALYs (Disability-Adjusted Life Years),73,Western Europe,3,Both,27,Age-standardized,626,Musculoskeletal disorders,3,Rate,1990,2019,-0.00796100381492586,0.004863363008871456,-0.019888598038423563
+2,DALYs (Disability-Adjusted Life Years),102,United States of America,3,Both,27,Age-standardized,410,Neoplasms,3,Rate,1990,2019,-0.23882929885611803,-0.20908255088092334,-0.2567364748749008
+2,DALYs (Disability-Adjusted Life Years),102,United States of America,3,Both,27,Age-standardized,542,Neurological disorders,3,Rate,1990,2019,-0.010610786610955962,0.028016688917158836,-0.041450045552032196
+2,DALYs (Disability-Adjusted Life Years),73,Western Europe,3,Both,27,Age-standardized,717,Self-harm and interpersonal violence,3,Rate,1990,2019,-0.36934954639326856,-0.34178011897349014,-0.3888882285935003
+2,DALYs (Disability-Adjusted Life Years),102,United States of America,3,Both,27,Age-standardized,558,Mental disorders,3,Rate,1990,2019,0.10457907783829355,0.12162482585760878,0.08681120580127862
+2,DALYs (Disability-Adjusted Life Years),102,United States of America,3,Both,27,Age-standardized,669,Sense organ diseases,3,Rate,1990,2019,-0.013864894960110657,0.0025848849518605773,-0.030324436399580358
