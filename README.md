@@ -13,6 +13,14 @@ This repository includes the Stata codes that use the GBD data and prepare the t
 
 **********************
 
+### INTERNAL USE NOTE:
+
+### Manuscript version is:
+
+### GBD Canada manuscript April 2022 pre-final.docx
+
+**********************
+
 How to use:
 
 Click on the green box "Code" and select "Download ZIP".
