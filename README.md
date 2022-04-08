@@ -47,7 +47,9 @@ Previously produced Excel (xlsx) copies of manuscript tables can be downloaded a
 
 [Table 4: Relative (%) changes in age-standardized DALY rates in Canada and comparator locations and Canada’s rank in 1990-2019 among all high-income countries. ](https://github.com/pourmalek/Canada-Burden-of-Disease/blob/main/output/Table%204.xlsx)
 
-[All Tables](https://github.com/pourmalek/Canada-Burden-of-Disease/blob/main/output/Tables.xlsx)
+[Table S2: Top 10 causes of DALYs, YLDs and YLLs in 2019 by sex and percent change from 1990]()
+
+[Table S3. Age-standardized all-cause DALY rates for 204 countries and high-income regions in 1990 and 2019 and relative change (males and females combined), sorted by descending order of DALY rates 2019]()
 
 *
 
