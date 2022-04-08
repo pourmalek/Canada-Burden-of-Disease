@@ -1,0 +1,211 @@
+measure_id,measure_name,location_id,location_name,sex_id,sex_name,age_id,age_name,cause_id,cause_name,metric_id,metric_name,year_start,year_end,val,upper,lower
+2,DALYs (Disability-Adjusted Life Years),193,Botswana,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.037993169847582886,0.11567113902214414,-0.16705003933669652
+2,DALYs (Disability-Adjusted Life Years),141,Egypt,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.35612118821037086,-0.2406552411983958,-0.45272858650345343
+2,DALYs (Disability-Adjusted Life Years),179,Ethiopia,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.6179242764182588,-0.5807520828671049,-0.6551756367797832
+2,DALYs (Disability-Adjusted Life Years),218,Togo,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.2886756018675155,-0.1824381411779909,-0.3801511739195263
+2,DALYs (Disability-Adjusted Life Years),64,High-income,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.21284928191801014,-0.18875702944462186,-0.24068784061818255
+2,DALYs (Disability-Adjusted Life Years),25,Micronesia (Federated States of),3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.1386365984701123,0.033365845670569945,-0.28798772244995907
+2,DALYs (Disability-Adjusted Life Years),116,Saint Lucia,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.2210486514670067,-0.1211726483214646,-0.3060914921619126
+2,DALYs (Disability-Adjusted Life Years),154,Tunisia,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.30613496807825824,-0.18612285935902906,-0.41046447460879165
+2,DALYs (Disability-Adjusted Life Years),206,Gambia,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.2873920341093197,-0.1863565256530137,-0.3843457304888422
+2,DALYs (Disability-Adjusted Life Years),367,Monaco,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.10056658269127904,0.011070225198640298,-0.20604144520907658
+2,DALYs (Disability-Adjusted Life Years),38,Mongolia,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.34018713450992843,-0.2173172082363968,-0.439411123759437
+2,DALYs (Disability-Adjusted Life Years),168,Angola,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.4984213908340223,-0.41688750161218385,-0.5744176716719107
+2,DALYs (Disability-Adjusted Life Years),180,Kenya,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.22087078072010255,-0.14854378224604842,-0.28889066499594823
+2,DALYs (Disability-Adjusted Life Years),142,Iran (Islamic Republic of),3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.4651967632653077,-0.4263634719356724,-0.5053351932514059
+2,DALYs (Disability-Adjusted Life Years),194,Lesotho,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,0.48138266718157835,0.7388860118373194,0.2498142003877781
+2,DALYs (Disability-Adjusted Life Years),129,Honduras,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.22404605310997516,-0.1065467199895006,-0.3170983107148896
+2,DALYs (Disability-Adjusted Life Years),12,Lao People's Democratic Republic,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.5304598980824101,-0.44679004674265305,-0.6092675111965208
+2,DALYs (Disability-Adjusted Life Years),26,Papua New Guinea,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.10400681513014322,0.069453969991741,-0.24581670517256432
+2,DALYs (Disability-Adjusted Life Years),169,Central African Republic,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.1644952451601226,0.0072944112072217,-0.30326086203326624
+2,DALYs (Disability-Adjusted Life Years),117,Saint Vincent and the Grenadines,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.1437346540409981,-0.043982353898631865,-0.23329182810779286
+2,DALYs (Disability-Adjusted Life Years),105,Antigua and Barbuda,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.11682890681351829,-0.024052611576075435,-0.20215424282911504
+2,DALYs (Disability-Adjusted Life Years),369,Nauru,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.06796208952785067,0.04664773016312695,-0.1695954736258495
+2,DALYs (Disability-Adjusted Life Years),207,Ghana,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.29720494662918046,-0.19161742492033285,-0.3863348576175388
+2,DALYs (Disability-Adjusted Life Years),39,Tajikistan,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.1898355953179801,-0.07610223801973252,-0.28087561080405243
+2,DALYs (Disability-Adjusted Life Years),181,Madagascar,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.37495942408450034,-0.2642563114604013,-0.46748946918646905
+2,DALYs (Disability-Adjusted Life Years),54,Slovakia,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.31391238172668007,-0.21985669273959432,-0.398333117216111
+2,DALYs (Disability-Adjusted Life Years),195,Namibia,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.13527125836554213,0.020131184105089607,-0.2645981028937618
+2,DALYs (Disability-Adjusted Life Years),13,Malaysia,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.18410935669754785,-0.0746227208996951,-0.2775964714644943
+2,DALYs (Disability-Adjusted Life Years),27,Samoa,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.17367034855179017,0.034568651360138376,-0.32737440482096936
+2,DALYs (Disability-Adjusted Life Years),209,Guinea-Bissau,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.40936815422276013,-0.29302224977805386,-0.5126096085478967
+2,DALYs (Disability-Adjusted Life Years),106,Bahamas,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.10776337510236507,0.020724781109762093,-0.2119095584643204
+2,DALYs (Disability-Adjusted Life Years),130,Mexico,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.24891418074483662,-0.18766362185916405,-0.30998641858382453
+2,DALYs (Disability-Adjusted Life Years),208,Guinea,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.33136965539877594,-0.2067086445177532,-0.44137672170200404
+2,DALYs (Disability-Adjusted Life Years),55,Slovenia,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.3437455618995478,-0.22794488141639185,-0.45560202084012824
+2,DALYs (Disability-Adjusted Life Years),40,Turkmenistan,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.2603848929566213,-0.14949362232368915,-0.35030170911578223
+2,DALYs (Disability-Adjusted Life Years),118,Suriname,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.18234769690690028,-0.06400286443422583,-0.2858967814451195
+2,DALYs (Disability-Adjusted Life Years),119,Trinidad and Tobago,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.22324897551762773,-0.07368427242837473,-0.34479493850790754
+2,DALYs (Disability-Adjusted Life Years),6,China,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.45820244172037855,-0.3989229172590321,-0.5164542190676078
+2,DALYs (Disability-Adjusted Life Years),374,Niue,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.10592473206303817,0.06224248727413436,-0.2483448032638069
+2,DALYs (Disability-Adjusted Life Years),146,Lebanon,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.3451258312857958,-0.2778137575609562,-0.41643228866962523
+2,DALYs (Disability-Adjusted Life Years),57,Belarus,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.1702093995054069,-0.025891022351800137,-0.2823816637136118
+2,DALYs (Disability-Adjusted Life Years),210,Liberia,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.56008729595486,-0.5008982021628895,-0.6105771964710885
+2,DALYs (Disability-Adjusted Life Years),107,Barbados,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.12072442652214248,-0.01172784767036069,-0.21898001994596208
+2,DALYs (Disability-Adjusted Life Years),41,Uzbekistan,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,0.01644556035374181,0.1286489795032039,-0.08679089326806548
+2,DALYs (Disability-Adjusted Life Years),211,Mali,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.3950502689015521,-0.27700879165280445,-0.48682525858113834
+2,DALYs (Disability-Adjusted Life Years),133,Venezuela (Bolivarian Republic of),3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.13247460976715386,0.02903465673136925,-0.2634465541042618
+2,DALYs (Disability-Adjusted Life Years),58,Estonia,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.3725649230509537,-0.28882224266748513,-0.45070014757802873
+2,DALYs (Disability-Adjusted Life Years),298,American Samoa,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.07148240408267294,0.059879691805630235,-0.18042344117225292
+2,DALYs (Disability-Adjusted Life Years),135,Brazil,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.3597473449295417,-0.32710387424133064,-0.3923607323021041
+2,DALYs (Disability-Adjusted Life Years),200,Benin,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.3293151654331731,-0.19392612853936397,-0.4338006987897034
+2,DALYs (Disability-Adjusted Life Years),108,Belize,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.09647300759888432,-0.012574798562930626,-0.17352587487224386
+2,DALYs (Disability-Adjusted Life Years),17,Sri Lanka,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.3609303525459306,-0.24768526321123477,-0.4575031526111449
+2,DALYs (Disability-Adjusted Life Years),305,Bermuda,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.3413410972531087,-0.2709000468161583,-0.40388517135655166
+2,DALYs (Disability-Adjusted Life Years),173,Gabon,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.3132240091902934,-0.2145330965888502,-0.40992383663234233
+2,DALYs (Disability-Adjusted Life Years),185,Rwanda,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.5688613234296541,-0.5085676807884357,-0.6189505546807231
+2,DALYs (Disability-Adjusted Life Years),376,Northern Mariana Islands,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.11258519300924509,-0.0003173820630045678,-0.22334603853805837
+2,DALYs (Disability-Adjusted Life Years),147,Libya,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.19176218627870367,-0.06247459492866228,-0.3009441220267172
+2,DALYs (Disability-Adjusted Life Years),320,Cook Islands,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.29460383759288256,-0.1845307180083234,-0.38819348794484604
+2,DALYs (Disability-Adjusted Life Years),59,Latvia,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.3041793554343679,-0.22564168796516096,-0.371442908652716
+2,DALYs (Disability-Adjusted Life Years),109,Cuba,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.20285692099189065,-0.11273371492864037,-0.28501178753707745
+2,DALYs (Disability-Adjusted Life Years),160,Afghanistan,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.35832655950633907,-0.28074836441617096,-0.4293888938830793
+2,DALYs (Disability-Adjusted Life Years),33,Armenia,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.3013883971975217,-0.2351544081375483,-0.36883350022033695
+2,DALYs (Disability-Adjusted Life Years),121,Bolivia (Plurinational State of),3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.43356240493500275,-0.34930342119580926,-0.5120855593403942
+2,DALYs (Disability-Adjusted Life Years),123,Peru,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.4735210893647853,-0.3701240876640274,-0.5604112539777212
+2,DALYs (Disability-Adjusted Life Years),186,Seychelles,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.14839139881276636,-0.08466535513573295,-0.2090349680939372
+2,DALYs (Disability-Adjusted Life Years),380,Palau,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.12380531319462931,0.057524017749424686,-0.2880862970798769
+2,DALYs (Disability-Adjusted Life Years),148,Morocco,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.3371368641335741,-0.24612691168173517,-0.41695470826484604
+2,DALYs (Disability-Adjusted Life Years),18,Thailand,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.320554788678319,-0.21234889138902147,-0.4108880922570524
+2,DALYs (Disability-Adjusted Life Years),161,Bangladesh,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.5494141998779417,-0.48795910489285477,-0.6043133203506008
+2,DALYs (Disability-Adjusted Life Years),213,Niger,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.46654833680240776,-0.36256511825053345,-0.546867069430798
+2,DALYs (Disability-Adjusted Life Years),212,Mauritania,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.43388542215354853,-0.32376610330102235,-0.5183703297388429
+2,DALYs (Disability-Adjusted Life Years),201,Burkina Faso,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.370822104061637,-0.2779264737691173,-0.44468793189230793
+2,DALYs (Disability-Adjusted Life Years),34,Azerbaijan,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.2413654370122121,-0.15620937892026723,-0.3162284951385945
+2,DALYs (Disability-Adjusted Life Years),60,Lithuania,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.2523956481676649,-0.16579326316760276,-0.32754254416849604
+2,DALYs (Disability-Adjusted Life Years),182,Malawi,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.48988776440543236,-0.4193808697964642,-0.5535943469417712
+2,DALYs (Disability-Adjusted Life Years),215,Sao Tome and Principe,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.35256709336176045,-0.2587077162267653,-0.4473559759482131
+2,DALYs (Disability-Adjusted Life Years),19,Timor-Leste,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.4338373840620053,-0.3692468919170581,-0.5018734160506289
+2,DALYs (Disability-Adjusted Life Years),187,Somalia,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.3538305251022295,-0.20976318577126637,-0.46886931948314425
+2,DALYs (Disability-Adjusted Life Years),35,Georgia,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.24812416746035582,-0.16627200819956273,-0.3274244738858287
+2,DALYs (Disability-Adjusted Life Years),175,Burundi,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.47535078122384594,-0.36473278400659015,-0.5664463777131589
+2,DALYs (Disability-Adjusted Life Years),170,Congo,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.41565483153775135,-0.31875204553297676,-0.5005657850675206
+2,DALYs (Disability-Adjusted Life Years),202,Cameroon,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.22299022116413028,-0.09195801268015544,-0.3282891439320698
+2,DALYs (Disability-Adjusted Life Years),162,Bhutan,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.49251099354625133,-0.39187041748868384,-0.5855250109957356
+2,DALYs (Disability-Adjusted Life Years),110,Dominica,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.0325213057294583,0.13248396398106255,-0.16678585732270762
+2,DALYs (Disability-Adjusted Life Years),20,Viet Nam,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.2862132502078085,-0.19428449698583672,-0.37828149093645946
+2,DALYs (Disability-Adjusted Life Years),149,Palestine,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.2939774490520663,-0.2070956555967951,-0.36839387666342044
+2,DALYs (Disability-Adjusted Life Years),125,Colombia,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.3596450083573064,-0.25750971608130313,-0.4473645323917519
+2,DALYs (Disability-Adjusted Life Years),122,Ecuador,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.252870590166915,-0.15307852563576146,-0.3370657981617759
+2,DALYs (Disability-Adjusted Life Years),216,Senegal,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.38897814940054404,-0.30891369824725956,-0.4551914656893364
+2,DALYs (Disability-Adjusted Life Years),214,Nigeria,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.36041841914315964,-0.2737372288078387,-0.4368944710665262
+2,DALYs (Disability-Adjusted Life Years),349,Greenland,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.3485747546031663,-0.2426378004877876,-0.44010777209533164
+2,DALYs (Disability-Adjusted Life Years),189,United Republic of Tanzania,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.43407192173022024,-0.357292333278814,-0.4978751598687515
+2,DALYs (Disability-Adjusted Life Years),36,Kazakhstan,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.21204173449097613,-0.14361804366073258,-0.27522651131449666
+2,DALYs (Disability-Adjusted Life Years),136,Paraguay,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.0927199928774238,0.06622115970579431,-0.22808076460651736
+2,DALYs (Disability-Adjusted Life Years),111,Dominican Republic,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.14578936695515168,0.017754806463083878,-0.28179190544301547
+2,DALYs (Disability-Adjusted Life Years),163,India,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.42948486750778825,-0.3788841282190451,-0.4813274215887655
+2,DALYs (Disability-Adjusted Life Years),150,Oman,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.34420831145700065,-0.23925377010498616,-0.43295443318898064
+2,DALYs (Disability-Adjusted Life Years),151,Qatar,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.31102773157806307,-0.20962037892854074,-0.40902941402162674
+2,DALYs (Disability-Adjusted Life Years),176,Comoros,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.4016931677726012,-0.31401136013871866,-0.4783819977656973
+2,DALYs (Disability-Adjusted Life Years),351,Guam,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.08478597211412545,0.02733805159635764,-0.1835536479027352
+2,DALYs (Disability-Adjusted Life Years),112,Grenada,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.1969417981068848,-0.13145219573382455,-0.2637902165213573
+2,DALYs (Disability-Adjusted Life Years),61,Republic of Moldova,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.29815966413807515,-0.24268087096608115,-0.3507417594001465
+2,DALYs (Disability-Adjusted Life Years),114,Haiti,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.3333903548152536,-0.22111162342001303,-0.4295283193557449
+2,DALYs (Disability-Adjusted Life Years),113,Guyana,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.22565313429173672,-0.06758913236260239,-0.36170521520443405
+2,DALYs (Disability-Adjusted Life Years),152,Saudi Arabia,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.31459335218696405,-0.2151884309852641,-0.4006645885960604
+2,DALYs (Disability-Adjusted Life Years),62,Russian Federation,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.18643946505375708,-0.11595242898520902,-0.25049345305724174
+2,DALYs (Disability-Adjusted Life Years),126,Costa Rica,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.14712952948617503,-0.021110020567183623,-0.2526650789473249
+2,DALYs (Disability-Adjusted Life Years),101,Canada,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.18821685943452485,-0.1603675291346535,-0.2189182652226474
+2,DALYs (Disability-Adjusted Life Years),139,Algeria,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.3929793517749658,-0.3066505877675278,-0.46947905552584
+2,DALYs (Disability-Adjusted Life Years),115,Jamaica,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.05081761888414335,0.09782483200181738,-0.1737705468218329
+2,DALYs (Disability-Adjusted Life Years),190,Uganda,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.5425515906351936,-0.4747481643630171,-0.6073021455863911
+2,DALYs (Disability-Adjusted Life Years),28,Solomon Islands,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.14986130344461113,0.014638541573348523,-0.29640157066136247
+2,DALYs (Disability-Adjusted Life Years),22,Fiji,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.09448495084042968,0.12205424635052589,-0.2597387044997496
+2,DALYs (Disability-Adjusted Life Years),63,Ukraine,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,0.007432092194920868,0.11721495050574618,-0.08818399654724776
+2,DALYs (Disability-Adjusted Life Years),127,El Salvador,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.32226384932337065,-0.202115028000186,-0.4236891752738407
+2,DALYs (Disability-Adjusted Life Years),140,Bahrain,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.3612945329997865,-0.2835163442898036,-0.4311680108296842
+2,DALYs (Disability-Adjusted Life Years),153,Syrian Arab Republic,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.25071796413123215,-0.10821760111884784,-0.3637440356520599
+2,DALYs (Disability-Adjusted Life Years),102,United States of America,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.11227225478917184,-0.09405030779670027,-0.13374294917859816
+2,DALYs (Disability-Adjusted Life Years),205,Côte d'Ivoire,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.32795434679984153,-0.2248238452431473,-0.42359701841772635
+2,DALYs (Disability-Adjusted Life Years),23,Kiribati,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.25556730126208377,-0.12050159136835642,-0.3733217318488167
+2,DALYs (Disability-Adjusted Life Years),97,Argentina,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.21449274884582467,-0.18699713991382205,-0.2427236878819385
+2,DALYs (Disability-Adjusted Life Years),14,Maldives,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.5369626518763139,-0.4862866129295606,-0.5830857507552305
+2,DALYs (Disability-Adjusted Life Years),37,Kyrgyzstan,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.3187170926967225,-0.2611615171489364,-0.37265811113696
+2,DALYs (Disability-Adjusted Life Years),74,Andorra,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.14692852966766023,-0.018540151724503573,-0.2829004582251069
+2,DALYs (Disability-Adjusted Life Years),24,Marshall Islands,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.1219344578006707,0.04605526730066182,-0.2581125804273153
+2,DALYs (Disability-Adjusted Life Years),90,Norway,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.27430360733695003,-0.24174656699168212,-0.3102034554553045
+2,DALYs (Disability-Adjusted Life Years),128,Guatemala,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.4378050507211787,-0.3282124209885141,-0.5237763611816535
+2,DALYs (Disability-Adjusted Life Years),15,Myanmar,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.49358927460897367,-0.39178055823358465,-0.5792411290746082
+2,DALYs (Disability-Adjusted Life Years),75,Austria,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.2825764777288646,-0.25132180365482587,-0.3173461355108195
+2,DALYs (Disability-Adjusted Life Years),91,Portugal,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.34560223401218715,-0.3102432169736831,-0.3815540907289146
+2,DALYs (Disability-Adjusted Life Years),217,Sierra Leone,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.37632932554983134,-0.2561522394591918,-0.48029713052317774
+2,DALYs (Disability-Adjusted Life Years),16,Philippines,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.2167183635717779,-0.1318204099577898,-0.29533802046668944
+2,DALYs (Disability-Adjusted Life Years),92,Spain,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.28564198750104375,-0.25080920891017777,-0.3230262996160418
+2,DALYs (Disability-Adjusted Life Years),143,Iraq,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.32411608210127774,-0.23683611708427335,-0.4068913982753166
+2,DALYs (Disability-Adjusted Life Years),76,Belgium,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.2315976390341451,-0.19890542985526824,-0.2655308795352728
+2,DALYs (Disability-Adjusted Life Years),144,Jordan,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.3273856622582494,-0.24203523363706597,-0.4021647563704159
+2,DALYs (Disability-Adjusted Life Years),93,Sweden,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.2269854583643793,-0.20010825224039247,-0.2569881176872016
+2,DALYs (Disability-Adjusted Life Years),94,Switzerland,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.2923078842929188,-0.25901087987255955,-0.32673824699402426
+2,DALYs (Disability-Adjusted Life Years),131,Nicaragua,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.26732814666289456,-0.18267931847990174,-0.34269080161350324
+2,DALYs (Disability-Adjusted Life Years),145,Kuwait,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.31988301392209223,-0.24869035258008065,-0.385138008407701
+2,DALYs (Disability-Adjusted Life Years),95,United Kingdom,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.22690685385244638,-0.20069328883655935,-0.25660874165838077
+2,DALYs (Disability-Adjusted Life Years),96,Southern Latin America,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.23802276163435468,-0.20833476314570643,-0.2674953810874041
+2,DALYs (Disability-Adjusted Life Years),172,Equatorial Guinea,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.49736282842170937,-0.3785573173460463,-0.5889958935698123
+2,DALYs (Disability-Adjusted Life Years),155,Turkey,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.4394041809348578,-0.3749810767452511,-0.4973996661580239
+2,DALYs (Disability-Adjusted Life Years),156,United Arab Emirates,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.2700842714469768,-0.15845532895161085,-0.36510852154483703
+2,DALYs (Disability-Adjusted Life Years),98,Chile,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.3032265719392443,-0.2671656623330516,-0.33966377085075244
+2,DALYs (Disability-Adjusted Life Years),157,Yemen,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.3398667957466849,-0.22968417251681497,-0.42861198998930644
+2,DALYs (Disability-Adjusted Life Years),385,Puerto Rico,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.2605124790560831,-0.15597463206025539,-0.35106202792150637
+2,DALYs (Disability-Adjusted Life Years),196,South Africa,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.06971924588647242,0.0007469602842425446,-0.13243768204731596
+2,DALYs (Disability-Adjusted Life Years),522,Sudan,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.47083082581768676,-0.3919711491508195,-0.5371740835016909
+2,DALYs (Disability-Adjusted Life Years),43,Albania,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.3078826204651263,-0.2117246963555441,-0.3953251526762465
+2,DALYs (Disability-Adjusted Life Years),171,Democratic Republic of the Congo,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.3985656656013725,-0.3135913421387999,-0.47893546492508815
+2,DALYs (Disability-Adjusted Life Years),164,Nepal,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.4865623557550702,-0.4273979066478764,-0.5494715802822703
+2,DALYs (Disability-Adjusted Life Years),165,Pakistan,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.21941974784411003,-0.1358136170276238,-0.29483275015903376
+2,DALYs (Disability-Adjusted Life Years),183,Mauritius,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.22671564083936696,-0.1252408175298564,-0.3158154803046134
+2,DALYs (Disability-Adjusted Life Years),8,Taiwan (Province of China),3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.26787037639155714,-0.15921553188347623,-0.3552508817841215
+2,DALYs (Disability-Adjusted Life Years),184,Mozambique,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.2807298209598972,-0.17132859468815656,-0.3713248650013373
+2,DALYs (Disability-Adjusted Life Years),177,Djibouti,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.26358055473821224,-0.09981739546203736,-0.3844452223917327
+2,DALYs (Disability-Adjusted Life Years),178,Eritrea,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.5494016759173632,-0.4474463473350931,-0.6268491875666397
+2,DALYs (Disability-Adjusted Life Years),99,Uruguay,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.2122992748666184,-0.1766367992152396,-0.24663248085139933
+2,DALYs (Disability-Adjusted Life Years),30,Vanuatu,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.11743498822529154,0.07925077991646533,-0.2586870657489591
+2,DALYs (Disability-Adjusted Life Years),29,Tonga,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.113700008680146,0.043356740322339375,-0.24189007544161822
+2,DALYs (Disability-Adjusted Life Years),191,Zambia,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.4027895522780374,-0.31626130023972937,-0.4790399094532002
+2,DALYs (Disability-Adjusted Life Years),393,Saint Kitts and Nevis,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.28877265602931923,-0.21087419644420308,-0.3505994681031855
+2,DALYs (Disability-Adjusted Life Years),65,High-income Asia Pacific,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.3075341698093876,-0.27825902555668924,-0.3410953993982724
+2,DALYs (Disability-Adjusted Life Years),77,Cyprus,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.29557569040591436,-0.2505591129554866,-0.34519510338376846
+2,DALYs (Disability-Adjusted Life Years),100,High-income North America,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.11954800578580291,-0.1010697133136993,-0.14123923514440423
+2,DALYs (Disability-Adjusted Life Years),7,Democratic People's Republic of Korea,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.30727249172515003,-0.2144366505768414,-0.3944796939855246
+2,DALYs (Disability-Adjusted Life Years),66,Brunei Darussalam,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.2600849149193479,-0.19117490997982867,-0.3226049320559128
+2,DALYs (Disability-Adjusted Life Years),78,Denmark,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.27672336825923016,-0.2452500681173632,-0.31068188097390587
+2,DALYs (Disability-Adjusted Life Years),67,Japan,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.2409372236906951,-0.21529252995383807,-0.2700241805103862
+2,DALYs (Disability-Adjusted Life Years),79,Finland,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.28415776193100195,-0.25105488724713326,-0.3206729234736314
+2,DALYs (Disability-Adjusted Life Years),68,Republic of Korea,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.46703385407325587,-0.4319485672890609,-0.5027832214530529
+2,DALYs (Disability-Adjusted Life Years),80,France,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.2544670791614627,-0.22423454571938015,-0.2870095275340726
+2,DALYs (Disability-Adjusted Life Years),69,Singapore,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.40977715965829753,-0.370526428335066,-0.448606879839552
+2,DALYs (Disability-Adjusted Life Years),81,Germany,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.2490346429238651,-0.21924050879427534,-0.2843573477583768
+2,DALYs (Disability-Adjusted Life Years),82,Greece,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.17317785322641085,-0.14502794049459375,-0.20271944252478807
+2,DALYs (Disability-Adjusted Life Years),70,Australasia,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.2520695130895117,-0.22195932091512463,-0.2853049735785971
+2,DALYs (Disability-Adjusted Life Years),71,Australia,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.2461179066903445,-0.21483506312208656,-0.2813799559644446
+2,DALYs (Disability-Adjusted Life Years),83,Iceland,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.2542961616901818,-0.20650729833057618,-0.3026600110990041
+2,DALYs (Disability-Adjusted Life Years),72,New Zealand,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.27561574609116046,-0.24526290264935469,-0.3068759881458776
+2,DALYs (Disability-Adjusted Life Years),84,Ireland,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.29483382996975005,-0.25624370323395684,-0.33310684326584655
+2,DALYs (Disability-Adjusted Life Years),73,Western Europe,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.25855776496107435,-0.22933734335575753,-0.2903539094206236
+2,DALYs (Disability-Adjusted Life Years),85,Israel,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.26483409309866607,-0.2316232259625286,-0.29965275549522347
+2,DALYs (Disability-Adjusted Life Years),86,Italy,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.28505635006714874,-0.2546251367028114,-0.31877724120706413
+2,DALYs (Disability-Adjusted Life Years),132,Panama,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.1704512205687213,-0.04103020067882319,-0.2800995891510015
+2,DALYs (Disability-Adjusted Life Years),87,Luxembourg,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.32410026097419903,-0.27321636972131524,-0.37496732539146144
+2,DALYs (Disability-Adjusted Life Years),11,Indonesia,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.35020782241061715,-0.2902591584010106,-0.4135102235902251
+2,DALYs (Disability-Adjusted Life Years),88,Malta,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.23999007894651006,-0.18482421934661322,-0.2941157297864178
+2,DALYs (Disability-Adjusted Life Years),89,Netherlands,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.21587631319721587,-0.18411165075565386,-0.25032207294424347
+2,DALYs (Disability-Adjusted Life Years),44,Bosnia and Herzegovina,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.21020895781522858,-0.10685185861551681,-0.29955564945275653
+2,DALYs (Disability-Adjusted Life Years),197,Eswatini,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,0.18411839678245465,0.4244878403011876,0.005981413630598627
+2,DALYs (Disability-Adjusted Life Years),198,Zimbabwe,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,0.05671719019496165,0.22571886889652143,-0.09991143273418097
+2,DALYs (Disability-Adjusted Life Years),203,Cabo Verde,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.25670004226008725,-0.1851181066254407,-0.321160048182541
+2,DALYs (Disability-Adjusted Life Years),204,Chad,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.2652598128134959,-0.16640460767481313,-0.3538526639924634
+2,DALYs (Disability-Adjusted Life Years),396,San Marino,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.11006482960493963,0.07291210904522472,-0.2607698604759807
+2,DALYs (Disability-Adjusted Life Years),45,Bulgaria,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.19246357774868478,-0.0684292458081786,-0.29610218402463045
+2,DALYs (Disability-Adjusted Life Years),51,Poland,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.3437955316878136,-0.28068767144121076,-0.4027096523472101
+2,DALYs (Disability-Adjusted Life Years),52,Romania,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.30703430390744213,-0.22515491042964664,-0.37707325600831626
+2,DALYs (Disability-Adjusted Life Years),53,Serbia,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.2781283945608794,-0.18303983046353456,-0.3644045899595173
+2,DALYs (Disability-Adjusted Life Years),435,South Sudan,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.32528160046118115,-0.22859730540747397,-0.40507667901139754
+2,DALYs (Disability-Adjusted Life Years),10,Cambodia,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.4637709905983389,-0.3979051942506447,-0.5295850945290429
+2,DALYs (Disability-Adjusted Life Years),46,Croatia,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.30537591633358097,-0.2099525333074219,-0.39079842489855166
+2,DALYs (Disability-Adjusted Life Years),47,Czechia,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.35726008145084637,-0.2855755680049418,-0.42559775243442377
+2,DALYs (Disability-Adjusted Life Years),48,Hungary,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.34939433821365024,-0.2705926633485586,-0.42085119566419404
+2,DALYs (Disability-Adjusted Life Years),49,North Macedonia,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.23038320436710474,-0.12278947622238424,-0.32233175342942405
+2,DALYs (Disability-Adjusted Life Years),413,Tokelau,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.2227539151732048,-0.06764319937945573,-0.34846837780464396
+2,DALYs (Disability-Adjusted Life Years),50,Montenegro,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.10501036705164933,-0.007047420397715298,-0.18671468344095904
+2,DALYs (Disability-Adjusted Life Years),416,Tuvalu,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.3216491833228883,-0.16548090134811647,-0.4411507829081668
+2,DALYs (Disability-Adjusted Life Years),422,United States Virgin Islands,3,Both,27,Age-standardized,294,All causes,3,Rate,1990,2019,-0.11291149219495136,0.018287198500788852,-0.22822255088710663

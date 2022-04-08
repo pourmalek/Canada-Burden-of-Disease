@@ -1,0 +1,676 @@
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output/log Table S3.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res} 8 Apr 2022, 08:01:46
+{txt}
+{com}. 
+. ***************************************************************************
+. * This is "do Table S3.do"
+. 
+. * Project: Canada Burden of Disease                                                                        
+. * Person: Farshad Pourmalek pourmalek_farshad at yahoo dotcom
+. * Time (initial): 2022 March 28
+. ***************************************************************************
+. 
+. 
+. 
+. ** Prepares Table S3
+. * Table S3. Age-standardized DALY rates for 204 countries and high-income regions in 1990 and 2019 and relative change (males and females combined)
+. 
+. 
+. 
+. * Metadata for input data described below,
+. * under each -import delimited using "IHME-GBD_2019_DATA-??.dta"-
+. 
+. 
+. 
+. 
+. 
+. 
+. ***********************************************************************
+. * Prepare Table S3 Part 1
+. 
+. ** Table S3 Part 1: Base values
+. 
+. 
+. 
+. * use input data from /data/ folder
+. 
+. cd .. // Canada-Burden-of-Disease-main
+{res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main
+{txt}
+{com}. 
+. cd data
+{res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/data
+{txt}
+{com}. 
+. import delimited using "IHME-GBD_2019_DATA-104.csv", clear 
+{res}{text}(16 vars, 420 obs)
+
+{com}. 
+. /* "IHME-GBD_2019_DATA-104.csv" Metadata:
+> 
+> Permalink:
+> https://ghdx.healthdata.org/gbd-results-tool?params=gbd-api-2019-permalink/75d3353d294bb8422dc47e0368c06244
+> 
+> Data settings:
+> 
+> Base: Single
+> Location: 204 countries, 5 high-income regions, all high-income countries
+> Year: 2019, 2019
+> 
+> Context: Cause
+> Age: Age-standardized
+> Metric: Rate
+> 
+> Measure: DALY
+> Sex: Male, Female, Both
+> Cause: All cause
+> 
+> 
+> Download settings: 
+> Both IDs and Names 
+> (ID = variable_id, Name = variable_name)
+> 
+> */
+. 
+. 
+. * save output data in /output/ folder
+. 
+. cd .. // Canada-Burden-of-Disease-main
+{res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main
+{txt}
+{com}. 
+. cd output 
+{res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output
+{txt}
+{com}. 
+. drop measure_id location_id age_id metric_id metric_name ///
+> measure_name sex_id sex_name age_name cause_id cause_name
+{txt}
+{com}. 
+. qui compress
+{txt}
+{com}. 
+. rename  val Value
+{res}{txt}
+{com}. rename upper Upper_UL
+{res}{txt}
+{com}. rename lower Lower_UL
+{res}{txt}
+{com}. 
+. order Upper_UL, after(Lower_UL)
+{txt}
+{com}. 
+. label var Upper_UL "Upper UL"
+{txt}
+{com}. label var Lower_UL "Lower UL"
+{txt}
+{com}. 
+. replace Value = round(Value,0.1)
+{txt}(404 real changes made)
+
+{com}. replace Upper_UL = round(Upper_UL,0.1)
+{txt}(402 real changes made)
+
+{com}. replace Lower_UL = round(Lower_UL,0.1)
+{txt}(407 real changes made)
+
+{com}. format Value Upper_UL Lower_UL %5.1f
+{txt}
+{com}.         
+. rename year Year 
+{res}{txt}
+{com}. 
+. gsort Year Value
+{txt}
+{com}. 
+. rename location_name Location
+{res}{txt}
+{com}. 
+. qui compress
+{txt}
+{com}. 
+. save "IHME-GBD_2019_DATA-104.dta", replace
+{txt}file IHME-GBD_2019_DATA-104.dta saved
+
+{com}. 
+. 
+. 
+. 
+. *****************************
+. * Table S3 2019
+. 
+. use "IHME-GBD_2019_DATA-104.dta",clear
+{txt}
+{com}. 
+. keep if Year == 2019
+{txt}(210 observations deleted)
+
+{com}. 
+. drop Year
+{txt}
+{com}. 
+. rename (Value Lower_UL Upper_UL) (Value_2019 Lower_UL_2019 Upper_UL_2019)
+{res}{txt}
+{com}. 
+. sort Value
+{txt}
+{com}. 
+. save "Table S3 2019.dta", replace
+{txt}(note: file Table S3 2019.dta not found)
+file Table S3 2019.dta saved
+
+{com}. 
+. 
+. 
+. 
+. 
+. 
+. 
+. *****************************
+. * Table S3 1990
+. 
+. use "IHME-GBD_2019_DATA-104.dta",clear
+{txt}
+{com}. 
+. keep if Year == 1990
+{txt}(210 observations deleted)
+
+{com}. 
+. drop Year
+{txt}
+{com}. 
+. rename (Value Lower_UL Upper_UL) (Value_1990 Lower_UL_1990 Upper_UL_1990)
+{res}{txt}
+{com}. 
+. sort Value
+{txt}
+{com}. 
+. save "Table S3 1990.dta", replace
+{txt}(note: file Table S3 1990.dta not found)
+file Table S3 1990.dta saved
+
+{com}. 
+. 
+. 
+. 
+. 
+. 
+. ******************************
+. * merge 2019 and 1990 
+. 
+. use "Table S3 2019.dta", clear 
+{txt}
+{com}. 
+. merge m:m Location using "Table S3 1990.dta"
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}               0
+{txt}{col 5}matched{col 30}{res}             210{txt}  (_merge==3)
+{col 5}{hline 41}
+
+{com}. 
+. drop _merge
+{txt}
+{com}. 
+. sort Value_2019
+{txt}
+{com}. 
+. order Location Value_1990 Lower_UL_1990 Upper_UL_1990 Value_2019 Lower_UL_2019 Upper_UL_2019
+{txt}
+{com}. 
+. 
+. gen dash = "-"
+{txt}
+{com}. gen Lower_UL_1990_str = strofreal(Lower_UL_1990, "%2.1f")
+{txt}
+{com}. gen Upper_UL_1990_str = strofreal(Upper_UL_1990, "%2.1f")
+{txt}
+{com}. 
+. egen Value_1990_UI = concat(Lower_UL_1990 dash Upper_UL_1990)
+{txt}
+{com}. label var Value_1990_UI "Value 1990 UI"
+{txt}
+{com}. 
+. order Value_1990_UI, after(Value_1990)
+{txt}
+{com}. 
+. 
+. gen Lower_UL_2019_str = strofreal(Lower_UL_2019, "%2.1f")
+{txt}
+{com}. gen Upper_UL_2019_str = strofreal(Upper_UL_2019, "%2.1f")
+{txt}
+{com}. 
+. egen Value_2019_UI = concat(Lower_UL_2019 dash Upper_UL_2019)
+{txt}
+{com}. label var Value_2019_UI "Value 2019 UI"
+{txt}
+{com}. 
+. order Value_2019_UI, after(Value_2019)
+{txt}
+{com}. 
+. drop Lower_UL_1990_str Upper_UL_1990_str Lower_UL_2019_str Upper_UL_2019_str
+{txt}
+{com}. 
+. drop dash 
+{txt}
+{com}. 
+. gen location_type = 2
+{txt}
+{com}. replace location_type = 1 if Location == "High-income Asia Pacific"
+{txt}(1 real change made)
+
+{com}. replace location_type = 1 if Location == "Western Europe"
+{txt}(1 real change made)
+
+{com}. replace location_type = 1 if Location == "Australasia"
+{txt}(1 real change made)
+
+{com}. replace location_type = 1 if Location == "High-income"
+{txt}(1 real change made)
+
+{com}. replace location_type = 1 if Location == "Southern Latin America"
+{txt}(1 real change made)
+
+{com}. replace location_type = 1 if Location == "High-income North America"
+{txt}(1 real change made)
+
+{com}. 
+. label define location_type 1 "Region" 2 "Country"
+{txt}
+{com}. label values location_type location_type
+{txt}
+{com}. 
+. sort location_type Value_2019
+{txt}
+{com}. 
+. gen rank_country = _n 
+{txt}
+{com}. replace rank = rank_country - 6
+{txt}(210 real changes made)
+
+{com}. replace rank = . if rank_country < 1
+{txt}(6 real changes made, 6 to missing)
+
+{com}. 
+. gen rank_region = _n
+{txt}
+{com}. replace rank_region = . if rank_region > 6 
+{txt}(204 real changes made, 204 to missing)
+
+{com}.  
+. gen alpha_region = "" // comes before location name in Table
+{txt}(210 missing values generated)
+
+{com}. replace alpha_region = "R1. " if Location == "High-income Asia Pacific"
+{txt}variable {bf}alpha_region{sf} was {bf}{res}str1{sf}{txt} now {bf}{res}str4{sf}
+{txt}(1 real change made)
+
+{com}. replace alpha_region = "R2. " if Location == "Western Europe"
+{txt}(1 real change made)
+
+{com}. replace alpha_region = "R3. " if Location == "Australasia"
+{txt}(1 real change made)
+
+{com}. replace alpha_region = "R4. " if Location == "High-income"
+{txt}(1 real change made)
+
+{com}. replace alpha_region = "R5. " if Location == "Southern Latin America"
+{txt}(1 real change made)
+
+{com}. replace alpha_region = "R6. " if Location == "High-income North America"
+{txt}(1 real change made)
+
+{com}. 
+. 
+. gen Location_original = Location
+{txt}
+{com}. 
+. replace Location = "Bolivia" if Location == "Bolivia (Plurinational State of)"
+{txt}(1 real change made)
+
+{com}. replace Location = "Côte d'Ivoire" if Location == "CÃ´te d'Ivoire"
+{txt}(1 real change made)
+
+{com}. replace Location = "North Korea" if Location == "Democratic People's Republic of Korea"
+{txt}(1 real change made)
+
+{com}. replace Location = "Democratic Republic of Congo" if Location == "Democratic Republic of the Congo"
+{txt}(1 real change made)
+
+{com}. replace Location = "Iran" if Location == "Iran (Islamic Republic of)"
+{txt}(1 real change made)
+
+{com}. replace Location = "Lao" if Location == "Lao People's Democratic Republic"
+{txt}(1 real change made)
+
+{com}. replace Location = "Micronesia" if Location == "Micronesia (Federated States of)"
+{txt}(1 real change made)
+
+{com}. replace Location = "Saint Vincent and Grenadines" if Location == "Saint Vincent and the Grenadines"
+{txt}(1 real change made)
+
+{com}. replace Location = "Syria" if Location == "Syrian Arab Republic"
+{txt}(1 real change made)
+
+{com}. replace Location = "Taiwan" if Location == "Taiwan (Province of China)"
+{txt}(1 real change made)
+
+{com}. replace Location = "Venezuela" if Location == "Venezuela (Bolivarian Republic of)"
+{txt}(1 real change made)
+
+{com}. 
+. 
+. 
+. 
+. gen dot = "." 
+{txt}
+{com}. gen under = "_"
+{txt}
+{com}. 
+. egen alpha_country = concat(rank_country dot under)
+{txt}
+{com}. 
+. gen alpha_location = alpha_country
+{txt}
+{com}. replace alpha_location = alpha_region if location_type == 1
+{txt}(6 real changes made)
+
+{com}. 
+. egen beta_location = concat(alpha_location Location)
+{txt}
+{com}. 
+. replace beta_location = subinstr(beta_location, "_", " ",.)
+{txt}(204 real changes made)
+
+{com}. 
+. order beta_location, first
+{txt}
+{com}. 
+. order Location, last
+{txt}
+{com}. rename Location Location_edited
+{res}{txt}
+{com}. rename beta_location Location
+{res}{txt}
+{com}. 
+. drop location_type rank_country rank_region alpha_region dot under alpha_country alpha_location
+{txt}
+{com}. 
+. 
+. sort Value_2019
+{txt}
+{com}. 
+. 
+. qui compress
+{txt}
+{com}. 
+. save "Table S3 Part 1.dta", replace
+{txt}(note: file Table S3 Part 1.dta not found)
+file Table S3 Part 1.dta saved
+
+{com}. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. ***********************************************************************
+. * Prepare Table S3 Part 2
+. 
+. ** Table S3 Part 2: Change 1990-2019
+. 
+. 
+. 
+. * use input data from /data/ folder
+. 
+. cd .. // Canada-Burden-of-Disease-main
+{res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main
+{txt}
+{com}. 
+. cd data
+{res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/data
+{txt}
+{com}. 
+. import delimited using "IHME-GBD_2019_DATA-105.csv", clear 
+{res}{text}(17 vars, 210 obs)
+
+{com}. 
+. /* "IHME-GBD_2019_DATA-105.csv" Metadata:
+> 
+> Permalink:
+> https://ghdx.healthdata.org/gbd-results-tool?params=gbd-api-2019-permalink/695590e099d5fe7dbaaef52dd38f0bd0
+> 
+> Data settings:
+> 
+> Base: Change
+> Location: 204 countries, 5 high-income regions, all high-income countries
+> Year range: 2019-2019
+> 
+> Context: Cause
+> Age: Age-standardized
+> Metric: Rate
+> 
+> Measure: DALY
+> Sex: Male, Female, Both
+> Cause: All cause
+> 
+> 
+> Download settings: 
+> Both IDs and Names 
+> (ID = variable_id, Name = variable_name)
+> 
+> */
+. 
+. 
+. 
+. * save output data in /output/ folder
+. 
+. cd .. // Canada-Burden-of-Disease-main
+{res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main
+{txt}
+{com}. 
+. cd output 
+{res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output
+{txt}
+{com}. 
+. drop measure_id location_id age_id metric_id metric_name ///
+> measure_name sex_id sex_name age_name cause_id cause_name
+{txt}
+{com}. 
+. 
+. rename  val Value
+{res}{txt}
+{com}. rename upper Upper_UL
+{res}{txt}
+{com}. rename lower Lower_UL
+{res}{txt}
+{com}. 
+. order Upper_UL, after(Lower_UL)
+{txt}
+{com}. 
+. label var Upper_UL "Upper UL"
+{txt}
+{com}. label var Lower_UL "Lower UL"
+{txt}
+{com}.         
+. drop year_start year_end
+{txt}
+{com}. 
+. rename Value Change_Value
+{res}{txt}
+{com}. rename Lower_UL Change_Lower_UL
+{res}{txt}
+{com}. rename Upper_UL Change_Upper_UL
+{res}{txt}
+{com}. 
+. * transform proportion to percent
+. replace Change_Value = Change_Value * 100
+{txt}(210 real changes made)
+
+{com}. replace Change_Lower_UL = Change_Lower_UL * 100
+{txt}(210 real changes made)
+
+{com}. replace Change_Upper_UL = Change_Upper_UL * 100
+{txt}(210 real changes made)
+
+{com}. 
+. replace Change_Value = round(Change_Value,0.1)
+{txt}(210 real changes made)
+
+{com}. replace Change_Lower_UL = round(Change_Lower_UL,0.1)
+{txt}(210 real changes made)
+
+{com}. replace Change_Upper_UL = round(Change_Upper_UL,0.1)
+{txt}(210 real changes made)
+
+{com}. format Change_Value Change_Lower_UL Change_Upper_UL %5.1f
+{txt}
+{com}. 
+. 
+. gen Change_Lower_UL_str = strofreal(Change_Lower_UL, "%2.1f")
+{txt}
+{com}. gen Change_Upper_UL_str = strofreal(Change_Upper_UL, "%2.1f")
+{txt}
+{com}. gen to = " to "
+{txt}
+{com}. egen Change_UI = concat(Change_Lower_UL_str to Change_Upper_UL_str)
+{txt}
+{com}. label var Change_UI "Change 1990-2019 UI"
+{txt}
+{com}. drop to
+{txt}
+{com}. 
+. order Change_UI, after(Change_Value)
+{txt}
+{com}. 
+. rename location_name location_original
+{res}{txt}
+{com}. 
+. drop Change_Lower_UL_str Change_Upper_UL_str
+{txt}
+{com}. 
+. rename location_original Location_original
+{res}{txt}
+{com}. 
+. qui compress
+{txt}
+{com}. 
+. save "Table S3 Part 2.dta", replace
+{txt}(note: file Table S3 Part 2.dta not found)
+file Table S3 Part 2.dta saved
+
+{com}. 
+. 
+. 
+. 
+. 
+. 
+. 
+. **********************************
+. * merge the two parts of Table S3
+. 
+. use "Table S3 Part 1.dta", clear 
+{txt}
+{com}. 
+. merge m:m Location_original using "Table S3 Part 2.dta"
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}               0
+{txt}{col 5}matched{col 30}{res}             210{txt}  (_merge==3)
+{col 5}{hline 41}
+
+{com}. 
+. drop _merge
+{txt}
+{com}. 
+. sort Value_2019
+{txt}
+{com}. 
+. order Location Value_1990 Value_1990_UI Value_2019 Value_2019_UI Change_Value Change_UI
+{txt}
+{com}. 
+. gen VarsNotInTable = "VarsNotInTable"
+{txt}
+{com}. 
+. order VarsNotInTable, after(Change_UI)
+{txt}
+{com}. 
+. 
+. label var Value_1990 "Value 1990"
+{txt}
+{com}. label var Value_2019 "Value 2019"
+{txt}
+{com}. label var Change_Value "Change 1990-2019"
+{txt}
+{com}. 
+. qui compress
+{txt}
+{com}. 
+. save "Table S3.dta", replace
+{txt}file Table S3.dta saved
+
+{com}. 
+. keep Location Value_1990 Value_1990_UI Value_2019 Value_2019_UI Change_Value Change_UI
+{txt}
+{com}. 
+. export excel using "Table S3.xlsx", replace firstrow(varlabels)
+{res}{txt}file Table S3.xlsx saved
+
+{com}. 
+. 
+. 
+. 
+. 
+. * omit files no longer needed
+. 
+. shell rm -r "Table S3 2019.dta"
+{txt}
+
+{com}. shell rm -r "Table S3 1990.dta"
+{txt}
+
+{com}. shell rm -r "Table S3 Part 1.dta"
+{txt}
+
+{com}. shell rm -r "Table S3 Part 2.dta"
+{txt}
+
+{com}. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. **********************
+. 
+. view "log Table S3.smcl"
+{txt}
+{com}. 
+. log close
+      {txt}name:  {res}<unnamed>
+       {txt}log:  {res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output/log Table S3.smcl
+  {txt}log type:  {res}smcl
+ {txt}closed on:  {res} 8 Apr 2022, 08:01:46
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}

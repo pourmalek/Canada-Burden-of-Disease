@@ -1,0 +1,1804 @@
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output/log Table S2.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res} 8 Apr 2022, 07:52:29
+{txt}
+{com}. 
+. ***************************************************************************
+. * This is "do Table S2.do"
+. 
+. * Project: Canada Burden of Disease                                                                        
+. * Person: Farshad Pourmalek pourmalek_farshad at yahoo dotcom
+. * Time (initial): 2022 March 28
+. ***************************************************************************
+. 
+. 
+. 
+. ** Prepares Table S2
+. * Table S2: Top 10 causes of DALYs, YLDs and YLLs in Canada in 2019 by sex 
+. * and percent change from 1990 to 2019
+. 
+. 
+. /*
+> 
+> Value2019 lower upper Change1990-2019 lower upper
+> 
+> (top 10 causes)
+> 
+> 1 DALYs, All Ages, Males
+> 2 DALYs, All Ages, Females
+> 3 DALYs, Age-standardized, Males
+> 4 DALYs, Age-standardized, Females
+> 5 YLLs, All Ages, Males
+> 6 YLLs, All Ages, Females
+> 7 YLLs, Age-standardized, Males
+> 8 YLLs, Age-standardized, Females
+> 9 YLDs, All Ages, Males
+> 10 YLDs, All Ages, Females
+> 11 YLDs, Age-standardized, Males 
+> 12 YLDs, Age-standardized, Females
+> 
+> */
+. 
+. 
+. * Metadata for input data described below,
+. * under each -import delimited using "IHME-GBD_2019_DATA-??.dta"-
+. 
+. 
+. 
+. 
+. 
+. 
+. ***********************************************************************
+. * Prepare Table S2 Part 1
+. 
+. ** Table S2 Part 1:
+. * DALYs, YLDs and YLLs in Canada in 2019, All Ages and Age-standardized, Males and Females
+. * Input data: "IHME-GBD_2019_DATA-102.csv"
+. * Output data: "Table S2 Part1.dta"
+. 
+. 
+. 
+. * use input data from /data/ folder
+. 
+. cd .. // Canada-Burden-of-Disease-main
+{res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main
+{txt}
+{com}. 
+. cd data
+{res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/data
+{txt}
+{com}. 
+. import delimited using "IHME-GBD_2019_DATA-102.csv", clear 
+{res}{text}(16 vars, 1,850 obs)
+
+{com}. 
+. /* "IHME-GBD_2019_DATA-102.csv" Metadata:
+> 
+> Permalink:
+> https://ghdx.healthdata.org/gbd-results-tool?params=gbd-api-2019-permalink/194355b4181a4e1d97905261d302770b
+> 
+> Data settings:
+> 
+> Base: Single
+> Location: Canada
+> Year: 2019
+> 
+> Context: Cause
+> Age: All-ages, Age-standardized
+> Metric: Rate
+> 
+> Measure: DALY, YLL, YLD
+> Sex: Male, Female, Both
+> Cause: level-3 causes
+> 
+> 
+> Download settings: 
+> Both IDs and Names 
+> (ID = variable_id, Name = variable_name)
+> 
+> */
+. 
+. 
+. * save output data in /output/ folder
+. 
+. cd .. // Canada-Burden-of-Disease-main
+{res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main
+{txt}
+{com}. 
+. cd output 
+{res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output
+{txt}
+{com}. 
+. drop measure_id location_id location_name age_id metric_id metric_name
+{txt}
+{com}. 
+. rename measure_name Measure
+{res}{txt}
+{com}. replace Measure = "DALYs" if Measure == "DALYs (Disability-Adjusted Life Years)"
+{txt}(672 real changes made)
+
+{com}. replace Measure = "YLDs" if Measure == "YLDs (Years Lived with Disability)"
+{txt}(660 real changes made)
+
+{com}. replace Measure = "YLLs" if Measure == "YLLs (Years of Life Lost)"
+{txt}(518 real changes made)
+
+{com}. qui compress
+{txt}
+{com}. 
+. gen measure_id_new = .
+{txt}(1,850 missing values generated)
+
+{com}. replace measure_id_new = 1 if Measure == "DALYs"
+{txt}(672 real changes made)
+
+{com}. replace measure_id_new = 2 if Measure == "YLLs"
+{txt}(518 real changes made)
+
+{com}. replace measure_id_new = 3 if Measure == "YLDs"
+{txt}(660 real changes made)
+
+{com}. 
+. 
+. gen age_id_new = .
+{txt}(1,850 missing values generated)
+
+{com}. replace age_id_new = 1 if age_name == "All Ages"
+{txt}(927 real changes made)
+
+{com}. replace age_id_new = 2 if age_name == "Age-standardized"
+{txt}(923 real changes made)
+
+{com}. 
+. 
+. gen Sex = ""
+{txt}(1,850 missing values generated)
+
+{com}. replace Sex = "Both sexes" if sex_name == "Both"
+{txt}(0 real changes made)
+
+{com}. replace Sex = "Males" if sex_name == "Male"
+{txt}variable {bf}Sex{sf} was {bf}{res}str1{sf}{txt} now {bf}{res}str5{sf}
+{txt}(919 real changes made)
+
+{com}. replace Sex = "Females" if sex_name == "Female"
+{txt}variable {bf}Sex{sf} was {bf}{res}str5{sf}{txt} now {bf}{res}str7{sf}
+{txt}(931 real changes made)
+
+{com}. drop sex_name
+{txt}
+{com}. 
+. 
+. gen sex_id_new = .
+{txt}(1,850 missing values generated)
+
+{com}. replace sex_id_new = 1 if Sex == "Both sexes"
+{txt}(0 real changes made)
+
+{com}. replace sex_id_new = 2 if Sex == "Males"
+{txt}(919 real changes made)
+
+{com}. replace sex_id_new = 3 if Sex == "Females"
+{txt}(931 real changes made)
+
+{com}. 
+. 
+. rename  val Value
+{res}{txt}
+{com}. rename upper Upper_UL
+{res}{txt}
+{com}. rename lower Lower_UL
+{res}{txt}
+{com}. 
+. order Upper_UL, after(Lower_UL)
+{txt}
+{com}. 
+. label var Upper_UL "Upper UL"
+{txt}
+{com}. label var Lower_UL "Lower UL"
+{txt}
+{com}. 
+. replace Value = round(Value,0.1)
+{txt}(1,661 real changes made)
+
+{com}. replace Upper_UL = round(Upper_UL,0.1)
+{txt}(1,662 real changes made)
+
+{com}. replace Lower_UL = round(Lower_UL,0.1)
+{txt}(1,654 real changes made)
+
+{com}. format Value Upper_UL Lower_UL %5.1fc
+{txt}
+{com}. 
+. rename age_name Age
+{res}{txt}
+{com}.         
+. rename year Year 
+{res}{txt}
+{com}. 
+. drop sex_id
+{txt}
+{com}. 
+. gsort measure_id_new age_id_new sex_id_new Year - Value
+{txt}
+{com}. 
+. order Measure Age Sex Year Value Lower_UL Upper_UL
+{txt}
+{com}. 
+. rename cause_name Cause
+{res}{txt}
+{com}. 
+. qui compress
+{txt}
+{com}. 
+. save "IHME-GBD_2019_DATA-102.dta", replace
+{txt}file IHME-GBD_2019_DATA-102.dta saved
+
+{com}. 
+. 
+. 
+. 
+. *****************************
+. * 1 DALYs, All Ages, Males
+. 
+. use "IHME-GBD_2019_DATA-102.dta",clear
+{txt}
+{com}. 
+. keep if Measure == "DALYs"
+{txt}(1,178 observations deleted)
+
+{com}. keep if Age == "All Ages"
+{txt}(334 observations deleted)
+
+{com}. keep if Sex == "Males"
+{txt}(169 observations deleted)
+
+{com}. 
+. gen rank = _n
+{txt}
+{com}. 
+. keep if rank <= 10
+{txt}(159 observations deleted)
+
+{com}. 
+. drop Year
+{txt}
+{com}. 
+. save "Canada 2019 1 DALYs, All Ages, Males.dta", replace
+{txt}(note: file Canada 2019 1 DALYs, All Ages, Males.dta not found)
+file Canada 2019 1 DALYs, All Ages, Males.dta saved
+
+{com}. 
+. 
+. 
+. 
+. *****************************
+. * 2 DALYs, All Ages, Females
+. 
+. use "IHME-GBD_2019_DATA-102.dta",clear
+{txt}
+{com}. 
+. keep if Measure == "DALYs"
+{txt}(1,178 observations deleted)
+
+{com}. keep if Age == "All Ages"
+{txt}(334 observations deleted)
+
+{com}. keep if Sex == "Females"
+{txt}(169 observations deleted)
+
+{com}. 
+. gen rank = _n
+{txt}
+{com}. 
+. keep if rank <= 10
+{txt}(159 observations deleted)
+
+{com}. 
+. drop Year
+{txt}
+{com}. 
+. save "Canada 2019 2 DALYs, All Ages, Females.dta", replace
+{txt}(note: file Canada 2019 2 DALYs, All Ages, Females.dta not found)
+file Canada 2019 2 DALYs, All Ages, Females.dta saved
+
+{com}. 
+. 
+. 
+. 
+. 
+. 
+. *****************************
+. * 3 DALYs, Age-standardized, Males
+. 
+. use "IHME-GBD_2019_DATA-102.dta",clear
+{txt}
+{com}. 
+. keep if Measure == "DALYs"
+{txt}(1,178 observations deleted)
+
+{com}. keep if Age == "Age-standardized"
+{txt}(338 observations deleted)
+
+{com}. keep if Sex == "Males"
+{txt}(168 observations deleted)
+
+{com}. 
+. gen rank = _n
+{txt}
+{com}. 
+. keep if rank <= 10
+{txt}(156 observations deleted)
+
+{com}. 
+. drop Year
+{txt}
+{com}. 
+. save "Canada 2019 3 DALYs, Age-standardized, Males.dta", replace
+{txt}(note: file Canada 2019 3 DALYs, Age-standardized, Males.dta not found)
+file Canada 2019 3 DALYs, Age-standardized, Males.dta saved
+
+{com}. 
+. 
+. 
+. 
+. *****************************
+. * 4 DALYs, Age-standardized, Females
+. 
+. use "IHME-GBD_2019_DATA-102.dta",clear
+{txt}
+{com}. 
+. keep if Measure == "DALYs"
+{txt}(1,178 observations deleted)
+
+{com}. keep if Age == "Age-standardized"
+{txt}(338 observations deleted)
+
+{com}. keep if Sex == "Females"
+{txt}(166 observations deleted)
+
+{com}. 
+. gen rank = _n
+{txt}
+{com}. 
+. keep if rank <= 10
+{txt}(158 observations deleted)
+
+{com}. 
+. drop Year
+{txt}
+{com}. 
+. save "Canada 2019 4 DALYs, Age-standardized, Females.dta", replace
+{txt}(note: file Canada 2019 4 DALYs, Age-standardized, Females.dta not found)
+file Canada 2019 4 DALYs, Age-standardized, Females.dta saved
+
+{com}. 
+. 
+. 
+. 
+. *****************************
+. * 5 YLLs, All Ages, Males
+. 
+. use "IHME-GBD_2019_DATA-102.dta",clear
+{txt}
+{com}. 
+. keep if Measure == "YLLs"
+{txt}(1,332 observations deleted)
+
+{com}. keep if Age == "All Ages"
+{txt}(259 observations deleted)
+
+{com}. keep if Sex == "Males"
+{txt}(131 observations deleted)
+
+{com}. 
+. gen rank = _n
+{txt}
+{com}. 
+. keep if rank <= 10
+{txt}(118 observations deleted)
+
+{com}. 
+. drop Year
+{txt}
+{com}. 
+. save "Canada 2019 5 YLLs, All Ages, Males.dta", replace
+{txt}(note: file Canada 2019 5 YLLs, All Ages, Males.dta not found)
+file Canada 2019 5 YLLs, All Ages, Males.dta saved
+
+{com}. 
+. 
+. 
+. 
+. *****************************
+. * 6 YLLs, All Ages, Females
+. 
+. use "IHME-GBD_2019_DATA-102.dta",clear
+{txt}
+{com}. 
+. keep if Measure == "YLLs"
+{txt}(1,332 observations deleted)
+
+{com}. keep if Age == "All Ages"
+{txt}(259 observations deleted)
+
+{com}. keep if Sex == "Females"
+{txt}(128 observations deleted)
+
+{com}. 
+. gen rank = _n
+{txt}
+{com}. 
+. keep if rank <= 10
+{txt}(121 observations deleted)
+
+{com}. 
+. drop Year
+{txt}
+{com}. 
+. save "Canada 2019 6 YLLs, All Ages, Females.dta", replace
+{txt}(note: file Canada 2019 6 YLLs, All Ages, Females.dta not found)
+file Canada 2019 6 YLLs, All Ages, Females.dta saved
+
+{com}. 
+. 
+. 
+. 
+. *****************************
+. * 7 YLLs, Age-standardized, Males
+. 
+. use "IHME-GBD_2019_DATA-102.dta",clear
+{txt}
+{com}. 
+. keep if Measure == "YLLs"
+{txt}(1,332 observations deleted)
+
+{com}. keep if Age == "Age-standardized"
+{txt}(259 observations deleted)
+
+{com}. keep if Sex == "Males"
+{txt}(131 observations deleted)
+
+{com}. 
+. gen rank = _n
+{txt}
+{com}. 
+. keep if rank <= 10
+{txt}(118 observations deleted)
+
+{com}. 
+. drop Year
+{txt}
+{com}. 
+. save "Canada 2019 7 YLLs, Age-standardized, Males.dta", replace
+{txt}(note: file Canada 2019 7 YLLs, Age-standardized, Males.dta not found)
+file Canada 2019 7 YLLs, Age-standardized, Males.dta saved
+
+{com}. 
+. 
+. 
+. 
+. 
+. *****************************
+. * 8 YLLs, Age-standardized, Females
+. 
+. use "IHME-GBD_2019_DATA-102.dta",clear
+{txt}
+{com}. 
+. keep if Measure == "YLLs"
+{txt}(1,332 observations deleted)
+
+{com}. keep if Age == "Age-standardized"
+{txt}(259 observations deleted)
+
+{com}. keep if Sex == "Females"
+{txt}(128 observations deleted)
+
+{com}. 
+. gen rank = _n
+{txt}
+{com}. 
+. keep if rank <= 10
+{txt}(121 observations deleted)
+
+{com}. 
+. drop Year
+{txt}
+{com}. 
+. save "Canada 2019 8 YLLs, Age-standardized, Females.dta", replace
+{txt}(note: file Canada 2019 8 YLLs, Age-standardized, Females.dta not found)
+file Canada 2019 8 YLLs, Age-standardized, Females.dta saved
+
+{com}. 
+. 
+. 
+. 
+. 
+. *****************************
+. * 9 YLDs, All Ages, Males
+. 
+. use "IHME-GBD_2019_DATA-102.dta",clear
+{txt}
+{com}. 
+. keep if Measure == "YLDs"
+{txt}(1,190 observations deleted)
+
+{com}. keep if Age == "All Ages"
+{txt}(330 observations deleted)
+
+{com}. keep if Sex == "Males"
+{txt}(166 observations deleted)
+
+{com}. 
+. gen rank = _n
+{txt}
+{com}. 
+. keep if rank <= 10
+{txt}(154 observations deleted)
+
+{com}. 
+. drop Year
+{txt}
+{com}. 
+. save "Canada 2019 9 YLDs, All Ages, Males.dta", replace
+{txt}(note: file Canada 2019 9 YLDs, All Ages, Males.dta not found)
+file Canada 2019 9 YLDs, All Ages, Males.dta saved
+
+{com}. 
+. 
+. 
+. 
+. 
+. *****************************
+. * 10 YLDs, All Ages, Females
+. 
+. use "IHME-GBD_2019_DATA-102.dta",clear
+{txt}
+{com}. 
+. keep if Measure == "YLDs"
+{txt}(1,190 observations deleted)
+
+{com}. keep if Age == "All Ages"
+{txt}(330 observations deleted)
+
+{com}. keep if Sex == "Females"
+{txt}(164 observations deleted)
+
+{com}. 
+. gen rank = _n
+{txt}
+{com}. 
+. keep if rank <= 10
+{txt}(156 observations deleted)
+
+{com}. 
+. drop Year
+{txt}
+{com}. 
+. save "Canada 2019 10 YLDs, All Ages, Females.dta", replace
+{txt}(note: file Canada 2019 10 YLDs, All Ages, Females.dta not found)
+file Canada 2019 10 YLDs, All Ages, Females.dta saved
+
+{com}. 
+. 
+. 
+. 
+. 
+. *****************************
+. * 11 YLDs, Age-standardized, Males
+. 
+. use "IHME-GBD_2019_DATA-102.dta",clear
+{txt}
+{com}. 
+. keep if Measure == "YLDs"
+{txt}(1,190 observations deleted)
+
+{com}. keep if Age == "Age-standardized"
+{txt}(330 observations deleted)
+
+{com}. keep if Sex == "Males"
+{txt}(166 observations deleted)
+
+{com}. 
+. gen rank = _n
+{txt}
+{com}. 
+. keep if rank <= 10
+{txt}(154 observations deleted)
+
+{com}. 
+. drop Year
+{txt}
+{com}. 
+. save "Canada 2019 11 YLDs, Age-standardized, Males.dta", replace
+{txt}(note: file Canada 2019 11 YLDs, Age-standardized, Males.dta not found)
+file Canada 2019 11 YLDs, Age-standardized, Males.dta saved
+
+{com}. 
+.  
+.  
+.  
+.  
+. *****************************
+. * 12 YLDs, Age-standardized, Females
+. 
+. use "IHME-GBD_2019_DATA-102.dta",clear
+{txt}
+{com}. 
+. keep if Measure == "YLDs"
+{txt}(1,190 observations deleted)
+
+{com}. keep if Age == "Age-standardized"
+{txt}(330 observations deleted)
+
+{com}. keep if Sex == "Females"
+{txt}(164 observations deleted)
+
+{com}. 
+. gen rank = _n
+{txt}
+{com}. 
+. keep if rank <= 10
+{txt}(156 observations deleted)
+
+{com}. 
+. drop Year
+{txt}
+{com}. 
+. save "Canada 2019 12 YLDs, Age-standardized, Females.dta", replace 
+{txt}(note: file Canada 2019 12 YLDs, Age-standardized, Females.dta not found)
+file Canada 2019 12 YLDs, Age-standardized, Females.dta saved
+
+{com}.  
+.  
+.  
+.  
+. 
+. ******************************
+. 
+. * append parts of Table S2
+. 
+. use "Canada 2019 1 DALYs, All Ages, Males.dta", clear 
+{txt}
+{com}. append using "Canada 2019 2 DALYs, All Ages, Females.dta" 
+{txt}
+{com}. append using "Canada 2019 3 DALYs, Age-standardized, Males.dta"
+{txt}
+{com}. append using "Canada 2019 4 DALYs, Age-standardized, Females.dta"
+{txt}
+{com}. append using "Canada 2019 5 YLLs, All Ages, Males.dta"
+{txt}
+{com}. append using "Canada 2019 6 YLLs, All Ages, Females.dta"
+{txt}
+{com}. append using "Canada 2019 7 YLLs, Age-standardized, Males.dta"
+{txt}
+{com}. append using "Canada 2019 8 YLLs, Age-standardized, Females.dta"
+{txt}
+{com}. append using "Canada 2019 9 YLDs, All Ages, Males.dta"
+{txt}
+{com}. append using "Canada 2019 10 YLDs, All Ages, Females.dta"
+{txt}
+{com}. append using "Canada 2019 11 YLDs, Age-standardized, Males.dta"
+{txt}
+{com}. append using "Canada 2019 12 YLDs, Age-standardized, Females.dta"
+{txt}
+{com}. 
+. 
+. replace Cause = "AR Hearing loss" if Cause == "Age-related and other hearing loss"
+{txt}(3 real changes made)
+
+{com}. replace Cause = "Alzheimer's" if Cause == "Alzheimer's disease and other dementias"
+{txt}(3 real changes made)
+
+{com}. replace Cause = "Anxiety" if Cause == "Anxiety disorders"
+{txt}(4 real changes made)
+
+{com}. replace Cause = "Breast ca" if Cause == "Breast cancer"
+{txt}(4 real changes made)
+
+{com}. replace Cause = "COPD" if Cause == "Chronic obstructive pulmonary disease"
+{txt}(7 real changes made)
+
+{com}. replace Cause = "Colorectal ca" if Cause == "Colon and rectum cancer"
+{txt}(5 real changes made)
+
+{com}. replace Cause = "Congenital BD" if Cause == "Congenital birth defects"
+{txt}(1 real change made)
+
+{com}. replace Cause = "Depression" if Cause == "Depressive disorders"
+{txt}(5 real changes made)
+
+{com}. replace Cause = "Diabetes" if Cause == "Diabetes mellitus"
+{txt}(5 real changes made)
+
+{com}. replace Cause = "Drug use" if Cause == "Drug use disorders"
+{txt}(8 real changes made)
+
+{com}. replace Cause = "Falls" if Cause == "Falls"
+{txt}(0 real changes made)
+
+{com}. replace Cause = "Gynecological" if Cause == "Gynecological diseases"
+{txt}(2 real changes made)
+
+{com}. replace Cause = "Headaches" if Cause == "Headache disorders"
+{txt}(6 real changes made)
+
+{com}. replace Cause = "IHD" if Cause == "Ischemic heart disease"
+{txt}(8 real changes made)
+
+{com}. replace Cause = "LBP" if Cause == "Low back pain"
+{txt}(8 real changes made)
+
+{com}. replace Cause = "Neck pain" if Cause == "Neck pain"
+{txt}(0 real changes made)
+
+{com}. replace Cause = "Neonatal" if Cause == "Neonatal disorders"
+{txt}(4 real changes made)
+
+{com}. replace Cause = "Osteoarthritis" if Cause == "Osteoarthritis"
+{txt}(0 real changes made)
+
+{com}. replace Cause = "Other MSK" if Cause == "Other musculoskeletal disorders"
+{txt}(8 real changes made)
+
+{com}. replace Cause = "Road injuries" if Cause == "Road injuries"
+{txt}(0 real changes made)
+
+{com}. replace Cause = "Self-harm" if Cause == "Self-harm"
+{txt}(0 real changes made)
+
+{com}. replace Cause = "Stroke" if Cause == "Stroke"
+{txt}(0 real changes made)
+
+{com}. replace Cause = "Lung ca" if Cause == "Tracheal, bronchus, and lung cancer"
+{txt}(8 real changes made)
+
+{com}. 
+. drop measure_id_new age_id_new sex_id_new rank
+{txt}
+{com}. 
+. order cause_id, last
+{txt}
+{com}. 
+. qui compress
+{txt}
+{com}. 
+. save "Table S2 Part1.dta", replace 
+{txt}(note: file Table S2 Part1.dta not found)
+file Table S2 Part1.dta saved
+
+{com}. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. ***********************************************************************
+. * Prepare Table S2 Part 2
+. 
+. ** Table S2 Part 2:
+. * DALYs, YLDs and YLLs in Canada, percent change from 1990 to 2019
+. * Input data: "IHME-GBD_2019_DATA-103.dta"
+. * Output data: "Table S2 Part3.dta"
+. 
+. 
+. 
+. 
+. * use input data from /data/ folder
+. 
+. cd .. // Canada-Burden-of-Disease-main
+{res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main
+{txt}
+{com}. 
+. cd data
+{res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/data
+{txt}
+{com}. 
+. import delimited using "IHME-GBD_2019_DATA-103.csv", clear 
+{res}{text}(17 vars, 1,730 obs)
+
+{com}. 
+. /* "IHME-GBD_2019_DATA-103.csv" Metadata:
+> 
+> Permalink:
+> https://ghdx.healthdata.org/gbd-results-tool?params=gbd-api-2019-permalink/f99eff64829dec35200a3936ecc97078
+> 
+> Data settings:
+> 
+> Base: Change
+> Location: Canada
+> Year range: 1990-2019
+> 
+> Context: Cause
+> Age: All-ages, Age-standardized
+> Metric: Rate
+> 
+> Measure: DALY, YLL, YLD
+> Sex: Male, Female, Both
+> Cause: level-3 causes
+> 
+> 
+> Download settings: 
+> Both IDs and Names 
+> (ID = variable_id, Name = variable_name)
+> 
+> */
+. 
+. 
+. 
+. * save output data in /output/ folder
+. 
+. cd .. // Canada-Burden-of-Disease-main
+{res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main
+{txt}
+{com}. 
+. cd output 
+{res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output
+{txt}
+{com}. 
+. drop measure_id location_id location_name age_id metric_id metric_name
+{txt}
+{com}. 
+. rename measure_name Measure
+{res}{txt}
+{com}. replace Measure = "DALYs" if Measure == "DALYs (Disability-Adjusted Life Years)"
+{txt}(598 real changes made)
+
+{com}. replace Measure = "YLDs" if Measure == "YLDs (Years Lived with Disability)"
+{txt}(660 real changes made)
+
+{com}. replace Measure = "YLLs" if Measure == "YLLs (Years of Life Lost)"
+{txt}(472 real changes made)
+
+{com}. qui compress
+{txt}
+{com}. 
+. gen measure_id_new = .
+{txt}(1,730 missing values generated)
+
+{com}. replace measure_id_new = 1 if Measure == "DALYs"
+{txt}(598 real changes made)
+
+{com}. replace measure_id_new = 2 if Measure == "YLLs"
+{txt}(472 real changes made)
+
+{com}. replace measure_id_new = 3 if Measure == "YLDs"
+{txt}(660 real changes made)
+
+{com}. 
+. 
+. gen age_id_new = .
+{txt}(1,730 missing values generated)
+
+{com}. replace age_id_new = 1 if age_name == "All Ages"
+{txt}(865 real changes made)
+
+{com}. replace age_id_new = 2 if age_name == "Age-standardized"
+{txt}(865 real changes made)
+
+{com}. 
+. 
+. gen Sex = ""
+{txt}(1,730 missing values generated)
+
+{com}. replace Sex = "Both sexes" if sex_name == "Both"
+{txt}(0 real changes made)
+
+{com}. replace Sex = "Males" if sex_name == "Male"
+{txt}variable {bf}Sex{sf} was {bf}{res}str1{sf}{txt} now {bf}{res}str5{sf}
+{txt}(856 real changes made)
+
+{com}. replace Sex = "Females" if sex_name == "Female"
+{txt}variable {bf}Sex{sf} was {bf}{res}str5{sf}{txt} now {bf}{res}str7{sf}
+{txt}(874 real changes made)
+
+{com}. drop sex_name
+{txt}
+{com}. 
+. 
+. gen sex_id_new = .
+{txt}(1,730 missing values generated)
+
+{com}. replace sex_id_new = 1 if Sex == "Both sexes"
+{txt}(0 real changes made)
+
+{com}. replace sex_id_new = 2 if Sex == "Males"
+{txt}(856 real changes made)
+
+{com}. replace sex_id_new = 3 if Sex == "Females"
+{txt}(874 real changes made)
+
+{com}. 
+. rename val Value
+{res}{txt}
+{com}. rename upper Upper_UL
+{res}{txt}
+{com}. rename lower Lower_UL
+{res}{txt}
+{com}. 
+. * transform proportion to percent
+. replace Value = Value * 100
+{txt}(1,656 real changes made)
+
+{com}. replace Upper_UL = Upper_UL * 100
+{txt}(1,656 real changes made)
+
+{com}. replace Lower_UL = Lower_UL * 100
+{txt}(1,656 real changes made)
+
+{com}. 
+. order Upper_UL, after(Lower_UL)
+{txt}
+{com}. 
+. label var Upper_UL "Upper UL"
+{txt}
+{com}. label var Lower_UL "Lower UL"
+{txt}
+{com}. 
+. replace Value = round(Value,0.1)
+{txt}(1,650 real changes made)
+
+{com}. replace Upper_UL = round(Upper_UL,0.1)
+{txt}(1,650 real changes made)
+
+{com}. replace Lower_UL = round(Lower_UL,0.1)
+{txt}(1,650 real changes made)
+
+{com}. format Upper_UL Lower_UL Value %5.1f
+{txt}
+{com}. 
+. rename age_name Age
+{res}{txt}
+{com}.         
+. drop sex_id
+{txt}
+{com}. 
+. gsort measure_id_new age_id_new sex_id_new - Value
+{txt}
+{com}. 
+. order Measure Age Sex Value Lower_UL Upper_UL
+{txt}
+{com}. 
+. rename Value Change_Value
+{res}{txt}
+{com}. rename Lower_UL Change_Lower_UL
+{res}{txt}
+{com}. rename Upper_UL Change_Upper_UL
+{res}{txt}
+{com}. 
+. drop year_start year_end
+{txt}
+{com}. 
+. rename cause_name Cause
+{res}{txt}
+{com}. 
+. qui compress
+{txt}
+{com}. 
+. save "IHME-GBD_2019_DATA-103.dta", replace
+{txt}file IHME-GBD_2019_DATA-103.dta saved
+
+{com}. 
+.  
+. 
+. 
+. *****************************
+. * 1 DALYs, All Ages, Males
+. 
+. use "IHME-GBD_2019_DATA-103.dta",clear
+{txt}
+{com}. 
+. merge m:m Measure Age Sex cause_id using "Canada 2019 1 DALYs, All Ages, Males.dta"
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}           1,720
+{txt}{col 9}from master{col 30}{res}           1,720{txt}  (_merge==1)
+{col 9}from using{col 30}{res}               0{txt}  (_merge==2)
+
+{col 5}matched{col 30}{res}              10{txt}  (_merge==3)
+{col 5}{hline 41}
+
+{com}. 
+. keep if _merge==3
+{txt}(1,720 observations deleted)
+
+{com}. 
+. drop _merge cause_id measure_id_new age_id_new sex_id_new
+{txt}
+{com}. 
+. sort rank
+{txt}
+{com}. 
+. order Measure Age Sex Cause Value Lower_UL Upper_UL     
+{txt}
+{com}. 
+. qui compress
+{txt}
+{com}. 
+. save "Canada 2019 Base and Change 1 DALYs, All Ages, Males.dta", replace
+{txt}(note: file Canada 2019 Base and Change 1 DALYs, All Ages, Males.dta not found)
+file Canada 2019 Base and Change 1 DALYs, All Ages, Males.dta saved
+
+{com}. 
+. 
+. 
+. 
+. 
+. *****************************
+. * 2 DALYs, All Ages, Females
+. 
+. use "IHME-GBD_2019_DATA-103.dta",clear
+{txt}
+{com}. 
+. merge m:m Measure Age Sex cause_id using "Canada 2019 2 DALYs, All Ages, Females.dta"
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}           1,720
+{txt}{col 9}from master{col 30}{res}           1,720{txt}  (_merge==1)
+{col 9}from using{col 30}{res}               0{txt}  (_merge==2)
+
+{col 5}matched{col 30}{res}              10{txt}  (_merge==3)
+{col 5}{hline 41}
+
+{com}. 
+. keep if _merge==3
+{txt}(1,720 observations deleted)
+
+{com}. 
+. drop _merge cause_id measure_id_new age_id_new sex_id_new
+{txt}
+{com}. 
+. sort rank
+{txt}
+{com}. 
+. order Measure Age Sex Cause Value Lower_UL Upper_UL     
+{txt}
+{com}. 
+. qui compress
+{txt}
+{com}. 
+. save "Canada 2019 Base and Change 2 DALYs, All Ages, Females.dta", replace
+{txt}(note: file Canada 2019 Base and Change 2 DALYs, All Ages, Females.dta not found)
+file Canada 2019 Base and Change 2 DALYs, All Ages, Females.dta saved
+
+{com}. 
+. 
+. 
+. 
+. 
+. 
+. *****************************
+. * 3 DALYs, Age-standardized, Males
+. 
+. use "IHME-GBD_2019_DATA-103.dta",clear
+{txt}
+{com}. 
+. merge m:m Measure Age Sex cause_id using "Canada 2019 3 DALYs, Age-standardized, Males.dta"
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}           1,720
+{txt}{col 9}from master{col 30}{res}           1,720{txt}  (_merge==1)
+{col 9}from using{col 30}{res}               0{txt}  (_merge==2)
+
+{col 5}matched{col 30}{res}              10{txt}  (_merge==3)
+{col 5}{hline 41}
+
+{com}. 
+. keep if _merge==3
+{txt}(1,720 observations deleted)
+
+{com}. 
+. drop _merge cause_id measure_id_new age_id_new sex_id_new
+{txt}
+{com}. 
+. sort rank
+{txt}
+{com}. 
+. order Measure Age Sex Cause Value Lower_UL Upper_UL     
+{txt}
+{com}. 
+. qui compress
+{txt}
+{com}. 
+. save "Canada 2019 Base and Change 3 DALYs, Age-standardized, Males.dta", replace
+{txt}(note: file Canada 2019 Base and Change 3 DALYs, Age-standardized, Males.dta not found)
+file Canada 2019 Base and Change 3 DALYs, Age-standardized, Males.dta saved
+
+{com}. 
+. 
+. 
+. 
+. *****************************
+. * 4 DALYs, Age-standardized, Females
+. 
+. use "IHME-GBD_2019_DATA-103.dta",clear
+{txt}
+{com}. 
+. merge m:m Measure Age Sex cause_id using "Canada 2019 4 DALYs, Age-standardized, Females.dta"
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}           1,720
+{txt}{col 9}from master{col 30}{res}           1,720{txt}  (_merge==1)
+{col 9}from using{col 30}{res}               0{txt}  (_merge==2)
+
+{col 5}matched{col 30}{res}              10{txt}  (_merge==3)
+{col 5}{hline 41}
+
+{com}. 
+. keep if _merge==3
+{txt}(1,720 observations deleted)
+
+{com}. 
+. drop _merge cause_id measure_id_new age_id_new sex_id_new
+{txt}
+{com}. 
+. sort rank
+{txt}
+{com}. 
+. order Measure Age Sex Cause Value Lower_UL Upper_UL     
+{txt}
+{com}. 
+. qui compress
+{txt}
+{com}. 
+. save "Canada 2019 Base and Change 4 DALYs, Age-standardized, Females.dta", replace
+{txt}(note: file Canada 2019 Base and Change 4 DALYs, Age-standardized, Females.dta not found)
+file Canada 2019 Base and Change 4 DALYs, Age-standardized, Females.dta saved
+
+{com}. 
+. 
+. 
+. 
+. *****************************
+. * 5 YLLs, All Ages, Males
+. 
+. use "IHME-GBD_2019_DATA-103.dta",clear
+{txt}
+{com}. 
+. merge m:m Measure Age Sex cause_id using "Canada 2019 5 YLLs, All Ages, Males.dta"
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}           1,720
+{txt}{col 9}from master{col 30}{res}           1,720{txt}  (_merge==1)
+{col 9}from using{col 30}{res}               0{txt}  (_merge==2)
+
+{col 5}matched{col 30}{res}              10{txt}  (_merge==3)
+{col 5}{hline 41}
+
+{com}. 
+. keep if _merge==3
+{txt}(1,720 observations deleted)
+
+{com}. 
+. drop _merge cause_id measure_id_new age_id_new sex_id_new
+{txt}
+{com}. 
+. sort rank
+{txt}
+{com}. 
+. order Measure Age Sex Cause Value Lower_UL Upper_UL     
+{txt}
+{com}. 
+. qui compress
+{txt}
+{com}. 
+. save "Canada 2019 Base and Change 5 YLLs, All Ages, Males.dta", replace
+{txt}(note: file Canada 2019 Base and Change 5 YLLs, All Ages, Males.dta not found)
+file Canada 2019 Base and Change 5 YLLs, All Ages, Males.dta saved
+
+{com}. 
+. 
+. 
+. 
+. *****************************
+. * 6 YLLs, All Ages, Females
+. 
+. use "IHME-GBD_2019_DATA-103.dta",clear
+{txt}
+{com}. 
+. merge m:m Measure Age Sex cause_id using "Canada 2019 6 YLLs, All Ages, Females.dta"
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}           1,720
+{txt}{col 9}from master{col 30}{res}           1,720{txt}  (_merge==1)
+{col 9}from using{col 30}{res}               0{txt}  (_merge==2)
+
+{col 5}matched{col 30}{res}              10{txt}  (_merge==3)
+{col 5}{hline 41}
+
+{com}. 
+. keep if _merge==3
+{txt}(1,720 observations deleted)
+
+{com}. 
+. drop _merge cause_id measure_id_new age_id_new sex_id_new
+{txt}
+{com}. 
+. sort rank
+{txt}
+{com}. 
+. order Measure Age Sex Cause Value Lower_UL Upper_UL     
+{txt}
+{com}. 
+. qui compress
+{txt}
+{com}. 
+. save "Canada 2019 Base and Change 6 YLLs, All Ages, Females.dta", replace
+{txt}(note: file Canada 2019 Base and Change 6 YLLs, All Ages, Females.dta not found)
+file Canada 2019 Base and Change 6 YLLs, All Ages, Females.dta saved
+
+{com}. 
+. 
+. 
+. 
+. *****************************
+. * 7 YLLs, Age-standardized, Males
+. 
+. use "IHME-GBD_2019_DATA-103.dta",clear
+{txt}
+{com}. 
+. merge m:m Measure Age Sex cause_id using "Canada 2019 7 YLLs, Age-standardized, Males.dta"
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}           1,720
+{txt}{col 9}from master{col 30}{res}           1,720{txt}  (_merge==1)
+{col 9}from using{col 30}{res}               0{txt}  (_merge==2)
+
+{col 5}matched{col 30}{res}              10{txt}  (_merge==3)
+{col 5}{hline 41}
+
+{com}. 
+. keep if _merge==3
+{txt}(1,720 observations deleted)
+
+{com}. 
+. drop _merge cause_id measure_id_new age_id_new sex_id_new
+{txt}
+{com}. 
+. sort rank
+{txt}
+{com}. 
+. order Measure Age Sex Cause Value Lower_UL Upper_UL     
+{txt}
+{com}. 
+. qui compress
+{txt}
+{com}. 
+. save "Canada 2019 Base and Change 7 YLLs, Age-standardized, Males.dta", replace
+{txt}(note: file Canada 2019 Base and Change 7 YLLs, Age-standardized, Males.dta not found)
+file Canada 2019 Base and Change 7 YLLs, Age-standardized, Males.dta saved
+
+{com}. 
+. 
+. 
+. 
+. 
+. *****************************
+. * 8 YLLs, Age-standardized, Females
+. 
+. use "IHME-GBD_2019_DATA-103.dta",clear
+{txt}
+{com}. 
+. merge m:m Measure Age Sex cause_id using "Canada 2019 8 YLLs, Age-standardized, Females.dta"
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}           1,720
+{txt}{col 9}from master{col 30}{res}           1,720{txt}  (_merge==1)
+{col 9}from using{col 30}{res}               0{txt}  (_merge==2)
+
+{col 5}matched{col 30}{res}              10{txt}  (_merge==3)
+{col 5}{hline 41}
+
+{com}. 
+. keep if _merge==3
+{txt}(1,720 observations deleted)
+
+{com}. 
+. drop _merge cause_id measure_id_new age_id_new sex_id_new
+{txt}
+{com}. 
+. sort rank
+{txt}
+{com}. 
+. order Measure Age Sex Cause Value Lower_UL Upper_UL     
+{txt}
+{com}. 
+. qui compress
+{txt}
+{com}. 
+. save "Canada 2019 Base and Change 8 YLLs, Age-standardized, Females.dta", replace
+{txt}(note: file Canada 2019 Base and Change 8 YLLs, Age-standardized, Females.dta not found)
+file Canada 2019 Base and Change 8 YLLs, Age-standardized, Females.dta saved
+
+{com}. 
+. 
+. 
+. 
+. 
+. *****************************
+. * 9 YLDs, All Ages, Males
+. 
+. use "IHME-GBD_2019_DATA-103.dta",clear
+{txt}
+{com}. 
+. merge m:m Measure Age Sex cause_id using "Canada 2019 9 YLDs, All Ages, Males.dta"
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}           1,720
+{txt}{col 9}from master{col 30}{res}           1,720{txt}  (_merge==1)
+{col 9}from using{col 30}{res}               0{txt}  (_merge==2)
+
+{col 5}matched{col 30}{res}              10{txt}  (_merge==3)
+{col 5}{hline 41}
+
+{com}. 
+. keep if _merge==3
+{txt}(1,720 observations deleted)
+
+{com}. 
+. drop _merge cause_id measure_id_new age_id_new sex_id_new
+{txt}
+{com}. 
+. sort rank
+{txt}
+{com}. 
+. order Measure Age Sex Cause Value Lower_UL Upper_UL     
+{txt}
+{com}. 
+. qui compress
+{txt}
+{com}. 
+. save "Canada 2019 Base and Change 9 YLDs, All Ages, Males.dta", replace
+{txt}(note: file Canada 2019 Base and Change 9 YLDs, All Ages, Males.dta not found)
+file Canada 2019 Base and Change 9 YLDs, All Ages, Males.dta saved
+
+{com}. 
+. 
+. 
+. 
+. 
+. *****************************
+. * 10 YLDs, All Ages, Females
+. 
+. use "IHME-GBD_2019_DATA-103.dta",clear
+{txt}
+{com}. 
+. merge m:m Measure Age Sex cause_id using "Canada 2019 10 YLDs, All Ages, Females.dta"
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}           1,720
+{txt}{col 9}from master{col 30}{res}           1,720{txt}  (_merge==1)
+{col 9}from using{col 30}{res}               0{txt}  (_merge==2)
+
+{col 5}matched{col 30}{res}              10{txt}  (_merge==3)
+{col 5}{hline 41}
+
+{com}. 
+. keep if _merge==3
+{txt}(1,720 observations deleted)
+
+{com}. 
+. drop _merge cause_id measure_id_new age_id_new sex_id_new
+{txt}
+{com}. 
+. sort rank
+{txt}
+{com}. 
+. order Measure Age Sex Cause Value Lower_UL Upper_UL     
+{txt}
+{com}. 
+. qui compress
+{txt}
+{com}. 
+. save "Canada 2019 Base and Change 10 YLDs, All Ages, Females.dta", replace
+{txt}(note: file Canada 2019 Base and Change 10 YLDs, All Ages, Females.dta not found)
+file Canada 2019 Base and Change 10 YLDs, All Ages, Females.dta saved
+
+{com}. 
+. 
+. 
+. 
+. 
+. *****************************
+. * 11 YLDs, Age-standardized, Males
+. 
+. use "IHME-GBD_2019_DATA-103.dta",clear
+{txt}
+{com}. 
+. merge m:m Measure Age Sex cause_id using "Canada 2019 11 YLDs, Age-standardized, Males.dta"
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}           1,720
+{txt}{col 9}from master{col 30}{res}           1,720{txt}  (_merge==1)
+{col 9}from using{col 30}{res}               0{txt}  (_merge==2)
+
+{col 5}matched{col 30}{res}              10{txt}  (_merge==3)
+{col 5}{hline 41}
+
+{com}. 
+. keep if _merge==3
+{txt}(1,720 observations deleted)
+
+{com}. 
+. drop _merge cause_id measure_id_new age_id_new sex_id_new
+{txt}
+{com}. 
+. sort rank
+{txt}
+{com}. 
+. order Measure Age Sex Cause Value Lower_UL Upper_UL     
+{txt}
+{com}. 
+. qui compress
+{txt}
+{com}. 
+. save "Canada 2019 Base and Change 11 YLDs, Age-standardized, Males.dta", replace
+{txt}(note: file Canada 2019 Base and Change 11 YLDs, Age-standardized, Males.dta not found)
+file Canada 2019 Base and Change 11 YLDs, Age-standardized, Males.dta saved
+
+{com}. 
+.  
+.  
+.  
+.  
+. *****************************
+. * 12 YLDs, Age-standardized, Females
+. 
+. use "IHME-GBD_2019_DATA-103.dta",clear
+{txt}
+{com}. 
+. merge m:m Measure Age Sex cause_id using "Canada 2019 12 YLDs, Age-standardized, Females.dta"
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}           1,720
+{txt}{col 9}from master{col 30}{res}           1,720{txt}  (_merge==1)
+{col 9}from using{col 30}{res}               0{txt}  (_merge==2)
+
+{col 5}matched{col 30}{res}              10{txt}  (_merge==3)
+{col 5}{hline 41}
+
+{com}. 
+. keep if _merge==3
+{txt}(1,720 observations deleted)
+
+{com}. 
+. drop _merge cause_id measure_id_new age_id_new sex_id_new
+{txt}
+{com}. 
+. sort rank
+{txt}
+{com}. 
+. order Measure Age Sex Cause Value Lower_UL Upper_UL     
+{txt}
+{com}. 
+. qui compress
+{txt}
+{com}. 
+. save "Canada 2019 Base and Change 12 YLDs, Age-standardized, Females.dta", replace
+{txt}(note: file Canada 2019 Base and Change 12 YLDs, Age-standardized, Females.dta not found)
+file Canada 2019 Base and Change 12 YLDs, Age-standardized, Females.dta saved
+
+{com}.  
+.  
+.  
+.  
+. 
+. ******************************
+. 
+. * append parts of Table S2 - Base and Change 
+. 
+. use "Canada 2019 Base and Change 1 DALYs, All Ages, Males.dta", clear 
+{txt}
+{com}. 
+. append using "Canada 2019 Base and Change 2 DALYs, All Ages, Females.dta"
+{txt}{p 0 7 2}
+(note: variable
+Sex was 
+str5, now str7 to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+Cause was 
+str37, now str39 to accommodate using data's values)
+{p_end}
+
+{com}. append using "Canada 2019 Base and Change 3 DALYs, Age-standardized, Males.dta"
+{txt}{p 0 7 2}
+(note: variable
+Age was 
+str8, now str16 to accommodate using data's values)
+{p_end}
+
+{com}. append using "Canada 2019 Base and Change 4 DALYs, Age-standardized, Females.dta"
+{txt}
+{com}. append using "Canada 2019 Base and Change 5 YLLs, All Ages, Males.dta"
+{txt}{p 0 7 2}
+(note: variable
+Cause was 
+str39, now str42 to accommodate using data's values)
+{p_end}
+
+{com}. append using "Canada 2019 Base and Change 6 YLLs, All Ages, Females.dta"
+{txt}
+{com}. append using "Canada 2019 Base and Change 7 YLLs, Age-standardized, Males.dta"
+{txt}
+{com}. append using "Canada 2019 Base and Change 8 YLLs, Age-standardized, Females.dta"
+{txt}
+{com}. append using "Canada 2019 Base and Change 9 YLDs, All Ages, Males.dta"
+{txt}
+{com}. append using "Canada 2019 Base and Change 10 YLDs, All Ages, Females.dta"
+{txt}
+{com}. append using "Canada 2019 Base and Change 11 YLDs, Age-standardized, Males.dta"
+{txt}
+{com}. append using "Canada 2019 Base and Change 12 YLDs, Age-standardized, Females.dta"
+{txt}
+{com}. 
+. 
+. label var Change_Value "Change Value"
+{txt}
+{com}. 
+. 
+. 
+. replace Cause = "AR Hearing loss" if Cause == "Age-related and other hearing loss"
+{txt}(3 real changes made)
+
+{com}. replace Cause = "Alzheimer's" if Cause == "Alzheimer's disease and other dementias"
+{txt}(3 real changes made)
+
+{com}. replace Cause = "Anxiety" if Cause == "Anxiety disorders"
+{txt}(4 real changes made)
+
+{com}. replace Cause = "Cirrhosis" if Cause == "Cirrhosis and other chronic liver diseases"
+{txt}(2 real changes made)
+
+{com}. replace Cause = "COPD" if Cause == "Chronic obstructive pulmonary disease"
+{txt}(7 real changes made)
+
+{com}. replace Cause = "Colorectal cancer" if Cause == "Colon and rectum cancer"
+{txt}(5 real changes made)
+
+{com}. replace Cause = "Congenital BD" if Cause == "Congenital birth defects"
+{txt}(1 real change made)
+
+{com}. replace Cause = "Depression" if Cause == "Depressive disorders"
+{txt}(5 real changes made)
+
+{com}. replace Cause = "Diabetes" if Cause == "Diabetes mellitus"
+{txt}(5 real changes made)
+
+{com}. replace Cause = "Drug use" if Cause == "Drug use disorders"
+{txt}(8 real changes made)
+
+{com}. replace Cause = "Falls" if Cause == "Falls"
+{txt}(0 real changes made)
+
+{com}. replace Cause = "Gynecological" if Cause == "Gynecological diseases"
+{txt}(2 real changes made)
+
+{com}. replace Cause = "Headaches" if Cause == "Headache disorders"
+{txt}(6 real changes made)
+
+{com}. replace Cause = "IHD" if Cause == "Ischemic heart disease"
+{txt}(8 real changes made)
+
+{com}. replace Cause = "LBP" if Cause == "Low back pain"
+{txt}(8 real changes made)
+
+{com}. replace Cause = "LRI" if Cause == "Lower respiratory infections"
+{txt}(1 real change made)
+
+{com}. replace Cause = "Neck pain" if Cause == "Neck pain"
+{txt}(0 real changes made)
+
+{com}. replace Cause = "Neonatal" if Cause == "Neonatal disorders"
+{txt}(4 real changes made)
+
+{com}. replace Cause = "Osteoarthritis" if Cause == "Osteoarthritis"
+{txt}(0 real changes made)
+
+{com}. replace Cause = "Other MSK" if Cause == "Other musculoskeletal disorders"
+{txt}(8 real changes made)
+
+{com}. replace Cause = "Pancreas cancer" if Cause == "Pancreatic cancer"
+{txt}(1 real change made)
+
+{com}. replace Cause = "Road injuries" if Cause == "Road injuries"
+{txt}(0 real changes made)
+
+{com}. replace Cause = "Self-harm" if Cause == "Self-harm"
+{txt}(0 real changes made)
+
+{com}. replace Cause = "Stroke" if Cause == "Stroke"
+{txt}(0 real changes made)
+
+{com}. replace Cause = "Lung cancer" if Cause == "Tracheal, bronchus, and lung cancer"
+{txt}(8 real changes made)
+
+{com}. 
+. 
+. 
+. 
+. gen row = _n
+{txt}
+{com}. 
+. gen dash = "-"
+{txt}
+{com}. gen Lower_UL_str = strofreal(Lower_UL, "%2.1f")
+{txt}
+{com}. gen Upper_UL_str = strofreal(Upper_UL, "%2.1f")
+{txt}
+{com}. 
+. egen Value_UI = concat(Lower_UL_str dash Upper_UL_str)
+{txt}
+{com}. label var Value_UI "Value UI"
+{txt}
+{com}. 
+. order Value_UI, after(Value)
+{txt}
+{com}. drop dash Lower_UL_str Upper_UL_str
+{txt}
+{com}. 
+. gen Change_Lower_UL_str = strofreal(Change_Lower_UL, "%3.2f")
+{txt}
+{com}. gen Change_Upper_UL_str = strofreal(Change_Upper_UL, "%3.2f")
+{txt}
+{com}. gen to = " to "
+{txt}
+{com}. 
+. egen Change_UI = concat(Change_Lower_UL to Change_Upper_UL)
+{txt}
+{com}. label var Change_UI "Change UI"
+{txt}
+{com}.         
+. order Change_UI, after(Change_Value)
+{txt}
+{com}. drop Change_Lower_UL_str to Change_Upper_UL_str
+{txt}
+{com}. 
+. order rank row, last
+{txt}
+{com}. 
+. 
+. qui compress
+{txt}
+{com}. 
+. save "Table S2.dta", replace
+{txt}file Table S2.dta saved
+
+{com}. 
+. export excel using "Table S2.xlsx", replace firstrow(varlabels)
+{res}{txt}file Table S2.xlsx saved
+
+{com}. 
+. 
+. 
+. 
+. 
+. 
+. 
+. * omit files no longer needed
+. 
+. shell rm -r "Canada 2019 1 DALYs, All Ages, Males.dta"
+{txt}
+
+{com}. shell rm -r "Canada 2019 2 DALYs, All Ages, Females.dta"
+{txt}
+
+{com}. shell rm -r "Canada 2019 3 DALYs, Age-standardized, Males.dta"
+{txt}
+
+{com}. shell rm -r "Canada 2019 4 DALYs, Age-standardized, Females.dta"
+{txt}
+
+{com}. shell rm -r "Canada 2019 5 YLLs, All Ages, Males.dta"
+{txt}
+
+{com}. shell rm -r "Canada 2019 6 YLLs, All Ages, Females.dta"
+{txt}
+
+{com}. shell rm -r "Canada 2019 7 YLLs, Age-standardized, Males.dta"
+{txt}
+
+{com}. shell rm -r "Canada 2019 8 YLLs, Age-standardized, Females.dta"
+{txt}
+
+{com}. shell rm -r "Canada 2019 9 YLDs, All Ages, Males.dta"
+{txt}
+
+{com}. shell rm -r "Canada 2019 10 YLDs, All Ages, Females.dta"
+{txt}
+
+{com}. shell rm -r "Canada 2019 11 YLDs, Age-standardized, Males.dta"
+{txt}
+
+{com}. shell rm -r "Canada 2019 12 YLDs, Age-standardized, Females.dta"
+{txt}
+
+{com}. 
+. 
+. shell rm -r "Table S2 Part1.dta"
+{txt}
+
+{com}. 
+. 
+. 
+. shell rm -r "Canada 2019 Base and Change 1 DALYs, All Ages, Males.dta"
+{txt}
+
+{com}. shell rm -r "Canada 2019 Base and Change 2 DALYs, All Ages, Females.dta"
+{txt}
+
+{com}. shell rm -r "Canada 2019 Base and Change 3 DALYs, Age-standardized, Males.dta"
+{txt}
+
+{com}. shell rm -r "Canada 2019 Base and Change 4 DALYs, Age-standardized, Females.dta"
+{txt}
+
+{com}. shell rm -r "Canada 2019 Base and Change 5 YLLs, All Ages, Males.dta"
+{txt}
+
+{com}. shell rm -r "Canada 2019 Base and Change 6 YLLs, All Ages, Females.dta"
+{txt}
+
+{com}. shell rm -r "Canada 2019 Base and Change 7 YLLs, Age-standardized, Males.dta"
+{txt}
+
+{com}. shell rm -r "Canada 2019 Base and Change 8 YLLs, Age-standardized, Females.dta"
+{txt}
+
+{com}. shell rm -r "Canada 2019 Base and Change 9 YLDs, All Ages, Males.dta"
+{txt}
+
+{com}. shell rm -r "Canada 2019 Base and Change 10 YLDs, All Ages, Females.dta"
+{txt}
+
+{com}. shell rm -r "Canada 2019 Base and Change 11 YLDs, Age-standardized, Males.dta"
+{txt}
+
+{com}. shell rm -r "Canada 2019 Base and Change 12 YLDs, Age-standardized, Females.dta"
+{txt}
+
+{com}. 
+. 
+. 
+. 
+. 
+. 
+. 
+. **********************
+. 
+. view "log Table S2.smcl"
+{txt}
+{com}. 
+. log close
+      {txt}name:  {res}<unnamed>
+       {txt}log:  {res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output/log Table S2.smcl
+  {txt}log type:  {res}smcl
+ {txt}closed on:  {res} 8 Apr 2022, 07:52:31
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}

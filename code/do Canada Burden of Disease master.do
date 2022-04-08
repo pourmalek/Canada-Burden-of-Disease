@@ -97,10 +97,11 @@ do "do Table 4 c.do"
 
 do "do Table 4 d.do"
 
-/*
-do "do Figure 1.do"
+* Tables in Supplementary Materials
 
-do "do Figure 2.do"
+do "do Table S2.do"
+
+do "do Table S3.do"
 
 
 

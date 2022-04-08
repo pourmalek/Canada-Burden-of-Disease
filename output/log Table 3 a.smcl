@@ -3,7 +3,7 @@
       name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output/log Table 3 a.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res} 7 Apr 2022, 09:15:49
+ {txt}opened on:  {res} 8 Apr 2022, 07:52:23
 {txt}
 {com}. 
 . ***************************************************************************
@@ -596,7 +596,7 @@ file Table 3 Part2.dta saved
       {txt}name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output/log Table 3 a.smcl
   {txt}log type:  {res}smcl
- {txt}closed on:  {res} 7 Apr 2022, 09:15:50
+ {txt}closed on:  {res} 8 Apr 2022, 07:52:24
 {txt}{.-}
 {smcl}
 {txt}{sf}{ul off}
