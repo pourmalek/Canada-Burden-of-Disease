@@ -1,4 +1,4 @@
-# Canada Burden of Disease
+# Canada Burden of Disease 1990-2019
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) [![DOI](https://zenodo.org/badge/475202009.svg)](https://zenodo.org/badge/latestdoi/475202009)
 
