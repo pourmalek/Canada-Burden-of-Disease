@@ -9,7 +9,7 @@ Worrisome health trends in Canada 1990-2019: An analysis for the Global Burden o
 
 **********************
 
-This repository includes the Stata codes that use the GBD data and prepare the tables and graphs used in the manuscript titled "Worrisome health trends in Canada 1990-2019: An analysis for the Global Burden of Disease Study". 
+This repository includes the Stata codes that use the GBD 2019 data and prepare the tables and graphs used in the manuscript titled "Worrisome health trends in Canada 1990-2019: An analysis for the Global Burden of Disease Study". 
 
 **********************
 
