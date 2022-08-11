@@ -4,7 +4,7 @@
 
 
 
-Canada Burden of Disease 1990-2019. Jacek A. Kopec, Farshad Pourmalek, et al. 
+Worrisome health trends in Canada 1990-2019: An analysis for the Global Burden of Disease Study. Jacek A. Kopec, Farshad Pourmalek, et al. 
 
 
 **********************
@@ -13,15 +13,7 @@ This repository includes the Stata codes that use the GBD data and prepare the t
 
 **********************
 
-### INTERNAL USE NOTE:
-
-### Manuscript version is:
-
-### GBD Canada manuscript April 2022 pre-final.docx
-
-**********************
-
-How to use:
+How to use this repository:
 
 Click on the green box "Code" and select "Download ZIP".
 
