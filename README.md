@@ -27,8 +27,6 @@ Run this Stata do file: /Downloads/Canada-Burden-of-Disease-main/code/do Canada 
 
 The outputs will be stored in your local machine in /Downloads/Canada-Burden-of-Disease-main/output/
 
-See "Table 1 Part 1.csv" in the /output/
-
 *
 
 Previously produced Excel (xlsx) copies of manuscript tables can be downloaded and seen from https://github.com/pourmalek/Canada-Burden-of-Disease/tree/main/output and below are direct links to them:
