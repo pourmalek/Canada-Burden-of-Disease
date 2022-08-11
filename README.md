@@ -4,7 +4,9 @@
 
 
 
-Worrisome health trends in Canada 1990-2019: An analysis for the Global Burden of Disease Study. Jacek A. Kopec, Farshad Pourmalek, et al. 
+Worrisome health trends in Canada 1990-2019: An analysis for the Global Burden of Disease Study. 
+
+Jacek A. Kopec, Farshad Pourmalek, et al. 
 
 
 **********************
