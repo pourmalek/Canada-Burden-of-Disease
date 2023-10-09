@@ -4,14 +4,13 @@
 
 
 
-Worrisome health trends in Canada 1990-2019: An analysis for the Global Burden of Disease Study. 
+Health trends in Canada 1990-2019: An analysis for the Global Burden of Disease Study
 
-Jacek A. Kopec, Farshad Pourmalek, et al. 
-
+Jacek A Kopec, Farshad Pourmalek, Daniel A Adeyinka, Amin Adibi, Gina Agarwal, Samiah Alam, Zulfiqar A Bhutta, Zahid A Butt, Vijay K Chattu, Oghenowede Eyawo, Ghazal Fazli, Seyed-Mohammad Fereshtehnejad, Jeffrey J Hebert, Md Belal Hossain, Marcus M Ilesanmi, Ademola J Itiola, Haitham Jahrami, Niranjan Kissoon, Barthelemy K Defo, Om P Kurmi, Ali H Mokdad, Christopher J L Murray, Andrew T Olagunju, Seithikurippu R Pandi-Perumal, Scott B Patten, Ata Rafiee, Drona Prakash Rasali, Yaeesh Sardiwalla, Thirunavukkarasu Sathish, Marco Solmi, Ranjani Somayaji, Saverio Stranges, Marcello Tonelli, Ziyue Wang, Sanni Yaya, & Frank J Elgar
 
 **********************
 
-This repository includes the Stata codes that use the GBD 2019 data and prepare the tables and graphs used in the manuscript titled "Worrisome health trends in Canada 1990-2019: An analysis for the Global Burden of Disease Study". 
+This repository includes the Stata codes that use the GBD 2019 data and prepare the tables and graphs used in the manuscript titled Health trends in Canada 1990-2019: An analysis for the Global Burden of Disease Study". 
 
 **********************
 
