@@ -1,16 +1,16 @@
 {smcl}
-{com}{sf}{ul off}{txt}{.-}
+{txt}{sf}{ul off}{.-}
       name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output/log Table 1.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res} 8 Apr 2022, 07:52:20
+ {txt}opened on:  {res} 8 Oct 2023, 20:40:09
 {txt}
 {com}. 
 . ***************************************************************************
 . * This is "do Table 1.do"
 . 
-. * Project: Canada Burden of Disease                                                                        
-. * Person: Farshad Pourmalek pourmalek_farshad at yahoo dotcom
+. * Project: Canada Burden of Disease 1990-2019                                                                        
+. * Person: Farshad Pourmalek
 . * Time (initial): 2022 March 28
 . ***************************************************************************
 . 
@@ -68,6 +68,7 @@
 {txt}
 {com}. 
 . import delimited using "IHME-GBD_2019_DATA-1.csv", clear 
+{res}{txt}(encoding automatically selected: ISO-8859-1)
 {res}{text}(16 vars, 72 obs)
 
 {com}. 
@@ -109,7 +110,6 @@
 {res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output
 {txt}
 {com}. 
-. 
 . 
 . drop measure_id location_id location_name age_id cause_id cause_name metric_id metric_name
 {txt}
@@ -158,7 +158,7 @@
 {txt}(72 missing values generated)
 
 {com}. replace Sex = "Both sexes" if sex_name == "Both"
-{txt}variable {bf}Sex{sf} was {bf}{res}str1{sf}{txt} now {bf}{res}str10{sf}
+{txt}variable {bf}{res}Sex{sf}{txt} was {bf}{res}str1{sf}{txt} now {bf}{res}str10{sf}
 {txt}(24 real changes made)
 
 {com}. replace Sex = "Males" if sex_name == "Male"
@@ -229,12 +229,12 @@
 {txt}
 {com}. 
 . reshape wide Value Lower_UL Upper_UL, i(Measure Age     Sex) j(Year)
-{txt}(note: j = 1990 2019)
+{txt}(j = 1990 2019)
 
-Data{col 36}long{col 43}->{col 48}wide
+Data{col 36}Long{col 43}->{col 48}Wide
 {hline 77}
-Number of obs.                 {res}      36   {txt}->{res}      18
-{txt}Number of variables            {res}      11   {txt}->{res}      13
+Number of observations     {res}          36   {txt}->   {res}18          
+{txt}Number of variables        {res}          11   {txt}->   {res}13          
 {txt}j variable (2 values)              {res}Year   {txt}->   (dropped)
 xij variables:
                                   {res}Value   {txt}->   {res}Value1990 Value2019
@@ -264,8 +264,16 @@ xij variables:
 {com}. 
 . 
 . save "Table 1 Part1.dta", replace
-{txt}(note: file Table 1 Part1.dta not found)
-file Table 1 Part1.dta saved
+{txt}{p 0 4 2}
+(file {bf}
+Table 1 Part1.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+Table 1 Part1.dta{rm}
+saved
+{p_end}
 
 {com}. 
 . 
@@ -306,6 +314,7 @@ file Table 1 Part1.dta saved
 {txt}
 {com}. 
 . import delimited using "IHME-GBD_2019_DATA-2.csv", clear 
+{res}{txt}(encoding automatically selected: ISO-8859-1)
 {res}{text}(17 vars, 54 obs)
 
 {com}. 
@@ -397,7 +406,7 @@ file Table 1 Part1.dta saved
 {txt}(54 missing values generated)
 
 {com}. replace Sex = "Both sexes" if sex_name == "Both"
-{txt}variable {bf}Sex{sf} was {bf}{res}str1{sf}{txt} now {bf}{res}str10{sf}
+{txt}variable {bf}{res}Sex{sf}{txt} was {bf}{res}str1{sf}{txt} now {bf}{res}str10{sf}
 {txt}(18 real changes made)
 
 {com}. replace Sex = "Males" if sex_name == "Male"
@@ -442,9 +451,9 @@ file Table 1 Part1.dta saved
 {com}. 
 . rename change_percent_mean Value
 {res}{txt}
-{com}. rename change_percent_upper Lower_UL
+{com}. rename change_percent_upper Upper_UL
 {res}{txt}
-{com}. rename change_percent_lower Upper_UL
+{com}. rename change_percent_lower Lower_UL
 {res}{txt}
 {com}. 
 . label var Value "Relative change (%)"
@@ -487,9 +496,6 @@ file Table 1 Part1.dta saved
 . order Sex, after(Age)
 {txt}
 {com}. 
-. drop Lower_UL Upper_UL
-{txt}
-{com}. 
 . order Measure Age Sex Value 
 {txt}
 {com}. 
@@ -498,8 +504,16 @@ file Table 1 Part1.dta saved
 
 {com}. 
 . save "Table 1 Part2.dta", replace
-{txt}(note: file Table 1 Part2.dta not found)
-file Table 1 Part2.dta saved
+{txt}{p 0 4 2}
+(file {bf}
+Table 1 Part2.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+Table 1 Part2.dta{rm}
+saved
+{p_end}
 
 {com}. 
 . 
@@ -545,6 +559,7 @@ file Table 1 Part2.dta saved
 {txt}
 {com}. 
 . import delimited using "IHME-GBD_2019_DATA-3.csv", clear 
+{res}{txt}(encoding automatically selected: ISO-8859-1)
 {res}{text}(14 vars, 12 obs)
 
 {com}. 
@@ -599,7 +614,7 @@ file Table 1 Part2.dta saved
 . rename age_name Age
 {res}{txt}
 {com}. replace Age = "At birth"
-{txt}variable {bf}Age{sf} was {bf}{res}str7{sf}{txt} now {bf}{res}str8{sf}
+{txt}variable {bf}{res}Age{sf}{txt} was {bf}{res}str7{sf}{txt} now {bf}{res}str8{sf}
 {txt}(12 real changes made)
 
 {com}. 
@@ -645,7 +660,7 @@ file Table 1 Part2.dta saved
 . rename sex_name Sex
 {res}{txt}
 {com}. replace Sex = "Both sexes" if Sex == "Both"
-{txt}variable {bf}Sex{sf} was {bf}{res}str6{sf}{txt} now {bf}{res}str10{sf}
+{txt}variable {bf}{res}Sex{sf}{txt} was {bf}{res}str6{sf}{txt} now {bf}{res}str10{sf}
 {txt}(4 real changes made)
 
 {com}. replace Sex = "Males" if Sex == "Male"
@@ -694,12 +709,12 @@ file Table 1 Part2.dta saved
 {com}. 
 . 
 . reshape wide Value Lower_UL Upper_UL, i(Measure Age     Sex) j(Year)
-{txt}(note: j = 1990 2019)
+{txt}(j = 1990 2019)
 
-Data{col 36}long{col 43}->{col 48}wide
+Data{col 36}Long{col 43}->{col 48}Wide
 {hline 77}
-Number of obs.                 {res}       6   {txt}->{res}       3
-{txt}Number of variables            {res}       8   {txt}->{res}      10
+Number of observations     {res}           6   {txt}->   {res}3           
+{txt}Number of variables        {res}           8   {txt}->   {res}10          
 {txt}j variable (2 values)              {res}Year   {txt}->   (dropped)
 xij variables:
                                   {res}Value   {txt}->   {res}Value1990 Value2019
@@ -733,8 +748,16 @@ xij variables:
 {com}. 
 . 
 . save "Table 1 Part3.dta", replace
-{txt}(note: file Table 1 Part3.dta not found)
-file Table 1 Part3.dta saved
+{txt}{p 0 4 2}
+(file {bf}
+Table 1 Part3.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+Table 1 Part3.dta{rm}
+saved
+{p_end}
 
 {com}. 
 . 
@@ -802,7 +825,7 @@ file Table 1 Part3.dta saved
 {com}. 
 . 
 . replace Measure = "Life expectancy % Change 1990 to 2019"
-{txt}variable {bf}Measure{sf} was {bf}{res}str15{sf}{txt} now {bf}{res}str37{sf}
+{txt}variable {bf}{res}Measure{sf}{txt} was {bf}{res}str15{sf}{txt} now {bf}{res}str37{sf}
 {txt}(3 real changes made)
 
 {com}. 
@@ -834,15 +857,20 @@ file Table 1 Part3.dta saved
 . order Measure Age Sex Value  
 {txt}
 {com}. 
-. drop Lower_UL Upper_UL
-{txt}
-{com}. 
 . 
 . * save output data in /output/ folder
 . 
 . save "Table 1 Part4.dta", replace 
-{txt}(note: file Table 1 Part4.dta not found)
-file Table 1 Part4.dta saved
+{txt}{p 0 4 2}
+(file {bf}
+Table 1 Part4.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+Table 1 Part4.dta{rm}
+saved
+{p_end}
 
 {com}. 
 . 
@@ -885,6 +913,7 @@ file Table 1 Part4.dta saved
 {txt}
 {com}. 
 . import delimited using "IHME-GBD_2019_DATA-4.csv", clear 
+{res}{txt}(encoding automatically selected: ISO-8859-1)
 {res}{text}(16 vars, 12 obs)
 
 {com}. 
@@ -897,7 +926,7 @@ file Table 1 Part4.dta saved
 {res}{txt}
 {com}. 
 . replace Measure = "Mortality rate" 
-{txt}variable {bf}Measure{sf} was {bf}{res}str6{sf}{txt} now {bf}{res}str14{sf}
+{txt}variable {bf}{res}Measure{sf}{txt} was {bf}{res}str6{sf}{txt} now {bf}{res}str14{sf}
 {txt}(12 real changes made)
 
 {com}. 
@@ -950,7 +979,7 @@ file Table 1 Part4.dta saved
 . rename sex_name Sex
 {res}{txt}
 {com}. replace Sex = "Both sexes" if Sex == "Both"
-{txt}variable {bf}Sex{sf} was {bf}{res}str6{sf}{txt} now {bf}{res}str10{sf}
+{txt}variable {bf}{res}Sex{sf}{txt} was {bf}{res}str6{sf}{txt} now {bf}{res}str10{sf}
 {txt}(4 real changes made)
 
 {com}. replace Sex = "Males" if Sex == "Male"
@@ -1030,12 +1059,12 @@ file Table 1 Part4.dta saved
 . 
 . 
 . reshape wide Value Lower_UL Upper_UL, i(Measure Age     Sex) j(Year)
-{txt}(note: j = 1990 2019)
+{txt}(j = 1990 2019)
 
-Data{col 36}long{col 43}->{col 48}wide
+Data{col 36}Long{col 43}->{col 48}Wide
 {hline 77}
-Number of obs.                 {res}       6   {txt}->{res}       3
-{txt}Number of variables            {res}       9   {txt}->{res}      11
+Number of observations     {res}           6   {txt}->   {res}3           
+{txt}Number of variables        {res}           9   {txt}->   {res}11          
 {txt}j variable (2 values)              {res}Year   {txt}->   (dropped)
 xij variables:
                                   {res}Value   {txt}->   {res}Value1990 Value2019
@@ -1069,7 +1098,7 @@ xij variables:
 {res}{txt}
 {com}. 
 . replace Measure = "Post-neonatal infant mortality"
-{txt}variable {bf}Measure{sf} was {bf}{res}str14{sf}{txt} now {bf}{res}str30{sf}
+{txt}variable {bf}{res}Measure{sf}{txt} was {bf}{res}str14{sf}{txt} now {bf}{res}str30{sf}
 {txt}(3 real changes made)
 
 {com}. 
@@ -1090,8 +1119,16 @@ xij variables:
 . 
 . 
 . save "Table 1 Part5.dta", replace 
-{txt}(note: file Table 1 Part5.dta not found)
-file Table 1 Part5.dta saved
+{txt}{p 0 4 2}
+(file {bf}
+Table 1 Part5.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+Table 1 Part5.dta{rm}
+saved
+{p_end}
 
 {com}. 
 . 
@@ -1127,6 +1164,7 @@ file Table 1 Part5.dta saved
 {txt}
 {com}. 
 . import delimited using "IHME-GBD_2019_DATA-5.csv", clear 
+{res}{txt}(encoding automatically selected: ISO-8859-1)
 {res}{text}(17 vars, 3 obs)
 
 {com}. 
@@ -1169,7 +1207,7 @@ file Table 1 Part5.dta saved
 {res}{txt}
 {com}. 
 . replace Measure = "Mortality rate" 
-{txt}variable {bf}Measure{sf} was {bf}{res}str6{sf}{txt} now {bf}{res}str14{sf}
+{txt}variable {bf}{res}Measure{sf}{txt} was {bf}{res}str6{sf}{txt} now {bf}{res}str14{sf}
 {txt}(3 real changes made)
 
 {com}. 
@@ -1235,7 +1273,7 @@ file Table 1 Part5.dta saved
 . rename sex_name Sex
 {res}{txt}
 {com}. replace Sex = "Both sexes" if Sex == "Both"
-{txt}variable {bf}Sex{sf} was {bf}{res}str6{sf}{txt} now {bf}{res}str10{sf}
+{txt}variable {bf}{res}Sex{sf}{txt} was {bf}{res}str6{sf}{txt} now {bf}{res}str10{sf}
 {txt}(1 real change made)
 
 {com}. replace Sex = "Males" if Sex == "Male"
@@ -1292,11 +1330,11 @@ file Table 1 Part5.dta saved
 {txt}
 {com}. 
 . replace Measure = "Post-neonatal infant mortality"
-{txt}variable {bf}Measure{sf} was {bf}{res}str14{sf}{txt} now {bf}{res}str30{sf}
+{txt}variable {bf}{res}Measure{sf}{txt} was {bf}{res}str14{sf}{txt} now {bf}{res}str30{sf}
 {txt}(3 real changes made)
 
 {com}. 
-. drop Lower_UL Upper_UL cause_name year_start year_end
+. drop cause_name year_start year_end
 {txt}
 {com}. 
 . 
@@ -1312,8 +1350,16 @@ file Table 1 Part5.dta saved
 {com}. 
 . 
 . save "Table 1 Part6.dta", replace 
-{txt}(note: file Table 1 Part6.dta not found)
-file Table 1 Part6.dta saved
+{txt}{p 0 4 2}
+(file {bf}
+Table 1 Part6.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+Table 1 Part6.dta{rm}
+saved
+{p_end}
 
 {com}. 
 . 
@@ -1350,10 +1396,10 @@ file Table 1 Part6.dta saved
 {com}. 
 . merge 1:1 Measure Age Sex using "Table 1 Part2.dta"
 {res}
-{txt}{col 5}Result{col 38}# of obs.
+{txt}{col 5}Result{col 33}Number of obs
 {col 5}{hline 41}
-{col 5}not matched{col 30}{res}               0
-{txt}{col 5}matched{col 30}{res}              18{txt}  (_merge==3)
+{col 5}Not matched{col 30}{res}               0
+{txt}{col 5}Matched{col 30}{res}              18{txt}  (_merge==3)
 {col 5}{hline 41}
 
 {com}. 
@@ -1406,8 +1452,16 @@ file Table 1 Part6.dta saved
 {txt}
 {com}. 
 . save "Table 1 Part1and2.dta", replace 
-{txt}(note: file Table 1 Part1and2.dta not found)
-file Table 1 Part1and2.dta saved
+{txt}{p 0 4 2}
+(file {bf}
+Table 1 Part1and2.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+Table 1 Part1and2.dta{rm}
+saved
+{p_end}
 
 {com}. 
 . 
@@ -1425,15 +1479,14 @@ file Table 1 Part1and2.dta saved
 {com}. 
 . merge 1:1 Age Sex using "Table 1 Part4.dta"
 {res}{txt}{p 0 7 2}
-(note: variable
-Measure was 
-str15, now str37 to accommodate using data's values)
+(variable
+{bf:Measure} was {bf:str15}, now {bf:str37} to accommodate using data's values)
 {p_end}
 
-{col 5}Result{col 38}# of obs.
+{col 5}Result{col 33}Number of obs
 {col 5}{hline 41}
-{col 5}not matched{col 30}{res}               0
-{txt}{col 5}matched{col 30}{res}               3{txt}  (_merge==3)
+{col 5}Not matched{col 30}{res}               0
+{txt}{col 5}Matched{col 30}{res}               3{txt}  (_merge==3)
 {col 5}{hline 41}
 
 {com}. 
@@ -1450,8 +1503,16 @@ str15, now str37 to accommodate using data's values)
 {txt}
 {com}. 
 . save "Table 1 Part3and4.dta", replace 
-{txt}(note: file Table 1 Part3and4.dta not found)
-file Table 1 Part3and4.dta saved
+{txt}{p 0 4 2}
+(file {bf}
+Table 1 Part3and4.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+Table 1 Part3and4.dta{rm}
+saved
+{p_end}
 
 {com}. 
 . 
@@ -1473,10 +1534,10 @@ file Table 1 Part3and4.dta saved
 {com}. 
 . merge 1:1 Sex using "Table 1 Part6.dta"
 {res}
-{txt}{col 5}Result{col 38}# of obs.
+{txt}{col 5}Result{col 33}Number of obs
 {col 5}{hline 41}
-{col 5}not matched{col 30}{res}               0
-{txt}{col 5}matched{col 30}{res}               3{txt}  (_merge==3)
+{col 5}Not matched{col 30}{res}               0
+{txt}{col 5}Matched{col 30}{res}               3{txt}  (_merge==3)
 {col 5}{hline 41}
 
 {com}. 
@@ -1506,8 +1567,16 @@ file Table 1 Part3and4.dta saved
 {txt}
 {com}. 
 . save "Table 1 Part5and6.dta", replace 
-{txt}(note: file Table 1 Part5and6.dta not found)
-file Table 1 Part5and6.dta saved
+{txt}{p 0 4 2}
+(file {bf}
+Table 1 Part5and6.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+Table 1 Part5and6.dta{rm}
+saved
+{p_end}
 
 {com}. 
 . 
@@ -1523,26 +1592,35 @@ file Table 1 Part5and6.dta saved
 {com}. 
 . append using  "Table 1 Part3and4.dta"
 {txt}{p 0 7 2}
-(note: variable
-Measure was 
-str5, now str15 to accommodate using data's values)
+(variable
+{bf:Measure} was {bf:str5}, now {bf:str15} to accommodate using data's values)
 {p_end}
 
 {com}. 
 . append using  "Table 1 Part5and6.dta"
 {txt}{p 0 7 2}
-(note: variable
-Measure was 
-str15, now str30 to accommodate using data's values)
+(variable
+{bf:Measure} was {bf:str15}, now {bf:str30} to accommodate using data's values)
 {p_end}
 
 {com}. 
+. 
+. 
 . save "Table 1.dta", replace
-{txt}file Table 1.dta saved
+{txt}{p 0 4 2}
+(file {bf}
+Table 1.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+Table 1.dta{rm}
+saved
+{p_end}
 
 {com}. 
-. export excel using "Table 1.xlsx", replace firstrow(varlabels)
-{res}{txt}file Table 1.xlsx saved
+. export excel using "Table 1.xlsx", replace firstrow(varlabels) keepcellfmt
+{res}{txt}file {bf:Table 1.xlsx} saved
 
 {com}. 
 . 
@@ -1608,7 +1686,7 @@ rm: Table 1 Part3.dta: No such file or directory
       {txt}name:  {res}<unnamed>
        {txt}log:  {res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output/log Table 1.smcl
   {txt}log type:  {res}smcl
- {txt}closed on:  {res} 8 Apr 2022, 07:52:22
+ {txt}closed on:  {res} 8 Oct 2023, 20:40:10
 {txt}{.-}
 {smcl}
 {txt}{sf}{ul off}

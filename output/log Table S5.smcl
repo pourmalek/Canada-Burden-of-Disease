@@ -1,23 +1,23 @@
 {smcl}
-{com}{sf}{ul off}{txt}{.-}
+{txt}{sf}{ul off}{.-}
       name:  {res}<unnamed>
-       {txt}log:  {res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output/log Table S3.smcl
+       {txt}log:  {res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output/log Table S5.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res} 8 Apr 2022, 08:01:46
+ {txt}opened on:  {res} 8 Oct 2023, 20:40:13
 {txt}
 {com}. 
 . ***************************************************************************
-. * This is "do Table S3.do"
+. * This is "do Table S5.do"
 . 
-. * Project: Canada Burden of Disease                                                                        
-. * Person: Farshad Pourmalek pourmalek_farshad at yahoo dotcom
+. * Project: Canada Burden of Disease 1990-2019                                                                        
+. * Person: Farshad Pourmalek
 . * Time (initial): 2022 March 28
 . ***************************************************************************
 . 
 . 
 . 
-. ** Prepares Table S3
-. * Table S3. Age-standardized DALY rates for 204 countries and high-income regions in 1990 and 2019 and relative change (males and females combined)
+. ** Prepares Table S5
+. * Table S5. Age-standardized DALY rates for 204 countries and high-income regions in 1990 and 2019 and relative change (males and females combined)
 . 
 . 
 . 
@@ -30,9 +30,9 @@
 . 
 . 
 . ***********************************************************************
-. * Prepare Table S3 Part 1
+. * Prepare Table S5 Part 1
 . 
-. ** Table S3 Part 1: Base values
+. ** Table S5 Part 1: Base values
 . 
 . 
 . 
@@ -47,6 +47,7 @@
 {txt}
 {com}. 
 . import delimited using "IHME-GBD_2019_DATA-104.csv", clear 
+{res}{txt}(encoding automatically selected: ISO-8859-1)
 {res}{text}(16 vars, 420 obs)
 
 {com}. 
@@ -134,14 +135,23 @@
 {txt}
 {com}. 
 . save "IHME-GBD_2019_DATA-104.dta", replace
-{txt}file IHME-GBD_2019_DATA-104.dta saved
+{txt}{p 0 4 2}
+(file {bf}
+IHME-GBD_2019_DATA-104.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+IHME-GBD_2019_DATA-104.dta{rm}
+saved
+{p_end}
 
 {com}. 
 . 
 . 
 . 
 . *****************************
-. * Table S3 2019
+. * Table S5 2019
 . 
 . use "IHME-GBD_2019_DATA-104.dta",clear
 {txt}
@@ -159,9 +169,17 @@
 . sort Value
 {txt}
 {com}. 
-. save "Table S3 2019.dta", replace
-{txt}(note: file Table S3 2019.dta not found)
-file Table S3 2019.dta saved
+. save "Table S5 2019.dta", replace
+{txt}{p 0 4 2}
+(file {bf}
+Table S5 2019.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+Table S5 2019.dta{rm}
+saved
+{p_end}
 
 {com}. 
 . 
@@ -171,7 +189,7 @@ file Table S3 2019.dta saved
 . 
 . 
 . *****************************
-. * Table S3 1990
+. * Table S5 1990
 . 
 . use "IHME-GBD_2019_DATA-104.dta",clear
 {txt}
@@ -189,9 +207,17 @@ file Table S3 2019.dta saved
 . sort Value
 {txt}
 {com}. 
-. save "Table S3 1990.dta", replace
-{txt}(note: file Table S3 1990.dta not found)
-file Table S3 1990.dta saved
+. save "Table S5 1990.dta", replace
+{txt}{p 0 4 2}
+(file {bf}
+Table S5 1990.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+Table S5 1990.dta{rm}
+saved
+{p_end}
 
 {com}. 
 . 
@@ -202,15 +228,15 @@ file Table S3 1990.dta saved
 . ******************************
 . * merge 2019 and 1990 
 . 
-. use "Table S3 2019.dta", clear 
+. use "Table S5 2019.dta", clear 
 {txt}
 {com}. 
-. merge m:m Location using "Table S3 1990.dta"
+. merge m:m Location using "Table S5 1990.dta"
 {res}
-{txt}{col 5}Result{col 38}# of obs.
+{txt}{col 5}Result{col 33}Number of obs
 {col 5}{hline 41}
-{col 5}not matched{col 30}{res}               0
-{txt}{col 5}matched{col 30}{res}             210{txt}  (_merge==3)
+{col 5}Not matched{col 30}{res}               0
+{txt}{col 5}Matched{col 30}{res}             210{txt}  (_merge==3)
 {col 5}{hline 41}
 
 {com}. 
@@ -307,7 +333,7 @@ file Table S3 1990.dta saved
 {txt}(210 missing values generated)
 
 {com}. replace alpha_region = "R1. " if Location == "High-income Asia Pacific"
-{txt}variable {bf}alpha_region{sf} was {bf}{res}str1{sf}{txt} now {bf}{res}str4{sf}
+{txt}variable {bf}{res}alpha_region{sf}{txt} was {bf}{res}str1{sf}{txt} now {bf}{res}str4{sf}
 {txt}(1 real change made)
 
 {com}. replace alpha_region = "R2. " if Location == "Western Europe"
@@ -409,9 +435,17 @@ file Table S3 1990.dta saved
 . qui compress
 {txt}
 {com}. 
-. save "Table S3 Part 1.dta", replace
-{txt}(note: file Table S3 Part 1.dta not found)
-file Table S3 Part 1.dta saved
+. save "Table S5 Part 1.dta", replace
+{txt}{p 0 4 2}
+(file {bf}
+Table S5 Part 1.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+Table S5 Part 1.dta{rm}
+saved
+{p_end}
 
 {com}. 
 . 
@@ -430,9 +464,9 @@ file Table S3 Part 1.dta saved
 . 
 . 
 . ***********************************************************************
-. * Prepare Table S3 Part 2
+. * Prepare Table S5 Part 2
 . 
-. ** Table S3 Part 2: Change 1990-2019
+. ** Table S5 Part 2: Change 1990-2019
 . 
 . 
 . 
@@ -447,6 +481,7 @@ file Table S3 Part 1.dta saved
 {txt}
 {com}. 
 . import delimited using "IHME-GBD_2019_DATA-105.csv", clear 
+{res}{txt}(encoding automatically selected: ISO-8859-1)
 {res}{text}(17 vars, 210 obs)
 
 {com}. 
@@ -570,9 +605,17 @@ file Table S3 Part 1.dta saved
 . qui compress
 {txt}
 {com}. 
-. save "Table S3 Part 2.dta", replace
-{txt}(note: file Table S3 Part 2.dta not found)
-file Table S3 Part 2.dta saved
+. save "Table S5 Part 2.dta", replace
+{txt}{p 0 4 2}
+(file {bf}
+Table S5 Part 2.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+Table S5 Part 2.dta{rm}
+saved
+{p_end}
 
 {com}. 
 . 
@@ -582,17 +625,17 @@ file Table S3 Part 2.dta saved
 . 
 . 
 . **********************************
-. * merge the two parts of Table S3
+. * merge the two parts of Table S5
 . 
-. use "Table S3 Part 1.dta", clear 
+. use "Table S5 Part 1.dta", clear 
 {txt}
 {com}. 
-. merge m:m Location_original using "Table S3 Part 2.dta"
+. merge m:m Location_original using "Table S5 Part 2.dta"
 {res}
-{txt}{col 5}Result{col 38}# of obs.
+{txt}{col 5}Result{col 33}Number of obs
 {col 5}{hline 41}
-{col 5}not matched{col 30}{res}               0
-{txt}{col 5}matched{col 30}{res}             210{txt}  (_merge==3)
+{col 5}Not matched{col 30}{res}               0
+{txt}{col 5}Matched{col 30}{res}             210{txt}  (_merge==3)
 {col 5}{hline 41}
 
 {com}. 
@@ -622,15 +665,24 @@ file Table S3 Part 2.dta saved
 . qui compress
 {txt}
 {com}. 
-. save "Table S3.dta", replace
-{txt}file Table S3.dta saved
+. save "Table S5.dta", replace
+{txt}{p 0 4 2}
+(file {bf}
+Table S5.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+Table S5.dta{rm}
+saved
+{p_end}
 
 {com}. 
 . keep Location Value_1990 Value_1990_UI Value_2019 Value_2019_UI Change_Value Change_UI
 {txt}
 {com}. 
-. export excel using "Table S3.xlsx", replace firstrow(varlabels)
-{res}{txt}file Table S3.xlsx saved
+. export excel using "Table S5.xlsx", replace firstrow(varlabels) keepcellfmt
+{res}{txt}file {bf:Table S5.xlsx} saved
 
 {com}. 
 . 
@@ -639,16 +691,16 @@ file Table S3 Part 2.dta saved
 . 
 . * omit files no longer needed
 . 
-. shell rm -r "Table S3 2019.dta"
+. shell rm -r "Table S5 2019.dta"
 {txt}
 
-{com}. shell rm -r "Table S3 1990.dta"
+{com}. shell rm -r "Table S5 1990.dta"
 {txt}
 
-{com}. shell rm -r "Table S3 Part 1.dta"
+{com}. shell rm -r "Table S5 Part 1.dta"
 {txt}
 
-{com}. shell rm -r "Table S3 Part 2.dta"
+{com}. shell rm -r "Table S5 Part 2.dta"
 {txt}
 
 {com}. 
@@ -663,14 +715,14 @@ file Table S3 Part 2.dta saved
 . 
 . **********************
 . 
-. view "log Table S3.smcl"
+. view "log Table S5.smcl"
 {txt}
 {com}. 
 . log close
       {txt}name:  {res}<unnamed>
-       {txt}log:  {res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output/log Table S3.smcl
+       {txt}log:  {res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output/log Table S5.smcl
   {txt}log type:  {res}smcl
- {txt}closed on:  {res} 8 Apr 2022, 08:01:46
+ {txt}closed on:  {res} 8 Oct 2023, 20:40:14
 {txt}{.-}
 {smcl}
 {txt}{sf}{ul off}

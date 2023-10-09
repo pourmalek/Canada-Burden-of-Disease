@@ -7,21 +7,21 @@ cd output
 
 capture log close 
 
-log using "log Table S2.smcl", replace
+log using "log Table S4.smcl", replace
 
 ***************************************************************************
-* This is "do Table S2.do"
+* This is "do Table S4.do"
 
-* Project: Canada Burden of Disease                                                                        
-* Person: Farshad Pourmalek pourmalek_farshad at yahoo dotcom
+* Project: Canada Burden of Disease 1990-2019                                                                        
+* Person: Farshad Pourmalek
 * Time (initial): 2022 March 28
 ***************************************************************************
 
 
 
-** Prepares Table S2
-* Table S2: Top 10 causes of DALYs, YLDs and YLLs in Canada in 2019 by sex 
-* and percent change from 1990 to 2019
+** Prepares Table S4
+* Table S4: Top 10 causes of all-age and age-standardized DALYs, YLDs and YLLs 
+* in Canada in 2019 and percent change from 1990 to 2019, by sex
 
 
 /*
@@ -55,12 +55,12 @@ Value2019 lower upper Change1990-2019 lower upper
 
 
 ***********************************************************************
-* Prepare Table S2 Part 1
+* Prepare Table S4 Part 1
 
-** Table S2 Part 1:
+** Table S4 Part 1:
 * DALYs, YLDs and YLLs in Canada in 2019, All Ages and Age-standardized, Males and Females
 * Input data: "IHME-GBD_2019_DATA-102.csv"
-* Output data: "Table S2 Part1.dta"
+* Output data: "Table S4 Part1.dta"
 
 
 
@@ -420,7 +420,7 @@ save "Canada 2019 12 YLDs, Age-standardized, Females.dta", replace
 
 ******************************
 
-* append parts of Table S2
+* append parts of Table S4
 
 use "Canada 2019 1 DALYs, All Ages, Males.dta", clear 
 append using "Canada 2019 2 DALYs, All Ages, Females.dta" 
@@ -466,7 +466,7 @@ order cause_id, last
 
 qui compress
 
-save "Table S2 Part1.dta", replace 
+save "Table S4 Part1.dta", replace 
 
 
 
@@ -483,12 +483,12 @@ save "Table S2 Part1.dta", replace
 
 
 ***********************************************************************
-* Prepare Table S2 Part 2
+* Prepare Table S4 Part 2
 
-** Table S2 Part 2:
+** Table S4 Part 2:
 * DALYs, YLDs and YLLs in Canada, percent change from 1990 to 2019
 * Input data: "IHME-GBD_2019_DATA-103.dta"
-* Output data: "Table S2 Part3.dta"
+* Output data: "Table S4 Part3.dta"
 
 
 
@@ -883,7 +883,7 @@ save "Canada 2019 Base and Change 12 YLDs, Age-standardized, Females.dta", repla
 
 ******************************
 
-* append parts of Table S2 - Base and Change 
+* append parts of Table S4 - Base and Change 
 
 use "Canada 2019 Base and Change 1 DALYs, All Ages, Males.dta", clear 
 
@@ -960,9 +960,9 @@ order rank row, last
 
 qui compress
 
-save "Table S2.dta", replace
+save "Table S4.dta", replace
 
-export excel using "Table S2.xlsx", replace firstrow(varlabels)
+export excel using "Table S4.xlsx", replace firstrow(varlabels) keepcellfmt
 
 
 
@@ -986,7 +986,7 @@ shell rm -r "Canada 2019 11 YLDs, Age-standardized, Males.dta"
 shell rm -r "Canada 2019 12 YLDs, Age-standardized, Females.dta"
 
 
-shell rm -r "Table S2 Part1.dta"
+shell rm -r "Table S4 Part1.dta"
 
 
 
@@ -1011,7 +1011,7 @@ shell rm -r "Canada 2019 Base and Change 12 YLDs, Age-standardized, Females.dta"
 
 **********************
 
-view "log Table S2.smcl"
+view "log Table S4.smcl"
 
 log close
 

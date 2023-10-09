@@ -7,20 +7,20 @@ cd output
 
 capture log close 
 
-log using "log Table S3.smcl", replace
+log using "log Table S5.smcl", replace
 
 ***************************************************************************
-* This is "do Table S3.do"
+* This is "do Table S5.do"
 
-* Project: Canada Burden of Disease                                                                        
-* Person: Farshad Pourmalek pourmalek_farshad at yahoo dotcom
+* Project: Canada Burden of Disease 1990-2019                                                                        
+* Person: Farshad Pourmalek
 * Time (initial): 2022 March 28
 ***************************************************************************
 
 
 
-** Prepares Table S3
-* Table S3. Age-standardized DALY rates for 204 countries and high-income regions in 1990 and 2019 and relative change (males and females combined)
+** Prepares Table S5
+* Table S5. Age-standardized DALY rates for 204 countries and high-income regions in 1990 and 2019 and relative change (males and females combined)
 
 
 
@@ -33,9 +33,9 @@ log using "log Table S3.smcl", replace
 
 
 ***********************************************************************
-* Prepare Table S3 Part 1
+* Prepare Table S5 Part 1
 
-** Table S3 Part 1: Base values
+** Table S5 Part 1: Base values
 
 
 
@@ -113,7 +113,7 @@ save "IHME-GBD_2019_DATA-104.dta", replace
 
 
 *****************************
-* Table S3 2019
+* Table S5 2019
 
 use "IHME-GBD_2019_DATA-104.dta",clear
 
@@ -125,7 +125,7 @@ rename (Value Lower_UL Upper_UL) (Value_2019 Lower_UL_2019 Upper_UL_2019)
 
 sort Value
 
-save "Table S3 2019.dta", replace
+save "Table S5 2019.dta", replace
 
 
 
@@ -134,7 +134,7 @@ save "Table S3 2019.dta", replace
 
 
 *****************************
-* Table S3 1990
+* Table S5 1990
 
 use "IHME-GBD_2019_DATA-104.dta",clear
 
@@ -146,7 +146,7 @@ rename (Value Lower_UL Upper_UL) (Value_1990 Lower_UL_1990 Upper_UL_1990)
 
 sort Value
 
-save "Table S3 1990.dta", replace
+save "Table S5 1990.dta", replace
 
 
 
@@ -156,9 +156,9 @@ save "Table S3 1990.dta", replace
 ******************************
 * merge 2019 and 1990 
 
-use "Table S3 2019.dta", clear 
+use "Table S5 2019.dta", clear 
 
-merge m:m Location using "Table S3 1990.dta"
+merge m:m Location using "Table S5 1990.dta"
 
 drop _merge
 
@@ -261,7 +261,7 @@ sort Value_2019
 
 qui compress
 
-save "Table S3 Part 1.dta", replace
+save "Table S5 Part 1.dta", replace
 
 
 
@@ -279,9 +279,9 @@ save "Table S3 Part 1.dta", replace
 
 
 ***********************************************************************
-* Prepare Table S3 Part 2
+* Prepare Table S5 Part 2
 
-** Table S3 Part 2: Change 1990-2019
+** Table S5 Part 2: Change 1990-2019
 
 
 
@@ -374,7 +374,7 @@ rename location_original Location_original
 
 qui compress
 
-save "Table S3 Part 2.dta", replace
+save "Table S5 Part 2.dta", replace
 
 
 
@@ -383,11 +383,11 @@ save "Table S3 Part 2.dta", replace
 
 
 **********************************
-* merge the two parts of Table S3
+* merge the two parts of Table S5
 
-use "Table S3 Part 1.dta", clear 
+use "Table S5 Part 1.dta", clear 
 
-merge m:m Location_original using "Table S3 Part 2.dta"
+merge m:m Location_original using "Table S5 Part 2.dta"
 
 drop _merge
 
@@ -406,11 +406,11 @@ label var Change_Value "Change 1990-2019"
 
 qui compress
 
-save "Table S3.dta", replace
+save "Table S5.dta", replace
 
 keep Location Value_1990 Value_1990_UI Value_2019 Value_2019_UI Change_Value Change_UI
 
-export excel using "Table S3.xlsx", replace firstrow(varlabels)
+export excel using "Table S5.xlsx", replace firstrow(varlabels) keepcellfmt
 
 
 
@@ -418,10 +418,10 @@ export excel using "Table S3.xlsx", replace firstrow(varlabels)
 
 * omit files no longer needed
 
-shell rm -r "Table S3 2019.dta"
-shell rm -r "Table S3 1990.dta"
-shell rm -r "Table S3 Part 1.dta"
-shell rm -r "Table S3 Part 2.dta"
+shell rm -r "Table S5 2019.dta"
+shell rm -r "Table S5 1990.dta"
+shell rm -r "Table S5 Part 1.dta"
+shell rm -r "Table S5 Part 2.dta"
 
 
 
@@ -434,7 +434,7 @@ shell rm -r "Table S3 Part 2.dta"
 
 **********************
 
-view "log Table S3.smcl"
+view "log Table S5.smcl"
 
 log close
 

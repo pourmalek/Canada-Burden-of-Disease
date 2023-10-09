@@ -1,24 +1,24 @@
 {smcl}
-{com}{sf}{ul off}{txt}{.-}
+{txt}{sf}{ul off}{.-}
       name:  {res}<unnamed>
-       {txt}log:  {res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output/log Table S2.smcl
+       {txt}log:  {res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output/log Table S4.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res} 8 Apr 2022, 07:52:29
+ {txt}opened on:  {res} 8 Oct 2023, 20:40:12
 {txt}
 {com}. 
 . ***************************************************************************
-. * This is "do Table S2.do"
+. * This is "do Table S4.do"
 . 
-. * Project: Canada Burden of Disease                                                                        
-. * Person: Farshad Pourmalek pourmalek_farshad at yahoo dotcom
+. * Project: Canada Burden of Disease 1990-2019                                                                        
+. * Person: Farshad Pourmalek
 . * Time (initial): 2022 March 28
 . ***************************************************************************
 . 
 . 
 . 
-. ** Prepares Table S2
-. * Table S2: Top 10 causes of DALYs, YLDs and YLLs in Canada in 2019 by sex 
-. * and percent change from 1990 to 2019
+. ** Prepares Table S4
+. * Table S4: Top 10 causes of all-age and age-standardized DALYs, YLDs and YLLs 
+. * in Canada in 2019 and percent change from 1990 to 2019, by sex
 . 
 . 
 . /*
@@ -52,12 +52,12 @@
 . 
 . 
 . ***********************************************************************
-. * Prepare Table S2 Part 1
+. * Prepare Table S4 Part 1
 . 
-. ** Table S2 Part 1:
+. ** Table S4 Part 1:
 . * DALYs, YLDs and YLLs in Canada in 2019, All Ages and Age-standardized, Males and Females
 . * Input data: "IHME-GBD_2019_DATA-102.csv"
-. * Output data: "Table S2 Part1.dta"
+. * Output data: "Table S4 Part1.dta"
 . 
 . 
 . 
@@ -72,6 +72,7 @@
 {txt}
 {com}. 
 . import delimited using "IHME-GBD_2019_DATA-102.csv", clear 
+{res}{txt}(encoding automatically selected: ISO-8859-1)
 {res}{text}(16 vars, 1,850 obs)
 
 {com}. 
@@ -161,11 +162,11 @@
 {txt}(0 real changes made)
 
 {com}. replace Sex = "Males" if sex_name == "Male"
-{txt}variable {bf}Sex{sf} was {bf}{res}str1{sf}{txt} now {bf}{res}str5{sf}
+{txt}variable {bf}{res}Sex{sf}{txt} was {bf}{res}str1{sf}{txt} now {bf}{res}str5{sf}
 {txt}(919 real changes made)
 
 {com}. replace Sex = "Females" if sex_name == "Female"
-{txt}variable {bf}Sex{sf} was {bf}{res}str5{sf}{txt} now {bf}{res}str7{sf}
+{txt}variable {bf}{res}Sex{sf}{txt} was {bf}{res}str5{sf}{txt} now {bf}{res}str7{sf}
 {txt}(931 real changes made)
 
 {com}. drop sex_name
@@ -235,7 +236,16 @@
 {txt}
 {com}. 
 . save "IHME-GBD_2019_DATA-102.dta", replace
-{txt}file IHME-GBD_2019_DATA-102.dta saved
+{txt}{p 0 4 2}
+(file {bf}
+IHME-GBD_2019_DATA-102.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+IHME-GBD_2019_DATA-102.dta{rm}
+saved
+{p_end}
 
 {com}. 
 . 
@@ -268,8 +278,16 @@
 {txt}
 {com}. 
 . save "Canada 2019 1 DALYs, All Ages, Males.dta", replace
-{txt}(note: file Canada 2019 1 DALYs, All Ages, Males.dta not found)
-file Canada 2019 1 DALYs, All Ages, Males.dta saved
+{txt}{p 0 4 2}
+(file {bf}
+Canada 2019 1 DALYs, All Ages, Males.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+Canada 2019 1 DALYs, All Ages, Males.dta{rm}
+saved
+{p_end}
 
 {com}. 
 . 
@@ -302,8 +320,16 @@ file Canada 2019 1 DALYs, All Ages, Males.dta saved
 {txt}
 {com}. 
 . save "Canada 2019 2 DALYs, All Ages, Females.dta", replace
-{txt}(note: file Canada 2019 2 DALYs, All Ages, Females.dta not found)
-file Canada 2019 2 DALYs, All Ages, Females.dta saved
+{txt}{p 0 4 2}
+(file {bf}
+Canada 2019 2 DALYs, All Ages, Females.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+Canada 2019 2 DALYs, All Ages, Females.dta{rm}
+saved
+{p_end}
 
 {com}. 
 . 
@@ -338,8 +364,16 @@ file Canada 2019 2 DALYs, All Ages, Females.dta saved
 {txt}
 {com}. 
 . save "Canada 2019 3 DALYs, Age-standardized, Males.dta", replace
-{txt}(note: file Canada 2019 3 DALYs, Age-standardized, Males.dta not found)
-file Canada 2019 3 DALYs, Age-standardized, Males.dta saved
+{txt}{p 0 4 2}
+(file {bf}
+Canada 2019 3 DALYs, Age-standardized, Males.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+Canada 2019 3 DALYs, Age-standardized, Males.dta{rm}
+saved
+{p_end}
 
 {com}. 
 . 
@@ -372,8 +406,16 @@ file Canada 2019 3 DALYs, Age-standardized, Males.dta saved
 {txt}
 {com}. 
 . save "Canada 2019 4 DALYs, Age-standardized, Females.dta", replace
-{txt}(note: file Canada 2019 4 DALYs, Age-standardized, Females.dta not found)
-file Canada 2019 4 DALYs, Age-standardized, Females.dta saved
+{txt}{p 0 4 2}
+(file {bf}
+Canada 2019 4 DALYs, Age-standardized, Females.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+Canada 2019 4 DALYs, Age-standardized, Females.dta{rm}
+saved
+{p_end}
 
 {com}. 
 . 
@@ -406,8 +448,16 @@ file Canada 2019 4 DALYs, Age-standardized, Females.dta saved
 {txt}
 {com}. 
 . save "Canada 2019 5 YLLs, All Ages, Males.dta", replace
-{txt}(note: file Canada 2019 5 YLLs, All Ages, Males.dta not found)
-file Canada 2019 5 YLLs, All Ages, Males.dta saved
+{txt}{p 0 4 2}
+(file {bf}
+Canada 2019 5 YLLs, All Ages, Males.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+Canada 2019 5 YLLs, All Ages, Males.dta{rm}
+saved
+{p_end}
 
 {com}. 
 . 
@@ -440,8 +490,16 @@ file Canada 2019 5 YLLs, All Ages, Males.dta saved
 {txt}
 {com}. 
 . save "Canada 2019 6 YLLs, All Ages, Females.dta", replace
-{txt}(note: file Canada 2019 6 YLLs, All Ages, Females.dta not found)
-file Canada 2019 6 YLLs, All Ages, Females.dta saved
+{txt}{p 0 4 2}
+(file {bf}
+Canada 2019 6 YLLs, All Ages, Females.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+Canada 2019 6 YLLs, All Ages, Females.dta{rm}
+saved
+{p_end}
 
 {com}. 
 . 
@@ -474,8 +532,16 @@ file Canada 2019 6 YLLs, All Ages, Females.dta saved
 {txt}
 {com}. 
 . save "Canada 2019 7 YLLs, Age-standardized, Males.dta", replace
-{txt}(note: file Canada 2019 7 YLLs, Age-standardized, Males.dta not found)
-file Canada 2019 7 YLLs, Age-standardized, Males.dta saved
+{txt}{p 0 4 2}
+(file {bf}
+Canada 2019 7 YLLs, Age-standardized, Males.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+Canada 2019 7 YLLs, Age-standardized, Males.dta{rm}
+saved
+{p_end}
 
 {com}. 
 . 
@@ -509,8 +575,16 @@ file Canada 2019 7 YLLs, Age-standardized, Males.dta saved
 {txt}
 {com}. 
 . save "Canada 2019 8 YLLs, Age-standardized, Females.dta", replace
-{txt}(note: file Canada 2019 8 YLLs, Age-standardized, Females.dta not found)
-file Canada 2019 8 YLLs, Age-standardized, Females.dta saved
+{txt}{p 0 4 2}
+(file {bf}
+Canada 2019 8 YLLs, Age-standardized, Females.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+Canada 2019 8 YLLs, Age-standardized, Females.dta{rm}
+saved
+{p_end}
 
 {com}. 
 . 
@@ -544,8 +618,16 @@ file Canada 2019 8 YLLs, Age-standardized, Females.dta saved
 {txt}
 {com}. 
 . save "Canada 2019 9 YLDs, All Ages, Males.dta", replace
-{txt}(note: file Canada 2019 9 YLDs, All Ages, Males.dta not found)
-file Canada 2019 9 YLDs, All Ages, Males.dta saved
+{txt}{p 0 4 2}
+(file {bf}
+Canada 2019 9 YLDs, All Ages, Males.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+Canada 2019 9 YLDs, All Ages, Males.dta{rm}
+saved
+{p_end}
 
 {com}. 
 . 
@@ -579,8 +661,16 @@ file Canada 2019 9 YLDs, All Ages, Males.dta saved
 {txt}
 {com}. 
 . save "Canada 2019 10 YLDs, All Ages, Females.dta", replace
-{txt}(note: file Canada 2019 10 YLDs, All Ages, Females.dta not found)
-file Canada 2019 10 YLDs, All Ages, Females.dta saved
+{txt}{p 0 4 2}
+(file {bf}
+Canada 2019 10 YLDs, All Ages, Females.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+Canada 2019 10 YLDs, All Ages, Females.dta{rm}
+saved
+{p_end}
 
 {com}. 
 . 
@@ -614,8 +704,16 @@ file Canada 2019 10 YLDs, All Ages, Females.dta saved
 {txt}
 {com}. 
 . save "Canada 2019 11 YLDs, Age-standardized, Males.dta", replace
-{txt}(note: file Canada 2019 11 YLDs, Age-standardized, Males.dta not found)
-file Canada 2019 11 YLDs, Age-standardized, Males.dta saved
+{txt}{p 0 4 2}
+(file {bf}
+Canada 2019 11 YLDs, Age-standardized, Males.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+Canada 2019 11 YLDs, Age-standardized, Males.dta{rm}
+saved
+{p_end}
 
 {com}. 
 .  
@@ -649,8 +747,16 @@ file Canada 2019 11 YLDs, Age-standardized, Males.dta saved
 {txt}
 {com}. 
 . save "Canada 2019 12 YLDs, Age-standardized, Females.dta", replace 
-{txt}(note: file Canada 2019 12 YLDs, Age-standardized, Females.dta not found)
-file Canada 2019 12 YLDs, Age-standardized, Females.dta saved
+{txt}{p 0 4 2}
+(file {bf}
+Canada 2019 12 YLDs, Age-standardized, Females.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+Canada 2019 12 YLDs, Age-standardized, Females.dta{rm}
+saved
+{p_end}
 
 {com}.  
 .  
@@ -659,7 +765,7 @@ file Canada 2019 12 YLDs, Age-standardized, Females.dta saved
 . 
 . ******************************
 . 
-. * append parts of Table S2
+. * append parts of Table S4
 . 
 . use "Canada 2019 1 DALYs, All Ages, Males.dta", clear 
 {txt}
@@ -766,9 +872,17 @@ file Canada 2019 12 YLDs, Age-standardized, Females.dta saved
 . qui compress
 {txt}
 {com}. 
-. save "Table S2 Part1.dta", replace 
-{txt}(note: file Table S2 Part1.dta not found)
-file Table S2 Part1.dta saved
+. save "Table S4 Part1.dta", replace 
+{txt}{p 0 4 2}
+(file {bf}
+Table S4 Part1.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+Table S4 Part1.dta{rm}
+saved
+{p_end}
 
 {com}. 
 . 
@@ -786,12 +900,12 @@ file Table S2 Part1.dta saved
 . 
 . 
 . ***********************************************************************
-. * Prepare Table S2 Part 2
+. * Prepare Table S4 Part 2
 . 
-. ** Table S2 Part 2:
+. ** Table S4 Part 2:
 . * DALYs, YLDs and YLLs in Canada, percent change from 1990 to 2019
 . * Input data: "IHME-GBD_2019_DATA-103.dta"
-. * Output data: "Table S2 Part3.dta"
+. * Output data: "Table S4 Part3.dta"
 . 
 . 
 . 
@@ -807,6 +921,7 @@ file Table S2 Part1.dta saved
 {txt}
 {com}. 
 . import delimited using "IHME-GBD_2019_DATA-103.csv", clear 
+{res}{txt}(encoding automatically selected: ISO-8859-1)
 {res}{text}(17 vars, 1,730 obs)
 
 {com}. 
@@ -897,11 +1012,11 @@ file Table S2 Part1.dta saved
 {txt}(0 real changes made)
 
 {com}. replace Sex = "Males" if sex_name == "Male"
-{txt}variable {bf}Sex{sf} was {bf}{res}str1{sf}{txt} now {bf}{res}str5{sf}
+{txt}variable {bf}{res}Sex{sf}{txt} was {bf}{res}str1{sf}{txt} now {bf}{res}str5{sf}
 {txt}(856 real changes made)
 
 {com}. replace Sex = "Females" if sex_name == "Female"
-{txt}variable {bf}Sex{sf} was {bf}{res}str5{sf}{txt} now {bf}{res}str7{sf}
+{txt}variable {bf}{res}Sex{sf}{txt} was {bf}{res}str5{sf}{txt} now {bf}{res}str7{sf}
 {txt}(874 real changes made)
 
 {com}. drop sex_name
@@ -988,7 +1103,16 @@ file Table S2 Part1.dta saved
 {txt}
 {com}. 
 . save "IHME-GBD_2019_DATA-103.dta", replace
-{txt}file IHME-GBD_2019_DATA-103.dta saved
+{txt}{p 0 4 2}
+(file {bf}
+IHME-GBD_2019_DATA-103.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+IHME-GBD_2019_DATA-103.dta{rm}
+saved
+{p_end}
 
 {com}. 
 .  
@@ -1002,13 +1126,13 @@ file Table S2 Part1.dta saved
 {com}. 
 . merge m:m Measure Age Sex cause_id using "Canada 2019 1 DALYs, All Ages, Males.dta"
 {res}
-{txt}{col 5}Result{col 38}# of obs.
+{txt}{col 5}Result{col 33}Number of obs
 {col 5}{hline 41}
-{col 5}not matched{col 30}{res}           1,720
+{col 5}Not matched{col 30}{res}           1,720
 {txt}{col 9}from master{col 30}{res}           1,720{txt}  (_merge==1)
 {col 9}from using{col 30}{res}               0{txt}  (_merge==2)
 
-{col 5}matched{col 30}{res}              10{txt}  (_merge==3)
+{col 5}Matched{col 30}{res}              10{txt}  (_merge==3)
 {col 5}{hline 41}
 
 {com}. 
@@ -1029,8 +1153,16 @@ file Table S2 Part1.dta saved
 {txt}
 {com}. 
 . save "Canada 2019 Base and Change 1 DALYs, All Ages, Males.dta", replace
-{txt}(note: file Canada 2019 Base and Change 1 DALYs, All Ages, Males.dta not found)
-file Canada 2019 Base and Change 1 DALYs, All Ages, Males.dta saved
+{txt}{p 0 4 2}
+(file {bf}
+Canada 2019 Base and Change 1 DALYs, All Ages, Males.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+Canada 2019 Base and Change 1 DALYs, All Ages, Males.dta{rm}
+saved
+{p_end}
 
 {com}. 
 . 
@@ -1045,13 +1177,13 @@ file Canada 2019 Base and Change 1 DALYs, All Ages, Males.dta saved
 {com}. 
 . merge m:m Measure Age Sex cause_id using "Canada 2019 2 DALYs, All Ages, Females.dta"
 {res}
-{txt}{col 5}Result{col 38}# of obs.
+{txt}{col 5}Result{col 33}Number of obs
 {col 5}{hline 41}
-{col 5}not matched{col 30}{res}           1,720
+{col 5}Not matched{col 30}{res}           1,720
 {txt}{col 9}from master{col 30}{res}           1,720{txt}  (_merge==1)
 {col 9}from using{col 30}{res}               0{txt}  (_merge==2)
 
-{col 5}matched{col 30}{res}              10{txt}  (_merge==3)
+{col 5}Matched{col 30}{res}              10{txt}  (_merge==3)
 {col 5}{hline 41}
 
 {com}. 
@@ -1072,8 +1204,16 @@ file Canada 2019 Base and Change 1 DALYs, All Ages, Males.dta saved
 {txt}
 {com}. 
 . save "Canada 2019 Base and Change 2 DALYs, All Ages, Females.dta", replace
-{txt}(note: file Canada 2019 Base and Change 2 DALYs, All Ages, Females.dta not found)
-file Canada 2019 Base and Change 2 DALYs, All Ages, Females.dta saved
+{txt}{p 0 4 2}
+(file {bf}
+Canada 2019 Base and Change 2 DALYs, All Ages, Females.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+Canada 2019 Base and Change 2 DALYs, All Ages, Females.dta{rm}
+saved
+{p_end}
 
 {com}. 
 . 
@@ -1089,13 +1229,13 @@ file Canada 2019 Base and Change 2 DALYs, All Ages, Females.dta saved
 {com}. 
 . merge m:m Measure Age Sex cause_id using "Canada 2019 3 DALYs, Age-standardized, Males.dta"
 {res}
-{txt}{col 5}Result{col 38}# of obs.
+{txt}{col 5}Result{col 33}Number of obs
 {col 5}{hline 41}
-{col 5}not matched{col 30}{res}           1,720
+{col 5}Not matched{col 30}{res}           1,720
 {txt}{col 9}from master{col 30}{res}           1,720{txt}  (_merge==1)
 {col 9}from using{col 30}{res}               0{txt}  (_merge==2)
 
-{col 5}matched{col 30}{res}              10{txt}  (_merge==3)
+{col 5}Matched{col 30}{res}              10{txt}  (_merge==3)
 {col 5}{hline 41}
 
 {com}. 
@@ -1116,8 +1256,16 @@ file Canada 2019 Base and Change 2 DALYs, All Ages, Females.dta saved
 {txt}
 {com}. 
 . save "Canada 2019 Base and Change 3 DALYs, Age-standardized, Males.dta", replace
-{txt}(note: file Canada 2019 Base and Change 3 DALYs, Age-standardized, Males.dta not found)
-file Canada 2019 Base and Change 3 DALYs, Age-standardized, Males.dta saved
+{txt}{p 0 4 2}
+(file {bf}
+Canada 2019 Base and Change 3 DALYs, Age-standardized, Males.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+Canada 2019 Base and Change 3 DALYs, Age-standardized, Males.dta{rm}
+saved
+{p_end}
 
 {com}. 
 . 
@@ -1131,13 +1279,13 @@ file Canada 2019 Base and Change 3 DALYs, Age-standardized, Males.dta saved
 {com}. 
 . merge m:m Measure Age Sex cause_id using "Canada 2019 4 DALYs, Age-standardized, Females.dta"
 {res}
-{txt}{col 5}Result{col 38}# of obs.
+{txt}{col 5}Result{col 33}Number of obs
 {col 5}{hline 41}
-{col 5}not matched{col 30}{res}           1,720
+{col 5}Not matched{col 30}{res}           1,720
 {txt}{col 9}from master{col 30}{res}           1,720{txt}  (_merge==1)
 {col 9}from using{col 30}{res}               0{txt}  (_merge==2)
 
-{col 5}matched{col 30}{res}              10{txt}  (_merge==3)
+{col 5}Matched{col 30}{res}              10{txt}  (_merge==3)
 {col 5}{hline 41}
 
 {com}. 
@@ -1158,8 +1306,16 @@ file Canada 2019 Base and Change 3 DALYs, Age-standardized, Males.dta saved
 {txt}
 {com}. 
 . save "Canada 2019 Base and Change 4 DALYs, Age-standardized, Females.dta", replace
-{txt}(note: file Canada 2019 Base and Change 4 DALYs, Age-standardized, Females.dta not found)
-file Canada 2019 Base and Change 4 DALYs, Age-standardized, Females.dta saved
+{txt}{p 0 4 2}
+(file {bf}
+Canada 2019 Base and Change 4 DALYs, Age-standardized, Females.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+Canada 2019 Base and Change 4 DALYs, Age-standardized, Females.dta{rm}
+saved
+{p_end}
 
 {com}. 
 . 
@@ -1173,13 +1329,13 @@ file Canada 2019 Base and Change 4 DALYs, Age-standardized, Females.dta saved
 {com}. 
 . merge m:m Measure Age Sex cause_id using "Canada 2019 5 YLLs, All Ages, Males.dta"
 {res}
-{txt}{col 5}Result{col 38}# of obs.
+{txt}{col 5}Result{col 33}Number of obs
 {col 5}{hline 41}
-{col 5}not matched{col 30}{res}           1,720
+{col 5}Not matched{col 30}{res}           1,720
 {txt}{col 9}from master{col 30}{res}           1,720{txt}  (_merge==1)
 {col 9}from using{col 30}{res}               0{txt}  (_merge==2)
 
-{col 5}matched{col 30}{res}              10{txt}  (_merge==3)
+{col 5}Matched{col 30}{res}              10{txt}  (_merge==3)
 {col 5}{hline 41}
 
 {com}. 
@@ -1200,8 +1356,16 @@ file Canada 2019 Base and Change 4 DALYs, Age-standardized, Females.dta saved
 {txt}
 {com}. 
 . save "Canada 2019 Base and Change 5 YLLs, All Ages, Males.dta", replace
-{txt}(note: file Canada 2019 Base and Change 5 YLLs, All Ages, Males.dta not found)
-file Canada 2019 Base and Change 5 YLLs, All Ages, Males.dta saved
+{txt}{p 0 4 2}
+(file {bf}
+Canada 2019 Base and Change 5 YLLs, All Ages, Males.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+Canada 2019 Base and Change 5 YLLs, All Ages, Males.dta{rm}
+saved
+{p_end}
 
 {com}. 
 . 
@@ -1215,13 +1379,13 @@ file Canada 2019 Base and Change 5 YLLs, All Ages, Males.dta saved
 {com}. 
 . merge m:m Measure Age Sex cause_id using "Canada 2019 6 YLLs, All Ages, Females.dta"
 {res}
-{txt}{col 5}Result{col 38}# of obs.
+{txt}{col 5}Result{col 33}Number of obs
 {col 5}{hline 41}
-{col 5}not matched{col 30}{res}           1,720
+{col 5}Not matched{col 30}{res}           1,720
 {txt}{col 9}from master{col 30}{res}           1,720{txt}  (_merge==1)
 {col 9}from using{col 30}{res}               0{txt}  (_merge==2)
 
-{col 5}matched{col 30}{res}              10{txt}  (_merge==3)
+{col 5}Matched{col 30}{res}              10{txt}  (_merge==3)
 {col 5}{hline 41}
 
 {com}. 
@@ -1242,8 +1406,16 @@ file Canada 2019 Base and Change 5 YLLs, All Ages, Males.dta saved
 {txt}
 {com}. 
 . save "Canada 2019 Base and Change 6 YLLs, All Ages, Females.dta", replace
-{txt}(note: file Canada 2019 Base and Change 6 YLLs, All Ages, Females.dta not found)
-file Canada 2019 Base and Change 6 YLLs, All Ages, Females.dta saved
+{txt}{p 0 4 2}
+(file {bf}
+Canada 2019 Base and Change 6 YLLs, All Ages, Females.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+Canada 2019 Base and Change 6 YLLs, All Ages, Females.dta{rm}
+saved
+{p_end}
 
 {com}. 
 . 
@@ -1257,13 +1429,13 @@ file Canada 2019 Base and Change 6 YLLs, All Ages, Females.dta saved
 {com}. 
 . merge m:m Measure Age Sex cause_id using "Canada 2019 7 YLLs, Age-standardized, Males.dta"
 {res}
-{txt}{col 5}Result{col 38}# of obs.
+{txt}{col 5}Result{col 33}Number of obs
 {col 5}{hline 41}
-{col 5}not matched{col 30}{res}           1,720
+{col 5}Not matched{col 30}{res}           1,720
 {txt}{col 9}from master{col 30}{res}           1,720{txt}  (_merge==1)
 {col 9}from using{col 30}{res}               0{txt}  (_merge==2)
 
-{col 5}matched{col 30}{res}              10{txt}  (_merge==3)
+{col 5}Matched{col 30}{res}              10{txt}  (_merge==3)
 {col 5}{hline 41}
 
 {com}. 
@@ -1284,8 +1456,16 @@ file Canada 2019 Base and Change 6 YLLs, All Ages, Females.dta saved
 {txt}
 {com}. 
 . save "Canada 2019 Base and Change 7 YLLs, Age-standardized, Males.dta", replace
-{txt}(note: file Canada 2019 Base and Change 7 YLLs, Age-standardized, Males.dta not found)
-file Canada 2019 Base and Change 7 YLLs, Age-standardized, Males.dta saved
+{txt}{p 0 4 2}
+(file {bf}
+Canada 2019 Base and Change 7 YLLs, Age-standardized, Males.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+Canada 2019 Base and Change 7 YLLs, Age-standardized, Males.dta{rm}
+saved
+{p_end}
 
 {com}. 
 . 
@@ -1300,13 +1480,13 @@ file Canada 2019 Base and Change 7 YLLs, Age-standardized, Males.dta saved
 {com}. 
 . merge m:m Measure Age Sex cause_id using "Canada 2019 8 YLLs, Age-standardized, Females.dta"
 {res}
-{txt}{col 5}Result{col 38}# of obs.
+{txt}{col 5}Result{col 33}Number of obs
 {col 5}{hline 41}
-{col 5}not matched{col 30}{res}           1,720
+{col 5}Not matched{col 30}{res}           1,720
 {txt}{col 9}from master{col 30}{res}           1,720{txt}  (_merge==1)
 {col 9}from using{col 30}{res}               0{txt}  (_merge==2)
 
-{col 5}matched{col 30}{res}              10{txt}  (_merge==3)
+{col 5}Matched{col 30}{res}              10{txt}  (_merge==3)
 {col 5}{hline 41}
 
 {com}. 
@@ -1327,8 +1507,16 @@ file Canada 2019 Base and Change 7 YLLs, Age-standardized, Males.dta saved
 {txt}
 {com}. 
 . save "Canada 2019 Base and Change 8 YLLs, Age-standardized, Females.dta", replace
-{txt}(note: file Canada 2019 Base and Change 8 YLLs, Age-standardized, Females.dta not found)
-file Canada 2019 Base and Change 8 YLLs, Age-standardized, Females.dta saved
+{txt}{p 0 4 2}
+(file {bf}
+Canada 2019 Base and Change 8 YLLs, Age-standardized, Females.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+Canada 2019 Base and Change 8 YLLs, Age-standardized, Females.dta{rm}
+saved
+{p_end}
 
 {com}. 
 . 
@@ -1343,13 +1531,13 @@ file Canada 2019 Base and Change 8 YLLs, Age-standardized, Females.dta saved
 {com}. 
 . merge m:m Measure Age Sex cause_id using "Canada 2019 9 YLDs, All Ages, Males.dta"
 {res}
-{txt}{col 5}Result{col 38}# of obs.
+{txt}{col 5}Result{col 33}Number of obs
 {col 5}{hline 41}
-{col 5}not matched{col 30}{res}           1,720
+{col 5}Not matched{col 30}{res}           1,720
 {txt}{col 9}from master{col 30}{res}           1,720{txt}  (_merge==1)
 {col 9}from using{col 30}{res}               0{txt}  (_merge==2)
 
-{col 5}matched{col 30}{res}              10{txt}  (_merge==3)
+{col 5}Matched{col 30}{res}              10{txt}  (_merge==3)
 {col 5}{hline 41}
 
 {com}. 
@@ -1370,8 +1558,16 @@ file Canada 2019 Base and Change 8 YLLs, Age-standardized, Females.dta saved
 {txt}
 {com}. 
 . save "Canada 2019 Base and Change 9 YLDs, All Ages, Males.dta", replace
-{txt}(note: file Canada 2019 Base and Change 9 YLDs, All Ages, Males.dta not found)
-file Canada 2019 Base and Change 9 YLDs, All Ages, Males.dta saved
+{txt}{p 0 4 2}
+(file {bf}
+Canada 2019 Base and Change 9 YLDs, All Ages, Males.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+Canada 2019 Base and Change 9 YLDs, All Ages, Males.dta{rm}
+saved
+{p_end}
 
 {com}. 
 . 
@@ -1386,13 +1582,13 @@ file Canada 2019 Base and Change 9 YLDs, All Ages, Males.dta saved
 {com}. 
 . merge m:m Measure Age Sex cause_id using "Canada 2019 10 YLDs, All Ages, Females.dta"
 {res}
-{txt}{col 5}Result{col 38}# of obs.
+{txt}{col 5}Result{col 33}Number of obs
 {col 5}{hline 41}
-{col 5}not matched{col 30}{res}           1,720
+{col 5}Not matched{col 30}{res}           1,720
 {txt}{col 9}from master{col 30}{res}           1,720{txt}  (_merge==1)
 {col 9}from using{col 30}{res}               0{txt}  (_merge==2)
 
-{col 5}matched{col 30}{res}              10{txt}  (_merge==3)
+{col 5}Matched{col 30}{res}              10{txt}  (_merge==3)
 {col 5}{hline 41}
 
 {com}. 
@@ -1413,8 +1609,16 @@ file Canada 2019 Base and Change 9 YLDs, All Ages, Males.dta saved
 {txt}
 {com}. 
 . save "Canada 2019 Base and Change 10 YLDs, All Ages, Females.dta", replace
-{txt}(note: file Canada 2019 Base and Change 10 YLDs, All Ages, Females.dta not found)
-file Canada 2019 Base and Change 10 YLDs, All Ages, Females.dta saved
+{txt}{p 0 4 2}
+(file {bf}
+Canada 2019 Base and Change 10 YLDs, All Ages, Females.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+Canada 2019 Base and Change 10 YLDs, All Ages, Females.dta{rm}
+saved
+{p_end}
 
 {com}. 
 . 
@@ -1429,13 +1633,13 @@ file Canada 2019 Base and Change 10 YLDs, All Ages, Females.dta saved
 {com}. 
 . merge m:m Measure Age Sex cause_id using "Canada 2019 11 YLDs, Age-standardized, Males.dta"
 {res}
-{txt}{col 5}Result{col 38}# of obs.
+{txt}{col 5}Result{col 33}Number of obs
 {col 5}{hline 41}
-{col 5}not matched{col 30}{res}           1,720
+{col 5}Not matched{col 30}{res}           1,720
 {txt}{col 9}from master{col 30}{res}           1,720{txt}  (_merge==1)
 {col 9}from using{col 30}{res}               0{txt}  (_merge==2)
 
-{col 5}matched{col 30}{res}              10{txt}  (_merge==3)
+{col 5}Matched{col 30}{res}              10{txt}  (_merge==3)
 {col 5}{hline 41}
 
 {com}. 
@@ -1456,8 +1660,16 @@ file Canada 2019 Base and Change 10 YLDs, All Ages, Females.dta saved
 {txt}
 {com}. 
 . save "Canada 2019 Base and Change 11 YLDs, Age-standardized, Males.dta", replace
-{txt}(note: file Canada 2019 Base and Change 11 YLDs, Age-standardized, Males.dta not found)
-file Canada 2019 Base and Change 11 YLDs, Age-standardized, Males.dta saved
+{txt}{p 0 4 2}
+(file {bf}
+Canada 2019 Base and Change 11 YLDs, Age-standardized, Males.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+Canada 2019 Base and Change 11 YLDs, Age-standardized, Males.dta{rm}
+saved
+{p_end}
 
 {com}. 
 .  
@@ -1472,13 +1684,13 @@ file Canada 2019 Base and Change 11 YLDs, Age-standardized, Males.dta saved
 {com}. 
 . merge m:m Measure Age Sex cause_id using "Canada 2019 12 YLDs, Age-standardized, Females.dta"
 {res}
-{txt}{col 5}Result{col 38}# of obs.
+{txt}{col 5}Result{col 33}Number of obs
 {col 5}{hline 41}
-{col 5}not matched{col 30}{res}           1,720
+{col 5}Not matched{col 30}{res}           1,720
 {txt}{col 9}from master{col 30}{res}           1,720{txt}  (_merge==1)
 {col 9}from using{col 30}{res}               0{txt}  (_merge==2)
 
-{col 5}matched{col 30}{res}              10{txt}  (_merge==3)
+{col 5}Matched{col 30}{res}              10{txt}  (_merge==3)
 {col 5}{hline 41}
 
 {com}. 
@@ -1499,8 +1711,16 @@ file Canada 2019 Base and Change 11 YLDs, Age-standardized, Males.dta saved
 {txt}
 {com}. 
 . save "Canada 2019 Base and Change 12 YLDs, Age-standardized, Females.dta", replace
-{txt}(note: file Canada 2019 Base and Change 12 YLDs, Age-standardized, Females.dta not found)
-file Canada 2019 Base and Change 12 YLDs, Age-standardized, Females.dta saved
+{txt}{p 0 4 2}
+(file {bf}
+Canada 2019 Base and Change 12 YLDs, Age-standardized, Females.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+Canada 2019 Base and Change 12 YLDs, Age-standardized, Females.dta{rm}
+saved
+{p_end}
 
 {com}.  
 .  
@@ -1509,37 +1729,33 @@ file Canada 2019 Base and Change 12 YLDs, Age-standardized, Females.dta saved
 . 
 . ******************************
 . 
-. * append parts of Table S2 - Base and Change 
+. * append parts of Table S4 - Base and Change 
 . 
 . use "Canada 2019 Base and Change 1 DALYs, All Ages, Males.dta", clear 
 {txt}
 {com}. 
 . append using "Canada 2019 Base and Change 2 DALYs, All Ages, Females.dta"
 {txt}{p 0 7 2}
-(note: variable
-Sex was 
-str5, now str7 to accommodate using data's values)
+(variable
+{bf:Sex} was {bf:str5}, now {bf:str7} to accommodate using data's values)
 {p_end}
 {p 0 7 2}
-(note: variable
-Cause was 
-str37, now str39 to accommodate using data's values)
+(variable
+{bf:Cause} was {bf:str37}, now {bf:str39} to accommodate using data's values)
 {p_end}
 
 {com}. append using "Canada 2019 Base and Change 3 DALYs, Age-standardized, Males.dta"
 {txt}{p 0 7 2}
-(note: variable
-Age was 
-str8, now str16 to accommodate using data's values)
+(variable
+{bf:Age} was {bf:str8}, now {bf:str16} to accommodate using data's values)
 {p_end}
 
 {com}. append using "Canada 2019 Base and Change 4 DALYs, Age-standardized, Females.dta"
 {txt}
 {com}. append using "Canada 2019 Base and Change 5 YLLs, All Ages, Males.dta"
 {txt}{p 0 7 2}
-(note: variable
-Cause was 
-str39, now str42 to accommodate using data's values)
+(variable
+{bf:Cause} was {bf:str39}, now {bf:str42} to accommodate using data's values)
 {p_end}
 
 {com}. append using "Canada 2019 Base and Change 6 YLLs, All Ages, Females.dta"
@@ -1686,12 +1902,21 @@ str39, now str42 to accommodate using data's values)
 . qui compress
 {txt}
 {com}. 
-. save "Table S2.dta", replace
-{txt}file Table S2.dta saved
+. save "Table S4.dta", replace
+{txt}{p 0 4 2}
+(file {bf}
+Table S4.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+Table S4.dta{rm}
+saved
+{p_end}
 
 {com}. 
-. export excel using "Table S2.xlsx", replace firstrow(varlabels)
-{res}{txt}file Table S2.xlsx saved
+. export excel using "Table S4.xlsx", replace firstrow(varlabels) keepcellfmt
+{res}{txt}file {bf:Table S4.xlsx} saved
 
 {com}. 
 . 
@@ -1740,7 +1965,7 @@ str39, now str42 to accommodate using data's values)
 
 {com}. 
 . 
-. shell rm -r "Table S2 Part1.dta"
+. shell rm -r "Table S4 Part1.dta"
 {txt}
 
 {com}. 
@@ -1791,14 +2016,14 @@ str39, now str42 to accommodate using data's values)
 . 
 . **********************
 . 
-. view "log Table S2.smcl"
+. view "log Table S4.smcl"
 {txt}
 {com}. 
 . log close
       {txt}name:  {res}<unnamed>
-       {txt}log:  {res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output/log Table S2.smcl
+       {txt}log:  {res}/Users/farshadpourmalek/Downloads/Canada-Burden-of-Disease-main/output/log Table S4.smcl
   {txt}log type:  {res}smcl
- {txt}closed on:  {res} 8 Apr 2022, 07:52:31
+ {txt}closed on:  {res} 8 Oct 2023, 20:40:13
 {txt}{.-}
 {smcl}
 {txt}{sf}{ul off}

@@ -2,8 +2,9 @@
 ***************************************************************************
 * This is "do CanadaBOD master.do"
                                                                                                           
-* Project: Canada Burden of Disease                                                                        
-* Person: Farshad Pourmalek pourmalek_farshad at yahoo dotcom
+* Project: Canada Burden of Disease 1990-2019
+* manuscript: Health trends in Canada 1990-2019: An analysis for the Global Burden of Disease Study                                                                      
+* Person: Farshad Pourmalek
 * Time (initial): 2022 March 28
 ***************************************************************************
 
@@ -79,29 +80,16 @@ do "do Table 1.do"
 
 do "do Table 2.do" 
 
-do "do Table 3 a.do" 
+do "do Table 3.do" 
 
-do "do Table 3 b.do" 
+do "do Table 4.do" 
 
-do "do Table 3 c.do" 
-
-do "do Table 3 d.do" 
-
-do "do Table 3 e.do" 
-
-do "do Table 4 a.do"
-
-do "do Table 4 b.do"
-
-do "do Table 4 c.do"
-
-do "do Table 4 d.do"
 
 * Tables in Supplementary Materials
 
-do "do Table S2.do"
+do "do Table S4.do"
 
-do "do Table S3.do"
+do "do Table S5.do"
 
 
 

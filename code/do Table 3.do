@@ -7,21 +7,22 @@ cd output
 
 capture log close 
 
-log using "log Table 4 c.smcl", replace
+log using "log Table 3.smcl", replace
 
 ***************************************************************************
-* This is "do Table 4 c.do"
+* This is "do Table 3.do"
 
-* Project: Canada Burden of Disease                                                                        
-* Person: Farshad Pourmalek pourmalek_farshad at yahoo dotcom
+* Project: Canada Burden of Disease 1990-2019                                                                        
+* Person: Farshad Pourmalek
 * Time (initial): 2022 March 28
 ***************************************************************************
 
 
 
-** Prepares Table 4
-* Table 4: Relative (%) changes in age-standardized DALY rates in Canada and comparator locations 
-* and Canada’s rank in 1990-2019 among all high-income countries. 
+** Prepares Table 3
+* Table 3: Relative (%) changes in age-standardized DALY rates 
+* in Canada and comparator high-income locations for major groups of conditions, 1990-2019
+* , with a 95% uncertainty interval
 
 * level 2 causes, % change in Age-standardized DALYs rate in each of 5 group of countries:
 * Canada, United States, Western Europe, Australasia, Asia-Pacific
@@ -31,9 +32,9 @@ log using "log Table 4 c.smcl", replace
 * under each -import delimited using "IHME-GBD_2019_DATA-??.csv"-
 
 
-** Table 4 Part 3: Level 2 Grouping of Conditions, % change in values 1990-2019
+** Table 3 : Level 2 Grouping of Conditions, % change in values 1990-2019
 * Input data: "IHME-GBD_2019_DATA-51.csv"
-* Output data: "Table 4 Part3.dta"
+* Output data: "Table 4 Part1.dta"
 
 
 
@@ -41,9 +42,9 @@ log using "log Table 4 c.smcl", replace
 
 
 ***********************************************************************
-* Prepare Table 4 Part3
+* Prepare Table 3
 
-** Prepares Table 4, Level 2 Grouping of Conditions
+** Prepares Table 3, Level 2 Grouping of Conditions
 * Table 4: Relative (%) changes in age-standardized DALY rates in Canada and comparator locations 
 * and Canada’s rank in 1990-2019 among all high-income countries. 
 
@@ -202,7 +203,7 @@ qui compress
 
 keep if year_start == 1990 & year_end == 2019
 
-keep Location Sex Cause Value cause_id_new 
+keep Location Sex Cause Value Lower_UL Upper_UL cause_id_new 
 
 keep if Sex == "Both sexes"
 
@@ -225,32 +226,46 @@ replace location_id_new = 6 if Location == "Southern_Latin" // Southern_Latin_Am
 
 sort location_id_new cause_id_new
 
-reshape wide Value location_id_new, i(Cause) j(Location) string
+reshape wide Value Lower_UL Upper_UL location_id_new, i(Cause) j(Location) string
 
 sort cause_id_new
 
-
-
+    
 rename ///
-(ValueAsia_Pacific ValueAustralasia ValueUnited_States ValueWestern_Europe ValueSouthern_Latin) ///
-(Asia_Pacific Australasia United_States Western_Europe Southern_Latin_America)
+(ValueCanada ValueUnited_States ValueWestern_Europe ValueAustralasia ValueAsia_Pacific ValueSouthern_Latin) ///
+(Canada_Value United_States_Value Western_Europe_Value Australasia_Value Asia_Pacific_Value Southern_Latin_Value)
 
-rename ValueCanada Canada
-label var Canada Canada
+order Cause Canada_Value United_States_Value Western_Europe_Value Australasia_Value Asia_Pacific_Value Southern_Latin_Value
 
-order Cause Canada United_States Western_Europe Australasia Asia_Pacific Southern_Latin_America
+drop location_*
 
-label var United_States "United States"
-label var Western_Europe "Western Europe"
-label var Asia_Pacific "Asia Pacific"
-label var Southern_Latin_America "Southern Latin America"
+rename (Lower_ULCanada Upper_ULCanada) (Canada_Lower_UL Canada_Upper_UL)
+rename (Lower_ULUnited_States Upper_ULUnited_States) (United_States_Lower_UL United_States_Upper_UL)
+rename (Lower_ULWestern_Europe Upper_ULWestern_Europe) (Western_Europe_Lower_UL Western_Europe_Upper_UL)
+rename (Lower_ULAustralasia Upper_ULAustralasia) (Australasia_Lower_UL Australasia_Upper_UL)
+rename (Lower_ULAsia_Pacific Upper_ULAsia_Pacific) (Asia_Pacific_Lower_UL Asia_Pacific_Upper_UL) 
+rename (Lower_ULSouthern_Latin Upper_ULSouthern_Latin) (Southern_Latin_Lower_UL Southern_Latin_Upper_UL)
+
+
+order Cause Canada_Value Canada_Lower_UL Canada_Upper_UL ///
+United_States_Value United_States_Lower_UL United_States_Upper_UL ///
+Western_Europe_Value Western_Europe_Lower_UL Western_Europe_Upper_UL ///
+Australasia_Value Australasia_Lower_UL Australasia_Upper_UL ///
+Asia_Pacific_Value Asia_Pacific_Lower_UL Asia_Pacific_Upper_UL ///
+Southern_Latin_Value Southern_Latin_Lower_UL Southern_Latin_Upper_UL 
+
+drop cause_id_new
+
+gsort -Canada_Value
 
 qui compress
 
-save "Table 4 Part3.dta", replace
+save "Table 3.dta", replace
+
+export excel using "Table 3.xlsx", replace firstrow(varlabels) keepcellfmt
 
 
-/* "Table 4 Part3.dta" contents
+/* "Table 3.dta" contents
 
 % change values 1990-2019
 
@@ -271,7 +286,7 @@ level 2 causes
 
 **********************
 
-view "log Table 4 c.smcl"
+view "log Table 3.smcl"
 
 log close
 

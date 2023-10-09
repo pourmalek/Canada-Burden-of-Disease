@@ -13,7 +13,7 @@ log using "log Table 2.smcl", replace
 * This is "do Table 2.do"
 
 * Project: Canada Burden of Disease                                                                        
-* Person: Farshad Pourmalek pourmalek_farshad at yahoo dotcom
+* Person: Farshad Pourmalek
 * Time (initial): 2022 March 28
 ***************************************************************************
 
@@ -222,6 +222,8 @@ label var Upper_UL2019 "2019 Upper_UL"
 drop Measure Age Sex cause_id_new
 
 drop rank1990 rank2019 to
+
+drop Rank_change
 
 
 save "Table 2 Part1.dta", replace
@@ -445,6 +447,8 @@ drop rank1990 rank2019 to
 
 drop sex_id measure_id_new age_id_new sex_id_new
 
+drop Rank_change
+
 save "Table 2 Part2.dta", replace
 
 /* Table 2 Part2.dta" contents
@@ -564,8 +568,8 @@ gen change_percent_lower = change_proportion_lower * 100
 drop change_proportion_*
 
 rename change_percent_mean Value
-rename change_percent_upper Lower_UL
-rename change_percent_lower Upper_UL
+rename change_percent_upper Upper_UL
+rename change_percent_lower Lower_UL
 
 label var Value "Relative change (%)"
 label var Lower_UL "Relative change (%) Lower UL"
@@ -589,8 +593,6 @@ sort measure_id_new sex_id_new age_id_new
 drop sex_id	measure_id_new age_id_new
 
 order Sex, after(Age)
-
-drop Lower_UL Upper_UL
 
 order Measure Age Sex Value 
 
@@ -746,11 +748,14 @@ rename Value Percent_change
 
 label var Percent_change "Percent change"
 
-order Percent_change, before(Rank_change)
+drop if Cause == "MNC"
+drop if Cause == "Non-communicable"
+drop if Cause == "Injuries"
+
 
 save "Table 2.dta", replace
 
-export excel using "Table 2.xlsx", replace firstrow(varlabels)
+export excel using "Table 2.xlsx", replace firstrow(varlabels) keepcellfmt
 
 
 

@@ -12,8 +12,8 @@ log using "log Table 1.smcl", replace
 ***************************************************************************
 * This is "do Table 1.do"
 
-* Project: Canada Burden of Disease                                                                        
-* Person: Farshad Pourmalek pourmalek_farshad at yahoo dotcom
+* Project: Canada Burden of Disease 1990-2019                                                                        
+* Person: Farshad Pourmalek
 * Time (initial): 2022 March 28
 ***************************************************************************
 
@@ -101,7 +101,6 @@ Both IDs and Names
 cd .. // Canada-Burden-of-Disease-main
 
 cd output 
-
 
 
 drop measure_id location_id location_name age_id cause_id cause_name metric_id metric_name
@@ -292,8 +291,8 @@ gen change_percent_lower = change_proportion_lower * 100
 drop change_proportion_*
 
 rename change_percent_mean Value
-rename change_percent_upper Lower_UL
-rename change_percent_lower Upper_UL
+rename change_percent_upper Upper_UL
+rename change_percent_lower Lower_UL
 
 label var Value "Relative change (%)"
 label var Lower_UL "Relative change (%) Lower UL"
@@ -317,8 +316,6 @@ sort measure_id_new sex_id_new age_id_new
 drop sex_id	measure_id_new sex_id_new age_id_new
 
 order Sex, after(Age)
-
-drop Lower_UL Upper_UL
 
 order Measure Age Sex Value 
 
@@ -541,8 +538,6 @@ format Value Upper_UL Lower_UL %5.1f
 
 
 order Measure Age Sex Value  
-
-drop Lower_UL Upper_UL
 
 
 * save output data in /output/ folder
@@ -818,7 +813,7 @@ order Measure Age Sex Value Lower_UL Upper_UL
 
 replace Measure = "Post-neonatal infant mortality"
 
-drop Lower_UL Upper_UL cause_name year_start year_end
+drop cause_name year_start year_end
 
 
 * save output data in /output/ folder
@@ -958,9 +953,11 @@ append using  "Table 1 Part3and4.dta"
 
 append using  "Table 1 Part5and6.dta"
 
+
+
 save "Table 1.dta", replace
 
-export excel using "Table 1.xlsx", replace firstrow(varlabels)
+export excel using "Table 1.xlsx", replace firstrow(varlabels) keepcellfmt
 
 
 
