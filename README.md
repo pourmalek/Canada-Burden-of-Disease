@@ -13,7 +13,7 @@ Jacek A Kopec, Farshad Pourmalek, Daniel A Adeyinka, Amin Adibi, Gina Agarwal, S
 
 Kopec, J.A., Pourmalek, F., Adeyinka, D.A. et al. Health trends in Canada 1990–2019: An analysis for the Global Burden of Disease Study. Can J Public Health (2024). https://doi.org/10.17269/s41997-024-00851-3
 
-https://link.springer.com/article/10.17269/s41997-024-00851-3
+Article view: https://link.springer.com/epdf/10.17269/s41997-024-00851-3?sharing_token=jPPJjTyphgUmCikE70QVCwZdynnHPFT2PjX9cjpe7G3OCzig0TOJKjjHPAMKBgQ602fGXb7dB86Jfru0hU_OJLNVgVZYkq6HfFWjO3bmy22thdkFze9CYrvc3BF4ju89IQSatQgYUZIEAZWXVz1AUge6XvLslmX-NYkDNc2m_DQ%3D 
 
 **********************
 
