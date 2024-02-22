@@ -7,7 +7,7 @@ manuscript:
 
 Health trends in Canada 1990-2019: An analysis for the Global Burden of Disease Study
 
-Jacek A Kopec, Farshad Pourmalek, Daniel A Adeyinka, Amin Adibi, Gina Agarwal, Samiah Alam, Zulfiqar A Bhutta, Zahid A Butt, Vijay K Chattu, Oghenowede Eyawo, Ghazal Fazli, Seyed-Mohammad Fereshtehnejad, Jeffrey J Hebert, Md Belal Hossain, Marcus M Ilesanmi, Ademola J Itiola, Haitham Jahrami, Niranjan Kissoon, Barthelemy K Defo, Om P Kurmi, Ali H Mokdad, Christopher J L Murray, Andrew T Olagunju, Seithikurippu R Pandi-Perumal, Scott B Patten, Ata Rafiee, Drona Prakash Rasali, Yaeesh Sardiwalla, Thirunavukkarasu Sathish, Marco Solmi, Ranjani Somayaji, Saverio Stranges, Marcello Tonelli, Ziyue Wang, Sanni Yaya, & Frank J Elgar
+Kopec JA, Pourmalek F, Adeyinka DA, Adibi A, Agarwal G, Alam S, Bhutta ZA, Butt ZA, Chattu VK, Eyawo O, Fazli G, Fereshtehnejad SM, Hebert JJ, Hossain MB, Ilesanmi MM, Itiola AJ, Jahrami H, Kissoon N, Defo BK, Kurmi OP, Mokdad AH, Murray CJL, Olagunju AT, Pandi-Perumal SR, Patten SB, Rafiee A, Rasali DP, Sardiwalla Y, Sathish T, Solmi M, Somayaji R, Stranges S, Tonelli M, Wang Z, Yaya S, Elgar FJ.
 
 **********************
 
