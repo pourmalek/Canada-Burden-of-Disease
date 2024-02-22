@@ -2,16 +2,11 @@
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) [![DOI](https://zenodo.org/badge/475202009.svg)](https://zenodo.org/badge/latestdoi/475202009)
 
-
-manuscript:
-
 Health trends in Canada 1990-2019: An analysis for the Global Burden of Disease Study
 
 Kopec JA, Pourmalek F, Adeyinka DA, Adibi A, Agarwal G, Alam S, Bhutta ZA, Butt ZA, Chattu VK, Eyawo O, Fazli G, Fereshtehnejad SM, Hebert JJ, Hossain MB, Ilesanmi MM, Itiola AJ, Jahrami H, Kissoon N, Defo BK, Kurmi OP, Mokdad AH, Murray CJL, Olagunju AT, Pandi-Perumal SR, Patten SB, Rafiee A, Rasali DP, Sardiwalla Y, Sathish T, Solmi M, Somayaji R, Stranges S, Tonelli M, Wang Z, Yaya S, Elgar FJ.
 
-**********************
-
-Kopec, J.A., Pourmalek, F., Adeyinka, D.A. et al. Health trends in Canada 1990–2019: An analysis for the Global Burden of Disease Study. Can J Public Health (2024). https://doi.org/10.17269/s41997-024-00851-3
+Can J Public Health (2024). https://doi.org/10.17269/s41997-024-00851-3
 
 Article view: https://link.springer.com/epdf/10.17269/s41997-024-00851-3?sharing_token=jPPJjTyphgUmCikE70QVCwZdynnHPFT2PjX9cjpe7G3OCzig0TOJKjjHPAMKBgQ602fGXb7dB86Jfru0hU_OJLNVgVZYkq6HfFWjO3bmy22thdkFze9CYrvc3BF4ju89IQSatQgYUZIEAZWXVz1AUge6XvLslmX-NYkDNc2m_DQ%3D 
 
